@@ -80,7 +80,7 @@ Demo returning client: phone `917-555-2222` or `ana@example.com`, ZIP `10457`, D
 
 ## Placeholders the production build must replace
 
-- Energy discounts: Benefits Enrollment Assistance intake URL (`#bea-partner-intake-placeholder` in `scripts/pillars.js` and `eeap-next.html`).
+- Energy discounts: Benefits Enrollment Assistant intake URL (`#bea-partner-intake-placeholder` in `scripts/pillars.js` and `eeap-next.html`).
 - Hospital bills: `https://dollarfor.org/` stands in for the simplified-application link.
 - Privacy policy link on `privacy.html` (`href="#"`).
 - Enrollment-site names, addresses, hours and phone numbers (`scripts/hi-sites.js`).

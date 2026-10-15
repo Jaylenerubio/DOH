@@ -56,7 +56,7 @@
         var u = Array.isArray(d.utility) ? d.utility[0] : d.utility;
         return 'You started your ' + (d.path === 'eeap' ? 'EEAP' : 'EAP') + ' application for your ' + b(UTIL[u] || 'utility') + ' account on ' + b(date) + '.';
       },
-      step1: function (date, d) { return d.path === 'eeap' ? 'You started your EEAP application on ' + date + '.' : 'You started your Benefits Enrollment Assistance application on ' + date + '.'; },
+      step1: function (date, d) { return d.path === 'eeap' ? 'You started your EEAP application on ' + date + '.' : 'You started your Benefits Enrollment Assistant application on ' + date + '.'; },
       finish: 'Finish your application'
     },
     'tax-credits': {
