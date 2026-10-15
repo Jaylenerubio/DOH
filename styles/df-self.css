@@ -1,0 +1,50 @@
+/* =========================================================================
+   NYC DOH Affordability Navigator — Dollar For intake, "Tell us about
+   yourself or the patient" (step 2 of the 3-step progress). Uses the shared
+   .step scaffold + .df-* form scaffold (components.css). Page-specific: the
+   household-size stepper and the 3-across insurance choice row.
+   ========================================================================= */
+
+/* Number stepper: [ − ] [ value ] [ + ], each a field-height bordered cell. */
+.df-stepper {
+  display: grid;
+  grid-template-columns: 1fr 96px 1fr;
+  gap: var(--space-1);                        /* 8px between cells */
+}
+.df-stepper__btn,
+.df-stepper__value {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-neutral-300);
+  border-radius: var(--radius-frame);
+  background: var(--color-bg);
+  font-family: var(--type-body-family);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--color-text);
+}
+.df-stepper__btn {
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 120ms var(--ease-out);
+}
+.df-stepper__btn:hover { background: var(--color-neutral-100); }
+.df-stepper__btn:active { background: var(--color-neutral-200); }
+.df-stepper__btn:disabled { opacity: .2; cursor: default; }   /* same as the Energy discounts stepper */
+.df-stepper__value { font-variant-numeric: tabular-nums; }
+
+/* Insurance answer — Yes / No / Not sure, three across. */
+.choice-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-1);                        /* 8px between */
+}
+.choice-row .choice-card { min-height: 64px; padding: var(--space-2); }
+
+/* ---- Tablet (≥768px): match the roomier field height. ------------------ */
+@media (min-width: 768px) {
+  .df-stepper__btn,
+  .df-stepper__value { min-height: 68px; }
+}

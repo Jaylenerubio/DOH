@@ -1,0 +1,40 @@
+/* =========================================================================
+   NYC DOH Affordability Navigator — Tenant Support Unit (TSU) intake,
+   "Facing eviction?" (step 1 of 2). A multi-select checklist of eviction /
+   harassment situations on off-white tiles. Uses the .step scaffold.
+   Depends on: tokens.css, components.css.
+   ========================================================================= */
+
+/* Balanced wrapping for the description. */
+.tsu .step__text { text-wrap: pretty; }
+
+.tsu-options { border: 0; padding: 0; min-width: 0; }
+.tsu-options__legend {
+  padding: 0;
+  margin-bottom: 12px;
+  font-family: var(--type-body-family);
+  font-weight: var(--type-body-weight);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--color-text);
+}
+.tsu-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);                        /* 16px between tiles */
+  margin-top: var(--space-3);                 /* 24px below the description */
+}
+
+/* Checkbox on an off-white tile (behaviour lives in components.css/.checkbox).
+   Tiles hug their content: 24px padding around the label, no fixed height. */
+.tsu-tile {
+  padding: var(--space-3);
+  background: var(--color-pillar-card);
+  border-radius: 24px;                        /* off-white cards use 24px corners */
+}
+.tsu-tile .checkbox__label {
+  font-family: var(--type-body-family);
+  font-weight: var(--type-body-weight);
+  font-size: var(--type-body-size);           /* Body/Regular 18px */
+  line-height: var(--type-body-line-height);
+}

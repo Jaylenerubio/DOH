@@ -1,0 +1,68 @@
+/* =========================================================================
+   Review cards — Edit mode. Read: off-white card, label + value as text.
+   Editing: 4px brand stroke, brand header band (title + "Editing" + Done),
+   brand @10% inside. Labels are text, not pills. Icons: Material (inline).
+   ========================================================================= */
+.review-card { position: relative; overflow: hidden; }
+.review-card__head { gap: var(--space-2); }
+.review-card__title { min-width: 0; }
+.review-card__ctl { display: flex; align-items: center; gap: 12px; flex: 0 0 auto; margin-left: auto; }
+.review-card__badge {
+  font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); font-weight: 600;
+}
+.review-card__badge--editing { color: #FFFFFF; }
+.review-card__badge--updated { color: var(--color-success-dark); }
+
+.review-card__edit {
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 44px; padding: 0 14px;
+  border: 1px solid var(--color-neutral-300); border-radius: 999px; background: var(--color-bg);
+  font-family: var(--type-button-family); font-weight: var(--type-button-weight); font-size: var(--type-button-size); line-height: 1;
+  color: var(--color-text); cursor: pointer;
+}
+.review-card__edit svg { width: 22px; height: 22px; }
+.review-card__edit:hover { background: var(--color-neutral-100); text-decoration: none; }
+.review-card__edit:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset); }
+.review-card__edit--done { background: #FFFFFF; color: var(--color-text); border-color: #FFFFFF; }
+.review-card__edit--done:hover { background: var(--color-neutral-100); }
+.review-card__edit--done:focus-visible { outline: 3px solid #FFFFFF; }
+.review-card__edit[aria-disabled="true"] { opacity: 0.45; cursor: default; }
+
+/* Read mode: values as text; controls hidden. */
+.review-read { display: flex; flex-direction: column; gap: 2px; }
+.review-read__label { font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text); }
+.review-read__value { font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); font-weight: 600; color: var(--color-text); }
+.review-read.is-empty .review-read__value { font-weight: 400; color: var(--color-text-secondary); }
+.review-card.is-read .review-field > :not(.review-read),
+.review-card.is-read .tsu-review__answers > :not(.review-read),
+.review-card.is-read .tsu-review__prompt { display: none !important; }
+.review-card.is-editing .review-read { display: none !important; }
+
+/* Editing: stroke + band + tint */
+.review-card.is-editing {
+  background: rgba(34, 94, 124, 0.10);
+  box-shadow: inset 0 0 0 4px var(--color-brand);
+  padding-top: 0;
+}
+.review-card.is-editing .review-card__head {
+  /* Band runs edge to edge inside the 4px stroke: pull it out of the card padding. */
+  margin: 4px calc(4px - var(--space-3)) 0; padding: 12px var(--space-3);
+  flex-wrap: wrap;
+  background: var(--color-brand); color: #FFFFFF;
+  border-radius: 20px 20px 0 0;
+}
+.review-card.is-editing .review-card__title { color: #FFFFFF; }
+.review-card.is-editing .review-card__rule { display: none; }
+.review-card.is-editing .review-fields, .review-card.is-editing .tsu-review__answers { padding: 0 4px; }
+.review-card.is-editing .field__input, .review-card.is-editing .combobox__trigger, .review-card.is-editing .program-tile { background: var(--color-bg); }
+
+.review-card__note {
+  margin: var(--space-2) 4px 0;
+  font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height);
+  color: var(--color-info-dark); background: var(--color-info-light); padding: 10px 12px; border-radius: 8px;
+}
+.review-edit__hint {
+  margin: 0; padding: 8px var(--page-margin-x) 0;
+  font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); color: var(--color-text-secondary);
+}
+.btn[aria-disabled="true"].btn--primary { background: var(--color-brand-disabled); }

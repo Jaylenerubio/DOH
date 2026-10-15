@@ -1,0 +1,59 @@
+/* Financial resources — EAP screener (step 1 of 3). Depends on tokens + components. */
+.eap .step__text { text-wrap: pretty; }
+
+/* Question groups: legend (Body/Regular) → choices, 32px between groups. */
+.qgroup { border: 0; margin: var(--space-4) 0 0; padding: 0; min-width: 0; }
+.qgroup__legend {
+  padding: 0;
+  font-family: var(--type-body-family);
+  font-weight: var(--type-body-weight);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--color-text);
+}
+.qgroup__hint { color: var(--color-text-secondary); font-size: inherit; }
+/* Stacked full-width single-select cards, left-aligned label. */
+.qgroup__list { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.qgroup__list .choice-card { min-height: 56px; padding: var(--space-2); justify-content: flex-start; text-align: left; }
+/* Two-up row (Yes / No, Morning / Evening). */
+.qgroup__row { display: flex; gap: var(--space-1); margin-top: 12px; }
+.qgroup__row .choice-card { flex: 1 1 0; min-height: 56px; padding: var(--space-1) var(--space-2); }
+/* Multi-select chips: same square-cornered card as Yes/No, sharing the row
+   at equal widths; a chip only wraps to the next row when its label would
+   otherwise truncate. */
+.qgroup__chips { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: 12px; }
+.qgroup__chips .choice-card { flex: 1 1 0; min-width: 0; white-space: nowrap; min-height: 56px; padding: var(--space-1) var(--space-2); }
+
+/* Program list: native checkbox tiles (same pattern as the eviction page).
+   Most common programs first; "Other / not listed" last. */
+.program-list { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.program-tile { padding: var(--space-2); background: var(--color-pillar-card); border-radius: 16px; }
+.program-tile .checkbox__label {
+  font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height);
+}
+.program-list.is-invalid .program-tile { box-shadow: none; }   /* group error shows as text only */
+
+/* Household stepper: − / value / + */
+.eap-stepper { display: flex; align-items: stretch; gap: var(--space-1); margin-top: 12px; }
+.eap-stepper__btn {
+  flex: 1 1 0; min-height: 56px;
+  border: 1px solid var(--color-neutral-300); border-radius: var(--radius-frame);
+  background: var(--color-bg); color: var(--color-text);
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+}
+.eap-stepper__btn svg { width: 24px; height: 24px; }
+.eap-stepper__btn:hover { background: var(--color-neutral-100); }
+.eap-stepper__btn:active { background: var(--color-neutral-200); }
+.eap-stepper__btn:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset); }
+.eap-stepper__btn:disabled { opacity: .2; cursor: default; }
+.eap-stepper__val {
+  flex: 1 1 0; min-height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--color-neutral-300); border-radius: var(--radius-frame);
+  font-family: var(--type-body-family); font-size: var(--type-body-size); color: var(--color-text);
+}
+
+/* Utility chips: four short options; two per row on phones so labels never wrap. */
+#qUtility .qgroup__chips .choice-card { flex: 1 1 calc(50% - 4px); }   /* 2×2 on phones */
+@media (min-width: 600px) { #qUtility .qgroup__chips .choice-card { flex: 1 1 auto; width: auto; } }  /* one row; each chip at least label + padding */

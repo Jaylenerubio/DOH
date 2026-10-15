@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Select your language — NYC Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/language.css">
+</head>
+<body>
+  <div class="lang-page">
+
+    <!-- Top banner -->
+    <div class="top-banner">
+      <div class="top-banner__inner">
+        <button class="top-banner__toggle" type="button" aria-expanded="false" aria-controls="govPanel">
+          <span>Official website of the City of New York</span>
+          <svg class="top-banner__caret" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 5 L7 9 L11 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="top-banner__panel" id="govPanel" hidden>
+        <div class="top-banner__panel-inner">
+          <div class="top-banner__block">
+            <h2 class="top-banner__heading">Official websites use .gov</h2>
+            <p class="top-banner__copy">A .gov website belongs to an official government organization in the United States.</p>
+          </div>
+          <div class="top-banner__block">
+            <h2 class="top-banner__heading">Secure .gov websites use HTTPS</h2>
+            <p class="top-banner__copy">A lock (<span aria-label="locked">&#128274;</span>) or https:// means you&rsquo;ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service navigation (translate control shown; localization is now in scope) -->
+    <header class="site-nav">
+      <div class="site-nav__inner">
+        <a href="programs.html" aria-label="NYC Health — your programs">
+          <img class="site-nav__logo" src="visual elements/nyc-health-stacked.png" width="65" height="30" alt="NYC Health">
+        </a>
+        <div class="site-nav__actions">
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="lang-page__body" id="main" tabindex="-1">
+      <h1 class="lang-page__title"><span class="lang-page__lead">Get help with</span><br>health insurance,<br>eviction,<br>hospital bills,<br>and utilities.</h1>
+      <hr class="lang-page__rule">
+      <p class="field__label lang-page__label" id="langLabel">Select your preferred language to start</p>
+
+      <div class="combobox" id="langCombo">
+        <div class="combobox__trigger is-placeholder" role="combobox" tabindex="0"
+             aria-haspopup="listbox" aria-expanded="false" aria-controls="langListbox"
+             aria-labelledby="langLabel langValue">
+          <span class="combobox__value" id="langValue">Select language</span>
+          <svg class="combobox__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <ul class="listbox" id="langListbox" role="listbox" aria-label="Preferred language" tabindex="-1">
+          <li class="listbox__option" role="option" id="lang-0"  data-value="en"  aria-selected="false">English<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="listbox__option" role="option" id="lang-1"  data-value="es"  aria-selected="false">Spanish<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="listbox__option" role="option" id="lang-2"  data-value="zh"  aria-selected="false">Chinese (Traditional)<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="listbox__option" role="option" id="lang-3"  data-value="ru"  aria-selected="false">Russian<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="listbox__option" role="option" id="lang-4"  data-value="bn"  aria-selected="false">Bengali<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="listbox__option" role="option" id="lang-5"  data-value="ht"  aria-selected="false">Haitian Creole<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="listbox__option" role="option" id="lang-6"  data-value="ko"  aria-selected="false">Korean<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="listbox__option" role="option" id="lang-7"  data-value="ar"  aria-selected="false">Arabic<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="listbox__option" role="option" id="lang-8"  data-value="ur"  aria-selected="false">Urdu<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="listbox__option" role="option" id="lang-9"  data-value="fr"  aria-selected="false">French<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="listbox__option" role="option" id="lang-10" data-value="pl"  aria-selected="false">Polish<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+        </ul>
+      </div>
+      <p class="field__error" id="stepError" role="alert" data-for="langCombo" hidden></p>
+    </main>
+
+    <!-- Pinned footer -->
+    <footer class="lang-page__footer">
+      <div class="step__actions">
+        <button class="btn btn--secondary btn--back" type="button" id="backBtn">Back</button>
+        <button class="btn btn--primary btn--continue" type="button" id="continueBtn">Continue</button>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="scripts/a11y.js"></script>
+  <script src="scripts/combobox.js"></script>
+  <script src="scripts/language.js"></script>
+  <script src="scripts/banner.js"></script>
+</body>
+</html>

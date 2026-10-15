@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Profile created — NYC Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/interstitial.css">
+</head>
+<body>
+  <main class="interstitial" id="main">
+    <div class="interstitial__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <h1 class="interstitial__title">Your profile has been created.</h1>
+    <p class="interstitial__text" id="nextText" role="status" aria-live="polite">Let&rsquo;s get started.</p>
+  </main>
+
+  <script src="scripts/interstitial.js"></script>
+  <script src="scripts/pillars.js"></script>
+  <script>
+    (function () {
+      var first = window.Pillars ? Pillars.first() : null;
+      var url = first ? Pillars.entryFor(first) : 'dashboard.html';
+      if (first) document.getElementById('nextText').textContent = 'Let\u2019s start with ' + Pillars.labelFor(first) + '.';
+      Interstitial.show(); Interstitial.go(url, 1600);
+    })();
+  </script>
+</body>
+</html>

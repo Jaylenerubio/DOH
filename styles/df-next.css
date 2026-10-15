@@ -1,0 +1,114 @@
+/* =========================================================================
+   NYC DOH Affordability Navigator — Dollar For intake, "What's next"
+   (terminal step, no progress bar). Dark title + muted subtitle, three
+   numbered step cards, an "Important note" callout, and two stacked actions.
+   Depends on: tokens.css, components.css.
+   ========================================================================= */
+
+.df-next .step__body { padding-top: 56px; }        /* no progress bar above; ~64px header→title */
+.df-next__subtitle { display: block; color: var(--color-text-muted); }
+
+/* Balanced wrapping for the description. */
+.df-next .step__text { text-wrap: pretty; }
+
+/* Numbered step cards. */
+.nsteps {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);                             /* 16px between cards */
+}
+.nstep {
+  display: flex;
+  gap: var(--space-2);                             /* badge → body */
+  padding: var(--space-3);
+  background: var(--color-pillar-card);
+  border-radius: 24px;
+}
+.nstep__num {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--type-ui-16-family);
+  font-size: var(--type-ui-16-size);
+  line-height: 1;
+}
+.nstep__body { min-width: 0; }
+.nstep__title {
+  margin: 0;
+  font-family: var(--type-card-family);
+  font-weight: var(--type-card-weight);
+  font-size: var(--type-card-size);                /* Card/Title 20px */
+  line-height: var(--type-card-line-height);
+  color: var(--color-text);
+}
+.nstep__note {
+  margin: var(--space-1) 0 0;                       /* 8px below title */
+  font-family: var(--type-ui-16-family);
+  font-weight: var(--type-ui-16-weight);
+  font-size: var(--type-ui-16-size);
+  line-height: var(--type-ui-16-line-height);
+  color: var(--color-text-secondary);              /* grey #565656 */
+}
+.nstep__need {
+  margin: var(--space-2) 0 0;                       /* 16px below the note */
+  font-family: var(--type-ui-16-family);
+  font-size: var(--type-ui-16-size);
+  line-height: var(--type-ui-16-line-height);
+  color: var(--color-text);
+}
+.nstep__list {
+  margin: var(--space-1) 0 0;                       /* 8px below "You'll need:" */
+  padding-left: 20px;
+  list-style-type: disc;                            /* filled bullets */
+  font-family: var(--type-ui-16-family);
+  font-size: var(--type-ui-16-size);
+  line-height: var(--type-ui-16-line-height);
+  color: var(--color-text);
+}
+.nstep__list li { margin-top: 2px; }
+.nstep__list li::marker { color: var(--color-text); }   /* filled black bullets */
+
+/* "Important note" callout — light accent tint, brand-blue label. */
+.df-note {
+  margin-top: var(--space-5);                       /* 40px below step 3 */
+  padding: var(--space-3);
+  background: var(--color-accent-fill);             /* accent @ 10% */
+  border-radius: 24px;
+}
+/* 24px between the note and the footer/buttons section. */
+.df-next .step__body { padding-bottom: var(--space-3); }
+.df-note__title {
+  margin: 0 0 var(--space-1);
+  font-family: var(--type-ui-16-family);
+  font-size: var(--type-ui-16-size);
+  line-height: var(--type-ui-16-line-height);
+  color: var(--color-brand);
+ font-weight: 600; }
+.df-note__body {
+  margin: 0;
+  font-family: var(--type-ui-16-family);
+  font-weight: var(--type-ui-16-weight);
+  font-size: var(--type-ui-16-size);
+  line-height: var(--type-ui-16-line-height);
+  color: var(--color-text);
+}
+
+/* Footer: two full-width actions stacked. */
+.df-next__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: var(--space-2) var(--page-margin-x)
+           calc(var(--space-2) + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--color-neutral-200);
+  background: var(--color-bg);
+}

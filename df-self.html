@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Tell us about yourself — NYC Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/df-self.css">
+</head>
+<body>
+  <div class="step df-self">
+
+    <!-- Top banner -->
+    <div class="top-banner">
+      <div class="top-banner__inner">
+        <button class="top-banner__toggle" type="button" aria-expanded="false" aria-controls="govPanel">
+          <span>Official website of the City of New York</span>
+          <svg class="top-banner__caret" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 5 L7 9 L11 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="top-banner__panel" id="govPanel" hidden>
+        <div class="top-banner__panel-inner">
+          <div class="top-banner__block">
+            <h2 class="top-banner__heading">Official websites use .gov</h2>
+            <p class="top-banner__copy">A .gov website belongs to an official government organization in the United States.</p>
+          </div>
+          <div class="top-banner__block">
+            <h2 class="top-banner__heading">Secure .gov websites use HTTPS</h2>
+            <p class="top-banner__copy">A lock (<span aria-label="locked">&#128274;</span>) or https:// means you&rsquo;ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service navigation -->
+    <header class="site-nav">
+      <div class="site-nav__inner">
+        <a href="programs.html" aria-label="NYC Health — your programs">
+          <img class="site-nav__logo" src="visual elements/nyc-health-stacked.png" width="65" height="30" alt="NYC Health">
+        </a>
+        <div class="site-nav__actions">
+          <button class="site-nav__translate" type="button" aria-label="Translate this page">
+            <span class="site-nav__translate-label">English</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Progress: step 2 of 3 -->
+    <div class="step__progress" role="region" aria-label="Progress">
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="3" aria-valuenow="2" aria-label="Step 2 of 3">
+        <span class="progress__seg is-complete"></span>
+        <span class="progress__seg is-complete"></span>
+        <span class="progress__seg"></span>
+      </div>
+    </div>
+
+    <!-- Scrollable content -->
+    <main class="step__body" id="main" tabindex="-1">
+      <h1 class="step__title">Tell us about<br>yourself or the patient.</h1>
+
+      <div class="df-fields">
+
+
+        <!-- Household size -->
+        <div class="df-field">
+          <label class="field__label" id="householdLabel">How many people are in your household?</label>
+          <div class="df-stepper" role="group" aria-labelledby="householdLabel">
+            <button class="df-stepper__btn" type="button" data-step="-1" aria-label="Decrease household size">&minus;</button>
+            <span class="df-stepper__value" id="householdValue" aria-live="polite">0</span>
+            <button class="df-stepper__btn" type="button" data-step="1" aria-label="Increase household size">+</button>
+          </div>
+          <p class="field__help">Include everyone on your tax return, including dependents.</p>
+        </div>
+
+        <!-- Household income -->
+        <div class="df-field">
+          <label class="field__label" for="income">What is your total household income per year?</label>
+          <div class="df-money">
+            <span class="df-money__prefix" aria-hidden="true">$</span>
+            <input class="field__input df-money__input" id="income" type="text" inputmode="numeric" placeholder="00000" autocomplete="off" aria-describedby="incomeHelp">
+          </div>
+          <p class="field__help" id="incomeHelp">Include income before taxes for everyone on your tax return, like paychecks, Social Security, unemployment, disability, and child support.</p>
+        </div>
+
+        <!-- Insurance at time of care -->
+        <div class="df-field">
+          <label class="field__label" id="insuranceLabel">Did you have health insurance when you went to the hospital?</label>
+          <div class="choice-row" role="radiogroup" aria-labelledby="insuranceLabel">
+            <button class="choice-card" type="button" role="radio" aria-checked="false" data-value="yes">Yes</button>
+            <button class="choice-card" type="button" role="radio" aria-checked="false" data-value="no">No</button>
+            <button class="choice-card" type="button" role="radio" aria-checked="false" data-value="not-sure">Not sure</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Pinned footer: Back / Save and continue -->
+    <div class="step__footer">
+      <div class="step__actions">
+        <button class="btn btn--secondary btn--back" type="button" id="backBtn">Back</button>
+        <button class="btn btn--primary btn--continue" type="button" id="continueBtn">Save and continue</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="scripts/a11y.js"></script>
+  <script src="scripts/df-store.js"></script>
+  <script src="scripts/df-self.js"></script>
+  <script src="scripts/money.js"></script>
+  <script src="scripts/banner.js"></script>
+  <script src="scripts/nav-lang.js"></script>
+</body>
+</html>

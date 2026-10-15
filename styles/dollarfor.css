@@ -1,0 +1,70 @@
+/* =========================================================================
+   NYC DOH Affordability Navigator — Dollar For intake (hospital bill
+   forgiveness), step 1. Uses the shared .step scaffold + footer, but has no
+   progress bar, so the title is placed 94px (mobile) / 120px (tablet) below
+   the nav to match every other page title.
+   Depends on: tokens.css, components.css (load in that order).
+   ========================================================================= */
+
+/* Column body so the "may not qualify" notice follows the choice cards. */
+.df .step__body { padding-top: 56px; display: flex; flex-direction: column; }
+
+/* Balanced wrapping for the description. */
+.df .step__text { text-wrap: pretty; }
+
+/* Yes / No — big single-select choice cards, stacked full-width. The card
+   look/behaviour lives in components.css (.choice-card); here just the
+   layout + height. */
+.choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);                        /* 16px between cards */
+  margin-top: var(--space-3);                 /* 24px below the description */
+}
+.choice-list .choice-card { min-height: 108px; }
+
+/* "You may not qualify" notice — sits just below the Yes / No cards. Shown when
+   "No" is selected: it animates up slightly and fades into place. */
+.df-notice {
+  margin-top: 12px;                           /* 12px below the choice cards */
+  padding: var(--space-3);
+  background: var(--color-pillar-card);
+  border-radius: 24px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 450ms var(--ease-out), transform 450ms var(--ease-out);
+}
+.df-notice[hidden] { display: none; }
+.df-notice.is-shown { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .df-notice { transition: opacity 450ms var(--ease-out); transform: none; }
+}
+.df-notice__title {
+  margin: 0;
+  font-family: var(--type-ui-16-family);
+  font-weight: var(--type-ui-16-weight);
+  font-size: var(--type-ui-16-size);
+  line-height: var(--type-ui-16-line-height);
+  color: var(--color-text);
+}
+.df-notice__desc {
+  margin: 4px 0 0;                             /* 4px below the title */
+  font-family: var(--type-ui-16-family);
+  font-weight: var(--type-ui-16-weight);
+  font-size: var(--type-ui-16-size);
+  line-height: var(--type-ui-16-line-height);
+  color: var(--color-text-secondary);
+}
+
+/* ---- Mobile (<768px): Yes / No side by side, mobile-sized, 8px apart. ---- */
+@media (max-width: 767px) {
+  .choice-list { flex-direction: row; gap: var(--space-1); }   /* 8px between */
+  .choice-list .choice-card { min-height: 56px; padding: var(--space-1) var(--space-2); flex: 1 1 0; }   /* 56px — match the flow's buttons/fields */
+}
+
+/* ---- Tablet (≥768px): title 120px below the nav (gutters come from .step) - */
+@media (min-width: 768px) {
+}
+
+/* Title stays at H1 (32px) on every breakpoint and wraps naturally. */
+.dollarfor__title { font-size: var(--type-h1-size); line-height: var(--type-h1-line-height); letter-spacing: var(--type-h1-letter-spacing); text-wrap: pretty; max-width: 22ch; }

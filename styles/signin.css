@@ -1,0 +1,17 @@
+/* Sign in (self-service) — email OTP. Mock: any 6 digits work. */
+.signin .step__body { padding-top: 56px; }
+.signin .field { margin-top: var(--space-3); }
+.signin__code { letter-spacing: 0.3em; font-variant-numeric: tabular-nums; }
+.signin__alt {
+  margin: var(--space-2) 0 0;
+  font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height);
+  color: var(--color-text-secondary);
+}
+.signin__link { padding: 0; border: 0; background: none; cursor: pointer; font: inherit; color: var(--color-link); text-decoration: underline; min-height: 44px; }
+.signin__link:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset); border-radius: 4px; }
+
+/* Returning client */
+.returning__text { margin: 12px 0 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text); }
+.returning__text + .returning__text { margin-top: var(--space-2); }
+.returning__id { font-weight: 600; white-space: nowrap; }
+.returning__new { margin-top: var(--space-3); }

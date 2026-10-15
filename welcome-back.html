@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Welcome back — NYC Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/interstitial.css">
+</head>
+<body>
+  <main class="interstitial" id="main">
+    <div role="status" aria-live="polite"><h1 class="interstitial__title" id="title">Welcome back</h1></div>
+  </main>
+
+  <script src="scripts/interstitial.js"></script>
+  <script>
+    (function () {
+      var c = {}; try { c = JSON.parse(sessionStorage.getItem('nyc.contact') || '{}'); } catch (e) {}
+      if (c.firstName) document.getElementById('title').textContent = 'Welcome back, ' + c.firstName;
+      Interstitial.show(); Interstitial.go('dashboard.html', 1400);
+    })();
+  </script>
+</body>
+</html>

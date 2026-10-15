@@ -1,0 +1,13 @@
+/* =========================================================================
+   NYC DOH Affordability Navigator — Dollar For intake, "Tell us about the
+   bill" (step 1 of the 3-step progress). Uses the shared .step scaffold and
+   the shared .df-* form scaffold in components.css; only the Month/Year row
+   is page-specific.
+   ========================================================================= */
+
+/* Month / Year — two equal selects side by side. */
+.df-daterow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);                        /* 16px between the two */
+}

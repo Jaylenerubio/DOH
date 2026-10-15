@@ -1,0 +1,20 @@
+/* Health insurance — enrollment site (auto-matched by ZIP; picker to change). */
+.hi-site .step__body { padding-top: 56px; }
+.site-card { margin-top: var(--space-3); padding: var(--space-2) var(--space-3); background: var(--color-pillar-card); border-radius: 16px; }
+.site-card__name { margin: 0 0 4px; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); font-weight: 600; color: var(--color-text); }
+.site-card__addr { margin: 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text); }
+.hi-site__picker { margin-top: var(--space-3); }
+
+/* Site options carry their address on a second line; the selected check is grey. */
+.site-option { display: flex; flex-direction: column; gap: 2px; }
+.site-option__addr { font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); color: var(--color-text-secondary); }
+#siteList .listbox__check { color: var(--color-text-secondary); }
+
+/* "Selected" chip, top-right of the site card (grey, like the Not eligible chip). */
+.site-card--selected { position: relative; padding-right: 120px; }
+.site-card__chip {
+  position: absolute; top: var(--space-2); right: var(--space-2);
+  display: inline-flex; align-items: center; padding: 8px 16px; border-radius: 999px;
+  background: var(--color-neutral-200); color: var(--color-text);
+  font-family: var(--type-ui-14-family); font-size: var(--type-ui-14-size); line-height: 1; font-weight: 400;
+}

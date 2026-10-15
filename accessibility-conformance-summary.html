@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Connector Accessibility</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  /* ── Tokens: light (bare :root = the un-stamped default) ─────────────── */
+  :root {
+    --ground:   #F5F7FA;
+    --surface:  #FFFFFF;
+    --surface-2:#EDF1F6;
+    --ink:      #14212C;
+    --ink-2:    #46566A;
+    --ink-3:    #5B6779;
+    --brand:    #225E7C;   /* NYC Health brand — the product's own accent  */
+    --navy:     #002D62;   /* deep navy — structural headings               */
+    --line:     #DDE4EC;
+    --line-2:   #C7D1DC;
+    --code-bg:  #EBF0F5;
+    --code-ink: #1B3D52;
+
+    --ok:       #1C7A4B;  --ok-bg:  #E4F2EA;  --ok-line:#BFE0CD;
+    --partial:  #8A5300;  --part-bg:#F6EAD5;  --part-line:#E7D3AE;
+    --defer:    #566274;  --def-bg: #E6EBF1;  --def-line:#CFD8E2;
+
+    --shadow: 0 1px 2px rgba(20,33,44,.05), 0 8px 26px -14px rgba(20,33,44,.22);
+    --measure: 66ch;
+    --radius: 12px;
+  }
+  /* System-dark (no explicit choice) + explicit dark both redefine tokens */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:   #0C141B;
+      --surface:  #131E28;
+      --surface-2:#1A2833;
+      --ink:      #E7EEF4;
+      --ink-2:    #A9B7C6;
+      --ink-3:    #8595A6;
+      --brand:    #78ABCB;
+      --navy:     #AFCBE0;
+      --line:     #263540;
+      --line-2:   #33454F;
+      --code-bg:  #0E1C26;
+      --code-ink: #9FD0EA;
+
+      --ok:      #5FCB92;  --ok-bg: #16271E;  --ok-line:#28402F;
+      --partial: #E2A952;  --part-bg:#2A2214;  --part-line:#43331A;
+      --defer:   #96A5B6;  --def-bg: #1E2831;  --def-line:#33424F;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px -16px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:   #0C141B;
+    --surface:  #131E28;
+    --surface-2:#1A2833;
+    --ink:      #E7EEF4;
+    --ink-2:    #A9B7C6;
+    --ink-3:    #8595A6;
+    --brand:    #78ABCB;
+    --navy:     #AFCBE0;
+    --line:     #263540;
+    --line-2:   #33454F;
+    --code-bg:  #0E1C26;
+    --code-ink: #9FD0EA;
+    --ok:      #5FCB92;  --ok-bg: #16271E;  --ok-line:#28402F;
+    --partial: #E2A952;  --part-bg:#2A2214;  --part-line:#43331A;
+    --defer:   #96A5B6;  --def-bg: #1E2831;  --def-line:#33424F;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px -16px rgba(0,0,0,.7);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: color-mix(in srgb, var(--brand) 26%, transparent); }
+
+  a { color: var(--brand); text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── Header ──────────────────────────────────────────────────────────── */
+  header.masthead {
+    border-bottom: 1px solid var(--line);
+    background:
+      radial-gradient(120% 140% at 100% -20%, color-mix(in srgb, var(--brand) 9%, transparent), transparent 60%),
+      var(--surface);
+  }
+  .top-strip {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .org {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 700; letter-spacing: .01em; color: var(--navy);
+  }
+  .org .mark {
+    display: inline-grid; place-items: center;
+    width: 30px; height: 30px; border-radius: 7px;
+    background: var(--brand); color: #fff; font-weight: 800; font-size: 13px;
+    letter-spacing: .02em;
+  }
+  .org small { display: block; font-weight: 400; color: var(--ink-3); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
+
+  .theme-toggle {
+    font: inherit; font-size: 13px; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 7px 12px; border-radius: 999px;
+    background: var(--surface-2); color: var(--ink-2);
+    border: 1px solid var(--line-2); cursor: pointer;
+    transition: background .15s ease, color .15s ease;
+  }
+  .theme-toggle:hover { color: var(--ink); }
+  .theme-toggle .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--brand); }
+
+  .hero { padding: 40px 0 34px; }
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--brand); margin: 0 0 14px;
+  }
+  h1 {
+    font-size: clamp(30px, 5vw, 46px); line-height: 1.05; letter-spacing: -.02em;
+    font-weight: 800; margin: 0 0 6px; color: var(--ink); text-wrap: balance;
+    max-width: 20ch;
+  }
+  .subline { font-size: clamp(17px,2.4vw,20px); color: var(--navy); font-weight: 600; margin: 0 0 20px; }
+  .lead { max-width: var(--measure); color: var(--ink-2); font-size: 17px; margin: 0 0 20px; }
+  .lead strong { color: var(--ink); font-weight: 600; }
+
+  .verdict {
+    max-width: var(--measure);
+    margin: 0 0 26px;
+    padding: 15px 18px;
+    border: 1px solid var(--ok-line);
+    border-left: 3px solid var(--ok);
+    background: var(--ok-bg);
+    border-radius: 10px;
+    font-size: 15.5px; line-height: 1.55;
+    color: var(--ink);
+  }
+  .verdict b { color: var(--ok); font-weight: 700; }
+
+  .badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+  .badge {
+    display: inline-flex; align-items: baseline; gap: 8px;
+    padding: 9px 14px 9px 12px; border-radius: 10px;
+    background: var(--surface); border: 1px solid var(--line-2);
+    box-shadow: var(--shadow);
+  }
+  .badge b { color: var(--navy); font-weight: 700; font-size: 15px; }
+  .badge span { color: var(--ink-3); font-size: 12.5px; }
+  .badge .tick { color: var(--ok); font-weight: 700; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; font-size: 13.5px; color: var(--ink-2); }
+  .legend .k { display: inline-flex; align-items: center; gap: 8px; }
+
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; font-weight: 600; letter-spacing: .01em;
+    padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+    border: 1px solid transparent;
+  }
+  .pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .9; }
+  .pill.ok      { color: var(--ok);      background: var(--ok-bg);   border-color: var(--ok-line); }
+  .pill.partial { color: var(--partial); background: var(--part-bg); border-color: var(--part-line); }
+  .pill.defer   { color: var(--defer);   background: var(--def-bg);  border-color: var(--def-line); }
+
+  /* ── Sections ────────────────────────────────────────────────────────── */
+  main { padding: 8px 0 40px; }
+  section { padding: 34px 0; border-top: 1px solid var(--line); }
+  section:first-child { border-top: 0; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; margin: 0 0 6px; }
+  .sec-num {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 600;
+    color: var(--brand); flex: 0 0 auto; padding-top: 2px;
+  }
+  h2 { font-size: clamp(21px, 3vw, 27px); line-height: 1.15; letter-spacing: -.015em; font-weight: 700; margin: 0; color: var(--ink); text-wrap: balance; }
+  .sec-intro { max-width: var(--measure); color: var(--ink-2); margin: 10px 0 22px; padding-left: 38px; }
+  @media (max-width: 640px){ .sec-intro { padding-left: 0; } .sec-head { gap: 10px; } }
+
+  h3 { font-size: 15px; font-weight: 700; letter-spacing: .01em; margin: 26px 0 12px; color: var(--navy); }
+
+  /* ── Table ───────────────────────────────────────────────────────────── */
+  .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+  table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14.5px; }
+  caption { text-align: left; padding: 0; }
+  thead th {
+    text-align: left; vertical-align: bottom;
+    font-size: 11.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--ink-3); background: var(--surface-2);
+    padding: 12px 16px; border-bottom: 1px solid var(--line-2); position: sticky; top: 0;
+  }
+  tbody td { padding: 13px 16px; border-top: 1px solid var(--line); vertical-align: top; }
+  tbody tr:first-child td { border-top: 0; }
+  tbody th[scope="row"] { text-align: left; padding: 13px 16px; border-top: 1px solid var(--line); vertical-align: top; font-weight: 600; color: var(--ink); width: 27%; }
+  tbody tr:hover td, tbody tr:hover th { background: color-mix(in srgb, var(--brand) 4%, transparent); }
+
+  code, .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+  td .mk { display: block; margin: 0 0 3px; }
+  .mk code {
+    font-size: 12.5px; line-height: 1.5;
+    background: var(--code-bg); color: var(--code-ink);
+    padding: 1.5px 6px; border-radius: 5px; word-break: break-word;
+  }
+  td .note { color: var(--ink-3); font-size: 12.5px; display: block; margin-top: 4px; }
+  .sc { display: flex; flex-wrap: wrap; gap: 5px; }
+  .sc b {
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 500;
+    color: var(--ink-2); background: var(--surface-2);
+    border: 1px solid var(--line); border-radius: 5px; padding: 2px 6px; white-space: nowrap;
+  }
+
+  /* ── Contrast swatches ───────────────────────────────────────────────── */
+  .swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 14px; }
+  .sw { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); box-shadow: var(--shadow); }
+  .sw .demo { padding: 18px 16px; font-size: 18px; font-weight: 600; }
+  .sw .meta { padding: 11px 16px 13px; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .sw .meta .hex { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-3); }
+  .sw .ratio { font-weight: 700; font-size: 15px; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .sw .ratio small { display:block; font-weight: 500; font-size: 11px; color: var(--ok); letter-spacing: .04em; text-transform: uppercase; }
+  /* fixed demo grounds (identical in both themes — they show the real app colors) */
+  .d-white { background:#fff; }
+  .d-ink   { color:#191919; }  .d-sec { color:#565656; } .d-mut { color:#767676; }
+  .d-brand { background:#225E7C; color:#fff; }
+
+  /* ── Cards / grids ───────────────────────────────────────────────────── */
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 18px 16px; box-shadow: var(--shadow); }
+  .card h3 { margin: 0 0 6px; font-size: 15px; font-weight: 700; color: var(--navy); }
+  .card p { margin: 0; color: var(--ink-2); font-size: 14px; }
+  .card .sc { margin-top: 11px; }
+
+  /* ── Standards matrix ────────────────────────────────────────────────── */
+  .std { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 16px; }
+  .std-col { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); overflow: hidden; }
+  .std-col > header { padding: 16px 18px; border-bottom: 1px solid var(--line); background: var(--surface-2); }
+  .std-col > header .lvl { font-weight: 800; color: var(--navy); font-size: 17px; }
+  .std-col > header .yr { color: var(--ink-3); font-size: 12.5px; font-family: "IBM Plex Mono", monospace; }
+  .std-col > header .role { display:block; margin-top: 4px; color: var(--ink-2); font-size: 13px; }
+  .std-col ul { list-style: none; margin: 0; padding: 10px 8px 12px; }
+  .std-col li { display: flex; gap: 10px; align-items: baseline; padding: 7px 10px; border-radius: 8px; font-size: 13.5px; color: var(--ink-2); }
+  .std-col li:hover { background: color-mix(in srgb, var(--brand) 5%, transparent); }
+  .std-col li b { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink); min-width: 46px; font-weight: 600; }
+  .std-col li .st { margin-left: auto; }
+
+  /* ── Callout (gaps) ──────────────────────────────────────────────────── */
+  .callout { border: 1px solid var(--part-line); background: var(--part-bg); border-radius: var(--radius); padding: 4px 20px 6px; }
+  .callout ul { list-style: none; margin: 0; padding: 0; }
+  .callout li { padding: 15px 0; border-top: 1px solid color-mix(in srgb, var(--partial) 22%, transparent); display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+  .callout li:first-child { border-top: 0; }
+  .callout li p { margin: 0; color: var(--ink-2); font-size: 14.5px; }
+  .callout li p b { color: var(--ink); font-weight: 700; }
+
+  /* ── Footer ──────────────────────────────────────────────────────────── */
+  footer { border-top: 1px solid var(--line); padding: 26px 0 44px; color: var(--ink-3); font-size: 13px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; align-items: baseline; }
+  footer .disclaimer { max-width: 62ch; }
+
+  .u { color: var(--ink); font-weight: 600; }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="top-strip">
+      <div class="org">
+        <span class="mark" aria-hidden="true">NYC</span>
+        <span>NYC Health · DOHMH<small>NYC Health and Affordability Connector</small></span>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+        <span class="dot" aria-hidden="true"></span><span id="themeLabel">Theme</span>
+      </button>
+    </div>
+
+    <div class="hero">
+      <p class="eyebrow">Accessibility · WCAG 2.0 / 2.1 / 2.2 AA</p>
+      <h1>Accessibility Conformance Summary</h1>
+      <p class="subline">NYC Health and Affordability Connector prototype — self-service (New Yorker) and CHW channels: intake, dashboard, and the Hospital bills, Health insurance, Eviction, Energy discounts &amp; Tax credits flows</p>
+      <p class="lead">
+        This summarizes the accessibility work built into the prototype and maps it to the
+        success criteria that govern <strong>AA conformance for public-sector civic technology</strong>.
+        It is a <strong>code-level conformance pass, now backed by an automated scan</strong> — every
+        interactive control has an accessible name, role, and state; it is not a certified audit.
+        Where something is partial, deferred, or a placeholder, it is marked as such rather than glossed.
+      </p>
+
+      <p class="verdict"><b>Bottom line —</b> the prototype addresses the AA success criteria in code and
+        passes axe-core with <b>0 violations across 40 page states at phone and desktop widths</b>
+        (see <a href="#scan">Automated verification</a>). What remains is manual screen-reader testing,
+        the carry-forwards in <a href="#gaps">Known gaps</a>, and the placeholders the vendor must
+        replace in the production build.</p>
+      <p class="verdict" style="margin-top:12px"><b>Updated Oct&nbsp;14,&nbsp;2026 —</b> reflects the self-service
+        channel: home → programs → privacy → contact (returning-client check) → contact method → dashboard,
+        with sign-in by one-time code, a header Menu / language panel, a profile page, dashboard status
+        chips, and “View details” handoff views. See <a href="#changes">What changed</a> at the end.</p>
+
+      <div class="badges">
+        <span class="badge"><span class="tick" aria-hidden="true">✓</span> <b>WCAG&nbsp;2.0&nbsp;AA</b> <span>Section&nbsp;508 floor</span></span>
+        <span class="badge"><span class="tick" aria-hidden="true">✓</span> <b>WCAG&nbsp;2.1&nbsp;AA</b> <span>civic-tech baseline</span></span>
+        <span class="badge"><span class="tick" aria-hidden="true">✓</span> <b>WCAG&nbsp;2.2&nbsp;AA</b> <span>latest, 2023</span></span>
+      </div>
+
+      <div class="legend" aria-hidden="false">
+        <span class="k"><span class="pill ok">Built</span> implemented &amp; verified in code</span>
+        <span class="k"><span class="pill partial">Partial</span> present, needs follow-up</span>
+        <span class="k"><span class="pill defer">Deferred</span> planned, not yet built</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- 1 · Interactive elements ------------------------------------------- -->
+  <section id="inventory" aria-labelledby="h-inventory">
+    <div class="sec-head"><span class="sec-num" aria-hidden="true">01</span><h2 id="h-inventory">Interactive elements — ARIA &amp; screen-reader treatment</h2></div>
+    <p class="sec-intro">Every interactive control carries a programmatic name, role, and state. Native
+      elements (buttons, checkboxes, radios, selects, inputs) are used wherever possible so the browser
+      supplies behavior for free; custom widgets follow the WAI-ARIA authoring patterns. Rows marked
+      <em>self</em> exist only in the self-service channel; <em>CHW</em> only in the staff channel.</p>
+
+    <div class="table-scroll">
+      <table>
+        <caption class="mono" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Interactive elements and their accessibility markup</caption>
+        <thead>
+          <tr><th scope="col">Element</th><th scope="col">Accessible name / role / state</th><th scope="col">Satisfies</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Site logo link</th>
+            <td><span class="mk"><code>&lt;a aria-label="NYC Health — your dashboard"&gt;</code> once a record exists; <code>"— home"</code> before (self)</span><span class="mk"><code>&lt;img alt="NYC Health"&gt;</code> (stacked mark, 30px)</span><span class="note">CHW channel returns to the programs hub</span></td>
+            <td><div class="sc"><b>2.4.4</b><b>4.1.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Step progress indicator</th>
+            <td><span class="mk"><code>role="progressbar"</code> + <code>aria-valuemin/​max/​now</code> + <code>aria-label="Step 2 of 3"</code></span><span class="mk">wrapper is a <code>role="region" aria-label="Progress"</code> landmark</span><span class="note">3 steps in self-service (privacy → contact → contact method); 4 in CHW (adds review)</span></td>
+            <td><div class="sc"><b>1.3.1</b><b>2.4.1</b><b>4.1.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Header Menu &amp; English buttons <span class="note" style="display:inline">(self)</span></th>
+            <td><span class="mk"><code>&lt;button aria-expanded aria-controls&gt;</code>; visible label “Menu” / “English” becomes “Close” while open — the visible text <em>is</em> the accessible name</span><span class="mk">hamburger lines and translate icon are <code>aria-hidden</code>; the icon morph is decorative</span><span class="note">while a panel is open every other nav item is removed from the DOM flow (<code>display:none</code>), so there is one live control in the header</span></td>
+            <td><div class="sc"><b>2.5.3</b><b>4.1.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Menu / language panels <span class="note" style="display:inline">(self)</span></th>
+            <td><span class="mk"><code>role="dialog" aria-modal="true" aria-label="Account menu" / "Choose a language"</code></span><span class="mk">focus moves to the first item on open; Tab / Shift+Tab loop between the button and the panel; Esc, Close, a link, or the panel’s empty area closes it and returns focus to the button</span><span class="mk">language rows: <code>role="listbox"</code> ▸ <code>&lt;button role="option" aria-selected&gt;</code>; native name carries <code>lang="es"</code> etc. so it is read in-language; current row is tinted <em>and</em> checked, with “(current)” as sr-only text</span><span class="note">choosing a language is announced via the shared live region. While open: the rest of the page is <code>inert</code> + <code>aria-hidden</code>, the body is pinned (scroll lock holds on iOS), the other header buttons fade out in place and leave the tab order, Arabic/Urdu names carry <code>dir="rtl"</code>, resizing past 1024px or a back-forward-cache restore closes the panel</span></td>
+            <td><div class="sc"><b>1.3.1</b><b>2.1.2</b><b>2.4.3</b><b>3.1.2</b><b>4.1.2</b><b>4.1.3</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Desktop nav links <span class="note" style="display:inline">(self, ≥1024px)</span></th>
+            <td><span class="mk">“My profile” / “Sign out” as plain <code>&lt;a&gt;</code>s, 44px tall; the hamburger is hidden at this width</span><span class="note">Sign out clears the session and goes home</span></td>
+            <td><div class="sc"><b>2.4.4</b><b>2.5.8</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Program cards <span class="note" style="display:inline">(programs page)</span></th>
+            <td><span class="mk"><code>role="group" aria-labelledby="stepTitle"</code></span><span class="mk">each <code>&lt;button aria-pressed&gt;</code>, toggled in JS</span><span class="note">CHW: screened pillars are <code>disabled aria-disabled="true"</code> with a visible “Screened” badge in the name</span></td>
+            <td><div class="sc"><b>1.3.1</b><b>4.1.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Dashboard program cards <span class="note" style="display:inline">(self)</span></th>
+            <td><span class="mk">list under an sr-only <code>&lt;h2&gt;Your programs&lt;/h2&gt;</code>; each card titled by an <code>&lt;h3&gt;</code>, icon <code>aria-hidden</code></span><span class="mk">status chip is plain text in the card (In progress · Screened · Awaiting response · Submitted · Not eligible), followed by a dated status sentence — state is never colour alone</span><span class="mk">CTAs are real buttons/links whose label names the action: Get started · Continue · Start your application · View details</span></td>
+            <td><div class="sc"><b>1.3.1</b><b>1.4.1</b><b>2.4.4</b><b>2.4.6</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Status chips — contrast</th>
+            <td><span class="mk">In progress <code>#5C3D00/#F8ECCE</code> 8.4:1 · Screened &amp; Submitted <code>#006333/#E2F2D5</code> 6.3:1 · Awaiting response <code>#1F4B66/#E3ECF3</code> 7.8:1 · Not eligible <code>#191919/#EEE</code> 13.3:1</span></td>
+            <td><div class="sc"><b>1.4.3</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Answer chips <span class="note" style="display:inline">(Yes/No, Health insurance, utility)</span></th>
+            <td><span class="mk">single-select: <code>role="radiogroup"</code> ▸ <code>role="radio" aria-checked</code></span><span class="mk">multi-select: <code>role="group"</code> ▸ <code>role="checkbox" aria-checked</code></span><span class="note">each group is a <code>&lt;fieldset&gt;</code> with a real <code>&lt;legend&gt;</code></span></td>
+            <td><div class="sc"><b>1.3.1</b><b>4.1.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Contact-method choice</th>
+            <td><span class="mk">native <code>&lt;input type="radio"&gt;</code> in <code>&lt;label&gt;</code>, wrapped in <code>role="radiogroup"</code></span><span class="note">Text me / Call me; on selection all text — value included — moves to <code>#191919</code></span></td>
+            <td><div class="sc"><b>1.3.1</b><b>1.4.3</b><b>4.1.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Eviction &amp; consent checkboxes</th>
+            <td><span class="mk">native <code>&lt;input type="checkbox"&gt;</code> in <code>&lt;label&gt;</code></span><span class="mk">eviction list is a <code>&lt;fieldset&gt;</code> with legend “Are any of the following situations happening to you?”</span></td>
+            <td><div class="sc"><b>1.3.1</b><b>3.3.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Household stepper <span class="note" style="display:inline">(Hospital bills &amp; Energy discounts)</span></th>
+            <td><span class="mk"><code>role="group" aria-label</code>; ± buttons <code>aria-label="Increase / Decrease…"</code>; value <code>&lt;output aria-live="polite"&gt;</code></span><span class="note">starts at 0 = unanswered; the income question is revealed at ≥1 and its threshold text updates live</span></td>
+            <td><div class="sc"><b>4.1.2</b><b>4.1.3</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Helper text</th>
+            <td><span class="mk">always shown in full as a <code>&lt;p class="field__help"&gt;</code>, tied to its input or date group with <code>aria-describedby</code> (added Oct 14)</span><span class="note">the former “Read more / less” truncation was removed Oct 14 — one less control, no hidden instructions</span></td>
+            <td><div class="sc"><b>3.3.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Searchable combobox <span class="note" style="display:inline">(language, programs)</span></th>
+            <td><span class="mk"><code>&lt;input role="combobox" aria-autocomplete="list" aria-expanded aria-controls&gt;</code></span><span class="mk"><code>role="listbox"</code> ▸ <code>role="option" aria-selected</code>; programs list <code>aria-multiselectable</code></span><span class="note">typing filters options; ↓/↑ move through visible ones via <code>aria-activedescendant</code>; Esc clears then closes. The listbox is portaled to <code>&lt;body&gt;</code>, so it sits outside a landmark while open (axe best-practice “region”, not a WCAG failure)</span></td>
+            <td><div class="sc"><b>2.1.1</b><b>4.1.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Selected-program pills</th>
+            <td><span class="mk"><code>&lt;ul aria-live="polite"&gt;</code> of chosen programs; remove <code>&lt;button aria-label="Remove …"&gt;</code></span><span class="note">44×44 hit area on a visually compact pill</span></td>
+            <td><div class="sc"><b>2.5.8</b><b>4.1.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Text fields (contact, sign-in, profile)</th>
+            <td><span class="mk">native <code>&lt;label&gt;</code> + <code>autocomplete</code> (given-name, family-name, bday, postal-code, tel, email, <b>one-time-code</b>), <code>inputmode</code>, <code>type</code></span><span class="note">light input masks (DOB, zip, phone) keep values in the shape the placeholder shows; the profile and intake review fields had a conflicting <code>autocomplete="off"</code> removed Oct 14</span></td>
+            <td><div class="sc"><b>1.3.5</b><b>3.3.2</b><b>4.1.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Sign-in by one-time code <span class="note" style="display:inline">(self)</span></th>
+            <td><span class="mk">two <code>&lt;section&gt;</code>s (contact details → code), one shown at a time; each with its own <code>&lt;h1&gt;</code> and <code>role="alert"</code> error</span><span class="mk">code field: <code>inputmode="numeric" autocomplete="one-time-code"</code>, 6 digits; “Verify another way” swaps phone ⇄ email and refocuses</span><span class="note">the destination is masked — <code>(•••) •••-2222</code> or <code>••na@example.com</code> — in <code>&lt;strong&gt;</code> with <code>white-space:nowrap</code> so it is read as one token; Back is a real <code>&lt;button&gt;</code></span></td>
+            <td><div class="sc"><b>1.3.5</b><b>2.4.3</b><b>3.3.1</b><b>3.3.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Returning-client interrupt <span class="note" style="display:inline">(self)</span></th>
+            <td><span class="mk">“Looks like you’ve been here before” page; Send code is primary, “Not you? Continue as a new client” is a link</span><span class="note">reached automatically when the contact details match an existing record; the user is told why before any code is sent</span></td>
+            <td><div class="sc"><b>3.2.2</b><b>3.3.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Profile page <span class="note" style="display:inline">(self)</span></th>
+            <td><span class="mk">one card: labelled native inputs (read-only until “Edit”), contact-method <code>&lt;select&gt;</code>; Edit ⇄ Done toggles and moves focus to the first field</span><span class="mk">“Back to dashboard” link above the <code>&lt;h1&gt;</code>, 44px tall, arrow icon <code>aria-hidden</code></span></td>
+            <td><div class="sc"><b>1.3.1</b><b>2.4.3</b><b>3.3.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Dollar inputs</th>
+            <td><span class="mk"><code>inputmode="numeric"</code>; thousands separators inserted live (20000 → 20,000) with the caret preserved</span></td>
+            <td><div class="sc"><b>3.3.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Selects &amp; bill-date pair</th>
+            <td><span class="mk"><code>&lt;label for&gt;</code>; date pair <code>role="group" aria-labelledby</code>; per-select <code>aria-label="Bill month / year"</code></span></td>
+            <td><div class="sc"><b>1.3.1</b><b>3.3.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Copy-to-clipboard buttons</th>
+            <td><span class="mk">visible “Copy” ⇄ “Copied”; <code>aria-label="Copy phone number"</code> names what is copied</span><span class="note">a live region announces the copy (label swap alone is silent); the field sizes to its content at every width and sits under its label on every page</span></td>
+            <td><div class="sc"><b>4.1.2</b><b>4.1.3</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Edit buttons &amp; review sections</th>
+            <td><span class="mk">visible “Edit” label + <code>aria-hidden</code> icon; Edit focuses the first field</span><span class="mk"><code>&lt;section aria-labelledby&gt;</code> + <code>&lt;h2&gt;</code>; editable answers are labelled native controls, not read-only text</span></td>
+            <td><div class="sc"><b>1.3.1</b><b>2.4.4</b><b>2.5.3</b><b>3.3.2</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Interstitials <span class="note" style="display:inline">(Profile created · Welcome back · Creating record · All set · Starting…)</span></th>
+            <td><span class="mk"><code>role="status" aria-live="polite"</code> wrapper around a real <code>&lt;h1&gt;</code></span><span class="note">fade 200ms / hold 1.4–1.6s then auto-advance; <code>prefers-reduced-motion</code> removes the fades. “Profile created” names the first program the user chose before opening it</span></td>
+            <td><div class="sc"><b>2.3.3</b><b>4.1.3</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Handoff pages &amp; “View details”</th>
+            <td><span class="mk">end of screening: primary “Start your application” (partner programs) or “Return to dashboard”; “Start / Finish your application” opens the partner site in a new tab and carries sr-only “(opens in new tab)”</span><span class="mk">from the dashboard: “Back to dashboard” link above the <code>&lt;h1&gt;</code>; after applying, step 1 of the list is marked done with a check icon and sr-only “Done:”; referral programs show a dated sentence and no footer</span><span class="note">Hospital bills “No” on the first question lands on “Need to resolve a medical bill?” — same template as the other not-eligible pages (external link with sr-only new-tab hint, label above a copy field). CHW “Open client record” is hidden in the self channel</span></td>
+            <td><div class="sc"><b>1.3.1</b><b>2.4.4</b><b>2.4.6</b><b>3.2.5</b></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Supporting structure &amp; announcements</h3>
+    <div class="grid2">
+      <div class="card"><h3>Landmarks &amp; headings</h3><p>Every page exposes a <code>banner</code> header, a <code>&lt;main id="main"&gt;</code> region and (where present) a labelled Progress region; section titles are <code>&lt;h2&gt;</code>s and every question group is a <code>&lt;fieldset&gt;</code>/<code>&lt;legend&gt;</code>, giving a navigable outline. axe reports no content outside a landmark.</p><div class="sc"><b>1.3.1</b><b>2.4.1</b></div></div>
+      <div class="card"><h3>Status messages</h3><p>A shared polite live region (<code>A11y.announce()</code>) voices state changes with no focus move — “Copied”, the record-check outcome, a language choice, the next program being started.</p><div class="sc"><b>4.1.3</b></div></div>
+      <div class="card"><h3>State not by colour alone</h3><p>Selected chips change border <em>and</em> weight; dashboard status is a text chip plus a dated sentence; the current language is tinted <em>and</em> checked; a completed handoff step is checked <em>and</em> reworded.</p><div class="sc"><b>1.3.1</b><b>1.4.1</b></div></div>
+      <div class="card"><h3>Focus management</h3><p>Validation errors move focus to the offending control; Edit moves focus to the first editable field; opening a header panel moves focus into it and closing returns it to the button; the searchable combobox keeps focus in its input while the list is open.</p><div class="sc"><b>2.4.3</b></div></div>
+    </div>
+  </section>
+
+  <!-- 2 · Titles / contrast ---------------------------------------------- -->
+  <section id="titles" aria-labelledby="h-titles">
+    <div class="sec-head"><span class="sec-num" aria-hidden="true">02</span><h2 id="h-titles">Page titles — the two-tone treatment &amp; color contrast</h2></div>
+    <p class="sec-intro">Several titles pair a black primary line with a muted grey secondary line
+      (the dashboard and the “What’s next” screens on every program). The grey is presentational
+      only — the title is a single real <code>&lt;h1&gt;</code> with the muted phrase as an inline
+      <code>&lt;span&gt;</code>, so structure survives for assistive tech. Every text color clears the
+      <span class="u">4.5:1</span> AA minimum for body text.</p>
+
+    <div class="swatches">
+      <div class="sw">
+        <div class="demo d-white d-ink">Primary title</div>
+        <div class="meta"><span class="hex">#191919 on&nbsp;#FFF</span><span class="ratio">16.9:1<small>AAA</small></span></div>
+      </div>
+      <div class="sw">
+        <div class="demo d-white d-sec">Body / description</div>
+        <div class="meta"><span class="hex">#565656 on&nbsp;#FFF</span><span class="ratio">7.3:1<small>AAA</small></span></div>
+      </div>
+      <div class="sw">
+        <div class="demo d-white d-mut">Muted title line</div>
+        <div class="meta"><span class="hex">#767676 on&nbsp;#FFF</span><span class="ratio">4.5:1<small>AA</small></span></div>
+      </div>
+      <div class="sw">
+        <div class="demo d-brand">Button label</div>
+        <div class="meta"><span class="hex">#FFF on&nbsp;#225E7C</span><span class="ratio">7.1:1<small>AAA</small></span></div>
+      </div>
+    </div>
+    <p class="sec-intro" style="margin-top:20px">The muted grey was deliberately darkened from
+      <code>#939393</code> (which failed at ~3:1) to <code>#767676</code> so the two-tone titles meet
+      <span class="u">1.4.3 Contrast (Minimum)</span> exactly. Dashboard card descriptions and status
+      lines use <code>#565656</code> at 18px. Only two font weights are used (400 / 600); no bold.</p>
+  </section>
+
+  <!-- 3 · Always-enabled Continue ------------------------------------------ -->
+  <section id="disabled" aria-labelledby="h-disabled">
+    <div class="sec-head"><span class="sec-num" aria-hidden="true">03</span><h2 id="h-disabled">“Continue” is never disabled — errors explain themselves</h2></div>
+    <p class="sec-intro">Gated “Continue” buttons don’t use the native <code>disabled</code> attribute —
+      which drops a control out of the tab order and leaves it silent. They stay enabled; an incomplete
+      step is answered with an inline message instead of a dead button.</p>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>How it works</h3>
+        <p>Pressing Continue (or Send code / Verify) on an incomplete step calls <code>A11y.stepError()</code>: a visible
+          <code>role="alert"</code> message appears (“Select at least one option to continue”, “Enter the 6-digit
+          code we sent you”, …), the alert text is announced, and focus moves to
+          the offending control. Making a valid choice hides the message. Multi-field forms use per-field
+          <code>aria-invalid</code> + <code>aria-describedby</code> instead.</p>
+        <div class="sc"><b>3.3.1</b><b>3.3.2</b><b>4.1.2</b></div>
+      </div>
+      <div class="card">
+        <h3>Why not native <code>disabled</code>?</h3>
+        <p>A natively-disabled button is removed from focus order and announces nothing, so a
+          screen-reader user can’t discover it or learn <em>why</em> they’re blocked. Keeping the button
+          live and answering with a message keeps the block discoverable and self-describing.</p>
+        <div class="sc"><b>2.1.1</b><b>4.1.3</b></div>
+      </div>
+    </div>
+    <p class="sec-intro" style="margin-top:18px">Native <code>disabled</code> is reserved for genuine
+      bound-limit or inert controls: the stepper’s − at 0 and + at 8 (20% opacity), and screened
+      program cards in the CHW channel.</p>
+  </section>
+
+  <!-- 4 · Rest of the AA story -------------------------------------------- -->
+  <section id="more" aria-labelledby="h-more">
+    <div class="sec-head"><span class="sec-num" aria-hidden="true">04</span><h2 id="h-more">The rest of the AA story</h2></div>
+    <p class="sec-intro">Beyond the three areas above, the prototype addresses the operable and
+      perceivable criteria that a full AA review checks.</p>
+    <div class="grid2">
+      <div class="card"><h3>One unified focus ring</h3><p>Every control shares a single focus indicator (<code>--focus-ring</code>: 3px brand <code>#225E7C</code>, 2px offset, ~7:1 on white), including the header panels and language rows.</p><div class="sc"><b>2.4.7</b><b>1.4.11</b></div></div>
+      <div class="card"><h3>Keyboard operable</h3><p>All flows work by keyboard, including the header panels (Tab loop, Esc), the searchable combobox (type to filter, ↓/↑, Enter, Esc) and the multi-select program list, which stays open between picks. No keyboard traps: a modal panel always has a reachable Close.</p><div class="sc"><b>2.1.1</b><b>2.1.2</b></div></div>
+      <div class="card"><h3>Reduced motion</h3><p><code>prefers-reduced-motion</code> removes the interstitial fades, the hamburger/translate icon morph and panel slide, slows the spinner, and disables card press scaling. All nav motion is 0.3s on one easing curve; nothing flashes.</p><div class="sc"><b>2.3.3</b></div></div>
+      <div class="card"><h3>Target sizes</h3><p>Buttons and chips are ≥54px tall; stepper ± 56px; header Menu / English / nav links and “Back to dashboard” 44px; language rows 44px; pill remove 44×44; only the “copy” affordance (65×39) sits between the 24px minimum and 44px.</p><div class="sc"><b>2.5.8</b></div></div>
+      <div class="card"><h3>Reflow &amp; resize</h3><p>Chips share a row at equal widths and wrap when a label would truncate; the dashboard goes from one column to two at 768px; header panels are full-screen at every width; no horizontal scroll at 320px.</p><div class="sc"><b>1.4.4</b><b>1.4.10</b></div></div>
+      <div class="card"><h3>Names match visible text</h3><p>Buttons whose visible label changes (Copy → Copied, Menu → Close, English → Close, Edit → Done, Start → Finish your application) keep the accessible name in sync because the visible text is the name.</p><div class="sc"><b>2.5.3</b></div></div>
+      <div class="card"><h3>Identity is never shown in full</h3><p>Sign-in and returning screens show only the last four digits of a phone or the last two letters of an email plus the domain. Not a WCAG criterion, but it keeps screen-reader output from reading a full identifier aloud in public.</p><div class="sc"><b>—</b></div></div>
+      <div class="card"><h3>Timing</h3><p>Interstitials auto-advance after ~1.5s but carry no interaction, and the one-time code “expires in 10 minutes” wording is copy only — the prototype never times a user out.</p><div class="sc"><b>2.2.1</b></div></div>
+    </div>
+  </section>
+
+  <!-- 5 · Standards matrix ------------------------------------------------ -->
+  <section id="standards" aria-labelledby="h-standards">
+    <div class="sec-head"><span class="sec-num" aria-hidden="true">05</span><h2 id="h-standards">Coverage by standard</h2></div>
+    <p class="sec-intro">The same work maps across all three levels. Criteria are grouped by the version
+      that introduced them, so it’s clear what each standard adds — and that the newer criteria are
+      already handled, not outstanding.</p>
+
+    <div class="std">
+      <div class="std-col">
+        <header><span class="lvl">WCAG 2.0 AA</span> <span class="yr">2008</span><span class="role">The floor US Section 508 legally incorporates.</span></header>
+        <ul>
+          <li><b>1.3.1</b> Info &amp; relationships <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>1.4.3</b> Contrast (minimum) <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>2.1.2</b> No keyboard trap <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>2.4.1</b> Bypass blocks <span class="st"><span class="pill partial">Partial</span></span></li>
+          <li><b>2.4.3</b> Focus order <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>2.4.4</b> Link purpose <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>2.4.7</b> Focus visible <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>3.1.2</b> Language of parts <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>3.3.1</b> Error identification <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>3.3.2</b> Labels / instructions <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>4.1.2</b> Name, role, value <span class="st"><span class="pill ok">Built</span></span></li>
+        </ul>
+      </div>
+      <div class="std-col">
+        <header><span class="lvl">WCAG 2.1 AA</span> <span class="yr">2018</span><span class="role">The baseline most civic-tech policies point to today.</span></header>
+        <ul>
+          <li><b>1.3.5</b> Identify input purpose <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>1.4.10</b> Reflow <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>1.4.11</b> Non-text contrast <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>1.4.13</b> Content on hover/focus <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>2.5.3</b> Label in name <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>4.1.3</b> Status messages <span class="st"><span class="pill ok">Built</span></span></li>
+        </ul>
+      </div>
+      <div class="std-col">
+        <header><span class="lvl">WCAG 2.2 AA</span> <span class="yr">2023</span><span class="role">The latest — already looking ahead of the requirement.</span></header>
+        <ul>
+          <li><b>2.4.11</b> Focus not obscured <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>2.5.8</b> Target size (minimum) <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>3.2.6</b> Consistent help <span class="st"><span class="pill partial">Partial</span></span></li>
+          <li><b>3.3.7</b> Redundant entry <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>3.3.8</b> Accessible authentication <span class="st"><span class="pill ok">Built</span></span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="sec-intro" style="margin-top:18px"><b>3.3.8</b> is met by design: sign-in uses details the person
+      already knows (phone or email, zip, date of birth) plus a one-time code with <code>autocomplete="one-time-code"</code>
+      — no password, no puzzle, no transcription of an image.</p>
+  </section>
+
+  <!-- 6 · Automated verification ------------------------------------------ -->
+  <section id="scan" aria-labelledby="h-scan">
+    <div class="sec-head"><span class="sec-num" aria-hidden="true">06</span><h2 id="h-scan">Automated verification</h2></div>
+    <p class="sec-intro">Run Oct&nbsp;14,&nbsp;2026 with <b>axe-core 4.10.3</b> in headless Chromium (Playwright),
+      rule set <code>wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa, best-practice</code>, at 390×844 and 1280×800.
+      The session was seeded as a signed-in self-service client with every program chosen so that all
+      dashboard states, handoff views and the not-eligible pages rendered.</p>
+    <div class="grid2">
+      <div class="card"><h3>Result</h3><p><b>0 violations</b> on 40 page states × 2 viewports, plus the dashboard with the Menu panel open and with the language panel open. The only remaining flag is the best-practice <em>region</em> rule on the searchable combobox while its list is open (the listbox is portaled to <code>&lt;body&gt;</code>); it is not a WCAG failure.</p></div>
+      <div class="card"><h3>Fixed during the scan</h3><p>Progress bars sat outside any landmark (now a labelled region on 15 pages) · sign-in Back was an <code>&lt;a&gt;</code> outside <code>&lt;main&gt;</code> (now a button) · the language combobox left <code>aria-expanded</code> on a role-less wrapper (critical 4.1.2) · the Welcome-back <code>&lt;h1&gt;</code> carried <code>role="status"</code> (now wrapped) · profile and intake-review fields had a conflicting <code>autocomplete="off"</code> (1.3.5).</p></div>
+    </div>
+    <p class="sec-intro" style="margin-top:18px">An automated scan catches roughly a third of WCAG issues. Manual
+      screen-reader and keyboard passes (VoiceOver on iOS and Safari, NVDA on Windows) remain the next step and
+      belong to the vendor’s build, where the markup is final.</p>
+  </section>
+
+  <!-- 7 · Gaps ------------------------------------------------------------ -->
+  <section id="gaps" aria-labelledby="h-gaps">
+    <div class="sec-head"><span class="sec-num" aria-hidden="true">07</span><h2 id="h-gaps">Known gaps, placeholders &amp; vendor hand-off notes</h2></div>
+    <p class="sec-intro">Stated plainly, because credible conformance means naming what isn’t done. None
+      of these block the AA baseline in the prototype; each must be resolved in the production build.</p>
+
+    <div class="callout">
+      <ul>
+        <li><span class="pill partial">Partial</span><p><b>Skip-to-content link.</b> Not present; <code>#main</code> targets are on every page, so the vendor should add a visible-on-focus “Skip to main content” link as the first focusable element (completes 2.4.1).</p></li>
+        <li><span class="pill partial">Partial</span><p><b>Translation.</b> The language panel stores and announces the choice but the prototype has no translated strings; the button keeps reading “English”. In production the choice must switch the page language and set <code>&lt;html lang&gt;</code> (3.1.1).</p></li>
+        <li><span class="pill partial">Partial</span><p><b>Consistent help (3.2.6).</b> 311 appears on the not-eligible pages and the Eviction handoff only. If a help mechanism ships (311 line, chat), it needs the same place on every page.</p></li>
+        <li><span class="pill partial">Partial</span><p><b>Stacked logo.</b> PNG at 30px; “Health” renders at ~9px, at the DOHMH 8pt floor. Swap to SVG from comms and verify legibility on device.</p></li>
+        <li><span class="pill defer">Placeholder</span><p><b>Links the vendor must replace.</b> Energy discounts: the Benefits Enrollment Assistance intake URL (<code>#bea-partner-intake-placeholder</code>, flagged in <code>scripts/pillars.js</code> and <code>eeap-next.html</code>). Hospital bills: “Start your application” opens <code>dollarfor.org</code>, a stand-in for the simplified-application link. The privacy-policy link on the privacy page is <code>href="#"</code>. The Dollar For / CSS links (Hospital bills review) and the TSU link (Eviction review) are final.</p></li>
+        <li><span class="pill defer">Placeholder</span><p><b>Demo data.</b> Enrollment-site names, addresses, hours and phone numbers; the returning-client demo record; and the hidden Health insurance consent subtext are fictional stand-ins. None are real people or numbers.</p></li>
+        <li><span class="pill defer">Depends on partner feed</span><p><b>“Submitted” state.</b> The dashboard only shows “Submitted” / “received” wording when the partner confirms receipt; until that feed exists the applied state reads “started” and “Awaiting response”. The <code>?demo=submitted</code> flag exists only to preview the state.</p></li>
+        <li><span class="pill defer">Deferred</span><p><b>Manual audit.</b> Automated scan is clean; a defensible AA <em>claim</em> still needs VoiceOver / NVDA testing on the production markup, plus a check of the live regions in the header panels and interstitials with a real screen reader.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 8 · Changes since Sep 3 ------------------------------------------- -->
+  <section id="changes" aria-labelledby="h-changes">
+    <div class="sec-head"><span class="sec-num" aria-hidden="true">08</span><h2 id="h-changes">What changed since Sep&nbsp;3</h2></div>
+    <p class="sec-intro">Accessibility-relevant changes in this round, so reviewers can re-test the right places.</p>
+    <div class="callout">
+      <ul>
+        <li><span class="pill ok">Built</span><p><b>Self-service channel.</b> home → programs → privacy (1/3) → contact (2/3) → contact method (3/3) → “Your profile has been created” → first chosen program’s screener → handoff → dashboard. Returning: sign-in or the returning-client interrupt → one-time code → “Welcome back” → dashboard. The CHW channel keeps its 4-step intake and review.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Dashboard.</b> Program cards with text status chips, dated status sentences, and action-named CTAs; “View details” opens the handoff page with a “Back to dashboard” link above the title.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Header.</b> Menu and English open the same full-screen modal panel (dialog semantics, focus trap, Esc, focus return); the language list reads native · English with <code>lang</code> attributes; desktop shows text links instead of the hamburger. Icon morph and panel share one 0.3s curve and switch off under reduced motion.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Sign-in by code.</b> Phone-or-email + zip + DOB, masked destination, <code>autocomplete="one-time-code"</code>; meets 3.3.8 without a password.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Profile page.</b> One editable card; Edit ⇄ Done with focus management; no record number shown.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Helper text always shown.</b> “Read more / less” removed from the Hospital bills steps.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Hospital bills “No” handoff.</b> Answering No to the first question now continues to “Need to resolve a medical bill?” (Community Health Advocates link + phone) instead of an inline notice with a blocked Continue; the dashboard shows Not eligible with View details.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Header panel hardening (Oct 15).</b> Page content inert while a panel is open; iOS-safe scroll lock; label and sibling-button crossfades on the same 0.3s curve; RTL native names; panel closes on resize past 1024px and on bfcache restore. Hospital bills stepper − at 0 now matches the Energy stepper (20% opacity).</p></li>
+        <li><span class="pill ok">Built</span><p><b>Terminal-page consistency.</b> Copy buttons read “Copy / Copied” everywhere; every contact row is label-above-field with the field at its own width; subtitle text under the h1 is <code>#565656</code> and everything after a divider is <code>#191919</code> on all handoff and not-eligible pages; inline text links are <code>#225E7C</code> underlined (consent notes, checkbox labels, privacy page); the pill radius on footer secondaries is one shared rule.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Scan fixes.</b> Progress regions, sign-in Back button, combobox wrapper attributes, Welcome-back heading, profile/intake autocomplete — see <a href="#scan">Automated verification</a>.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Copy.</b> “Financial resources” → “Energy discounts”; Health insurance handoff gains an Important note on both views; not-eligible pages no longer offer “Start your application”.</p></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="disclaimer">Prepared Aug&nbsp;28,&nbsp;2026 · Updated Oct&nbsp;14,&nbsp;2026 · Prototype, code-level conformance with an automated scan — a description of current coverage, not a certified audit.</span>
+    <span>NYC Health · DOHMH — NYC Health and Affordability Connector</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement, btn = document.getElementById('themeToggle'), lbl = document.getElementById('themeLabel');
+    function sysDark() { return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; }
+    function current() { return root.getAttribute('data-theme') || (sysDark() ? 'dark' : 'light'); }
+    function apply(t) {
+      root.setAttribute('data-theme', t);
+      var dark = t === 'dark';
+      btn.setAttribute('aria-pressed', String(dark));
+      lbl.textContent = dark ? 'Dark' : 'Light';
+    }
+    try { var saved = localStorage.getItem('a11y-summary-theme'); if (saved) apply(saved); else { lbl.textContent = sysDark() ? 'Dark' : 'Light'; btn.setAttribute('aria-pressed', String(sysDark())); } }
+    catch (e) { lbl.textContent = sysDark() ? 'Dark' : 'Light'; }
+    btn.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem('a11y-summary-theme', next); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>

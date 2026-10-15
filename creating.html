@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Creating client record — NYC Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/interstitial.css">
+</head>
+<body>
+  <main class="interstitial" id="main">
+    <h1 class="sr-only">Creating client record</h1>
+    <div class="interstitial__spinner" aria-hidden="true"></div>
+    <p class="interstitial__text" role="status" aria-live="polite">Creating client record&hellip;</p>
+  </main>
+
+  <script src="scripts/interstitial.js"></script>
+  <script>
+    /* Stand-in for the real "does this client exist?" lookup. A record matches
+       when the phone or email was used to create a record earlier this session. */
+    (function () {
+      Interstitial.show();
+      var c = {}, records = [];
+      try { c = JSON.parse(sessionStorage.getItem('nyc.contact') || '{}'); } catch (e) {}
+      try { records = JSON.parse(sessionStorage.getItem('nyc.records') || '[]'); } catch (e) {}
+      var phone = (c.phone || '').replace(/\D/g, ''), email = (c.email || '').trim().toLowerCase();
+      var found = records.some(function (r) { return (phone && r.phone === phone) || (email && r.email === email); });
+      var match = records.filter(function (r) { return (phone && r.phone === phone) || (email && r.email === email); })[0];
+      var id = match ? match.id : ('NYC-' + new Date().getFullYear() + '-' + String(100000 + Math.floor(Math.random() * 900000)).slice(1));
+      if (!found) records.push({ phone: phone, email: email, id: id });
+      try {
+        sessionStorage.setItem('nyc.records', JSON.stringify(records));
+        sessionStorage.setItem('nyc.recordFound', found ? '1' : '');
+        sessionStorage.setItem('nyc.recordId', id);
+      } catch (e) {}
+      Interstitial.go('allset.html');
+    })();
+  </script>
+</body>
+</html>

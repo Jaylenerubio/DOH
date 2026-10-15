@@ -1,0 +1,46 @@
+/* Interstitial screens (Creating record / All set / Starting <pillar>).
+   Quick fade in → hold → fade out; reduced-motion skips the fades. */
+.interstitial {
+  min-height: 100dvh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: var(--space-3); padding: var(--page-margin-x); text-align: center;
+  opacity: 0; transition: opacity 200ms var(--ease-out);
+}
+.interstitial.is-visible { opacity: 1; }
+.interstitial.is-leaving { opacity: 0; }
+.interstitial__spinner {
+  width: 40px; height: 40px;
+  border: 3px solid var(--color-neutral-200); border-top-color: var(--color-brand);
+  border-radius: 50%; animation: interstitial-spin 900ms linear infinite;
+}
+@keyframes interstitial-spin { to { transform: rotate(360deg); } }
+.interstitial__check {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--color-success-bg, #E2F2D5); color: var(--color-success, #006333);
+  display: flex; align-items: center; justify-content: center;
+}
+.interstitial__check svg { width: 28px; height: 28px; }
+/* Existing-record variant: warning on the in-progress yellow/brown pair
+   (#5C3D00 on #F8ECCE ≈ 9.7:1). */
+.interstitial__warn {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #F8ECCE; color: #5C3D00;
+  display: flex; align-items: center; justify-content: center;
+}
+.interstitial__warn svg { width: 28px; height: 28px; }
+.interstitial__title {
+  margin: 0;
+  font-family: var(--type-h1-family); font-weight: var(--type-h1-weight);
+  font-size: var(--type-h1-size); line-height: var(--type-h1-line-height);
+  letter-spacing: var(--type-h1-letter-spacing); color: var(--color-text);
+}
+.interstitial__text {
+  margin: 0; max-width: 32ch;
+  font-family: var(--type-body-family); font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height); color: var(--color-text-secondary);
+}
+.interstitial__actions { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 420px; margin-top: var(--space-2); }
+@media (prefers-reduced-motion: reduce) {
+  .interstitial, .interstitial.is-leaving { transition: none; opacity: 1; }
+  .interstitial__spinner { animation-duration: 2400ms; }
+}

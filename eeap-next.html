@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Energy Affordability Program — NYC Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/eeap-next.css">
+</head>
+<body>
+  <div class="step eeap-next" data-handoff="financial-help">
+
+    <!-- Top banner -->
+    <div class="top-banner">
+      <div class="top-banner__inner">
+        <button class="top-banner__toggle" type="button" aria-expanded="false" aria-controls="govPanel">
+          <span>Official website of the City of New York</span>
+          <svg class="top-banner__caret" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 5 L7 9 L11 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="top-banner__panel" id="govPanel" hidden>
+        <div class="top-banner__panel-inner">
+          <div class="top-banner__block">
+            <h2 class="top-banner__heading">Official websites use .gov</h2>
+            <p class="top-banner__copy">A .gov website belongs to an official government organization in the United States.</p>
+          </div>
+          <div class="top-banner__block">
+            <h2 class="top-banner__heading">Secure .gov websites use HTTPS</h2>
+            <p class="top-banner__copy">A lock (<span aria-label="locked">&#128274;</span>) or https:// means you&rsquo;ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service navigation -->
+    <header class="site-nav">
+      <div class="site-nav__inner">
+        <a href="programs.html" aria-label="NYC Health — your programs">
+          <img class="site-nav__logo" src="visual elements/nyc-health-stacked.png" width="65" height="30" alt="NYC Health">
+        </a>
+        <div class="site-nav__actions">
+          <button class="site-nav__translate" type="button" aria-label="Translate this page">
+            <span class="site-nav__translate-label">English</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="step__body" id="main" tabindex="-1">
+      <h1 class="step__title"><span id="nextTitle">You&rsquo;re eligible for the Energy Affordability Program (EAP).</span> <span class="eeap-next__subtitle">What&rsquo;s next</span></h1>
+
+      <!-- EAP (enrolled in a qualifying program) -->
+      <ol class="nsteps" id="stepsEap">
+        <li class="nstep"><span class="nstep__num" aria-hidden="true">1</span>
+          <div class="nstep__body"><h2 class="nstep__title">Apply for energy assistance using the NYC Health <a class="ext-link" href="#bea-partner-intake-placeholder" title="Vendor: replace with the BEA partner intake link" target="_blank" rel="noopener noreferrer">Benefits Enrollment Assistance<svg class="ext-link__icon" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M14.3001 6.41659H9.16675C8.90703 6.41659 8.68932 6.32874 8.51362 6.15304C8.33793 5.97735 8.25008 5.75964 8.25008 5.49992C8.25008 5.2402 8.33793 5.02249 8.51362 4.84679C8.68932 4.6711 8.90703 4.58325 9.16675 4.58325H16.5001C16.7598 4.58325 16.9775 4.6711 17.1532 4.84679C17.3289 5.02249 17.4167 5.2402 17.4167 5.49992V12.8333C17.4167 13.093 17.3289 13.3107 17.1532 13.4864C16.9775 13.6621 16.7598 13.7499 16.5001 13.7499C16.2404 13.7499 16.0227 13.6621 15.847 13.4864C15.6713 13.3107 15.5834 13.093 15.5834 12.8333V7.69992L5.59175 17.6916C5.42369 17.8596 5.2098 17.9437 4.95008 17.9437C4.69036 17.9437 4.47647 17.8596 4.30841 17.6916C4.14036 17.5235 4.05633 17.3096 4.05633 17.0499C4.05633 16.7902 4.14036 16.5763 4.30841 16.4083L14.3001 6.41659Z" fill="currentColor"/></svg><span class="sr-only"> (opens in new tab)</span></a></h2></div></li>
+        <li class="nstep"><span class="nstep__num" aria-hidden="true">2</span>
+          <div class="nstep__body"><h2 class="nstep__title">Share proof of your benefits.</h2>
+            <p class="nstep__note">The document should have your name, the name of the government assistance program, a government agency name, and the date your benefits started.</p></div></li>
+        <li class="nstep"><span class="nstep__num" aria-hidden="true">3</span>
+          <div class="nstep__body"><h2 class="nstep__title">Once you&rsquo;re approved, you&rsquo;ll receive the EAP discount within two billing cycles.</h2>
+            <p class="nstep__note">Your credit will last 18 months. You&rsquo;ll need to reapply after that.</p></div></li>
+      </ol>
+
+      <!-- EEAP (income-based) -->
+      <ol class="nsteps" id="stepsEeap" hidden>
+        <li class="nstep"><span class="nstep__num" aria-hidden="true">1</span>
+          <div class="nstep__body"><h2 class="nstep__title">Start your <a class="ext-link" href="https://nyeeap.com/program" target="_blank" rel="noopener noreferrer">EEAP application<svg class="ext-link__icon" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M14.3001 6.41659H9.16675C8.90703 6.41659 8.68932 6.32874 8.51362 6.15304C8.33793 5.97735 8.25008 5.75964 8.25008 5.49992C8.25008 5.2402 8.33793 5.02249 8.51362 4.84679C8.68932 4.6711 8.90703 4.58325 9.16675 4.58325H16.5001C16.7598 4.58325 16.9775 4.6711 17.1532 4.84679C17.3289 5.02249 17.4167 5.2402 17.4167 5.49992V12.8333C17.4167 13.093 17.3289 13.3107 17.1532 13.4864C16.9775 13.6621 16.7598 13.7499 16.5001 13.7499C16.2404 13.7499 16.0227 13.6621 15.847 13.4864C15.6713 13.3107 15.5834 13.093 15.5834 12.8333V7.69992L5.59175 17.6916C5.42369 17.8596 5.2098 17.9437 4.95008 17.9437C4.69036 17.9437 4.47647 17.8596 4.30841 17.6916C4.14036 17.5235 4.05633 17.3096 4.05633 17.0499C4.05633 16.7902 4.14036 16.5763 4.30841 16.4083L14.3001 6.41659Z" fill="currentColor"/></svg><span class="sr-only"> (opens in new tab)</span></a></h2>
+            <p class="nstep__note">If your electric and natural gas services are with different companies, you can apply for both in a single application &mdash; as long as both accounts are at the same address.</p></div></li>
+        <li class="nstep"><span class="nstep__num" aria-hidden="true">2</span>
+          <div class="nstep__body"><h2 class="nstep__title">You have 14 days after applying to submit your proof of income for the last 28 days for everyone you share your utility costs with.</h2>
+            <p class="nstep__note">That includes paystubs, Social Security, unemployment and disability payments, and child support. Photos and uploaded documents are both accepted.</p></div></li>
+        <li class="nstep"><span class="nstep__num" aria-hidden="true">3</span>
+          <div class="nstep__body"><h2 class="nstep__title">Once you&rsquo;re approved, you&rsquo;ll receive the EAP discount within two billing cycles.</h2>
+            <p class="nstep__note">Your credit will last 18 months. You&rsquo;ll need to reapply after that.</p></div></li>
+      </ol>
+    </main>
+
+    <footer class="step__footer">
+      <div class="eeap-next__actions">
+        <button class="btn btn--primary" type="button" id="nextPillarBtn">Continue</button>
+        <button class="btn btn--secondary" type="button" id="recordBtn">Return to dashboard</button>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="scripts/a11y.js"></script>
+  <script src="scripts/pillars.js"></script>
+  <script src="scripts/eap-store.js"></script>
+  <script src="scripts/eeap-next.js"></script>
+  <script src="scripts/handoff-view.js"></script>
+  <script src="scripts/banner.js"></script>
+  <script src="scripts/nav-lang.js"></script>
+</body>
+</html>

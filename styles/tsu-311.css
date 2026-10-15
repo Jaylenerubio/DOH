@@ -1,0 +1,66 @@
+/* =========================================================================
+   NYC DOH Affordability Navigator — TSU intake, "Call 311 for housing
+   support" (terminal referral for the "None of the above" path). No progress
+   bar. Contact rows with copy-to-clipboard fields + a 311 Online link, and a
+   single "Return to dashboard" action. Depends on: tokens.css, components.css.
+   ========================================================================= */
+
+.tsu-311 .step__body { padding-top: 56px; }        /* no progress bar above; ~64px header→title */
+
+.tsu-311__rule {
+  height: 1px;
+  margin: var(--space-4) 0 0;                        /* 32px below the description */
+  background: var(--color-neutral-300);
+  border: 0;
+}
+
+/* Contact rows: label left, value (copy field or link) right. */
+.contact-list { margin: var(--space-3) 0 0; display: flex; flex-direction: column; gap: var(--space-1); }
+.contact-row {
+  display: flex;
+  flex-direction: column;              /* label above the copy field */
+  align-items: flex-start;
+  gap: var(--space-1);
+}
+.contact-row__value { margin: 0; }
+.contact-row__label {
+  font-family: var(--type-body-family);
+  font-weight: var(--type-body-weight);
+  font-size: var(--type-body-size);                 /* Body/Regular 18px */
+  line-height: var(--type-body-line-height);
+  color: var(--color-text);
+}
+/* "online" trails the label on tablet only — on mobile it reads "Submit
+   request" so the row (label + one-line link) fits. */
+.contact-row__online { display: none; }
+@media (min-width: 768px) { .contact-row__online { display: inline; } }
+
+/* The copy field (.copy-field) is a shared primitive — see components.css. */
+
+/* 311 Online link — opens in a new tab, so it carries an external-link icon
+   (and a visually-hidden "opens in new tab" cue in the markup). Kept on one
+   line so the link + arrow never break apart. */
+.contact-row__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  font-family: var(--type-body-family);
+  font-weight: var(--type-body-weight);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--color-brand);
+  text-decoration: underline;
+}
+.contact-row__link-icon { flex: 0 0 auto; width: 20px; height: 20px; }
+
+/* Footer: single full-width pill action. */
+.tsu-311__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: var(--space-2) var(--page-margin-x)
+           calc(var(--space-2) + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--color-neutral-200);
+  background: var(--color-bg);
+}

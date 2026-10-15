@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Review and submit — NYC Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/tsu-review.css">
+<link rel="stylesheet" href="styles/review-edit.css">
+</head>
+<body>
+  <div class="step tsu-review">
+
+    <!-- Top banner -->
+    <div class="top-banner">
+      <div class="top-banner__inner">
+        <button class="top-banner__toggle" type="button" aria-expanded="false" aria-controls="govPanel">
+          <span>Official website of the City of New York</span>
+          <svg class="top-banner__caret" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 5 L7 9 L11 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="top-banner__panel" id="govPanel" hidden>
+        <div class="top-banner__panel-inner">
+          <div class="top-banner__block">
+            <h2 class="top-banner__heading">Official websites use .gov</h2>
+            <p class="top-banner__copy">A .gov website belongs to an official government organization in the United States.</p>
+          </div>
+          <div class="top-banner__block">
+            <h2 class="top-banner__heading">Secure .gov websites use HTTPS</h2>
+            <p class="top-banner__copy">A lock (<span aria-label="locked">&#128274;</span>) or https:// means you&rsquo;ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service navigation -->
+    <header class="site-nav">
+      <div class="site-nav__inner">
+        <a href="programs.html" aria-label="NYC Health — your programs">
+          <img class="site-nav__logo" src="visual elements/nyc-health-stacked.png" width="65" height="30" alt="NYC Health">
+        </a>
+        <div class="site-nav__actions">
+          <button class="site-nav__translate" type="button" aria-label="Translate this page">
+            <span class="site-nav__translate-label">English</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Progress: step 2 of 2 -->
+    <div class="step__progress" role="region" aria-label="Progress">
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="2" aria-valuenow="2" aria-label="Step 2 of 2">
+        <span class="progress__seg is-complete"></span>
+        <span class="progress__seg is-complete"></span>
+      </div>
+    </div>
+
+    <!-- Scrollable content -->
+    <main class="step__body" id="main" tabindex="-1">
+      <h1 class="step__title">Review and submit</h1>
+      <p class="step__text">We&rsquo;ll use your responses to connect you with the Mayor&rsquo;s <br class="br-tablet">Tenant Support Unit, who will follow up to help with your housing situation.</p>
+
+      <div class="review-cards">
+
+        <!-- Anti-eviction services (editable: the situations the user picked) -->
+        <section class="review-card" aria-labelledby="tsuTitle">
+          <div class="review-card__head">
+            <h2 class="review-card__title" id="tsuTitle">Anti-eviction services</h2>
+            <span class="review-card__hint"><svg viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4.58333 17.4167H5.88958L14.85 8.45625L13.5438 7.15L4.58333 16.1104V17.4167ZM3.66667 19.25C3.40694 19.25 3.18924 19.1622 3.01354 18.9865C2.83785 18.8108 2.75 18.5931 2.75 18.3333V16.1104C2.75 15.866 2.79583 15.633 2.8875 15.4115C2.97917 15.1899 3.10903 14.9951 3.27708 14.8271L14.85 3.27708C15.0333 3.10903 15.2358 2.97917 15.4573 2.8875C15.6788 2.79583 15.9118 2.75 16.1563 2.75C16.4007 2.75 16.6375 2.79583 16.8667 2.8875C17.0958 2.97917 17.2944 3.11667 17.4625 3.3L18.7229 4.58333C18.9063 4.75139 19.0399 4.95 19.1240 5.17917C19.208 5.40833 19.25 5.6375 19.25 5.86667C19.25 6.11111 19.208 6.34410 19.1240 6.56563C19.0399 6.78715 18.9063 6.98958 18.7229 7.17292L7.17292 18.7229C7.00486 18.891 6.81007 19.0208 6.58854 19.1125C6.36701 19.2042 6.13403 19.25 5.88958 19.25H3.66667ZM14.1854 7.81458L13.5438 7.15L14.85 8.45625L14.1854 7.81458Z" fill="currentColor"/></svg>Edit below</span>
+          </div>
+          <hr class="review-card__rule">
+          <p class="tsu-review__prompt">What describes your situation?</p>
+          <div class="tsu-review__answers" id="tsuAnswers" role="group" aria-labelledby="tsuTitle"></div>
+        </section>
+
+      </div>
+
+      <div class="consent-note" id="consentNote"><p>By submitting this page, you agree to share your information with TSU and you agree to receive calls and texts from TSU about your eviction case. You may opt out at any time. Learn more about <a href="https://www.nyc.gov/site/mayorspeu/about-peu/privacy-policy.page" target="_blank" rel="noopener noreferrer">TSU&rsquo;s privacy policy<span class="sr-only"> (opens in new tab)</span></a>.</p></div>
+    </main>
+
+    <!-- Pinned footer: Back / Save and continue -->
+    <footer class="step__footer">
+      <div class="step__actions">
+        <button class="btn btn--secondary btn--back" type="button" id="backBtn">Back</button>
+        <button class="btn btn--primary btn--continue" type="button" id="continueBtn">Submit</button>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="scripts/a11y.js"></script>
+  <script src="scripts/tsu-store.js"></script>
+  <script src="scripts/tsu-review.js"></script>
+  <script src="scripts/review-edit.js"></script>
+  <script src="scripts/banner.js"></script>
+  <script src="scripts/nav-lang.js"></script>
+</body>
+</html>

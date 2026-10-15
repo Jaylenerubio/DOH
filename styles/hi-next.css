@@ -1,0 +1,53 @@
+/* Health insurance — "What's next" handoff (terminal step, no progress bar). */
+.hi-next .step__body { padding-top: 56px; }
+.hi-next__subtitle { display: block; color: var(--color-text-muted); }
+.hi-next .step__text { text-wrap: pretty; }
+.hi-next .site-card { margin-top: var(--space-3); }
+.hi-next__rule {
+  height: 1px;
+  margin: var(--space-4) 0 0;                        /* 32px below the description */
+  background: var(--color-neutral-300);
+  border: 0;
+}
+/* Contact rows: label left, value (copy field or link) right. */
+.contact-list { margin: var(--space-3) 0 0; display: flex; flex-direction: column; gap: var(--space-1); }
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: 48px;
+}
+.contact-row__label {
+  font-family: var(--type-body-family);
+  font-weight: var(--type-body-weight);
+  font-size: var(--type-body-size);                 /* Body/Regular 18px */
+  line-height: var(--type-body-line-height);
+  color: var(--color-text);
+}
+/* "online" trails the label on tablet only — on mobile it reads "Submit
+   request" so the row (label + one-line link) fits. */
+.contact-row__label strong { font-weight: 600; }
+/* Footer: two full-width actions stacked. */
+.hi-next__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: var(--space-2) var(--page-margin-x)
+           calc(var(--space-2) + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--color-neutral-200);
+  background: var(--color-bg);
+}
+
+/* Label above the number, like every other contact row. */
+.hi-next .contact-row { flex-direction: column; align-items: flex-start; gap: var(--space-1); }
+.hi-next .contact-row__value { margin: 0; }
+/* Copy fields size to their content at every width (never full-width). */
+
+/* Enrollment-site picker under the number. */
+.hi-next__site { margin-top: var(--space-3); }
+
+/* Self-service handoff: body copy in text colour; numbers stacked, no labels. */
+.hi-next__text { color: var(--color-text-secondary); }
+.hi-next__text strong { font-weight: 600; }
+.hi-next__phones { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: var(--space-3); }

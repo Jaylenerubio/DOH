@@ -1,0 +1,9 @@
+/* Tax credits (EITC) — screener and results. */
+.eitc .step__text { text-wrap: pretty; }
+.eitc .step__text + .step__text { margin-top: var(--space-2); }
+.eitc__lead { color: var(--color-text); }
+.eitc .qgroup__chips .choice-card { flex: 0 1 auto; width: auto; max-width: 100%; text-align: left; }
+.eitc-next .step__body { padding-top: 56px; }
+.eitc-next .step__text + .step__text { margin-top: var(--space-2); }
+.eitc-next__actions { display: flex; flex-direction: column; gap: 12px; padding: var(--space-2) var(--page-margin-x) calc(var(--space-2) + env(safe-area-inset-bottom)); border-top: 1px solid var(--color-neutral-200); background: var(--color-bg); }
+.eitc-next .nstep__list strong { font-weight: 600; }

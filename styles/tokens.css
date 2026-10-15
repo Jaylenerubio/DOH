@@ -1,0 +1,125 @@
+/* =========================================================================
+   NYC DOH Affordability Navigator — Design Tokens
+   Single source of truth for color + typography. Imported first by every
+   page so component and page styles can reference var(--…) names only.
+   Values transcribed from the NYC DOH design spec (Typography + Color).
+   ========================================================================= */
+
+:root {
+  /* ---- Font families -------------------------------------------------- */
+  /* Per spec, EVERY type token (including Display/Title) resolves to
+     --font-body. There is intentionally no separate display family. */
+  --font-body: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* ---- Type scale ----------------------------------------------------- */
+  /* Mobile/Display/Title — Home hero, dashboard, bottom-sheet titles */
+  --type-display-title-family: var(--font-body);
+  --type-display-title-weight: 400;
+  --type-display-title-size: 38px;
+  --type-display-title-line-height: 120%;
+  --type-display-title-letter-spacing: -1%;
+
+  /* Mobile/H1 — interface page titles */
+  --type-h1-family: var(--font-body);
+  --type-h1-weight: 400;
+  --type-h1-size: 32px;
+  --type-h1-line-height: 114%;
+  --type-h1-letter-spacing: -2%;
+
+  /* Mobile/Card/Title — Home ticker-tape card titles */
+  --type-card-family: var(--font-body);
+  --type-card-weight: 400;             /* section & card titles: 20/400 */
+  --type-card-size: 20px;
+  --type-card-line-height: 140%;
+  --type-card-letter-spacing: 0%;
+
+  /* Mobile/Body/Regular — interface DESCRIPTION body text only.
+     Text inside a component (card, dropdown, input, etc.) uses ui-16. */
+  --type-body-family: var(--font-body);
+  --type-body-weight: 400;
+  --type-body-size: 18px;
+  --type-body-line-height: 150%;
+
+  /* Mobile/Interface/16/Regular — component labels & in-component text */
+  --type-ui-16-family: var(--font-body);
+  --type-ui-16-weight: 400;
+  --type-ui-16-size: 16px;
+  --type-ui-16-line-height: 150%;
+
+  /* Mobile/Interface/14/Regular — in-progress chip labels, eyebrow text */
+  --type-ui-14-family: var(--font-body);
+  --type-ui-14-weight: 400;
+  --type-ui-14-size: 14px;
+  --type-ui-14-line-height: 160%;
+
+  /* Mobile/Interface/Button Label — Back and Continue/Check eligibility
+     buttons. NOTE: the design reference was cut off before its exact
+     size/weight; 16/600 is our working value (regular-weight variant used
+     for read-more / show-less). Revisit when the spec is available. */
+  --type-button-family: var(--font-body);
+  --type-button-weight: 600;
+  --type-button-size: 18px;
+  --type-button-line-height: 150%;
+  --type-button-weight-regular: 400; /* read more / show less variant */
+
+  /* ---- Color: brand --------------------------------------------------- */
+  --color-brand: #225E7C;            /* base brand — active progressive buttons */
+  --color-brand-disabled: rgba(34, 94, 124, 0.3); /* brand @ 30% (disabled) */
+  --color-accent: #5D87A1;           /* progress bar/step indicators, select border */
+  --color-accent-fill: rgba(93, 135, 161, 0.1);   /* accent @ 10% — select-state bg */
+
+  /* ---- Color: text ---------------------------------------------------- */
+  --color-text: #191919;             /* base text */
+  --color-text-secondary: #565656;   /* grey body / description text */
+  --color-text-muted: #565656;       /* muted title line — all grey text is #565656 */
+  --color-text-disabled: #B1AEAC;    /* disabled state text (= pillar logo) */
+  --color-link: #225E7C;             /* inline text links: primary, always underlined */
+
+  /* ---- Color: surfaces ------------------------------------------------ */
+  --color-bg: #FFFFFF;               /* base background */
+  --color-neutral-100: #F5F5F5;      /* Back/Close/Read-more btn bg, nav banner bg */
+  --color-neutral-200: #EEEEEE;      /* inactive progress bar */
+  --color-neutral-300: #DDDDDD;      /* borders / strokes / dividers */
+  --color-neutral-700: #707070;      /* secondary text */
+  --color-pillar-card: #FAF8F5;      /* Program pillar card bg (Home + Dashboard) */
+  --color-app-button: #FFFEFD;       /* Dashboard application button bg */
+  --color-pillar-logo: #B1AEAC;      /* pillar logos + disabled text */
+
+  /* ---- Color: status -------------------------------------------------- */
+  --color-info-light: #F8ECCE;       /* in-progress chip bg */
+  --color-info-dark: #5C3D00;        /* in-progress chip label */
+  --color-success-light: #E2F2D5;    /* success-state bg */
+  --color-success-dark: #006333;     /* success-state label/icon */
+  --color-error-light: #F8D9DE;      /* error / destructive bg */
+  --color-error-dark: #CF2A46;       /* error / destructive label */
+
+  /* ---- Color: overlay ------------------------------------------------- */
+  --color-overlay: rgba(221, 221, 221, 0.7); /* bottom-sheet overlay (+ 4px blur) */
+  --overlay-blur: 4px;
+
+  /* ---- Focus ---------------------------------------------------------- */
+  --focus-ring: 3px solid var(--color-brand);   /* single shared focus ring — brand #225E7C, ~7:1 on white */
+  --focus-ring-offset: 2px;
+
+  /* ---- Spacing (8pt) -------------------------------------------------- */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-8: 64px;
+  --page-margin-x: 16px;             /* mobile page gutter */
+
+  /* ---- Radius --------------------------------------------------------- */
+  --radius-chip: 8px;
+  --radius-frame: 12px;
+  --radius-card: 16px;               /* ticker-tape program cards */
+  --radius-button: 12px;
+
+  /* ---- Motion --------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  /* Smooth accelerate-and-settle for the ticker slide/scale (easeInOutCubic).
+     Reads as one continuous motion with no snappy tail. */
+  --ease-move: cubic-bezier(0.65, 0, 0.35, 1);
+}
