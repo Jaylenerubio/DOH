@@ -8,7 +8,7 @@ CHW starts in the Blooming Health CRM; the client finishes at home. Self-service
 
 **Added / changed**
 - Landing: single "Resume your session" button.
-- Sign-in: phone + ZIP + DOB only (email field and toggle removed); code expires in 5 minutes (unconfirmed); "Send a new code" swaps the code text for a success alert and starts a 30-second countdown (placeholders); "Verify by email" / "Verify by text" offers a masked on-file email; no-match shows "We couldn't find your account" with pilot-location route and Try again.
+- Sign-in: phone + ZIP + DOB only (email field and toggle removed); code expires in 5 minutes (unconfirmed); "Send a new code" shows a success alert under the code text and starts a 30-second countdown (placeholders); "Verify by email" / "Verify by text" offers a masked on-file email; no-match shows "We couldn't find your account" with pilot-location route and Try again.
 - Dashboard: two result states (Referral sent, No match) plus Get started; "Referral sent {full date}" with a program message; "Start your application" returns for Dollar For, Energy discounts and Tax credits; all programs except SNAP shown as "Get started" until completed, results first; in-person support link at the bottom.
 - Handoff pages from the dashboard are static; Back to dashboard on top.
 - My profile: "Your information" is read-only; "Preferred contact method" (Text me / Call me) is editable with Edit / Done; red "Request account deletion" text button (placeholder, no modal).

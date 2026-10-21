@@ -25,16 +25,16 @@
     var stage = 'contact', mode = 'phone';
     try { sessionStorage.setItem('nyc.channel', 'self'); } catch (e) {}
 
-    /* "We sent you a new code" alert (placeholder copy). It replaces the
-       "We sent a 6-digit code" text so the two never repeat each other. The
-       resend link counts down 30 seconds (placeholder) after each send. */
+    /* "We sent you a new code." alert (placeholder copy) sits under the
+       "We sent a 6-digit code to …" text, which stays so the destination is
+       always visible. The resend link counts down 30 seconds (placeholder)
+       after each send. */
     var CHECK = '<svg viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="currentColor"/><path d="M9.16675 12.2859L14.4874 6.96524C14.6847 6.76795 14.9278 6.66931 15.2167 6.66931C15.5057 6.66931 15.7488 6.76795 15.9461 6.96524C16.1434 7.16252 16.242 7.40654 16.242 7.69731C16.242 7.98809 16.1434 8.23212 15.9461 8.4294L9.90157 14.4794C9.69266 14.6883 9.44772 14.7928 9.16675 14.7928C8.88577 14.7928 8.64083 14.6883 8.43192 14.4794L6.04859 12.0961C5.85131 11.8988 5.75358 11.6548 5.7554 11.364C5.75723 11.0732 5.85679 10.8292 6.05407 10.6319C6.25135 10.4346 6.49538 10.336 6.78616 10.336C7.07693 10.336 7.32096 10.4346 7.51824 10.6319L9.16675 12.2859Z" fill="#E2F2D5"/></svg>';
     var resendBtn = document.getElementById('resend'), codeText = document.getElementById('codeText'), status = document.getElementById('resendStatus');
     var COOLDOWN = 30, timer = null;
-    function clearAlert() { status.innerHTML = ''; codeText.hidden = false; }
+    function clearAlert() { status.innerHTML = ''; }
     function showAlert() {
-      codeText.hidden = true;
-      status.innerHTML = '<div class="signin__alert">' + CHECK + '<span>We sent you a new code. Expires in 5 minutes.</span></div>';
+      status.innerHTML = '<div class="signin__alert">' + CHECK + '<span>We sent you a new code.</span></div>';
     }
     function startCooldown() {
       var left = COOLDOWN;

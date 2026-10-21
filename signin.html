@@ -75,14 +75,15 @@
       <section id="stepCode" hidden>
         <h1 class="step__title">Enter your code</h1>
         <p class="step__text" id="codeText">We sent a 6-digit code to <strong id="sentTo"></strong>. It expires in 5 minutes.</p>
-        <!-- Live region: filled when a new code is sent, replacing #codeText. PLACEHOLDER copy. -->
+        <!-- Live region: filled when a new code is sent. PLACEHOLDER copy. -->
         <div id="resendStatus" role="status" aria-live="polite"></div>
         <p class="step-error" id="codeError" role="alert" hidden></p>
         <label class="field">
-          <span class="field__label">6-digit code</span>
+          <span class="field__label">Enter code</span>
           <input class="field__input signin__code" type="text" inputmode="numeric" autocomplete="one-time-code" id="code" maxlength="6" placeholder="000000">
         </label>
-        <p class="signin__alt">Didn&rsquo;t get it? <button class="signin__link" type="button" id="resend">Send a new code</button><br><button class="signin__link" type="button" id="verifyAlt" hidden>Verify by email</button></p>
+        <p class="signin__alt signin__alt--row"><span>Didn&rsquo;t get it?</span> <button class="signin__link" type="button" id="resend">Send a new code</button></p>
+        <p class="signin__alt"><button class="signin__link" type="button" id="verifyAlt" hidden>Verify by email</button></p>
       </section>
 
       <section id="stepNotFound" hidden>

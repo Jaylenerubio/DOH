@@ -79,7 +79,7 @@ Programs with a result come first, then the rest, under the two-tone "Explore pr
 ## Placeholders the production build must replace
 
 - Dollar For PIN shown as `####` in the Hospital bills dashboard message.
-- Code expiry ("5 minutes"), the 30-second resend countdown and the "We sent you a new code. Expires in 5 minutes." alert copy are placeholders.
+- Code expiry ("5 minutes"), the 30-second resend countdown and the "We sent you a new code." alert copy are placeholders.
 - Links still TBD: pilot location (not-found screen), in-person support (dashboard help message), account deletion ("Request account deletion" has no modal or destination).
 - Energy discounts: Benefits Enrollment Assistant intake URL (`#bea-partner-intake-placeholder` in `scripts/pillars.js` and `eeap-next.html`).
 - Hospital bills: `https://dollarfor.org/` stands in for the simplified-application link.
