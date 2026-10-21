@@ -39,7 +39,7 @@
   function el(tag, cls, html) { var n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; }
   function head(key) {
     var m = Pillars.META[key];
-    return '<span class="app-card__head"><span class="app-card__icon">' + ICONS[key] + '</span><h3 class="app-card__title">' + m.label + '</h3></span><hr class="app-card__rule">';
+    return '<span class="app-card__head"><span class="app-card__icon">' + ICONS[key] + '</span><h2 class="app-card__title">' + m.label + '</h2></span><hr class="app-card__rule">';
   }
   /* Full date: "October 12, 2026" */
   function fmt(iso) { var d = iso ? new Date(iso) : new Date(); if (isNaN(d.getTime())) d = new Date(); return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }); }
