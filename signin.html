@@ -74,7 +74,9 @@
 
       <section id="stepCode" hidden>
         <h1 class="step__title">Enter your code</h1>
-        <p class="step__text">We sent a 6-digit code to <strong id="sentTo"></strong>. It expires in 5 minutes.</p>
+        <p class="step__text" id="codeText">We sent a 6-digit code to <strong id="sentTo"></strong>. It expires in 5 minutes.</p>
+        <!-- Live region: filled when a new code is sent, replacing #codeText. PLACEHOLDER copy. -->
+        <div id="resendStatus" role="status" aria-live="polite"></div>
         <p class="step-error" id="codeError" role="alert" hidden></p>
         <label class="field">
           <span class="field__label">6-digit code</span>

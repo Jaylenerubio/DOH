@@ -25,6 +25,27 @@
     var stage = 'contact', mode = 'phone';
     try { sessionStorage.setItem('nyc.channel', 'self'); } catch (e) {}
 
+    /* "We sent you a new code" alert (placeholder copy). It replaces the
+       "We sent a 6-digit code" text so the two never repeat each other. The
+       resend link counts down 30 seconds (placeholder) after each send. */
+    var CHECK = '<svg viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="currentColor"/><path d="M9.16675 12.2859L14.4874 6.96524C14.6847 6.76795 14.9278 6.66931 15.2167 6.66931C15.5057 6.66931 15.7488 6.76795 15.9461 6.96524C16.1434 7.16252 16.242 7.40654 16.242 7.69731C16.242 7.98809 16.1434 8.23212 15.9461 8.4294L9.90157 14.4794C9.69266 14.6883 9.44772 14.7928 9.16675 14.7928C8.88577 14.7928 8.64083 14.6883 8.43192 14.4794L6.04859 12.0961C5.85131 11.8988 5.75358 11.6548 5.7554 11.364C5.75723 11.0732 5.85679 10.8292 6.05407 10.6319C6.25135 10.4346 6.49538 10.336 6.78616 10.336C7.07693 10.336 7.32096 10.4346 7.51824 10.6319L9.16675 12.2859Z" fill="#E2F2D5"/></svg>';
+    var resendBtn = document.getElementById('resend'), codeText = document.getElementById('codeText'), status = document.getElementById('resendStatus');
+    var COOLDOWN = 30, timer = null;
+    function clearAlert() { status.innerHTML = ''; codeText.hidden = false; }
+    function showAlert() {
+      codeText.hidden = true;
+      status.innerHTML = '<div class="signin__alert">' + CHECK + '<span>We sent you a new code. Expires in 5 minutes.</span></div>';
+    }
+    function startCooldown() {
+      var left = COOLDOWN;
+      clearInterval(timer);
+      resendBtn.setAttribute('aria-disabled', 'true');
+      function tick() {
+        if (left <= 0) { clearInterval(timer); resendBtn.removeAttribute('aria-disabled'); resendBtn.textContent = 'Send a new code'; return; }
+        resendBtn.textContent = 'Send a new code in ' + left + ' second' + (left === 1 ? '' : 's'); left--;
+      }
+      tick(); timer = setInterval(tick, 1000);
+    }
     function hasEmailOnFile() { return !!Mask.DEMO.email; }   /* demo record has an email */
     function target() { return mode === 'phone' ? Mask.phone(Mask.DEMO.phone) : Mask.email(Mask.DEMO.email); }
     function show(which) {
@@ -37,9 +58,10 @@
       var canAlt = hasEmailOnFile();
       verifyAlt.hidden = !canAlt;
       verifyAlt.textContent = mode === 'phone' ? 'Verify by email' : 'Verify by text';
+      clearAlert(); startCooldown();
       cont.textContent = 'Verify'; code.value = ''; code.focus();
     }
-    function toContact() { show('contact'); cont.textContent = 'Send code'; phone.focus(); }
+    function toContact() { clearInterval(timer); show('contact'); cont.textContent = 'Send code'; phone.focus(); }
     function toNotFound() {
       show('notfound'); cont.textContent = 'Try again';
       var h = s3.querySelector('h1'); if (h) { h.setAttribute('tabindex', '-1'); h.focus(); }
@@ -79,7 +101,10 @@
     back.addEventListener('click', function () {
       if (stage === 'code' || stage === 'notfound') toContact(); else window.location.href = 'home.html';
     });
-    document.getElementById('resend').addEventListener('click', function () { A11y.clearStepError(err2); code.value = ''; code.focus(); });
+    resendBtn.addEventListener('click', function () {
+      if (resendBtn.getAttribute('aria-disabled') === 'true') return;
+      A11y.clearStepError(err2); code.value = ''; code.focus(); showAlert(); startCooldown();
+    });
     verifyAlt.addEventListener('click', function () { mode = mode === 'phone' ? 'email' : 'phone'; A11y.clearStepError(err2); toCode(); });
     [phone, zip, dob].forEach(function (el) { el.addEventListener('input', function () { A11y.clearStepError(err1); }); });
     dob.addEventListener('input', function () { dob.value = maskDob(dob.value); });
