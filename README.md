@@ -14,7 +14,7 @@ dashboard → "View details" (static handoff page) · "Start your application" (
 ```
 
 - Sign-in finds the record by phone + ZIP + DOB. No match shows "We couldn't find your account" with a route to a pilot location and "Try again".
-- "Verify another way" on the code step offers a masked email, only if an email is on file (phone first). Users never type an email.
+- "Verify by email" / "Verify by text" on the code step offers a masked email, only if an email is on file (phone first). Users never type an email.
 - Sets `nyc.channel = 'self'`.
 
 ## Programs
@@ -64,11 +64,11 @@ Everything is `sessionStorage`; nothing is sent anywhere. Clearing the tab reset
 | `nyc.language` | chosen language code (stored and announced; no translation in the prototype) |
 | `nyc.df`, `nyc.hi`, `nyc.tsu`, `nyc.eap`, `nyc.eitc` | per-program answers |
 
-Demo client: phone `917-555-2222`, ZIP `10457`, DOB `03/15/1988` (anything else shows "We couldn't find your account"). Any 6 digits verify. The demo record seeds three referrals (Hospital bills, Health insurance, Energy discounts) and one no match (Tax credits). All names, numbers and sites are fictional.
+Demo client: phone `917-555-2222`, ZIP `10457`, DOB `03/15/1988` (anything else shows "We couldn't find your account"). Any 6 digits verify. The demo record seeds no results: every program shows "Get started" until a screener and handoff are completed. In production the vendor fills these from what the client did with the CHW in person. All names, numbers and sites are fictional.
 
 ## Dashboard states
 
-Programs with a result come first, then the rest under "Explore programs & applications for you". SNAP is hidden for now. Clicking a partner link does not change state.
+Programs with a result come first, then the rest, under the two-tone "Explore programs & applications for you" H1 (small "Hi, {name}" above it). The in-person support link sits at the bottom. SNAP is hidden for now. Clicking a partner link does not change state.
 
 | State | Chip | Body | CTAs |
 |---|---|---|---|

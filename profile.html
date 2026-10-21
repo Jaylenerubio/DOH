@@ -62,7 +62,7 @@
 
       <div class="review-cards">
 
-        <section class="review-card" aria-labelledby="infoTitle">
+        <section class="review-card" aria-labelledby="infoTitle" data-readonly>
           <div class="review-card__head">
             <h2 class="review-card__title" id="infoTitle">Your information</h2>
           </div>
@@ -84,7 +84,7 @@
           <hr class="review-card__rule">
           <div class="review-fields">
             <div class="review-field">
-              <label class="review-field__label" for="method">How should we contact you about your programs?</label>
+              <label class="review-field__label" for="method">How should we contact you?</label>
               <select class="field__input review-value" id="method" required>
                 <option value="text">Text me</option>
                 <option value="call">Call me</option>
@@ -94,7 +94,7 @@
         </section>
 
         <!-- PLACEHOLDER: no confirmation step or destination yet (deletion process TBD). -->
-        <button class="profile__delete" type="button" id="deleteAccount">Request account deletion</button>
+        <button class="ext-link profile__delete" type="button" id="deleteAccount">Request account deletion</button>
 
       </div>
     </main>
@@ -105,6 +105,7 @@
   <script src="scripts/a11y.js"></script>
   <script src="scripts/combobox.js"></script>
   <script src="scripts/profile.js"></script>
+  <script src="scripts/review-edit.js"></script>
   <script src="scripts/banner.js"></script>
   <script src="scripts/nav-lang.js"></script>
 </body>

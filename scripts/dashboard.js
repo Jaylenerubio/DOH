@@ -7,7 +7,7 @@
                   + "Start your application" where a partner application
                   exists (Dollar For, Energy/BEA, Tax credits) + "View details"
      nomatch    → "No match" chip + description + "View details"
-   Programs with an outcome come first; the rest follow under "Explore
+   Programs with an outcome come first, then the rest, under "Explore
    programs & applications for you". SNAP is hidden for now.
    Clicking a partner link does not change state.
    ========================================================================= */
@@ -29,7 +29,6 @@
     'financial-help': 'Start your application. You\u2019ll get a one-time code each time you sign in.',
     'tax-credits': 'Start your application with GetYourRefund to file or amend your return.'
   };
-  var HELP_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.95 18q.525 0 .888-.363.362-.362.362-.887t-.362-.888q-.363-.362-.888-.362t-.887.362q-.363.363-.363.888t.363.887q.362.363.887.363Zm-.9-3.85h1.85q0-.825.188-1.3.187-.475 1.062-1.3.65-.65 1.025-1.238.375-.587.375-1.312 0-1.25-.913-1.912Q13.725 6.425 12.25 6.425q-1.4 0-2.35.712-.95.713-1.325 1.838l1.65.65q.15-.55.588-.962.437-.413 1.162-.413.725 0 1.125.375.4.375.4.925 0 .5-.3.9t-.8.85q-1.025.9-1.275 1.4-.25.5-.25 1.775ZM12 22q-2.075 0-3.9-.788-1.825-.787-3.175-2.137-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175 1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138 1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"/></svg>';
 
   function read(k) { try { return JSON.parse(sessionStorage.getItem(k) || 'null'); } catch (e) { return null; } }
   function raw(k) { try { return sessionStorage.getItem(k) || ''; } catch (e) { return ''; } }
@@ -71,14 +70,14 @@
   function init() {
     var c = read('nyc.contact') || {};
     if (c.firstName) document.getElementById('greeting').textContent = 'Hi, ' + c.firstName;
-    var all = Pillars.ORDER.filter(function (k) { return k !== 'snap'; });   /* SNAP hidden for now */
-    var screened = all.filter(function (k) { return stateFor(k) !== 'none'; });
+    /* Every program shows "Get started" until a screener is finished (in
+       production the CHW's in-person results come from the record). Programs
+       with a result float to the top. SNAP is hidden for now. */
+    var all = Pillars.ORDER.filter(function (k) { return k !== 'snap'; });
+    var done = all.filter(function (k) { return stateFor(k) !== 'none'; });
     var rest = all.filter(function (k) { return stateFor(k) === 'none'; });
-    var yours = document.getElementById('appStack'), more = document.getElementById('exploreStack');
-    screened.forEach(function (k) { yours.appendChild(card(k)); });
-    rest.forEach(function (k) { more.appendChild(card(k)); });
-    document.getElementById('yourSection').hidden = screened.length === 0;
-    document.getElementById('exploreSection').hidden = rest.length === 0;
+    var stack = document.getElementById('appStack');
+    done.concat(rest).forEach(function (k) { stack.appendChild(card(k)); });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

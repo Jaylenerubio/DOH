@@ -56,8 +56,8 @@
 
 .app-card__status { margin: var(--space-2) 0 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text-secondary); }
 
-/* v1.3 help message (Material "help" icon) and explore stack */
-.dash__helpnote { margin: var(--space-2) 0 0; }
-.dash__helpbtn { display: inline-flex; align-items: flex-start; gap: 8px; min-height: 44px; padding: 8px 0; color: var(--color-link); font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); font-weight: 600; text-decoration: underline; }
-.dash__helpbtn svg { width: 24px; height: 24px; flex: 0 0 auto; }
-.dash__featured .dash__stack { margin-top: 0; }
+/* v1.3 help link at the bottom: ext-link underline, Material "help" icon. */
+.dash__help { margin: var(--space-4) 0 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); }
+.dash__helplink { display: inline-flex; align-items: flex-start; gap: 8px; padding: 8px 0; text-decoration: none; }
+.dash__helplink span { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+.dash__helplink svg { width: 20px; height: 20px; flex: 0 0 auto; margin-top: 5px; color: var(--color-brand); }

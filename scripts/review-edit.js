@@ -166,7 +166,7 @@
   }
 
   function init() {
-    Array.prototype.forEach.call(document.querySelectorAll('.review-card'), setup);
+    Array.prototype.forEach.call(document.querySelectorAll('.review-card:not([data-readonly])'), setup);
     submit = document.getElementById('continueBtn');
     if (submit) submit.addEventListener('click', function (e) {
       if (editing) { e.preventDefault(); e.stopImmediatePropagation(); A11y.announce('Finish editing ' + editing.name + ' before you submit.'); editing.btn.focus(); }

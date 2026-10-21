@@ -5,7 +5,7 @@
    Prototype: the demo record is phone 917-555-2222, ZIP 10457, DOB 03/15/1988
    (Mask.DEMO). Anything else shows "We couldn't find your account". Any
    6 digits work as the code. Code expiry (5 minutes) is an unconfirmed
-   placeholder. "Verify another way" appears on the code step only when an
+   placeholder. "Verify by email" / "Verify by text" appears on the code step only when an
    email is on file; the email is masked, never typed.
    Masked identifiers only on these screens (scripts/mask.js). */
 (function () {
@@ -21,7 +21,7 @@
     var s1 = document.getElementById('stepContact'), s2 = document.getElementById('stepCode'), s3 = document.getElementById('stepNotFound');
     var cont = document.getElementById('continueBtn'), back = document.getElementById('backBtn');
     var err1 = document.getElementById('stepError'), err2 = document.getElementById('codeError');
-    var verifyAlt = document.getElementById('verifyAlt'), altSep = document.getElementById('altSep');
+    var verifyAlt = document.getElementById('verifyAlt');
     var stage = 'contact', mode = 'phone';
     try { sessionStorage.setItem('nyc.channel', 'self'); } catch (e) {}
 
@@ -35,8 +35,8 @@
       show('code');
       document.querySelector('#stepCode .step__text').innerHTML = 'We sent a 6-digit code to <strong id="sentTo" style="white-space:nowrap">' + target() + '</strong>. It expires in 5 minutes.';
       var canAlt = hasEmailOnFile();
-      verifyAlt.hidden = !canAlt; altSep.hidden = !canAlt;
-      verifyAlt.textContent = mode === 'phone' ? 'Verify another way' : 'Verify by text instead';
+      verifyAlt.hidden = !canAlt;
+      verifyAlt.textContent = mode === 'phone' ? 'Verify by email' : 'Verify by text';
       cont.textContent = 'Verify'; code.value = ''; code.focus();
     }
     function toContact() { show('contact'); cont.textContent = 'Send code'; phone.focus(); }
@@ -55,14 +55,6 @@
         sessionStorage.setItem('nyc.contact', JSON.stringify(c));
         if (!sessionStorage.getItem('nyc.contactMethod')) sessionStorage.setItem('nyc.contactMethod', 'text');
         sessionStorage.setItem('nyc.recordId', 'NYC-2026-104877');
-        /* Results from the HART employee's visit (demo): three referrals, one no-match. */
-        var done = ['hospital-bills', 'medicaid', 'financial-help', 'tax-credits'];
-        sessionStorage.setItem('nyc.programs', JSON.stringify(done));
-        sessionStorage.setItem('nyc.completed', JSON.stringify(done));
-        ['hospital-bills', 'medicaid', 'financial-help', 'tax-credits'].forEach(function (k, i) {
-          sessionStorage.setItem('nyc.completed.' + k, new Date(2026, 9, 12 + i).toISOString());
-        });
-        sessionStorage.setItem('nyc.outcome.tax-credits', 'ineligible');
         sessionStorage.setItem('nyc.df', JSON.stringify({ hospital: 'NYC Health + Hospitals/Bellevue', billMonth: 'August', billYear: '2026', amount: '3,240', household: '3', state: 'New York', city: 'New York' }));
         sessionStorage.setItem('nyc.returning', 'verified');
       } catch (e) {}
