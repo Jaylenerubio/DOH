@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Return to your last session — NYC Health</title>
+<title>Resume your session — NYC Health</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -56,15 +56,11 @@
     <main class="step__body" id="main" tabindex="-1">
       <section id="stepContact">
         <h1 class="step__title">Finish where<br>you left off</h1>
-        <p class="step__text">Enter the phone number, zip code, and date of birth you used before. We&rsquo;ll text you a 6-digit code.</p>
+        <p class="step__text">Enter the phone number, zip code, and date of birth you gave your HART employee. We&rsquo;ll text you a 6-digit code.</p>
         <p class="step-error" id="stepError" role="alert" hidden></p>
         <label class="field" id="phoneField">
           <span class="field__label">Phone number</span>
           <input class="field__input" type="tel" inputmode="tel" autocomplete="tel" id="phone" maxlength="12" placeholder="000-000-0000">
-        </label>
-        <label class="field" id="emailField" hidden>
-          <span class="field__label">Email</span>
-          <input class="field__input" type="email" inputmode="email" autocomplete="email" id="email" placeholder="you@email.com">
         </label>
         <label class="field">
           <span class="field__label">Zip code</span>
@@ -74,18 +70,28 @@
           <span class="field__label">Date of birth</span>
           <input class="field__input" type="text" inputmode="numeric" autocomplete="bday" id="dob" maxlength="10" placeholder="MM/DD/YYYY">
         </label>
-        <p class="signin__alt"><button class="signin__link" type="button" id="swap">Verify another way</button></p>
       </section>
 
       <section id="stepCode" hidden>
         <h1 class="step__title">Enter your code</h1>
-        <p class="step__text">We sent a 6-digit code to <strong id="sentTo"></strong>. It expires in 10 minutes.</p>
+        <p class="step__text">We sent a 6-digit code to <strong id="sentTo"></strong>. It expires in 5 minutes.</p>
         <p class="step-error" id="codeError" role="alert" hidden></p>
         <label class="field">
           <span class="field__label">6-digit code</span>
           <input class="field__input signin__code" type="text" inputmode="numeric" autocomplete="one-time-code" id="code" maxlength="6" placeholder="000000">
         </label>
-        <p class="signin__alt">Didn&rsquo;t get it? <button class="signin__link" type="button" id="resend">Send a new code</button><span id="sep"> &middot; </span><button class="signin__link" type="button" id="changeContact">Use a different number</button></p>
+        <p class="signin__alt">Didn&rsquo;t get it? <button class="signin__link" type="button" id="resend">Send a new code</button><span id="altSep" hidden> &middot; </span><button class="signin__link" type="button" id="verifyAlt" hidden>Verify another way</button></p>
+      </section>
+
+      <section id="stepNotFound" hidden>
+        <h1 class="step__title">We couldn&rsquo;t find<br>your account</h1>
+        <p class="step__text">Check that your information is correct and try again. If you haven&rsquo;t started with a HART employee yet, you can begin at a pilot location.</p>
+        <div class="signin__card">
+          <h2 class="signin__card-title">Get started in person</h2>
+          <p class="signin__card-text">A HART employee at a pilot location will help you check which programs can help you.</p>
+          <!-- PLACEHOLDER: pilot-location link TBD -->
+          <a class="btn btn--primary" href="#" id="pilotLink" data-placeholder="pilot-location">Find a pilot location</a>
+        </div>
       </section>
     </main>
 

@@ -44,7 +44,7 @@
       window.location.href = 'eitc-review.html';
     });
     if (back) back.addEventListener('click', function () {
-      if (history.length > 1) history.back(); else window.location.href = (sessionStorage.getItem('nyc.channel') === 'self') ? 'dashboard.html' : 'programs.html';
+      if (history.length > 1) history.back(); else window.location.href = (sessionStorage.getItem('nyc.channel') === 'self') ? 'dashboard.html' : 'dashboard.html';
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();

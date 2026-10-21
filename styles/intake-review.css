@@ -33,3 +33,11 @@ select.review-value option { color: var(--color-text); }
 /* My profile: no progress bar or footer; back link above the title. */
 .profile .step__body { padding-top: 40px; }
 .profile .review-cards { margin-top: var(--space-3); }
+
+/* My profile (v1.3): read-only information list + red text delete button. */
+.profile__list { margin: var(--space-3) 0 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.profile__row { display: flex; flex-direction: column; gap: 2px; }
+.profile__row dt { font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text); }
+.profile__row dd { margin: 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); font-weight: 600; color: var(--color-text); }
+.profile__delete { align-self: flex-start; min-height: 44px; padding: 0 4px; background: none; border: 0; cursor: pointer; font-family: var(--type-button-family); font-size: var(--type-button-size); font-weight: 600; color: var(--color-error-dark); text-decoration: underline; }
+.profile__delete:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset); border-radius: 4px; }

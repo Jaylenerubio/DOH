@@ -2,9 +2,24 @@
 
 One entry per drop. Newest first. Dates are the day the drop was tagged.
 
-## v2.1 self-service — 2026-10-15
+## v1.3 Save & Continue — 2026-10-21
 
-Baseline for the vendor hand-off.
+CHW starts in the Blooming Health CRM; the client finishes at home. Self-service intake moves to v1.4.
+
+**Added / changed**
+- Landing: single "Resume your session" button.
+- Sign-in: phone + ZIP + DOB only (email field and toggle removed); code expires in 5 minutes (unconfirmed); "Verify another way" offers a masked on-file email; no-match shows "We couldn't find your account" with pilot-location route and Try again.
+- Dashboard: two result states (Referral sent, No match) plus Get started; "Referral sent {full date}" with a program message; "Start your application" returns for Dollar For, Energy discounts and Tax credits; all programs except SNAP, results first; in-person support help message.
+- Handoff pages from the dashboard are static; Back to dashboard on top.
+- My profile: "Your information" is read-only; "Preferred contact method" (Text me / Call me) is editable; red "Request account deletion" text button (placeholder, no modal).
+
+**Removed**
+- Intake and account creation: language, privacy, contact, contact method, profile created, creating, all set, starting, programs, intake review, returning-client pages.
+- In progress, Awaiting response, Submitted states; `?demo=submitted`; applied/submitted tracking; "screen again".
+
+## v2.1 self-service — 2026-10-15 (pre-split baseline)
+
+Full self-service build before the release split. Not sent to vendors. Its flow now lives on branch `v1.4-Self-service`.
 
 **Flow**
 - Self-service channel: home → programs → privacy → contact (returning-client check) → contact method → "Your profile has been created" → first chosen program's screener → handoff → dashboard.

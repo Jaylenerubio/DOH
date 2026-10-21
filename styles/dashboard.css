@@ -41,7 +41,7 @@
 }
 .featured-list { display: flex; flex-direction: column; gap: var(--space-2); }
 
-.dash__help { margin: var(--space-5) 0 0; font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); color: var(--color-text-secondary); }
+
 .dash__help a { color: var(--color-link); }
 
 @media (min-width: 768px) {
@@ -55,3 +55,9 @@
 .featured-row__desc { font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text-secondary); }
 
 .app-card__status { margin: var(--space-2) 0 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text-secondary); }
+
+/* v1.3 help message (Material "help" icon) and explore stack */
+.dash__helpnote { margin: var(--space-2) 0 0; }
+.dash__helpbtn { display: inline-flex; align-items: flex-start; gap: 8px; min-height: 44px; padding: 8px 0; color: var(--color-link); font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); font-weight: 600; text-decoration: underline; }
+.dash__helpbtn svg { width: 24px; height: 24px; flex: 0 0 auto; }
+.dash__featured .dash__stack { margin-top: 0; }

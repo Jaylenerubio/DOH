@@ -1,7 +1,0 @@
-/* =========================================================================
-   NYC DOH Affordability Navigator — preferred contact method step (mobile)
-   Built from the shared .step* scaffold + .method-card / .method-list
-   components. Page-specific spacing only.
-   ========================================================================= */
-
-.method-list { margin-top: var(--space-5); }   /* 40px below the title */

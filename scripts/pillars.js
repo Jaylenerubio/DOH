@@ -1,11 +1,10 @@
 /* =========================================================================
    Pillar chaining + completion.
-   - 'nyc.programs'  : pillar keys selected on programs.html
+   - 'nyc.programs'  : programs with a result (seeded at sign-in)
    - 'nyc.completed' : pillar keys whose handoff screen has been reached
    Terminal ("What's next") screens call Pillars.wireHandoff(currentKey):
-   marks it screened, labels the primary CTA "Continue to <next selected,
-   unscreened pillar>" and routes via starting.html; "Finish" when none remain.
-   "Open client record" is intentionally a no-op for now.
+   marks it screened and wires the primary CTA (partner application link, or
+   Return to dashboard).
    ========================================================================= */
 window.Pillars = (function () {
   'use strict';
@@ -27,7 +26,13 @@ window.Pillars = (function () {
     return ORDER.filter(function (k) { return p.indexOf(k) !== -1; });
   }
   /* Outcome recorded by terminal pages: 'eligible' | 'ineligible' */
-  function outcome(key) { try { return sessionStorage.getItem('nyc.outcome.' + key) || ''; } catch (e) { return ''; } }
+  function outcome(key) {
+    try {
+      var o = sessionStorage.getItem('nyc.outcome.' + key) || '';
+      if (!o && completed().indexOf(key) !== -1) o = 'eligible';   /* handoff reached with no result recorded = referral */
+      return o;
+    } catch (e) { return ''; }
+  }
   function markOutcome(key, v) { try { sessionStorage.setItem('nyc.outcome.' + key, v); } catch (e) {} }
   function completed() { var c = list('nyc.completed'); return ORDER.filter(function (k) { return c.indexOf(k) !== -1; }); }
   function isCompleted(key) { return completed().indexOf(key) !== -1; }
@@ -51,13 +56,9 @@ window.Pillars = (function () {
     }
     return null;
   }
-  function entryFor(key) { return META[key] ? META[key].entry : 'programs.html'; }
+  function entryFor(key) { return META[key] ? META[key].entry : 'dashboard.html'; }
   function labelFor(key) { return META[key] ? META[key].label : ''; }
-  function startUrl(key) { return 'starting.html?pillar=' + encodeURIComponent(key); }
-  /* Self-service channel: 'nyc.channel' === 'self' (set by signin.html).
-     Handoffs return to the dashboard instead of chaining, and the secondary
-     action becomes "Start application" where a partner application exists
-     (marks the pillar applied in 'nyc.applied'). */
+  /* Partner applications open in a new tab; handoffs return to the dashboard. */
   /* Partner applications. Vendor: the EAP url is a placeholder for the BEA
      partner intake link (e.g. staging.nyc-bea.navateam.com/partner-intake-demo). */
   var APPLY = {
@@ -71,45 +72,30 @@ window.Pillars = (function () {
     return a.url;
   }
   function isSelf() { try { return sessionStorage.getItem('nyc.channel') === 'self'; } catch (e) { return false; } }
-  function applied() { var a = list('nyc.applied'); return ORDER.filter(function (k) { return a.indexOf(k) !== -1; }); }
-  function isApplied(key) { return applied().indexOf(key) !== -1; }
-  /* Partner confirmed receipt (demo only until partners return a status).
-     Trigger: dashboard.html?demo=submitted sets it for Hospital bills. */
-  function submittedAt(key) { try { return sessionStorage.getItem('nyc.submitted.' + key) || ''; } catch (e) { return ''; } }
-  function isSubmitted(key) { return !!submittedAt(key); }
-  function markApplied(key) {
-    var a = list('nyc.applied');
-    if (a.indexOf(key) === -1) a.push(key);
-    try { sessionStorage.setItem('nyc.applied', JSON.stringify(a)); sessionStorage.setItem('nyc.applied.' + key, new Date().toISOString()); } catch (e) {}
-  }
+  /* v1.3: no applied / submitted tracking. Clicking a partner link does not
+     change any state; the dashboard shows only "Referral sent" or "No match". */
   function wireHandoff(currentKey) {
     markCompleted(currentKey);
     var btn = document.getElementById('nextPillarBtn');
     var rec = document.getElementById('recordBtn');
-    if (isSelf()) {
-      var app = outcome(currentKey) === 'ineligible' ? null : APPLY[currentKey];   /* not eligible: no application to start */
-      if (btn) {
-        if (app) {
-          btn.innerHTML = app.label + '<span class="sr-only"> (opens in new tab)</span>';
-          btn.addEventListener('click', function () { markApplied(currentKey); var u = applyUrl(currentKey); if (u.charAt(0) !== '#') window.open(u, '_blank', 'noopener'); window.location.href = 'dashboard.html'; });
-        } else {
-          btn.textContent = 'Return to dashboard';
-          btn.addEventListener('click', function () { window.location.href = 'dashboard.html'; });
-        }
+    var app = outcome(currentKey) === 'ineligible' ? null : APPLY[currentKey];   /* not eligible: no application to start */
+    if (btn) {
+      if (app) {
+        btn.innerHTML = app.label + '<span class="sr-only"> (opens in new tab)</span>';
+        btn.addEventListener('click', function () { var u = applyUrl(currentKey); if (u.charAt(0) !== '#') window.open(u, '_blank', 'noopener'); });
+      } else {
+        btn.textContent = 'Return to dashboard';
+        btn.addEventListener('click', function () { window.location.href = 'dashboard.html'; });
       }
-      if (rec) {
-        if (app) { rec.textContent = 'Return to dashboard'; rec.addEventListener('click', function () { window.location.href = 'dashboard.html'; }); }
-        else rec.hidden = true;
-      }
-      return;
     }
-    /* No chaining: every handoff returns to the dashboard. */
-    if (btn) { btn.textContent = 'Return to dashboard'; btn.addEventListener('click', function () { window.location.href = 'dashboard.html'; }); }
-    if (rec) rec.hidden = true;
+    if (rec) {
+      if (app) { rec.textContent = 'Return to dashboard'; rec.addEventListener('click', function () { window.location.href = 'dashboard.html'; }); }
+      else rec.hidden = true;
+    }
   }
   return { ORDER: ORDER, META: META, selected: selected, completed: completed, isCompleted: isCompleted,
            markCompleted: markCompleted, pending: pending, first: first, nextAfter: nextAfter,
-           entryFor: entryFor, labelFor: labelFor, startUrl: startUrl, wireHandoff: wireHandoff,
-           isSelf: isSelf, applied: applied, isApplied: isApplied, markApplied: markApplied, isSubmitted: isSubmitted, submittedAt: submittedAt, APPLY: APPLY,
+           entryFor: entryFor, labelFor: labelFor, wireHandoff: wireHandoff,
+           isSelf: isSelf, APPLY: APPLY,
            outcome: outcome, markOutcome: markOutcome, applyUrl: applyUrl };
 })();
