@@ -18,7 +18,8 @@
   }
   function init() {
     var email = document.getElementById('email'), phone = document.getElementById('phone'), zip = document.getElementById('zip'), dob = document.getElementById('dob'), code = document.getElementById('code');
-    var s1 = document.getElementById('stepContact'), s2 = document.getElementById('stepCode'), s3 = document.getElementById('stepNotFound');
+    var s1 = document.getElementById('stepContact'), s2 = document.getElementById('stepCode'), s3 = document.getElementById('stepNotFound'), s4 = document.getElementById('stepPaused');
+    var wrong = 0, MAX_WRONG = 5;   /* PLACEHOLDER: server enforces; demo treats 000000 as a wrong code */
     var cont = document.getElementById('continueBtn'), back = document.getElementById('backBtn');
     var err1 = document.getElementById('stepError'), err2 = document.getElementById('codeError');
     var verifyAlt = document.getElementById('verifyAlt');
@@ -49,7 +50,7 @@
     function hasEmailOnFile() { return true; }   /* email is required to sign in */
     function target() { return mode === 'phone' ? Mask.phone(Mask.DEMO.phone) : Mask.email(Mask.DEMO.email); }
     function show(which) {
-      s1.hidden = which !== 'contact'; s2.hidden = which !== 'code'; s3.hidden = which !== 'notfound';
+      s1.hidden = which !== 'contact'; s2.hidden = which !== 'code'; s3.hidden = which !== 'notfound'; s4.hidden = which !== 'paused';
       stage = which;
     }
     function toCode() {
@@ -83,6 +84,7 @@
     }
 
     cont.addEventListener('click', function () {
+      if (stage === 'paused') { window.location.href = 'home.html'; return; }
       if (stage === 'notfound') { toContact(); return; }
       if (stage === 'contact') {
         var em = email.value.trim(), v = phone.value.trim(), z = zip.value.trim(), d = dob.value.trim();
@@ -95,6 +97,12 @@
         mode = 'phone'; toCode();
       } else {
         if (!/^\d{6}$/.test(code.value.trim())) { A11y.stepError(err2, 'Enter the 6-digit code we sent you'); code.focus(); return; }
+        if (code.value.trim() === '000000') {
+          wrong++;
+          if (wrong >= MAX_WRONG) { clearInterval(timer); show('paused'); back.hidden = true; cont.textContent = 'Back to home'; stage = 'paused'; return; }
+          var left = MAX_WRONG - wrong;
+          A11y.stepError(err2, 'Invalid code. You have ' + left + ' attempt' + (left === 1 ? '' : 's') + ' left.'); code.value = ''; code.focus(); return;
+        }
         seedReturningUser();
         window.location.href = 'welcome-back.html';
       }

@@ -64,7 +64,7 @@ Everything is `sessionStorage`; nothing is sent anywhere. Clearing the tab reset
 | `nyc.language` | chosen language code (stored and announced; no translation in the prototype) |
 | `nyc.df`, `nyc.hi`, `nyc.tsu`, `nyc.eap`, `nyc.eitc` | per-program answers |
 
-Demo client: email `ana@example.com`, phone `917-555-2222`, ZIP `10457`, DOB `03/15/1988` (anything else shows "We couldn't find your account"). Any 6 digits verify. The demo record seeds no results: every program shows "Get started" until a screener and handoff are completed. In production the vendor fills these from what the client did with the CHW in person. All names, numbers and sites are fictional.
+Demo client: email `ana@example.com`, phone `917-555-2222`, ZIP `10457`, DOB `03/15/1988` (anything else shows "We couldn't find your account"). Any 6 digits verify, except `000000`, which counts as a wrong code ("Invalid code. You have N attempts left."); the fifth pauses sign-in. The demo record seeds no results: every program shows "Get started" until a screener and handoff are completed. In production the vendor fills these from what the client did with the CHW in person. All names, numbers and sites are fictional.
 
 ## Dashboard states
 

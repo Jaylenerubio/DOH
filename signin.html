@@ -56,7 +56,7 @@
     <main class="step__body" id="main" tabindex="-1">
       <section id="stepContact">
         <h1 class="step__title">Finish where<br>you left off</h1>
-        <p class="step__text">Enter the email, phone number, zip code, and date of birth you gave your HART employee. We&rsquo;ll text you a 6-digit code.</p>
+        <p class="step__text">Enter your information and we&rsquo;ll text you a 6-digit code.</p>
         <p class="step-error" id="stepError" role="alert" hidden></p>
         <label class="field" id="emailField">
           <span class="field__label">Email</span>
@@ -74,6 +74,13 @@
           <span class="field__label">Date of birth</span>
           <input class="field__input" type="text" inputmode="numeric" autocomplete="bday" id="dob" maxlength="10" placeholder="MM/DD/YYYY">
         </label>
+      </section>
+
+      <!-- PLACEHOLDER: pause length (15 min) and copy pending security sign-off. Demo: enter 000000 five times. -->
+      <section id="stepPaused" hidden>
+        <h1 class="step__title">Sign-in is paused</h1>
+        <p class="step__text">For your security, we paused sign-in after too many incorrect codes. You can try again in 15 minutes.</p>
+        <p class="support-line">Need help? Contact us at <a class="ext-link support-mail" href="mailto:HARTConnectorSupport@health.nyc.gov"><svg class="support-mail__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.33 16.67c-.46 0-.85-.16-1.18-.49-.33-.33-.49-.72-.49-1.18v-10c0-.46.16-.85.49-1.18.33-.33.72-.49 1.18-.49h13.33c.46 0 .85.16 1.18.49.33.33.49.72.49 1.18v10c0 .46-.16.85-.49 1.18-.33.33-.72.49-1.18.49H3.33Zm13.33-10-6.23 3.9a.8.8 0 0 1-.43.12.8.8 0 0 1-.43-.12L3.33 6.67v8.33h13.33V6.67ZM10 9.17l6.67-4.17H3.33L10 9.17Z" fill="currentColor"/></svg>HARTConnectorSupport@health.nyc.gov</a>.</p>
       </section>
 
       <section id="stepCode" hidden>
