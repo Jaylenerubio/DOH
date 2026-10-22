@@ -22,10 +22,8 @@
 #resendStatus:not(:empty) { margin-top: var(--space-2); }
 .signin__link[aria-disabled="true"] { color: var(--color-text-secondary); text-decoration: none; cursor: default; }
 
-/* Account-not-found card */
-.signin__card { margin-top: var(--space-3); padding: var(--space-3); background: var(--color-neutral-100); border: 1px solid var(--color-neutral-300); border-radius: 16px; display: flex; flex-direction: column; gap: var(--space-2); }
-.signin__card-title { margin: 0; font-family: var(--type-body-family); font-size: 20px; line-height: 1.4; font-weight: 600; color: var(--color-text); }
-.signin__card-text { margin: 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text-secondary); }
-
-.signin__alt--row { display: flex; flex-wrap: wrap; align-items: center; column-gap: 8px; }
-.signin__alt--row .signin__link { min-height: 44px; }
+/* Account-not-found: NYC Health locations */
+.signin__hours { margin: var(--space-2) 0 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); font-weight: 600; color: var(--color-text); }
+.signin__locs { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.signin__loc { display: flex; flex-direction: column; gap: 4px; padding: var(--space-2); background: var(--color-neutral-100); border: 1px solid var(--color-neutral-300); border-radius: 16px; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text); }
+.signin__loc-name { font-weight: 600; }

@@ -9,11 +9,11 @@ No build step. No dependencies. Open `home.html` in a browser, or serve the fold
 A HART employee (CHW) starts the client's record in the Blooming Health CRM; the client finishes at home. This branch has **no intake or account-creation pages**. The public self-service flow (landing, programs, privacy, contact, account created, "Starting [program]") is on branch `v1.4-Self-service`.
 
 ```
-home ("Resume your session") → signin (phone + ZIP + DOB) → 6-digit code → welcome-back → dashboard
+home ("Resume your session") → signin (email + phone + ZIP + DOB) → 6-digit code → welcome-back → dashboard
 dashboard → "View details" (static handoff page) · "Start your application" (partner link) · My profile
 ```
 
-- Sign-in finds the record by phone + ZIP + DOB. No match shows "We couldn't find your account" with a route to a pilot location and "Try again".
+- Sign-in finds the record by email + phone + ZIP + DOB (all four must match; email is required, so clients without an email on file can't use it yet). No match shows "We couldn't find your account", the five NYC Health locations and a single "Try again" button.
 - "Verify by email" / "Verify by text" on the code step offers a masked email, only if an email is on file (phone first). Users never type an email.
 - Sets `nyc.channel = 'self'`.
 
@@ -64,7 +64,7 @@ Everything is `sessionStorage`; nothing is sent anywhere. Clearing the tab reset
 | `nyc.language` | chosen language code (stored and announced; no translation in the prototype) |
 | `nyc.df`, `nyc.hi`, `nyc.tsu`, `nyc.eap`, `nyc.eitc` | per-program answers |
 
-Demo client: phone `917-555-2222`, ZIP `10457`, DOB `03/15/1988` (anything else shows "We couldn't find your account"). Any 6 digits verify. The demo record seeds no results: every program shows "Get started" until a screener and handoff are completed. In production the vendor fills these from what the client did with the CHW in person. All names, numbers and sites are fictional.
+Demo client: email `ana@example.com`, phone `917-555-2222`, ZIP `10457`, DOB `03/15/1988` (anything else shows "We couldn't find your account"). Any 6 digits verify. The demo record seeds no results: every program shows "Get started" until a screener and handoff are completed. In production the vendor fills these from what the client did with the CHW in person. All names, numbers and sites are fictional.
 
 ## Dashboard states
 
@@ -80,7 +80,8 @@ Programs with a result come first, then the rest, under the two-tone "Explore pr
 
 - Dollar For PIN shown as `####` in the Hospital bills dashboard message.
 - Code expiry ("5 minutes"), the 30-second resend countdown and the "We sent you a new code." alert copy are placeholders.
-- Links still TBD: pilot location (not-found screen), in-person support (dashboard help message), account deletion ("Request account deletion" has no modal or destination).
+- Not-found screen: confirm HART employees are at all five locations (two are Sexual Health Clinics, both linking to the generic clinics page) and walk-in vs appointment.
+- Links still TBD: in-person support (dashboard help message), account deletion ("Request account deletion" has no modal or destination).
 - Energy discounts: Benefits Enrollment Assistant intake URL (`#bea-partner-intake-placeholder` in `scripts/pillars.js` and `eeap-next.html`).
 - Hospital bills: `https://dollarfor.org/` stands in for the simplified-application link.
 - Enrollment-site names, addresses, hours and phone numbers (`scripts/hi-sites.js`).

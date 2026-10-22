@@ -56,8 +56,12 @@
     <main class="step__body" id="main" tabindex="-1">
       <section id="stepContact">
         <h1 class="step__title">Finish where<br>you left off</h1>
-        <p class="step__text">Enter the phone number, zip code, and date of birth you gave your HART employee. We&rsquo;ll text you a 6-digit code.</p>
+        <p class="step__text">Enter the email, phone number, zip code, and date of birth you gave your HART employee. We&rsquo;ll text you a 6-digit code.</p>
         <p class="step-error" id="stepError" role="alert" hidden></p>
+        <label class="field" id="emailField">
+          <span class="field__label">Email</span>
+          <input class="field__input" type="email" inputmode="email" autocomplete="email" id="email" placeholder="you@email.com">
+        </label>
         <label class="field" id="phoneField">
           <span class="field__label">Phone number</span>
           <input class="field__input" type="tel" inputmode="tel" autocomplete="tel" id="phone" maxlength="12" placeholder="000-000-0000">
@@ -88,13 +92,31 @@
 
       <section id="stepNotFound" hidden>
         <h1 class="step__title">We couldn&rsquo;t find<br>your account</h1>
-        <p class="step__text">Check that your information is correct and try again. If you haven&rsquo;t started with a HART employee yet, you can begin at a pilot location.</p>
-        <div class="signin__card">
-          <h2 class="signin__card-title">Get started in person</h2>
-          <p class="signin__card-text">A HART employee at a pilot location will help you check which programs can help you.</p>
-          <!-- PLACEHOLDER: pilot-location link TBD -->
-          <a class="btn btn--primary" href="#" id="pilotLink" data-placeholder="pilot-location">Find a pilot location</a>
-        </div>
+        <p class="step__text">Check that your information is correct and try again. If you haven&rsquo;t started with a HART employee yet, you can visit one of these NYC Health locations to get started.</p>
+        <p class="signin__hours">Hours for all locations: 9 a.m. to 5 p.m., Monday to Friday.</p>
+        <!-- PLACEHOLDER: confirm with Shannon that HART employees are at all five sites, and walk-in vs appointment. -->
+        <ul class="signin__locs">
+          <li class="signin__loc">
+            <a class="ext-link signin__loc-name" href="https://www.nyc.gov/site/doh/health/neighborhood-health/action-center-brownsville.page" target="_blank" rel="noopener">Brownsville Neighborhood Health Action Center<span class="sr-only"> (opens in new tab)</span></a>
+            <span class="signin__loc-addr">259 Bristol Street<br>Brooklyn, New York</span>
+          </li>
+          <li class="signin__loc">
+            <a class="ext-link signin__loc-name" href="https://www.nyc.gov/site/doh/health/neighborhood-health/action-center-east-harlem.page" target="_blank" rel="noopener">East Harlem Neighborhood Health Action Center<span class="sr-only"> (opens in new tab)</span></a>
+            <span class="signin__loc-addr">158 East 115th Street<br>Manhattan, New York</span>
+          </li>
+          <li class="signin__loc">
+            <a class="ext-link signin__loc-name" href="https://www.nyc.gov/site/doh/health/neighborhood-health/action-center-tremont.page" target="_blank" rel="noopener">Tremont Neighborhood Health Action Center<span class="sr-only"> (opens in new tab)</span></a>
+            <span class="signin__loc-addr">1826 Arthur Avenue<br>Bronx, New York</span>
+          </li>
+          <li class="signin__loc">
+            <a class="ext-link signin__loc-name" href="https://www.nyc.gov/site/doh/services/sexual-health-clinics.page" target="_blank" rel="noopener">Morrisania Sexual Health Clinic<span class="sr-only"> (opens in new tab)</span></a>
+            <span class="signin__loc-addr">1309 Fulton Avenue, Second Floor<br>Bronx, New York</span>
+          </li>
+          <li class="signin__loc">
+            <a class="ext-link signin__loc-name" href="https://www.nyc.gov/site/doh/services/sexual-health-clinics.page" target="_blank" rel="noopener">Jamaica Sexual Health Clinic<span class="sr-only"> (opens in new tab)</span></a>
+            <span class="signin__loc-addr">90-37 Parsons Boulevard, First Floor<br>Queens, New York</span>
+          </li>
+        </ul>
       </section>
     </main>
 

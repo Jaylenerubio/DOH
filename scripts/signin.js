@@ -1,12 +1,12 @@
-/* Resume your session (v1.3 Save & Continue) — phone + ZIP + date of birth,
+/* Resume your session (v1.3 Save & Continue) — email + phone + ZIP + date of birth,
    then a 6-digit code. A HART employee (CHW) already started the record in the
    Blooming Health CRM; the client finishes at home.
 
-   Prototype: the demo record is phone 917-555-2222, ZIP 10457, DOB 03/15/1988
+   Prototype: the demo record is email ana@example.com, phone 917-555-2222, ZIP 10457, DOB 03/15/1988
    (Mask.DEMO). Anything else shows "We couldn't find your account". Any
    6 digits work as the code. Code expiry (5 minutes) is an unconfirmed
-   placeholder. "Verify by email" / "Verify by text" appears on the code step only when an
-   email is on file; the email is masked, never typed.
+   placeholder. Email is required for sign-in, so "Verify by email" / "Verify by text"
+   is always offered on the code step; the email is masked, never re-typed.
    Masked identifiers only on these screens (scripts/mask.js). */
 (function () {
   'use strict';
@@ -17,7 +17,7 @@
     return d;
   }
   function init() {
-    var phone = document.getElementById('phone'), zip = document.getElementById('zip'), dob = document.getElementById('dob'), code = document.getElementById('code');
+    var email = document.getElementById('email'), phone = document.getElementById('phone'), zip = document.getElementById('zip'), dob = document.getElementById('dob'), code = document.getElementById('code');
     var s1 = document.getElementById('stepContact'), s2 = document.getElementById('stepCode'), s3 = document.getElementById('stepNotFound');
     var cont = document.getElementById('continueBtn'), back = document.getElementById('backBtn');
     var err1 = document.getElementById('stepError'), err2 = document.getElementById('codeError');
@@ -46,7 +46,7 @@
       }
       tick(); timer = setInterval(tick, 1000);
     }
-    function hasEmailOnFile() { return !!Mask.DEMO.email; }   /* demo record has an email */
+    function hasEmailOnFile() { return true; }   /* email is required to sign in */
     function target() { return mode === 'phone' ? Mask.phone(Mask.DEMO.phone) : Mask.email(Mask.DEMO.email); }
     function show(which) {
       s1.hidden = which !== 'contact'; s2.hidden = which !== 'code'; s3.hidden = which !== 'notfound';
@@ -61,9 +61,9 @@
       clearAlert(); startCooldown();
       cont.textContent = 'Verify'; code.value = ''; code.focus();
     }
-    function toContact() { clearInterval(timer); show('contact'); cont.textContent = 'Send code'; phone.focus(); }
+    function toContact() { clearInterval(timer); show('contact'); back.hidden = false; cont.textContent = 'Send code'; email.focus(); }
     function toNotFound() {
-      show('notfound'); cont.textContent = 'Try again';
+      show('notfound'); back.hidden = true; cont.textContent = 'Try again';   /* one button: Back would do the same thing */
       var h = s3.querySelector('h1'); if (h) { h.setAttribute('tabindex', '-1'); h.focus(); }
     }
 
@@ -85,12 +85,13 @@
     cont.addEventListener('click', function () {
       if (stage === 'notfound') { toContact(); return; }
       if (stage === 'contact') {
-        var v = phone.value.trim(), z = zip.value.trim(), d = dob.value.trim();
+        var em = email.value.trim(), v = phone.value.trim(), z = zip.value.trim(), d = dob.value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) { A11y.stepError(err1, 'Enter a valid email address'); email.focus(); return; }
         if (!/^\d{3}-?\d{3}-?\d{4}$/.test(v)) { A11y.stepError(err1, 'Enter your phone number'); phone.focus(); return; }
         if (!/^\d{5}$/.test(z)) { A11y.stepError(err1, 'Enter your 5-digit zip code'); zip.focus(); return; }
         if (!/^\d{2}\/\d{2}\/\d{4}$/.test(d)) { A11y.stepError(err1, 'Enter your date of birth as MM/DD/YYYY'); dob.focus(); return; }
         A11y.clearStepError(err1);
-        if (!Mask.isReturning({ phone: v, zip: z, dob: d })) { toNotFound(); return; }
+        if (!Mask.isReturning({ email: em, phone: v, zip: z, dob: d })) { toNotFound(); return; }
         mode = 'phone'; toCode();
       } else {
         if (!/^\d{6}$/.test(code.value.trim())) { A11y.stepError(err2, 'Enter the 6-digit code we sent you'); code.focus(); return; }
@@ -106,7 +107,7 @@
       A11y.clearStepError(err2); code.value = ''; code.focus(); showAlert(); startCooldown();
     });
     verifyAlt.addEventListener('click', function () { mode = mode === 'phone' ? 'email' : 'phone'; A11y.clearStepError(err2); toCode(); });
-    [phone, zip, dob].forEach(function (el) { el.addEventListener('input', function () { A11y.clearStepError(err1); }); });
+    [email, phone, zip, dob].forEach(function (el) { el.addEventListener('input', function () { A11y.clearStepError(err1); }); });
     dob.addEventListener('input', function () { dob.value = maskDob(dob.value); });
     phone.addEventListener('input', function () {
       var d = phone.value.replace(/\D/g, '').slice(0, 10);
