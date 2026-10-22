@@ -28,6 +28,5 @@
 .signin__loc { display: flex; flex-direction: column; gap: 4px; padding: var(--space-2); background: var(--color-neutral-100); border: 1px solid var(--color-neutral-300); border-radius: 16px; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text); }
 .signin__loc-name { font-weight: 600; }
 
-/* Not-found screen: warm page background (#FAF8F5); cards go white so they still read as cards. */
-body.signin-notfound { background: #FAF8F5; }
-body.signin-notfound .signin__loc { background: #fff; }
+/* Not-found screen: location cards use #FAF8F5 on the white page. */
+.signin__loc { background: #FAF8F5; }
