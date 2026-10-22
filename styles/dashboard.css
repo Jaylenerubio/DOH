@@ -42,7 +42,6 @@
 .featured-list { display: flex; flex-direction: column; gap: var(--space-2); }
 
 
-.dash__help a { color: var(--color-link); }
 
 @media (min-width: 768px) {
   .dash__stack { display: grid; grid-template-columns: 1fr 1fr; }
@@ -55,9 +54,3 @@
 .featured-row__desc { font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text-secondary); }
 
 .app-card__status { margin: var(--space-2) 0 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text-secondary); }
-
-/* v1.3 help link at the bottom: ext-link underline, Material "help" icon. */
-.dash__help { margin: var(--space-4) 0 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); }
-.dash__helplink { display: inline-flex; align-items: flex-start; gap: 8px; padding: 8px 0; text-decoration: none; }
-.dash__helplink span { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
-.dash__helplink svg { width: 20px; height: 20px; flex: 0 0 auto; margin-top: 5px; color: var(--color-brand); }

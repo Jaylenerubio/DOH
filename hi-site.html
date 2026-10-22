@@ -56,30 +56,11 @@
 
     <main class="step__body" id="main" tabindex="-1">
       <h1 class="step__title">Your NYC Health<br>enrollment site</h1>
-      <p class="step__text">We found an NYC Health site closest to the zip code you gave us. You can pick a different one below.</p>
+      <p class="step__text">We found an NYC Health site closest to the zip code you gave us.</p>
 
       <div class="site-card site-card--selected" aria-live="polite">
-        <span class="site-card__chip">Selected</span>
         <p class="site-card__name" id="siteName">[Enrollment site name]</p>
         <p class="site-card__addr" id="siteAddr">[Street address]<br>[City], [State] [Zip code]</p>
-      </div>
-
-      <div class="field hi-site__picker">
-        <label class="field__label" id="siteLabel">Prefer a different site?</label>
-        <div class="combobox" id="siteCombo">
-          <div class="combobox__trigger" role="combobox" tabindex="0" aria-haspopup="listbox" aria-expanded="false" aria-controls="siteList" aria-labelledby="siteLabel siteValue" id="siteTrigger">
-            <span class="combobox__value" id="siteValue">Select a site</span>
-            <svg class="combobox__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <ul class="listbox" id="siteList" role="listbox" aria-labelledby="siteLabel" tabindex="-1">
-            <li class="listbox__option" role="option" id="siteOpt-east-harlem" data-value="east-harlem" aria-selected="false">East Harlem<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-            <li class="listbox__option" role="option" id="siteOpt-morrisania" data-value="morrisania" aria-selected="false">Morrisania<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-            <li class="listbox__option" role="option" id="siteOpt-east-tremont" data-value="east-tremont" aria-selected="false">East Tremont<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-            <li class="listbox__option" role="option" id="siteOpt-corona" data-value="corona" aria-selected="false">Corona<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-            <li class="listbox__option" role="option" id="siteOpt-ohis" data-value="ohis" aria-selected="false">OHIS Triage Team<svg class="listbox__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-          </ul>
-        </div>
-      
       </div>
     </main>
 
@@ -92,7 +73,6 @@
   </div>
 
   <script src="scripts/a11y.js"></script>
-  <script src="scripts/combobox.js"></script>
   <script src="scripts/hi-store.js"></script>
   <script src="scripts/hi-sites.js"></script>
   <script src="scripts/hi-site.js"></script>

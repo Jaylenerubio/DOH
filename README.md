@@ -68,7 +68,7 @@ Demo client: email `ana@example.com`, phone `917-555-2222`, ZIP `10457`, DOB `03
 
 ## Dashboard states
 
-Programs with a result come first, then the rest, under the two-tone "Explore programs & applications for you" H1 (small "Hi, {name}" above it). The in-person support link sits at the bottom. SNAP is hidden for now. Clicking a partner link does not change state.
+Programs with a result come first, then the rest, under the two-tone "Explore programs & applications for you" H1 (small "Hi, {name}" above it). The support email line (envelope + mailto link) sits at the bottom. SNAP is hidden for now. Clicking a partner link does not change state.
 
 | State | Chip | Body | CTAs |
 |---|---|---|---|
@@ -81,7 +81,9 @@ Programs with a result come first, then the rest, under the two-tone "Explore pr
 - Dollar For PIN shown as `####` in the Hospital bills dashboard message.
 - Code expiry ("5 minutes"), the 30-second resend countdown and the "We sent you a new code." alert copy are placeholders.
 - Not-found screen: confirm HART employees are at all five locations (two are Sexual Health Clinics, both linking to the generic clinics page) and walk-in vs appointment.
-- Links still TBD: in-person support (dashboard help message), account deletion ("Request account deletion" has no modal or destination).
+- Support contact is the email HARTConnectorSupport@health.nyc.gov (dashboard, My profile, code step). Account deletion is a request by email; what BH does with it (records are never hard-deleted) is TBD.
+- Health insurance: the "Prefer a different site?" picker is removed for v1.3; site changes return later, bundled with editing client information.
+- OTP lockout rules (attempt limits, lock time, resend limits) are proposals pending security.
 - Energy discounts: Benefits Enrollment Assistant intake URL (`#bea-partner-intake-placeholder` in `scripts/pillars.js` and `eeap-next.html`).
 - Hospital bills: `https://dollarfor.org/` stands in for the simplified-application link.
 - Enrollment-site names, addresses, hours and phone numbers (`scripts/hi-sites.js`).

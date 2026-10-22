@@ -39,6 +39,3 @@ select.review-value option { color: var(--color-text); }
 .profile__row { display: flex; flex-direction: column; gap: 2px; }
 .profile__row dt { font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text); }
 .profile__row dd { margin: 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); font-weight: 600; color: var(--color-text); }
-/* Same underline as .ext-link (3px offset, 1.5px), in the error red. */
-.profile__delete { align-self: flex-start; min-height: 44px; padding: 8px 0; background: none; border: 0; cursor: pointer; font-family: var(--type-button-family); font-size: var(--type-body-size); font-weight: var(--type-body-weight); color: var(--color-error-dark); }
-.profile__delete:hover { color: #A8202F; }

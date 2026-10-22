@@ -9,11 +9,12 @@ CHW starts in the Blooming Health CRM; the client finishes at home. Self-service
 **Added / changed**
 - Landing: single "Resume your session" button.
 - Sign-in: email + phone + ZIP + DOB (email required, listed first; the phone/email toggle is gone); code expires in 5 minutes (unconfirmed); "Send a new code" shows a success alert under the code text and starts a 30-second countdown (placeholders); "Verify by email" / "Verify by text" offers a masked on-file email; no-match shows "We couldn't find your account" with the five NYC Health locations and a single Try again button.
-- Dashboard: two result states (Referral sent, No match) plus Get started; "Referral sent {full date}" with a program message; "Start your application" returns for Dollar For, Energy discounts and Tax credits; all programs except SNAP shown as "Get started" until completed, results first; in-person support link at the bottom.
+- Dashboard: two result states (Referral sent, No match) plus Get started; "Referral sent {full date}" with a program message; "Start your application" returns for Dollar For, Energy discounts and Tax credits; all programs except SNAP shown as "Get started" until completed, results first; support email line at the bottom (also on the code step).
 - Handoff pages from the dashboard are static; Back to dashboard on top.
-- My profile: "Your information" is read-only; "Preferred contact method" (Text me / Call me) is editable with Edit / Done; red "Request account deletion" text button (placeholder, no modal).
+- My profile: "Your information" is read-only; "Preferred contact method" (Text me / Call me) is editable with Edit / Done; a support-email line replaces account deletion ("review, update, or delete your information by contacting us at HARTConnectorSupport@health.nyc.gov").
 
 **Removed**
+- Health insurance "Prefer a different site?" picker (site changes return later, bundled with editing).
 - Intake and account creation: language, privacy, contact, contact method, profile created, creating, all set, starting, programs, intake review, returning-client pages.
 - In progress, Awaiting response, Submitted states; `?demo=submitted`; applied/submitted tracking; "screen again".
 
