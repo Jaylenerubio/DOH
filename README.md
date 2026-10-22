@@ -13,7 +13,7 @@ home ("Resume your session") → signin (email + phone + ZIP + DOB) → 6-digit 
 dashboard → "View details" (static handoff page) · "Start your application" (partner link) · My profile
 ```
 
-- Sign-in finds the record by email + phone + ZIP + DOB (all four must match; email is required, so clients without an email on file can't use it yet). No match shows "We couldn't find your account", the five NYC Health locations and a single "Try again" button.
+- Sign-in finds the record by email + phone + ZIP + DOB (all four must match; email is required at intake). No match shows "We couldn't find your account", the five NYC Health locations and a single "Try again" button.
 - "Verify by email" / "Verify by text" on the code step offers a masked email, only if an email is on file (phone first). Users never type an email.
 - Sets `nyc.channel = 'self'`.
 
