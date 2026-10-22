@@ -52,6 +52,7 @@
     function show(which) {
       s1.hidden = which !== 'contact'; s2.hidden = which !== 'code'; s3.hidden = which !== 'notfound'; s4.hidden = which !== 'paused';
       stage = which;
+      document.body.classList.toggle('signin-notfound', which === 'notfound');
     }
     function toCode() {
       show('code');
