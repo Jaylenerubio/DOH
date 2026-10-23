@@ -49,7 +49,7 @@
 }
 
 /* Featured rows: title 20/600, description 18/400 grey, height hugs content. */
-.featured-row { min-height: 0; padding: var(--space-3); padding-right: calc(12px + 52px + var(--space-3)); }  /* keep text clear of the chevron */
+.featured-row { min-height: 0; padding: var(--space-3); padding-inline-end: calc(12px + 52px + var(--space-3)); }  /* keep text clear of the chevron */
 .featured-row__icon, .featured-row__chevron { color: var(--color-pillar-logo); }  /* one icon colour everywhere */
 .featured-row__desc { font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text-secondary); }
 

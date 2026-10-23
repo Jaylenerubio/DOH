@@ -11,9 +11,9 @@
 #siteList .listbox__check { color: var(--color-text-secondary); }
 
 /* "Selected" chip, top-right of the site card (grey, like the Not eligible chip). */
-.site-card--selected { position: relative; padding-right: 120px; }
+.site-card--selected { position: relative; padding-inline-end: 120px; }
 .site-card__chip {
-  position: absolute; top: var(--space-2); right: var(--space-2);
+  position: absolute; top: var(--space-2); inset-inline-end: var(--space-2);
   display: inline-flex; align-items: center; padding: 8px 16px; border-radius: 999px;
   background: var(--color-neutral-200); color: var(--color-text);
   font-family: var(--type-ui-14-family); font-size: var(--type-ui-14-size); line-height: 1; font-weight: 400;

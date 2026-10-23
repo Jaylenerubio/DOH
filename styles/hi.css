@@ -14,11 +14,11 @@
 .qgroup__hint { color: var(--color-text-secondary); font-size: inherit; }
 /* Stacked full-width single-select cards, left-aligned label. */
 .qgroup__list { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
-.qgroup__list .choice-card { min-height: 56px; padding: var(--space-2); justify-content: flex-start; text-align: left; }
+.qgroup__list .choice-card { min-height: 56px; padding: var(--space-2); justify-content: flex-start; text-align: start; }
 /* Two-up row (Morning / Evening) hugs too, for consistency. */
 .qgroup__row { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: 12px; }
 .qgroup__row .choice-card { flex: 1 1 0; min-width: 0; white-space: nowrap; min-height: 56px; padding: var(--space-1) var(--space-2); }
 /* Chips: square-cornered cards sharing the row at equal widths; a chip wraps
    to the next row only when its label would otherwise truncate. */
 .qgroup__chips { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: 12px; }
-.qgroup__chips .choice-card { flex: 0 1 auto; width: auto; max-width: 100%; min-height: 56px; padding: var(--space-1) var(--space-2); text-align: left; }  /* long labels: hug text, wrap to the next row inside the gutters */
+.qgroup__chips .choice-card { flex: 0 1 auto; width: auto; max-width: 100%; min-height: 56px; padding: var(--space-1) var(--space-2); text-align: start; }  /* long labels: hug text, wrap to the next row inside the gutters */

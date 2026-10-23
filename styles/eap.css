@@ -14,7 +14,7 @@
 .qgroup__hint { color: var(--color-text-secondary); font-size: inherit; }
 /* Stacked full-width single-select cards, left-aligned label. */
 .qgroup__list { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
-.qgroup__list .choice-card { min-height: 56px; padding: var(--space-2); justify-content: flex-start; text-align: left; }
+.qgroup__list .choice-card { min-height: 56px; padding: var(--space-2); justify-content: flex-start; text-align: start; }
 /* Two-up row (Yes / No, Morning / Evening). */
 .qgroup__row { display: flex; gap: var(--space-1); margin-top: 12px; }
 .qgroup__row .choice-card { flex: 1 1 0; min-height: 56px; padding: var(--space-1) var(--space-2); }

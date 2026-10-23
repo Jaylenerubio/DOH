@@ -67,7 +67,7 @@
 }
 .nstep__list {
   margin: var(--space-1) 0 0;                       /* 8px below "You'll need:" */
-  padding-left: 20px;
+  padding-inline-start: 20px;
   list-style-type: disc;                            /* filled bullets */
   font-family: var(--type-ui-16-family);
   font-size: var(--type-ui-16-size);
