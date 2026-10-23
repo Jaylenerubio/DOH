@@ -13,14 +13,15 @@
 </head>
 <body>
   <main class="interstitial" id="main">
-    <div role="status" aria-live="polite"><h1 class="interstitial__title" id="title">Welcome back</h1></div>
+    <div role="status" aria-live="polite"><h1 class="interstitial__title" id="title" data-i18n="welcome">Welcome back</h1></div>
   </main>
 
+  <script src="scripts/i18n.js"></script>
   <script src="scripts/interstitial.js"></script>
   <script>
     (function () {
       var c = {}; try { c = JSON.parse(sessionStorage.getItem('nyc.contact') || '{}'); } catch (e) {}
-      if (c.firstName) document.getElementById('title').textContent = 'Welcome back, ' + c.firstName;
+      if (c.firstName) { var t = document.getElementById('title'); t.setAttribute('data-i18n', 'welcome_name'); t.setAttribute('data-i18n-name', c.firstName); I18n.apply(); }
       Interstitial.show(); Interstitial.go('dashboard.html', 1400);
     })();
   </script>

@@ -42,6 +42,9 @@
   var LANGS = [['en','English',''],['es','Español','Spanish'],['zh','繁體中文','Chinese (Traditional)'],['ru','Русский','Russian'],['bn','বাংলা','Bengali'],['ht','Kreyòl Ayisyen','Haitian Creole'],['ko','한국어','Korean'],['ar','العربية','Arabic'],['ur','اردو','Urdu'],['fr','Français','French'],['pl','Polski','Polish']];
 
   function get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
+  /* Translations (scripts/i18n.js) where loaded; English otherwise. */
+  function T(k, en) { return window.I18n ? I18n.t(k) : en; }
+  function nativeLang() { var c = get('nyc.language') || 'en', l = LANGS.filter(function (x) { return x[0] === c; })[0]; return l ? l[1] : 'English'; }
   function signOut() { try { sessionStorage.clear(); } catch (e) {} window.location.href = 'home.html'; }
 
   function apply() {
@@ -51,7 +54,7 @@
     var hasRecord = !!get('nyc.recordId');
 
     var logo = nav.querySelector('.site-nav__inner > a');
-    if (logo) { logo.setAttribute('href', hasRecord ? 'dashboard.html' : 'home.html'); logo.setAttribute('aria-label', hasRecord ? 'NYC Health — your dashboard' : 'NYC Health — home'); }
+    if (logo) { logo.setAttribute('href', hasRecord ? 'dashboard.html' : 'home.html'); logo.setAttribute('aria-label', hasRecord ? T('home_aria', 'NYC Health — your dashboard') : 'NYC Health — home'); }
 
     var prog = document.querySelector('.progress[aria-valuemax="4"]');
     if (prog && !document.body.querySelector('.intake-review')) {
@@ -63,6 +66,8 @@
     var langBtn = nav.querySelector('.site-nav__translate');
     var langLabel = langBtn && langBtn.querySelector('.site-nav__translate-label');
     /* Translate icon and X share one slot so they can crossfade. */
+    if (langLabel) langLabel.textContent = nativeLang();
+    if (langBtn) langBtn.setAttribute('aria-label', nativeLang() + T('translate_suffix', ', translate this page'));
     var langIcon = langBtn && langBtn.querySelector('svg');
     if (langIcon) { var wrap = document.createElement('span'); wrap.className = 'icon-swap'; wrap.setAttribute('aria-hidden', 'true'); langIcon.parentNode.insertBefore(wrap, langIcon); langIcon.classList.add('icon-swap__lang'); wrap.appendChild(langIcon); wrap.insertAdjacentHTML('beforeend', CLOSE.replace('<svg ', '<svg class="icon-swap__close" ')); }
 
@@ -70,11 +75,11 @@
     var menuBtn = null;
     if (hasRecord) {
       var links = document.createElement('div'); links.className = 'site-nav__links';
-      links.innerHTML = '<a class="site-nav__link" href="profile.html">My profile</a><a class="site-nav__link" href="home.html" data-signout>Sign out</a>';
+      links.innerHTML = '<a class="site-nav__link" href="profile.html">' + T('my_profile', 'My profile') + '</a><a class="site-nav__link" href="home.html" data-signout>' + T('sign_out', 'Sign out') + '</a>';
       actions.insertBefore(links, langBtn || null);
       menuBtn = document.createElement('button'); menuBtn.type = 'button'; menuBtn.className = 'site-nav__menu menu-toggle';
       menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-controls', 'siteMenuPanel');
-      menuBtn.innerHTML = '<span class="burger" aria-hidden="true"><span></span><span></span><span></span></span><span class="site-nav__menu-label">Menu</span>';
+      menuBtn.innerHTML = '<span class="burger" aria-hidden="true"><span></span><span></span><span></span></span><span class="site-nav__menu-label">' + T('menu', 'Menu') + '</span>';
       actions.appendChild(menuBtn);
     }
     if (langBtn) { langBtn.setAttribute('aria-expanded', 'false'); langBtn.setAttribute('aria-controls', 'siteLangPanel'); langBtn.setAttribute('aria-haspopup', 'true'); }
@@ -83,20 +88,20 @@
     function panel(id, label) { var p = document.createElement('div'); p.className = 'site-panel'; p.id = id; p.hidden = true; p.setAttribute('role', 'dialog'); p.setAttribute('aria-modal', 'true'); p.setAttribute('aria-label', label); nav.appendChild(p); return p; }
     var menuPanel = null;
     if (hasRecord) {
-      menuPanel = panel('siteMenuPanel', 'Account menu');
-      menuPanel.innerHTML = '<nav class="site-panel__inner" aria-label="Account"><a class="site-panel__item" href="profile.html">My profile</a><a class="site-panel__item" href="home.html" data-signout>Sign out</a></nav>';
+      menuPanel = panel('siteMenuPanel', T('account_menu', 'Account menu'));
+      menuPanel.innerHTML = '<nav class="site-panel__inner" aria-label="' + T('account', 'Account') + '"><a class="site-panel__item" href="profile.html">' + T('my_profile', 'My profile') + '</a><a class="site-panel__item" href="home.html" data-signout>' + T('sign_out', 'Sign out') + '</a></nav>';
     }
     var langPanel = null;
     if (langBtn) {
-      langPanel = panel('siteLangPanel', 'Choose a language');
+      langPanel = panel('siteLangPanel', T('choose_language', 'Choose a language'));
       var cur = get('nyc.language') || 'en';
       var rows = LANGS.map(function (l) {
         var sel = l[0] === cur;
         return '<button class="site-panel__lang' + (sel ? ' is-selected' : '') + '" type="button" role="option" aria-selected="' + sel + '" data-lang="' + l[0] + '">' +
           '<span class="site-panel__lang-name"><span lang="' + l[0] + '"' + (l[0] === 'ar' || l[0] === 'ur' ? ' dir="rtl"' : '') + '>' + l[1] + '</span>' + (l[2] ? '<span class="site-panel__dot" aria-hidden="true"></span><span class="site-panel__lang-en">' + l[2] + '</span>' : '') + '</span>' +
-          (sel ? '<span class="site-panel__check">' + CHECK + '<span class="sr-only"> (current)</span></span>' : '') + '</button>';
+          (sel ? '<span class="site-panel__check">' + CHECK + '<span class="sr-only">' + T('current', ' (current)') + '</span></span>' : '') + '</button>';
       }).join('');
-      langPanel.innerHTML = '<div class="site-panel__inner" role="listbox" aria-label="Language">' + rows + '</div>';
+      langPanel.innerHTML = '<div class="site-panel__inner" role="listbox" aria-label="' + T('language', 'Language') + '">' + rows + '</div>';
     }
 
     var openPanel = null, openBtn = null, scrollY = 0;
@@ -124,11 +129,11 @@
       place();
       if (v) {
         openPanel = p; openBtn = btn; nav.classList.add('nav-open'); btn.classList.add('is-active'); lockScroll(true); setInert(true);
-        btn.setAttribute('aria-expanded', 'true'); swapLabel(labelOf(btn), 'Close');
+        btn.setAttribute('aria-expanded', 'true'); swapLabel(labelOf(btn), T('close', 'Close'));
         p.hidden = false; void p.offsetWidth; p.classList.add('is-open');
         var first = p.querySelector('.site-panel__item, .is-selected, .site-panel__lang'); if (first) window.setTimeout(function () { first.focus(); }, 80);
       } else {
-        p.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); swapLabel(labelOf(btn), btn === menuBtn ? 'Menu' : 'English');
+        p.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); swapLabel(labelOf(btn), btn === menuBtn ? T('menu', 'Menu') : nativeLang());
         if (instant) p.hidden = true; else window.setTimeout(function () { p.hidden = true; }, 300);
         nav.classList.remove('nav-open'); btn.classList.remove('is-active'); lockScroll(false); setInert(false);
         openPanel = null; openBtn = null; if (!instant) btn.focus();
@@ -158,8 +163,10 @@
         var code = b.getAttribute('data-lang'), l = LANGS.filter(function (x) { return x[0] === code; })[0];
         try { sessionStorage.setItem('nyc.language', code); } catch (e) {}
         langPanel.querySelectorAll('.site-panel__lang').forEach(function (o) { o.classList.remove('is-selected'); o.setAttribute('aria-selected', 'false'); var c = o.querySelector('.site-panel__check'); if (c) c.remove(); });
-        b.classList.add('is-selected'); b.setAttribute('aria-selected', 'true'); b.insertAdjacentHTML('beforeend', '<span class="site-panel__check">' + CHECK + '<span class="sr-only"> (current)</span></span>');
+        b.classList.add('is-selected'); b.setAttribute('aria-selected', 'true'); b.insertAdjacentHTML('beforeend', '<span class="site-panel__check">' + CHECK + '<span class="sr-only">' + T('current', ' (current)') + '</span></span>');
         if (window.A11y && A11y.announce) A11y.announce('Language set to ' + (l[2] || l[1]));
+        /* Translated pages re-render in the new language (and flip direction). */
+        if (window.I18n) { window.location.reload(); return; }   /* languages without translations fall back to English */
         setOpen(langBtn, langPanel, false);
       });
     });

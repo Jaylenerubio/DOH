@@ -48,7 +48,8 @@
       tick(); timer = setInterval(tick, 1000);
     }
     function hasEmailOnFile() { return true; }   /* email is required to sign in */
-    function target() { return mode === 'phone' ? Mask.phone(Mask.DEMO.phone) : Mask.email(Mask.DEMO.email); }
+    var matched = Mask.DEMO;
+    function target() { return mode === 'phone' ? Mask.phone(matched.phone) : Mask.email(matched.email); }
     function show(which) {
       s1.hidden = which !== 'contact'; s2.hidden = which !== 'code'; s3.hidden = which !== 'notfound'; s4.hidden = which !== 'paused';
       stage = which;
@@ -70,9 +71,10 @@
 
     function seedReturningUser() {
       /* The matched record, as started by the HART employee. */
+      var k = matched, p = k.phone;
       var c = {
-        firstName: 'Ana', lastName: 'Lopez', dob: Mask.DEMO.dob, zip: Mask.DEMO.zip,
-        phone: '917-555-2222', email: Mask.DEMO.email
+        firstName: k.firstName, lastName: k.lastName, dob: k.dob, zip: k.zip,
+        phone: p.slice(0, 3) + '-' + p.slice(3, 6) + '-' + p.slice(6), email: k.email
       };
       try {
         sessionStorage.setItem('nyc.contact', JSON.stringify(c));
@@ -80,6 +82,7 @@
         sessionStorage.setItem('nyc.recordId', 'NYC-2026-104877');
         sessionStorage.setItem('nyc.df', JSON.stringify({ hospital: 'NYC Health + Hospitals/Bellevue', billMonth: 'August', billYear: '2026', amount: '3,240', household: '3', state: 'New York', city: 'New York' }));
         sessionStorage.setItem('nyc.returning', 'verified');
+        sessionStorage.setItem('nyc.language', k.lang);   /* preferred language: post-login screens render in it */
       } catch (e) {}
     }
 
@@ -93,7 +96,8 @@
         if (!/^\d{5}$/.test(z)) { A11y.stepError(err1, 'Enter your 5-digit zip code'); zip.focus(); return; }
         if (!/^\d{2}\/\d{2}\/\d{4}$/.test(d)) { A11y.stepError(err1, 'Enter your date of birth as MM/DD/YYYY'); dob.focus(); return; }
         A11y.clearStepError(err1);
-        if (!Mask.isReturning({ email: em, phone: v, zip: z, dob: d })) { toNotFound(); return; }
+        matched = Mask.match({ email: em, phone: v, zip: z, dob: d });
+        if (!matched) { matched = Mask.DEMO; toNotFound(); return; }
         mode = 'phone'; toCode();
       } else {
         if (!/^\d{6}$/.test(code.value.trim())) { A11y.stepError(err2, 'Enter the 6-digit code we sent you'); code.focus(); return; }

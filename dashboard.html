@@ -18,7 +18,7 @@
     <div class="top-banner">
       <div class="top-banner__inner">
         <button class="top-banner__toggle" type="button" aria-expanded="false" aria-controls="govPanel">
-          <span>Official website of the City of New York</span>
+          <span data-i18n="gov_site">Official website of the City of New York</span>
           <svg class="top-banner__caret" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path d="M3 5 L7 9 L11 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -27,12 +27,12 @@
       <div class="top-banner__panel" id="govPanel" hidden>
         <div class="top-banner__panel-inner">
           <div class="top-banner__block">
-            <h2 class="top-banner__heading">Official websites use .gov</h2>
-            <p class="top-banner__copy">A .gov website belongs to an official government organization in the United States.</p>
+            <h2 class="top-banner__heading" data-i18n="gov_h1">Official websites use .gov</h2>
+            <p class="top-banner__copy" data-i18n="gov_p1">A .gov website belongs to an official government organization in the United States.</p>
           </div>
           <div class="top-banner__block">
-            <h2 class="top-banner__heading">Secure .gov websites use HTTPS</h2>
-            <p class="top-banner__copy">A lock (<span aria-label="locked">&#128274;</span>) or https:// means you&rsquo;ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
+            <h2 class="top-banner__heading" data-i18n="gov_h2">Secure .gov websites use HTTPS</h2>
+            <p class="top-banner__copy" data-i18n-html="gov_p2">A lock (<span aria-label="locked">&#128274;</span>) or https:// means you&rsquo;ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@
     <!-- Service navigation -->
     <header class="site-nav">
       <div class="site-nav__inner">
-        <a href="dashboard.html" aria-label="NYC Health — your dashboard">
+        <a href="dashboard.html" aria-label="NYC Health — your dashboard" data-i18n-aria="home_aria">
           <img class="site-nav__logo" src="assets/nyc-health-stacked.png" width="65" height="30" alt="NYC Health">
         </a>
         <div class="site-nav__actions">
@@ -55,18 +55,19 @@
 
     <main class="step__body" id="main" tabindex="-1">
       <div class="dash__who">
-        <p class="dash__eyebrow" id="greeting">Hi there</p>
+        <p class="dash__eyebrow" id="greeting" data-i18n="hi_there">Hi there</p>
       </div>
-      <h1 class="dash__title">Explore programs <span class="dash__title-muted">&amp; applications for you</span></h1>
+      <h1 class="dash__title"><span data-i18n="dash_title">Explore programs</span> <span class="dash__title-muted" data-i18n="dash_title_muted">&amp; applications for you</span></h1>
 
       <div class="dash__stack" id="appStack"></div>
 
-      <p class="support-line">You can request help by contacting us at <a class="ext-link support-mail" href="mailto:HARTConnectorSupport@health.nyc.gov"><svg class="support-mail__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.33317 16.6663C2.87484 16.6663 2.48248 16.5031 2.15609 16.1768C1.8297 15.8504 1.6665 15.458 1.6665 14.9997V4.99967C1.6665 4.54134 1.8297 4.14898 2.15609 3.82259C2.48248 3.4962 2.87484 3.33301 3.33317 3.33301H16.6665C17.1248 3.33301 17.5172 3.4962 17.8436 3.82259C18.17 4.14898 18.3332 4.54134 18.3332 4.99967V14.9997C18.3332 15.458 18.17 15.8504 17.8436 16.1768C17.5172 16.5031 17.1248 16.6663 16.6665 16.6663H3.33317ZM16.6665 6.66634L10.4373 10.5622C10.3679 10.6038 10.295 10.6351 10.2186 10.6559C10.1422 10.6768 10.0693 10.6872 9.99984 10.6872C9.93039 10.6872 9.85748 10.6768 9.78109 10.6559C9.7047 10.6351 9.63178 10.6038 9.56234 10.5622L3.33317 6.66634V14.9997H16.6665V6.66634ZM9.99984 9.16634L16.6665 4.99967H3.33317L9.99984 9.16634Z" fill="currentColor"/></svg>HARTConnectorSupport@health.nyc.gov</a>.</p>
+      <p class="support-line"><span data-i18n="support_pre">You can request help by contacting us at </span><a class="ext-link support-mail" href="mailto:HARTConnectorSupport@health.nyc.gov"><svg class="support-mail__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.33317 16.6663C2.87484 16.6663 2.48248 16.5031 2.15609 16.1768C1.8297 15.8504 1.6665 15.458 1.6665 14.9997V4.99967C1.6665 4.54134 1.8297 4.14898 2.15609 3.82259C2.48248 3.4962 2.87484 3.33301 3.33317 3.33301H16.6665C17.1248 3.33301 17.5172 3.4962 17.8436 3.82259C18.17 4.14898 18.3332 4.54134 18.3332 4.99967V14.9997C18.3332 15.458 18.17 15.8504 17.8436 16.1768C17.5172 16.5031 17.1248 16.6663 16.6665 16.6663H3.33317ZM16.6665 6.66634L10.4373 10.5622C10.3679 10.6038 10.295 10.6351 10.2186 10.6559C10.1422 10.6768 10.0693 10.6872 9.99984 10.6872C9.93039 10.6872 9.85748 10.6768 9.78109 10.6559C9.7047 10.6351 9.63178 10.6038 9.56234 10.5622L3.33317 6.66634V14.9997H16.6665V6.66634ZM9.99984 9.16634L16.6665 4.99967H3.33317L9.99984 9.16634Z" fill="currentColor"/></svg><bdi>HARTConnectorSupport@health.nyc.gov</bdi></a><span data-i18n="support_post">.</span></p>
 
     </main>
 
   </div>
 
+  <script src="scripts/i18n.js"></script>
   <script src="scripts/pillars.js"></script>
   <script src="scripts/dashboard.js"></script>
   <script src="scripts/banner.js"></script>

@@ -2132,3 +2132,8 @@ body.menu-open { overflow: hidden; }
 .support-line { margin: var(--space-4) 0 0; font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); color: var(--color-text); overflow-wrap: anywhere; }
 .support-mail { font-weight: inherit; display: inline-block; }   /* icon and address wrap together */
 .support-mail__icon { display: inline-block; width: 20px; height: 20px; margin-right: 6px; vertical-align: -4px; }
+
+/* Languages: fonts that cover Arabic and Traditional Chinese. RTL itself comes from <html dir="rtl"> (set by scripts/i18n.js). */
+html[lang="ar"] { --font-body: 'Public Sans', 'Noto Sans Arabic', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+html[lang="zh"] { --font-body: 'Public Sans', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif; }
+bdi { white-space: nowrap; }   /* brand names and addresses stay in one piece inside translated text */

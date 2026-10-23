@@ -66,6 +66,16 @@ Everything is `sessionStorage`; nothing is sent anywhere. Clearing the tab reset
 
 Demo client: email `ana@example.com`, phone `917-555-2222`, ZIP `10457`, DOB `03/15/1988` (anything else shows "We couldn't find your account"). Any 6 digits verify, except `000000`, which counts as a wrong code ("Invalid code. You have N attempts left."); the fifth pauses sign-in. The demo record seeds no results: every program shows "Get started" until a screener and handoff are completed. In production the vendor fills these from what the client did with the CHW in person. All names, numbers and sites are fictional.
 
+Translation demo (PLACEHOLDER translations, not reviewed by a translator; the screens covered are welcome back and the dashboard, including the header menu). Three more demo clients each have a preferred language, and everything after sign-in renders in it. Same sign-in steps; any 6-digit code:
+
+| Client | Language | Email | Phone | ZIP | DOB |
+|---|---|---|---|---|---|
+| Sofía | Spanish | sofia@example.com | 917-555-4444 | 10029 | 11/04/1985 |
+| ليلى (Layla) | Arabic (right-to-left) | layla@example.com | 917-555-3333 | 11201 | 07/22/1990 |
+| 美玲 (Mei) | Chinese, Traditional | mei@example.com | 917-555-5555 | 11354 | 02/09/1979 |
+
+How it works for the vendor: `scripts/i18n.js` holds every string by key (`data-i18n` in markup); `nyc.language` picks the language; `<html lang>` and `dir` follow it; names, emails and numbers stay left-to-right inside right-to-left text. The header language menu also switches the page. Languages without translations show English. Pages after the dashboard (profile, program screens, handoffs) are still English.
+
 ## Dashboard states
 
 Programs with a result come first, then the rest, under the two-tone "Explore programs & applications for you" H1 (small "Hi, {name}" above it). The support email line (envelope + mailto link) sits at the bottom. SNAP is hidden for now. Clicking a partner link does not change state.

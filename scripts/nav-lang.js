@@ -63,7 +63,8 @@
     function choose(code, label) {
       try { sessionStorage.setItem('nyc.language', code); } catch (e) {}
       opts.forEach(function (o) { o.setAttribute('aria-selected', o.getAttribute('data-value') === code ? 'true' : 'false'); });
-      btn.setAttribute('aria-label', label + ', translate this page');
+      if (window.I18n) I18n.apply();
+      btn.setAttribute('aria-label', label + (window.I18n ? I18n.t('translate_suffix') : ', translate this page'));
       if (window.A11y) A11y.announce('Language set to ' + label);
       closeList(true);
     }
@@ -76,7 +77,7 @@
       else if (e.key === 'Tab') closeList(false);
     });
     var cur = LANGS.filter(function (l) { return l[0] === current(); })[0];
-    if (cur) btn.setAttribute('aria-label', cur[1] + ', translate this page');
+    if (cur) btn.setAttribute('aria-label', cur[1] + (window.I18n ? I18n.t('translate_suffix') : ', translate this page'));
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

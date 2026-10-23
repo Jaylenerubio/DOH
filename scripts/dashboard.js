@@ -22,13 +22,8 @@
   var INEL   = { 'hospital-bills': 'df-ineligible.html', 'financial-help': 'eap-ineligible.html', 'tax-credits': 'eitc-ineligible.html' };
   /* Granular message after "Referral sent <date>." (from the handoff pages).
      PLACEHOLDER: the Dollar For PIN is "####" until BH supplies it. */
-  var MSG = {
-    'hospital-bills': 'Start your application using your PIN ####.',
-    'medicaid': 'An enrollment counselor will call you within three business days.',
-    'anti-eviction': 'A tenant support specialist will contact you in 2\u20133 business days.',
-    'financial-help': 'Start your application. You\u2019ll get a one-time code each time you sign in.',
-    'tax-credits': 'Start your application with GetYourRefund to file or amend your return.'
-  };
+  var MSG = { 'hospital-bills': 'msg_hospital', 'medicaid': 'msg_medicaid', 'anti-eviction': 'msg_eviction', 'financial-help': 'msg_financial', 'tax-credits': 'msg_tax' };
+  var T = function (k, v) { return window.I18n ? I18n.t(k, v) : k; };
 
   function read(k) { try { return JSON.parse(sessionStorage.getItem(k) || 'null'); } catch (e) { return null; } }
   function raw(k) { try { return sessionStorage.getItem(k) || ''; } catch (e) { return ''; } }
@@ -39,37 +34,38 @@
   function el(tag, cls, html) { var n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; }
   function head(key) {
     var m = Pillars.META[key];
-    return '<span class="app-card__head"><span class="app-card__icon">' + ICONS[key] + '</span><h2 class="app-card__title">' + m.label + '</h2></span><hr class="app-card__rule">';
+    return '<span class="app-card__head"><span class="app-card__icon">' + ICONS[key] + '</span><h2 class="app-card__title">' + T(key) + '</h2></span><hr class="app-card__rule">';
   }
   /* Full date: "October 12, 2026" */
-  function fmt(iso) { var d = iso ? new Date(iso) : new Date(); if (isNaN(d.getTime())) d = new Date(); return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }); }
+  function fmt(iso) { var d = iso ? new Date(iso) : new Date(); if (isNaN(d.getTime())) d = new Date(); return I18n.date(d); }
   function status(text) { return '<p class="app-card__status">' + text + '</p>'; }
   function card(key) {
     var m = Pillars.META[key], st = stateFor(key);
     var c = el('article', 'app-card'); c.setAttribute('data-key', key); c.setAttribute('data-state', st);
     var html = '', details = NEXT[key] + '?from=dashboard';
     if (st === 'none') {
-      html = head(key) + '<p class="app-card__desc">' + m.desc + '</p>' +
-        '<div class="app-card__cta"><a class="btn btn--outline" href="' + m.entry + '">Get started</a></div>';
+      html = head(key) + '<p class="app-card__desc">' + T(key + '_desc') + '</p>' +
+        '<div class="app-card__cta"><a class="btn btn--outline" href="' + m.entry + '">' + T('get_started') + '</a></div>';
     } else if (st === 'referral') {
       c.classList.add('is-in-progress');
-      html = '<span class="app-card__chip app-card__chip--done">Referral sent</span>' + head(key) +
-        status('Referral sent ' + fmt(raw('nyc.completed.' + key)) + '. ' + MSG[key]) +
+      html = '<span class="app-card__chip app-card__chip--done">' + T('referral_sent') + '</span>' + head(key) +
+        status(T('sent_on', { date: fmt(raw('nyc.completed.' + key)) }) + T(MSG[key])) +
         '<div class="app-card__cta">' +
-        (Pillars.APPLY[key] ? '<a class="btn btn--primary" href="' + Pillars.applyUrl(key) + '" target="_blank" rel="noopener">Start your application<span class="sr-only"> (opens in new tab)</span></a>' : '') +
-        '<a class="btn btn--outline" href="' + details + '">View details</a></div>';
+        (Pillars.APPLY[key] ? '<a class="btn btn--primary" href="' + Pillars.applyUrl(key) + '" target="_blank" rel="noopener">' + T('start_app') + '<span class="sr-only">' + T('new_tab') + '</span></a>' : '') +
+        '<a class="btn btn--outline" href="' + details + '">' + T('view_details') + '</a></div>';
     } else {
       c.classList.add('is-in-progress');
-      html = '<span class="app-card__chip app-card__chip--ineligible">No match</span>' + head(key) +
-        '<p class="app-card__desc">' + m.desc + '</p>' +
-        '<div class="app-card__cta"><a class="btn btn--outline" href="' + (INEL[key] || NEXT[key]) + '?from=dashboard">View details</a></div>';
+      html = '<span class="app-card__chip app-card__chip--ineligible">' + T('no_match') + '</span>' + head(key) +
+        '<p class="app-card__desc">' + T(key + '_desc') + '</p>' +
+        '<div class="app-card__cta"><a class="btn btn--outline" href="' + (INEL[key] || NEXT[key]) + '?from=dashboard">' + T('view_details') + '</a></div>';
     }
     c.innerHTML = html;
     return c;
   }
   function init() {
     var c = read('nyc.contact') || {};
-    if (c.firstName) document.getElementById('greeting').textContent = 'Hi, ' + c.firstName;
+    var g = document.getElementById('greeting');
+    if (c.firstName) { g.setAttribute('data-i18n', 'hi_name'); g.setAttribute('data-i18n-name', c.firstName); g.textContent = T('hi_name', { name: c.firstName }); }
     /* Every program shows "Get started" until a screener is finished (in
        production the CHW's in-person results come from the record). Programs
        with a result float to the top. SNAP is hidden for now. */
@@ -77,7 +73,9 @@
     var done = all.filter(function (k) { return stateFor(k) !== 'none'; });
     var rest = all.filter(function (k) { return stateFor(k) === 'none'; });
     var stack = document.getElementById('appStack');
+    stack.innerHTML = '';
     done.concat(rest).forEach(function (k) { stack.appendChild(card(k)); });
   }
+  if (window.I18n) I18n.onChange(init);   /* header language menu: re-render in the new language */
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
