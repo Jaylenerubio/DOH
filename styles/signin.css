@@ -31,8 +31,9 @@
 /* Not-found screen: location cards use #FAF8F5 on the white page. */
 .signin__loc { background: #FAF8F5; }
 
-/* Desktop: location cards hug their content and get more inner padding. Phone is unchanged (full width). */
+/* Desktop: not-found content in a ~554px column; location cards full width of it, rounder, roomier. Phone unchanged. */
 @media (min-width: 768px) {
-  .signin__locs { align-items: flex-start; }
-  .signin__loc { width: fit-content; max-width: min(500px, 100%); padding: var(--space-3); }
+  #stepNotFound { max-width: 554px; }
+  .signin__locs { gap: 18px; }
+  .signin__loc { padding: 28px 26px; border-radius: 28px; }
 }
