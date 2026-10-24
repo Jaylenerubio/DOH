@@ -88,6 +88,7 @@ Programs with a result come first, then the rest, under the two-tone "Explore pr
 
 ## Placeholders the production build must replace
 
+- Hidden consent subtext in `hi-review.html` reads "[Consent subtext TBD]" (copy not final).
 - Dollar For PIN shown as `####` in the Hospital bills dashboard message.
 - Code expiry ("5 minutes"), the 30-second resend countdown and the "We sent you a new code." alert copy are placeholders.
 - Not-found screen: confirm HART employees are at all five locations (two are Sexual Health Clinics, both linking to the generic clinics page) and walk-in vs appointment.
