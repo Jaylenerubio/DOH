@@ -150,11 +150,6 @@ window.I18N_DICT = {
   "ar": "بإرسال هذه الصفحة، فإنك توافق على مشاركة معلوماتك مع TSU، وتوافق على تلقي مكالمات ورسائل نصية من TSU بشأن قضية الإخلاء الخاصة بك. يمكنك إلغاء الاشتراك في أي وقت. اطّلع على المزيد حول <a>سياسة الخصوصية لدى TSU<span> (تفتح في علامة تبويب جديدة)</span></a>.",
   "zh": "提交此頁面即表示，您同意與 TSU 分享您的資訊，並同意 TSU 就您的驅逐案件透過電話和簡訊與您聯絡。您可隨時選擇退出。進一步了解 <a>TSU 的隱私權政策<span>（在新分頁開啟）</span></a>。"
  },
- "By submitting this page, you agree to share your information with the NYC Health Office of Health Insurance Services and you agree to receive calls from our enrollment counselors.": {
-  "es": "Al enviar esta página, usted acepta compartir su información con la Oficina de Servicios de Seguro Médico de NYC Health y acepta recibir llamadas de nuestros consejeros de inscripción.",
-  "ar": "بإرسال هذه الصفحة، فإنك توافق على مشاركة معلوماتك مع مكتب خدمات التأمين الصحي في NYC Health، وتوافق على تلقي مكالمات من مستشاري التسجيل لدينا.",
-  "zh": "提交此頁面即表示，您同意與 NYC Health 健康保險服務辦公室分享您的資訊，並同意接聽我們登記輔導員的來電。"
- },
  "By submitting this page, you agree to share your information with your utility company and the NYC Health Benefits Enrollment Assistant team to help you get the energy discounts you qualify for.": {
   "es": "Al enviar esta página, usted acepta compartir su información con su compañía de servicios públicos y con el equipo del Asistente de Inscripción de Beneficios de NYC Health para ayudarle a obtener los descuentos de energía para los que califica.",
   "ar": "بإرسال هذه الصفحة، فإنك توافق على مشاركة معلوماتك مع شركة المرافق التي تتعامل معها وفريق مساعد التسجيل في المزايا التابع لـ NYC Health لمساعدتك في الحصول على خصومات الطاقة التي تستحقها.",
@@ -1175,11 +1170,6 @@ window.I18N_DICT = {
   "ar": "الرمز البريدي",
   "zh": "郵遞區號"
  },
- "[Consent subtext TBD]": {
-  "es": "[Subtexto de consentimiento por definir]",
-  "ar": "[Consent subtext TBD]",
-  "zh": "[同意說明文字待定]"
- },
  "Required": {
   "es": "Obligatorio",
   "ar": "مطلوب",
@@ -1389,5 +1379,10 @@ window.I18N_DICT = {
   "es": "de lunes a viernes, de 9 a. m. a 4 p. m.",
   "ar": "من الاثنين إلى الجمعة، من الساعة 9 صباحًا إلى 4 مساءً.",
   "zh": "週一至週五，上午 9 點至下午 4 點。"
+ },
+ "By submitting this page, you agree to receive calls from our enrollment counselors.": {
+  "es": "Al enviar esta página, usted acepta recibir llamadas de nuestros consejeros de inscripción.",
+  "ar": "بإرسال هذه الصفحة، فإنك توافق على تلقي مكالمات من مستشاري التسجيل لدينا.",
+  "zh": "提交此頁面即表示，您同意接聽我們註冊顧問打來的電話。"
  }
 };

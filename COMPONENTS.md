@@ -72,4 +72,3 @@ Home, sign-in (contact step, code step, not found, paused), welcome back, dashbo
 - Placeholder values still to be confirmed: code expiry (5 min), resend countdown (30 s), attempt limits (5 wrong codes, then 15-minute pause), "Invalid code" copy, PIN `####` on Dollar For.
 - Legacy classes still in `components.css` but unused in v1.3 (carousel, category, featured-row, option-card, partner-row, program-card, site-footer, consent-*): vendor should skip these.
 - Component usage was checked by searching the HTML and scripts; confirm nothing is missing.
-- Hidden placeholder in `hi-review.html`: "[Consent subtext TBD]" (consent copy not final).
