@@ -28,7 +28,7 @@
     document.getElementById('notMe').addEventListener('click', function (e) {
       e.preventDefault();
       try { sessionStorage.setItem('nyc.returning', 'new'); } catch (e2) {}
-      window.location.href = 'contact-method.html';
+      window.location.href = 'verify.html';
     });
     var back = document.getElementById('backBtn');
     if (back) back.addEventListener('click', function () { window.location.href = 'contact.html'; });

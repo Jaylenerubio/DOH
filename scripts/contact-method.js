@@ -66,15 +66,6 @@
         return;
       }
       A11y.clearStepError(errorEl); A11y.clearGroupError(document.querySelector('.method-list') || radios[0].closest('[role="radiogroup"]'));
-      var self = false; try { self = sessionStorage.getItem('nyc.channel') === 'self'; } catch (e) {}
-      if (self) {
-        /* Self-service: this submit creates the record (no review step). */
-        try { if (!sessionStorage.getItem('nyc.recordId')) sessionStorage.setItem('nyc.recordId', 'NYC-2026-' + String(100000 + Math.floor(Math.random() * 900000))); } catch (e) {}
-        /* Straight into the screener for the first program they chose; the
-           dashboard comes after its handoff. Nothing chosen → dashboard. */
-        window.location.href = 'profile-created.html';   /* → first chosen program's screener */
-        return;
-      }
       window.location.href = 'intake-review.html';   /* CHW: step 3 → step 4 (review) */
     });
 
