@@ -8,7 +8,19 @@
   function init() {
     var code = document.getElementById('code'), err = document.getElementById('codeError');
     var c = {}; try { c = JSON.parse(sessionStorage.getItem('nyc.contact') || '{}'); } catch (e) {}
-    document.getElementById('sentTo').textContent = window.Mask ? Mask.phone(c.phone || '') : (c.phone || '');
+    var via = 'text', sentTo = document.getElementById('sentTo'), viaWord = document.getElementById('viaWord'), alt = document.getElementById('viaAlt');
+    var hasEmail = !!(c.email && String(c.email).trim());
+    function render() {
+      sentTo.textContent = via === 'text' ? (window.Mask ? Mask.phone(c.phone || '') : (c.phone || '')) : (window.Mask ? Mask.email(c.email || '') : (c.email || ''));
+      viaWord.textContent = via;
+      alt.textContent = via === 'text' ? 'Get a code by email' : 'Get a code by text';
+      alt.hidden = via === 'text' && !hasEmail;
+    }
+    render();
+    alt.addEventListener('click', function () {
+      via = via === 'text' ? 'email' : 'text'; render(); A11y.clearStepError(err); code.value = '';
+      A11y.announce && A11y.announce('We sent a new code by ' + via + '.'); code.focus();
+    });
     code.focus();
     code.addEventListener('input', function () { code.value = code.value.replace(/\D/g, '').slice(0, 6); A11y.clearStepError(err); });
     document.getElementById('resend').addEventListener('click', function () { A11y.clearStepError(err); code.value = ''; code.focus(); A11y.announce && A11y.announce('We sent you a new code.'); });
