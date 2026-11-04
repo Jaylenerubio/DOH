@@ -104,7 +104,7 @@
       try { self = sessionStorage.getItem('nyc.channel') === 'self'; decided = sessionStorage.getItem('nyc.returning') || ''; } catch (e) {}
       var data = {}; FIELDS.forEach(function (id) { data[id] = inputs[id] ? inputs[id].value : ''; });
       if (self && decided !== 'new' && window.Mask && Mask.isReturning(data)) { window.location.href = 'returning.html'; return; }
-      window.location.href = self ? 'verify.html' : 'contact-method.html';   /* self-service verifies by text; CHW picks a contact method */
+      window.location.href = self ? 'review-info.html' : 'contact-method.html';   /* self-service: check details, then verify by text; CHW picks a contact method */
     });
 
     if (back) {

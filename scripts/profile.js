@@ -1,6 +1,7 @@
-/* My profile — the client's own information and preferred contact method, in
-   one review card with the shared Edit → Editing/Done mode (review-edit.js).
-   Fields are two-way bound to sessionStorage 'nyc.contact' + 'nyc.contactMethod'. */
+/* My profile (v1.3). "Your information" is read-only (the HART employee entered
+   it); "Preferred contact method" (Text me / Call me) is editable and saved to
+   sessionStorage 'nyc.contactMethod'. "Request account deletion" is a
+   placeholder: no modal or destination yet. */
 (function () {
   'use strict';
   var FIELDS = ['firstName', 'lastName', 'dob', 'zip', 'phone', 'email'];
@@ -8,13 +9,13 @@
   function init() {
     var c = contact();
     FIELDS.forEach(function (id) {
-      var el = document.getElementById(id); if (!el) return;
-      el.value = c[id] || '';
-      el.addEventListener('input', function () { var d = contact(); d[id] = el.value; try { sessionStorage.setItem('nyc.contact', JSON.stringify(d)); } catch (e) {} });
+      var el = document.querySelector('[data-field="' + id + '"]');
+      if (el && c[id]) el.textContent = c[id];
     });
     var m = document.getElementById('method');
     if (m) {
-      try { m.value = sessionStorage.getItem('nyc.contactMethod') || ''; } catch (e) {}
+      try { m.value = sessionStorage.getItem('nyc.contactMethod') || 'text'; } catch (e) {}
+      if (!m.value) m.value = 'text';
       m.addEventListener('change', function () { try { sessionStorage.setItem('nyc.contactMethod', m.value); } catch (e) {} });
     }
   }

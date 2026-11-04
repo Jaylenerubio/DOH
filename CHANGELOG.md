@@ -2,6 +2,14 @@
 
 One entry per drop. Newest first. Dates are the day the drop was tagged.
 
+## Unreleased (v1.4-Self-service) — 2026-11-04
+
+**Flow**
+- Self-service: contact → **Check your information** (new `review-info.html`, editable) → verify by text code → profile created. Contact-method page is CHW-only.
+- Progress shows 2/4, 3/4, 4/4 for self-service.
+- Profile: "Your information" card is read-only (no Edit); only preferred contact method is editable.
+- `review-edit.js` skips `.review-card[data-readonly]`.
+
 ## v2.1 self-service — 2026-10-15
 
 Baseline for the vendor hand-off.

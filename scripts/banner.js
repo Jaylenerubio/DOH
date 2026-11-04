@@ -53,12 +53,6 @@
     var logo = nav.querySelector('.site-nav__inner > a');
     if (logo) { logo.setAttribute('href', hasRecord ? 'dashboard.html' : 'home.html'); logo.setAttribute('aria-label', hasRecord ? 'NYC Health — your dashboard' : 'NYC Health — home'); }
 
-    var prog = document.querySelector('.progress[aria-valuemax="4"]');
-    if (prog && !document.body.querySelector('.intake-review')) {
-      var segs = prog.querySelectorAll('.progress__seg'); if (segs.length === 4) prog.removeChild(segs[3]);
-      prog.setAttribute('aria-valuemax', '3'); prog.setAttribute('aria-label', 'Step ' + prog.getAttribute('aria-valuenow') + ' of 3');
-    }
-
     var actions = nav.querySelector('.site-nav__actions'); if (!actions) return;
     var langBtn = nav.querySelector('.site-nav__translate');
     var langLabel = langBtn && langBtn.querySelector('.site-nav__translate-label');
