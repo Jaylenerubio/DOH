@@ -9,6 +9,7 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 - Progress shows 2/4, 3/4, 4/4 for self-service.
 - Profile: "Your information" card is read-only (no Edit); only preferred contact method is editable.
 - Self-service: "I'm looking for support" (programs) page removed from the flow. New **Preferred language** page (`preferred-language.html`) comes first; a language picked with the header Translate control is carried over. Dashboard now shows all programs as featured rows until one is started.
+- Verify: OTP 6 digits, 5-min expiry, max 5 wrong attempts then 1-hour lockout (`locked.html`, live m:ss countdown), 30s resend wait ("Resend in 0:30"), expired code allows immediate resend, masked phone (last four) and email (first letter + domain) shown semibold. Demo: code 000000 is always wrong; a phone ending 0000 fails to send. Lock is session-only in the prototype.
 - Combobox: restoring a saved choice no longer opens the list.
 - `review-edit.js` skips `.review-card[data-readonly]`.
 
