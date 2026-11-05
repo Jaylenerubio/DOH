@@ -8,24 +8,30 @@
   function init() {
     var code = document.getElementById('code'), err = document.getElementById('codeError');
     var c = {}; try { c = JSON.parse(sessionStorage.getItem('nyc.contact') || '{}'); } catch (e) {}
-    var via = 'text', sentTo = document.getElementById('sentTo'), viaWord = document.getElementById('viaWord'), alt = document.getElementById('viaAlt');
+    var via = 'text', sentTo = document.getElementById('sentTo'), alt = document.getElementById('viaAlt');
+    var resend = document.getElementById('resend'), wait = document.getElementById('resendWait'), secs = document.getElementById('secs');
+    var banner = document.getElementById('resentMsg'), bannerText = document.getElementById('resentText'), timer = null;
     var hasEmail = !!(c.email && String(c.email).trim());
-    function render() {
-      sentTo.textContent = via === 'text' ? (window.Mask ? Mask.phone(c.phone || '') : (c.phone || '')) : (window.Mask ? Mask.email(c.email || '') : (c.email || ''));
-      viaWord.textContent = via;
-      alt.textContent = via === 'text' ? 'Get a code by email' : 'Get a code by text';
-      alt.hidden = via === 'text' && !hasEmail;
+    function lastFour() { var d = String(c.phone || '').replace(/\D/g, ''); return d.slice(-4); }
+    function startCooldown() {
+      var n = 30; clearInterval(timer); secs.textContent = n; wait.hidden = false; resend.hidden = true;
+      timer = setInterval(function () { n--; secs.textContent = n; if (n <= 0) { clearInterval(timer); wait.hidden = true; resend.hidden = false; } }, 1000);
     }
-    render();
-    alt.addEventListener('click', function () {
-      via = via === 'text' ? 'email' : 'text'; render(); A11y.clearStepError(err); code.value = '';
-      say('We sent a new code by ' + via + '.'); code.focus();
-    });
+    function render() {
+      sentTo.textContent = via === 'text' ? 'the number ending in ' + lastFour() : (window.Mask ? Mask.email(c.email || '') : (c.email || ''));
+      alt.textContent = via === 'text' ? 'Get a code by email instead' : 'Get a code by text instead';
+      alt.hidden = via === 'text' && !hasEmail;
+      document.getElementById('lostText').textContent = via === 'text' ? 'No longer have this number?' : 'No longer have this email?';
+    }
+    function sent() {
+      banner.hidden = false; bannerText.textContent = ''; setTimeout(function () { bannerText.textContent = 'New code sent.'; }, 50);
+      A11y.clearStepError(err); code.value = ''; code.focus(); startCooldown();
+    }
+    render(); startCooldown();
+    alt.addEventListener('click', function () { via = via === 'text' ? 'email' : 'text'; render(); sent(); });
     code.focus();
     code.addEventListener('input', function () { code.value = code.value.replace(/\D/g, '').slice(0, 6); A11y.clearStepError(err); });
-    var resentMsg = document.getElementById('resentMsg');
-    function say(msg) { resentMsg.hidden = false; resentMsg.textContent = ''; setTimeout(function () { resentMsg.textContent = msg; }, 50); }
-    document.getElementById('resend').addEventListener('click', function () { A11y.clearStepError(err); code.value = ''; code.focus(); say('We sent a new code by ' + via + '.'); });
+    resend.addEventListener('click', sent);
     document.getElementById('backBtn').addEventListener('click', function () { if (history.length > 1) history.back(); else window.location.href = 'review-info.html'; });
     document.getElementById('continueBtn').addEventListener('click', function () {
       if (!/^\d{6}$/.test(code.value.trim())) { A11y.stepError(err, 'Enter the 6-digit code we sent you'); code.focus(); return; }
