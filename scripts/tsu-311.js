@@ -9,7 +9,7 @@
   function init() {
     // Terminal referral: drop anti-eviction from the dashboard's program cards
     // and queue the explanatory toast (shared with any future dead-end).
-    if (window.closeIneligibleProgram) window.closeIneligibleProgram('anti-eviction', 'Anti-eviction services');
+    if (window.Pillars) Pillars.markOutcome('anti-eviction', 'ineligible');   /* dashboard card reads "No match" */
 
     Array.prototype.forEach.call(document.querySelectorAll('.copy-field'), function (field) {
       var text = field.querySelector('.copy-field__text');
