@@ -26,6 +26,7 @@
     var searchable = !!opts.searchable;
     var multi = !!opts.multi;
     var input = null;
+    var suppressOpen = false;   // focus returned programmatically (after a pick) must not reopen the list
     var restoring = false;   // selectByValue() restores silently: no open list, no filter
 
     // Searchable: swap the static value span for a real text input and move
@@ -135,7 +136,7 @@
       document.removeEventListener('click', onDocPointer, true);
       window.removeEventListener('resize', position);
       window.removeEventListener('scroll', onScroll, true);
-      if (focusControl) control.focus();
+      if (focusControl) { suppressOpen = true; control.focus(); suppressOpen = false; }
     }
     function toggle() { open ? closeList(true) : openList(); }
 
@@ -161,7 +162,8 @@
         if (input) { input.value = ''; filter(''); }
         return;
       }
-      applySelection(i);
+      restoring = true; applySelection(i); restoring = false;   // picking must not filter the list to the picked item
+      if (input) filter('');
       closeList(true);
       if (opts.onChange) opts.onChange(options[i].getAttribute('data-value'), labelOf(options[i]));
     }
@@ -192,7 +194,7 @@
         if (e.target !== input) { input.focus(); }
         if (!open) openList();
       });
-      input.addEventListener('focus', function () { if (!open) openList(); });
+      input.addEventListener('focus', function () { if (suppressOpen) return; if (!open) openList(); try { input.select(); } catch (e) {} });
       input.addEventListener('input', function () {
         if (restoring) { trigger.classList.toggle('is-placeholder', !input.value); return; }
         if (!open) openList();

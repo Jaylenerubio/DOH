@@ -6,6 +6,9 @@
     var need = window.SNAPStore ? SNAPStore.get('need') : '';
     if (['apply', 'enroll', 'renew'].indexOf(need) === -1) need = 'apply';
     Array.prototype.forEach.call(document.querySelectorAll('[data-variant]'), function (v) { v.hidden = v.getAttribute('data-variant') !== need; });
+    var T = { apply: 'Frontdoor Benefits can help you get started with SNAP', enroll: 'Frontdoor Benefits can help you get your SNAP benefits', renew: 'Frontdoor Benefits can help you keep your SNAP benefits' };
+    document.getElementById('snapTitle').textContent = T[need];
+    document.getElementById('foodTail').textContent = need === 'renew' ? 'for additional resources.' : 'while you wait for your SNAP benefits to arrive.';
     if (window.Pillars) { Pillars.markOutcome('snap', ''); Pillars.wireHandoff('snap'); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
