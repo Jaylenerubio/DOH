@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Returning client — Preferred contact method — NYC Health</title>
+<title>Welcome back — NYC Health</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -56,19 +56,33 @@
     <!-- Progress: step 4 of 4 -->
 
     <!-- Scrollable content -->
-    <main class="step__body returning" id="main" tabindex="-1">
-      <h1 class="step__title">Looks like you&rsquo;ve<br>been here before</h1>
-      <p class="returning__text">We found a record that uses the phone number <span class="returning__id" id="matchId">(&bull;&bull;&bull;) &bull;&bull;&bull;-0000</span>.</p>
-      <p class="returning__text" id="howText">We&rsquo;ll text you a 6-digit code to open it. The programs you just picked will be added to your record.</p>
-      <p class="signin__alt"><button class="signin__link" type="button" id="swap">Verify another way</button></p>
-      <p class="signin__alt returning__new">Not you? <a class="signin__link" href="#" id="notMe">Continue as a new client</a></p>
+    <main class="step__body" id="main" tabindex="-1">
+      <h1 class="step__title" id="stepTitle">Welcome back</h1>
+      <p class="step__text" id="sentText">This number is already linked to an account. Enter the 6-digit code sent to <span id="sentTo"></span> to sign in. The code expires in 5 minutes.</p>
+      <div class="signin__banner" id="resentMsg" role="status" aria-live="polite" hidden>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M7 12.5l3.2 3.2L17 8.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span id="resentText">New code sent.</span>
+      </div>
+      <p class="step-error" id="codeError" role="alert" hidden></p>
+      <label class="field">
+        <span class="field__label">6-digit code</span>
+        <input class="field__input signin__code" type="text" inputmode="numeric" autocomplete="one-time-code" id="code" maxlength="6" placeholder="000000">
+      </label>
+      <p class="signin__alt" id="resendRow">Need a new code? <span id="resendWait">Resend in <span id="secs">0:30</span>.</span><span id="sending" hidden>Sending a new code&hellip;</span><button class="signin__link" type="button" id="resend" hidden>Resend</button></p>
+      <button class="btn btn--secondary signin__alt-btn" type="button" id="viaAlt" hidden>Get a code by email instead</button>
+      <hr class="signin__divider">
+      <details class="signin__trouble" id="trouble" open>
+        <summary>Having trouble signing in?</summary>
+        <p>Changed numbers? Email <a class="ext-link" href="mailto:HARTConnectorSupport@health.nyc.gov">HARTConnectorSupport@health.nyc.gov</a></p>
+        <p>Not you? <a class="ext-link" href="review-info.html" id="notMe">Create an account</a></p>
+      </details>
     </main>
 
     <!-- Pinned footer: Back / Continue -->
     <div class="step__footer">
       <div class="step__actions">
         <button class="btn btn--secondary btn--back" type="button" id="backBtn">Back</button>
-        <button class="btn btn--primary btn--continue" type="button" id="continueBtn">Send code</button>
+        <button class="btn btn--primary btn--continue" type="button" id="continueBtn">Continue</button>
       </div>
     </div>
 

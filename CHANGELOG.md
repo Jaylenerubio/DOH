@@ -5,7 +5,8 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 ## Unreleased (v1.4-Self-service) — 2026-11-04
 
 - Sign in ("Finish where you left off") asks first name, last name, phone, zip, DOB; email path removed; code step copy: 5 minutes, Resend code.
-- Header actions (language, menu, My profile, Sign out) show on the landing page only.
+- Header: language button on the landing page only (language is in My profile); Menu (My profile, Sign out) stays inside the tool.
+- De-dup page (returning.html) rebuilt from the mock: "Welcome back" with code entry, 0:30 resend, email alternative, "Having trouble signing in?" (Create an account).
 - My profile: Preferred language card (editable, `nyc.language`); added missing profile list styles.
 
 **Flow**

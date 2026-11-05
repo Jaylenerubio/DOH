@@ -36,3 +36,10 @@
 #lockText strong { font-weight: 600; color: var(--color-text); font-variant-numeric: tabular-nums; }
 
 #codeError { margin: 0 0 var(--space-2); }
+
+/* Having trouble signing in? (returning client) */
+.signin__trouble summary { min-height: 44px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; list-style: none; font-weight: 400; }
+.signin__trouble summary::-webkit-details-marker { display: none; }
+.signin__trouble summary::after { content: ""; width: 10px; height: 10px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); margin-right: 6px; transition: transform .2s; }
+.signin__trouble[open] summary::after { transform: rotate(-135deg); }
+.signin__trouble p { margin: 8px 0 0; }
