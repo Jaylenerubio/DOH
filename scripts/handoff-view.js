@@ -71,6 +71,12 @@
       },
       note: 'We\u2019ll also email you this site information so you can find it later.'
     },
+    'snap': {
+      referral: function (d, date) {
+        var what = { apply: 'apply for SNAP', enroll: 'get your SNAP benefits', renew: 'keep your SNAP benefits' }[d.need] || 'with SNAP';
+        return 'We shared your information with Frontdoor Benefits on ' + b(date) + ' to help you ' + what + '. They will text you with next steps.';
+      }
+    },
     'anti-eviction': {
       referral: function (d, date) {
         var arr = Array.isArray(d) ? d : (d.situations || []);
@@ -79,7 +85,7 @@
       }
     }
   };
-  var STORE = { 'hospital-bills': 'nyc.df', 'medicaid': 'nyc.hi', 'anti-eviction': 'nyc.tsu', 'financial-help': 'nyc.eap', 'tax-credits': 'nyc.eitc' };
+  var STORE = { 'hospital-bills': 'nyc.df', 'medicaid': 'nyc.hi', 'anti-eviction': 'nyc.tsu', 'financial-help': 'nyc.eap', 'tax-credits': 'nyc.eitc', 'snap': 'nyc.snap' };
 
   function init() {
     if (q('from') !== 'dashboard') return;

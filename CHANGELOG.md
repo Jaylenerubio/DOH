@@ -10,6 +10,7 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 - Profile: "Your information" card is read-only (no Edit); only preferred contact method is editable.
 - Self-service: "I'm looking for support" (programs) page removed from the flow. New **Preferred language** page (`preferred-language.html`) comes first; a language picked with the header Translate control is carried over. Dashboard now shows all programs as featured rows until one is started.
 - Verify: OTP 6 digits, 5-min expiry, max 5 wrong attempts then 1-hour lockout (`locked.html`, live m:ss countdown), 30s resend wait ("Resend in 0:30"), expired code allows immediate resend, masked phone (last four) and email (first letter + domain) shown semibold. Demo: code 000000 is always wrong; a phone ending 0000 fails to send. Lock is session-only in the prototype.
+- **SNAP (food stamps)** via Frontdoor Benefits, self-service only: `snap` (what do you need help with) → `snap-fit` (does text and online help work) → `snap-review` (review and submit) → `snap-next` (apply / enroll / renew steps + "Need food now?"). "No" on the fit question goes to `snap-notfit` (free in-person help, food, WIC, CSFP). New dashboard card with a "Not a fit" state. External links are placeholders (`data-placeholder`, href "#") until URLs are confirmed.
 - Combobox: restoring a saved choice no longer opens the list.
 - `review-edit.js` skips `.review-card[data-readonly]`.
 

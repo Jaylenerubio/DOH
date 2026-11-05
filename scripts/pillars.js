@@ -12,13 +12,14 @@ window.Pillars = (function () {
   /* Program keys. 'financial-help' (the "Financial resources" pillar on the
      selection page) expands to two programs: Energy discounts (EAP flow,
      keeps the key) and Tax credits (EITC flow). */
-  var ORDER = ['hospital-bills', 'medicaid', 'anti-eviction', 'financial-help', 'tax-credits'];
+  var ORDER = ['hospital-bills', 'medicaid', 'anti-eviction', 'financial-help', 'tax-credits', 'snap'];
   var META = {
     'hospital-bills': { label: 'Hospital bills',   entry: 'dollarfor.html', desc: 'Find out if your hospital will reduce or forgive your bills.' },
     'medicaid':       { label: 'Health insurance', entry: 'hi.html',        desc: 'Enroll in or renew free health insurance.' },
     'anti-eviction':  { label: 'Eviction',         entry: 'tsu.html',       desc: 'Get help staying in your home.' },
     'financial-help': { label: 'Energy discounts', entry: 'eap.html',       desc: 'Lower your monthly Con Edison and National Grid bills.' },
-    'tax-credits':    { label: 'Tax credits',      entry: 'eitc.html',      desc: 'Claim up to 3 years of tax credits and cash payments.' }
+    'tax-credits':    { label: 'Tax credits',      entry: 'eitc.html',      desc: 'Claim up to 3 years of tax credits and cash payments.' },
+    'snap':           { label: 'SNAP (food stamps)', entry: 'snap.html',    desc: 'Enroll or renew SNAP/EBT benefits.' }
   };
   function list(key) { try { return JSON.parse(sessionStorage.getItem(key) || '[]'); } catch (e) { return []; } }
   function selected()  {
