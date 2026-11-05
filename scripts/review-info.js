@@ -19,7 +19,7 @@
     var cont = document.getElementById('continueBtn'), errorEl = document.getElementById('stepError');
     if (cont) cont.addEventListener('click', function () {
       if (cont.getAttribute('aria-disabled') === 'true') return;   /* a card is still being edited */
-      var missing = FIELDS.filter(function (id) { var el = document.getElementById(id); return el && !el.value.trim(); });
+      var missing = FIELDS.filter(function (id) { var el = document.getElementById(id); return id !== 'email' && el && !el.value.trim(); });   /* email is optional */
       FIELDS.forEach(function (id) { var el = document.getElementById(id); if (el) A11y.clearGroupError(el); });
       if (missing.length) {
         missing.forEach(function (id) { A11y.groupError(document.getElementById(id), LABELS[id] + ' required'); });

@@ -12,6 +12,8 @@
   var KEY = 'nyc.contact';
   var FIELDS = ['firstName', 'lastName', 'dob', 'zip', 'phone', 'email'];
   var OPTIONAL = ['apt'];
+  /* Self-service intake: email is optional (phone is what gets verified). The CHW channel still asks for it. */
+  try { if (sessionStorage.getItem('nyc.channel') === 'self') OPTIONAL.push('email'); } catch (e) {}
 
   // ---- masks ----------------------------------------------------------
   function maskDob(v) {
@@ -42,6 +44,7 @@
     // is accepted (clients may live in NJ, Westchester, etc.).
     var cityRoot = document.getElementById('cityCombo');
     if (cityRoot && window.Combobox) Combobox.create(cityRoot, { searchable: true });
+    var emailOpt = document.getElementById('emailOpt'); if (emailOpt && OPTIONAL.indexOf('email') !== -1) emailOpt.hidden = false;
     var inputs = {}, errEls = {};
     FIELDS.forEach(function (id) {
       inputs[id] = document.getElementById(id);
