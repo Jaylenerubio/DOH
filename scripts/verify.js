@@ -13,9 +13,11 @@
     var sending = document.getElementById('sending'), banner = document.getElementById('resentMsg'), bannerText = document.getElementById('resentText'), timer = null;
     var hasEmail = !!(c.email && String(c.email).trim());
     function lastFour() { var d = String(c.phone || '').replace(/\D/g, ''); return d.slice(-4); }
+    var sentAt = Date.now(), EXPIRES = 5 * 60 * 1000;   /* codes expire after 5 minutes */
+    function fmt(n) { return Math.floor(n / 60) + ':' + ('0' + (n % 60)).slice(-2); }
     function startCooldown() {
-      var n = 30; clearInterval(timer); secs.textContent = n; wait.hidden = false; resend.hidden = true;
-      timer = setInterval(function () { n--; secs.textContent = n; if (n <= 0) { clearInterval(timer); wait.hidden = true; resend.hidden = false; } }, 1000);
+      var n = 30; clearInterval(timer); sentAt = Date.now(); secs.textContent = fmt(n); wait.hidden = false; resend.hidden = true;
+      timer = setInterval(function () { n--; secs.textContent = fmt(n); if (n <= 0) { clearInterval(timer); wait.hidden = true; resend.hidden = false; } }, 1000);
     }
     function render() {
       sentTo.textContent = via === 'text' ? 'the number ending in ' + lastFour() : (window.Mask ? Mask.email(c.email || '') : (c.email || ''));
@@ -42,6 +44,12 @@
     document.getElementById('backBtn').addEventListener('click', function () { if (history.length > 1) history.back(); else window.location.href = 'review-info.html'; });
     document.getElementById('continueBtn').addEventListener('click', function () {
       if (!/^\d{6}$/.test(code.value.trim())) { A11y.stepError(err, 'Enter the 6-digit code we sent you'); code.focus(); return; }
+      if (Date.now() - sentAt > EXPIRES) {
+        /* Expired: the 30-second wait is long over, so Resend is available at once. */
+        A11y.stepError(err, 'Code expired.'); code.focus();
+        clearInterval(timer); wait.hidden = true; resend.hidden = false;
+        return;
+      }
       try {
         if (!sessionStorage.getItem('nyc.recordId')) sessionStorage.setItem('nyc.recordId', 'NYC-2026-' + String(100000 + Math.floor(Math.random() * 900000)));
         /* No contact-method step: texts are the default until they change it on their profile. */
