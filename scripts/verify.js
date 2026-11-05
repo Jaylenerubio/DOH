@@ -10,7 +10,7 @@
     var c = {}; try { c = JSON.parse(sessionStorage.getItem('nyc.contact') || '{}'); } catch (e) {}
     var via = 'text', sentTo = document.getElementById('sentTo'), alt = document.getElementById('viaAlt');
     var resend = document.getElementById('resend'), wait = document.getElementById('resendWait'), secs = document.getElementById('secs');
-    var banner = document.getElementById('resentMsg'), bannerText = document.getElementById('resentText'), timer = null;
+    var sending = document.getElementById('sending'), banner = document.getElementById('resentMsg'), bannerText = document.getElementById('resentText'), timer = null;
     var hasEmail = !!(c.email && String(c.email).trim());
     function lastFour() { var d = String(c.phone || '').replace(/\D/g, ''); return d.slice(-4); }
     function startCooldown() {
@@ -23,9 +23,16 @@
       alt.hidden = via === 'text' && !hasEmail;
       document.getElementById('lostText').textContent = via === 'text' ? 'No longer have this number?' : 'No longer have this email?';
     }
+    var busy = false;
+    /* Prototype only: pause ~0.9s so a resend feels real before the banner appears. */
     function sent() {
-      banner.hidden = false; bannerText.textContent = ''; setTimeout(function () { bannerText.textContent = 'New code sent.'; }, 50);
-      A11y.clearStepError(err); code.value = ''; code.focus(); startCooldown();
+      if (busy) return; busy = true;
+      banner.hidden = true; clearInterval(timer); wait.hidden = true; resend.hidden = true; sending.hidden = false;
+      A11y.clearStepError(err); code.value = '';
+      setTimeout(function () {
+        sending.hidden = true;
+        banner.hidden = false; code.focus(); startCooldown(); busy = false;
+      }, 900);
     }
     render(); startCooldown();
     alt.addEventListener('click', function () { via = via === 'text' ? 'email' : 'text'; render(); sent(); });
