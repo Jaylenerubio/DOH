@@ -24,7 +24,6 @@
     code.focus();
     code.addEventListener('input', function () { code.value = code.value.replace(/\D/g, '').slice(0, 6); A11y.clearStepError(err); });
     document.getElementById('resend').addEventListener('click', function () { A11y.clearStepError(err); code.value = ''; code.focus(); A11y.announce && A11y.announce('We sent you a new code.'); });
-    document.getElementById('changeNumber').addEventListener('click', function () { window.location.href = 'contact.html'; });
     document.getElementById('backBtn').addEventListener('click', function () { if (history.length > 1) history.back(); else window.location.href = 'review-info.html'; });
     document.getElementById('continueBtn').addEventListener('click', function () {
       if (!/^\d{6}$/.test(code.value.trim())) { A11y.stepError(err, 'Enter the 6-digit code we sent you'); code.focus(); return; }

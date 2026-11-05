@@ -17,8 +17,9 @@
 .returning__new { margin-top: var(--space-3); }
 
 /* Verify: alternate-channel button + divider + support */
-.signin__alt-btn { display: block; width: 100%; margin-top: var(--space-2); min-height: 48px; background: transparent; color: var(--color-link); border: 2px solid var(--color-link); border-radius: 999px; font-family: inherit; font-size: var(--type-ui-16-size); font-weight: 600; cursor: pointer; }
+.signin__alt-btn { display: inline-flex; align-items: center; justify-content: center; width: auto; margin-top: var(--space-2); padding: 8px; min-height: 44px; background: transparent; color: var(--color-link); border: 2px solid var(--color-link); border-radius: 999px; font-family: inherit; font-size: var(--type-ui-16-size); font-weight: 600; cursor: pointer; }
 .signin__alt-btn[hidden] { display: none; }
+#sentText { margin-bottom: var(--space-3); }
 .signin__alt-btn:hover { background: var(--color-neutral-200); }
 .signin__alt-btn:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset); }
 .signin__divider { margin: var(--space-3) 0 var(--space-2); border: 0; border-top: 1px solid var(--color-neutral-300); }
