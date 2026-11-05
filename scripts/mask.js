@@ -1,7 +1,7 @@
 /* Masked identifiers for verification screens. Never show a full phone or
    email on sign-in / returning-client / code screens:
      phone '917-555-2222'   → '(•••) •••-2222'
-     email 'ana@example.com' → '••na@example.com' (last two letters + domain) */
+     email 'ana@example.com' → 'a••@example.com' (first letter + domain) */
 (function () {
   'use strict';
   var DOT = '•';
@@ -14,7 +14,7 @@
     var s = String(v || '').trim(), at = s.indexOf('@');
     if (at < 0) return DOT + DOT;
     var local = s.slice(0, at), domain = s.slice(at);
-    return DOT + DOT + local.slice(-2) + domain;
+    return local.charAt(0) + DOT + DOT + domain;
   }
   /* Demo returning client: this phone + ZIP + DOB combination has a record. */
   var DEMO = { phone: '9175552222', zip: '10457', dob: '03/15/1988', email: 'ana@example.com' };

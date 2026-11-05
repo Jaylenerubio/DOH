@@ -20,7 +20,8 @@
       timer = setInterval(function () { n--; secs.textContent = fmt(n); if (n <= 0) { clearInterval(timer); wait.hidden = true; resend.hidden = false; } }, 1000);
     }
     function render() {
-      sentTo.textContent = via === 'text' ? 'the number ending in ' + lastFour() : (window.Mask ? Mask.email(c.email || '') : (c.email || ''));
+      if (via === 'text') sentTo.innerHTML = 'the number ending in <strong>' + lastFour() + '</strong>';
+      else { sentTo.textContent = ''; var st = document.createElement('strong'); st.style.whiteSpace = 'nowrap'; st.textContent = window.Mask ? Mask.email(c.email || '') : (c.email || ''); sentTo.appendChild(st); }
       alt.textContent = via === 'text' ? 'Get a code by email instead' : 'Get a code by text instead';
       alt.hidden = via === 'text' && !hasEmail;
       document.getElementById('lostText').textContent = via === 'text' ? 'No longer have this number?' : 'No longer have this email?';
