@@ -17,28 +17,16 @@
     return d;
   }
   function init() {
-    var phone = document.getElementById('phone'), email = document.getElementById('email'), zip = document.getElementById('zip'), dob = document.getElementById('dob'), code = document.getElementById('code');
-    var phoneField = document.getElementById('phoneField'), emailField = document.getElementById('emailField');
+    var fn = document.getElementById('firstName'), ln = document.getElementById('lastName'), phone = document.getElementById('phone'), email = { value: '' }, zip = document.getElementById('zip'), dob = document.getElementById('dob'), code = document.getElementById('code');
+    var phoneField = document.getElementById('phoneField');
     var s1 = document.getElementById('stepContact'), s2 = document.getElementById('stepCode');
     var cont = document.getElementById('continueBtn'), back = document.getElementById('backBtn');
     var err1 = document.getElementById('stepError'), err2 = document.getElementById('codeError');
-    var swap = document.getElementById('swap');
     var stage = 'contact', mode = 'phone';
     var returning = q('stage') === 'code';           /* came from returning.html */
     var stored = {}; try { stored = JSON.parse(sessionStorage.getItem('nyc.contact') || '{}'); } catch (e) {}
     try { sessionStorage.setItem('nyc.channel', 'self'); } catch (e) {}
 
-    function setMode(m) {
-      mode = m;
-      phoneField.hidden = m !== 'phone'; emailField.hidden = m !== 'email';
-      swap.textContent = m === 'phone' ? 'Verify another way' : 'Verify by text instead';
-      document.querySelector('#stepContact .step__text').textContent = m === 'phone'
-        ? 'Enter the phone number, zip code, and date of birth you used before. We’ll text you a 6-digit code.'
-        : 'Enter the email, zip code, and date of birth you used before. We’ll email you a 6-digit code.';
-      A11y.clearStepError(err1);
-      (m === 'phone' ? phone : email).focus();
-    }
-    swap.addEventListener('click', function () { setMode(mode === 'phone' ? 'email' : 'phone'); });
 
     function target() {
       /* Masked: last four of the phone, or last two letters + domain. */
@@ -47,13 +35,13 @@
     }
     function toCode() {
       stage = 'code'; s1.hidden = true; s2.hidden = false;
-      document.querySelector('#stepCode .step__text').innerHTML = 'We sent a 6-digit code to <strong id="sentTo" style="white-space:nowrap">' + target() + '</strong>. It expires in 10 minutes.';
+      document.querySelector('#stepCode .step__text').innerHTML = 'We sent a 6-digit code to <strong id="sentTo" style="white-space:nowrap">' + target() + '</strong>. It expires in 5 minutes.';
       document.getElementById('changeContact').textContent = mode === 'phone' ? 'Use a different number' : 'Use a different email';
       document.getElementById('changeContact').hidden = returning;
       var sep = document.getElementById('sep'); if (sep) sep.hidden = returning;
       cont.textContent = 'Verify'; code.value = ''; code.focus();
     }
-    function toContact() { stage = 'contact'; s2.hidden = true; s1.hidden = false; cont.textContent = 'Send code'; (mode === 'phone' ? phone : email).focus(); }
+    function toContact() { stage = 'contact'; s2.hidden = true; s1.hidden = false; cont.textContent = 'Send code'; phone.focus(); }
 
     function seedReturningUser() {
       /* The matched record. Programs picked this visit are merged in. */
@@ -77,9 +65,10 @@
 
     cont.addEventListener('click', function () {
       if (stage === 'contact') {
-        var v = (mode === 'phone' ? phone : email).value.trim(), z = zip.value.trim(), d = dob.value.trim();
-        var okContact = mode === 'phone' ? /^\d{3}-?\d{3}-?\d{4}$/.test(v) : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-        if (!okContact) { A11y.stepError(err1, mode === 'phone' ? 'Enter your phone number' : 'Enter a valid email address'); (mode === 'phone' ? phone : email).focus(); return; }
+        var v = phone.value.trim(), z = zip.value.trim(), d = dob.value.trim();
+        if (!fn.value.trim()) { A11y.stepError(err1, 'Enter your first name'); fn.focus(); return; }
+        if (!ln.value.trim()) { A11y.stepError(err1, 'Enter your last name'); ln.focus(); return; }
+        if (!/^\d{3}-?\d{3}-?\d{4}$/.test(v)) { A11y.stepError(err1, 'Enter your phone number'); phone.focus(); return; }
         if (!/^\d{5}$/.test(z)) { A11y.stepError(err1, 'Enter your 5-digit zip code'); zip.focus(); return; }
         if (!/^\d{2}\/\d{2}\/\d{4}$/.test(d)) { A11y.stepError(err1, 'Enter your date of birth as MM/DD/YYYY'); dob.focus(); return; }
         A11y.clearStepError(err1);
@@ -97,7 +86,7 @@
     });
     document.getElementById('resend').addEventListener('click', function () { A11y.clearStepError(err2); code.value = ''; code.focus(); });
     document.getElementById('changeContact').addEventListener('click', toContact);
-    [phone, email, zip, dob].forEach(function (el) { el.addEventListener('input', function () { A11y.clearStepError(err1); }); });
+    [fn, ln, phone, zip, dob].forEach(function (el) { el.addEventListener('input', function () { A11y.clearStepError(err1); }); });
     dob.addEventListener('input', function () { dob.value = maskDob(dob.value); });
     phone.addEventListener('input', function () {
       var d = phone.value.replace(/\D/g, '').slice(0, 10);
@@ -105,7 +94,7 @@
     });
     code.addEventListener('input', function () { code.value = code.value.replace(/\D/g, '').slice(0, 6); A11y.clearStepError(err2); });
 
-    if (returning) { mode = q('via') === 'email' ? 'email' : 'phone'; toCode(); }
+    if (returning) { toCode(); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

@@ -46,6 +46,9 @@
 
   function apply() {
     var nav = document.querySelector('.site-nav'); if (!nav) return;
+    /* Header actions (language, menu, profile, sign out) live on the landing page only. */
+    var pg = (location.pathname.split('/').pop() || 'index.html');
+    if (pg !== 'home.html' && pg !== 'index.html') { var ac = nav.querySelector('.site-nav__actions'); if (ac) ac.remove(); }
     if (get('nyc.channel') !== 'self') return;
     nav.classList.add('is-self');
     var hasRecord = !!get('nyc.recordId');
@@ -53,7 +56,7 @@
     var logo = nav.querySelector('.site-nav__inner > a');
     if (logo) { logo.setAttribute('href', hasRecord ? 'dashboard.html' : 'home.html'); logo.setAttribute('aria-label', hasRecord ? 'NYC Health — your dashboard' : 'NYC Health — home'); }
 
-    var actions = nav.querySelector('.site-nav__actions'); if (!actions) return;
+    var actions = nav.querySelector('.site-nav__actions'); if (!actions) { nav.classList.add('is-self'); return; }
     var langBtn = nav.querySelector('.site-nav__translate');
     var langLabel = langBtn && langBtn.querySelector('.site-nav__translate-label');
     /* Translate icon and X share one slot so they can crossfade. */

@@ -4,6 +4,10 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 
 ## Unreleased (v1.4-Self-service) — 2026-11-04
 
+- Sign in ("Finish where you left off") asks first name, last name, phone, zip, DOB; email path removed; code step copy: 5 minutes, Resend code.
+- Header actions (language, menu, My profile, Sign out) show on the landing page only.
+- My profile: Preferred language card (editable, `nyc.language`); added missing profile list styles.
+
 **Flow**
 - Self-service: contact → **Check your information** (new `review-info.html`, editable) → verify by text code → profile created. Contact-method page is CHW-only.
 - Progress shows 2/4, 3/4, 4/4 for self-service.

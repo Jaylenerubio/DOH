@@ -66,3 +66,10 @@
   font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); color: var(--color-text-secondary);
 }
 .btn[aria-disabled="true"].btn--primary { background: var(--color-brand-disabled); }
+
+/* My profile: read-only information list and support line */
+.profile__list { margin: 16px 0 0; display: grid; gap: 16px; }
+.profile__row { display: grid; gap: 4px; }
+.profile__row dt { margin: 0; font-weight: 400; }
+.profile__row dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.support-mail__icon { width: 20px; height: 20px; vertical-align: -3px; margin-right: 4px; }

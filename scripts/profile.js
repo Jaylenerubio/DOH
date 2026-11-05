@@ -18,6 +18,12 @@
       if (!m.value) m.value = 'text';
       m.addEventListener('change', function () { try { sessionStorage.setItem('nyc.contactMethod', m.value); } catch (e) {} });
     }
+    var l = document.getElementById('lang');
+    if (l) {
+      try { l.value = sessionStorage.getItem('nyc.language') || 'en'; } catch (e) {}
+      if (!l.value) l.value = 'en';
+      l.addEventListener('change', function () { try { sessionStorage.setItem('nyc.language', l.value); } catch (e) {} });
+    }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
