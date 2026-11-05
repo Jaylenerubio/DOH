@@ -9,7 +9,7 @@ No build step. No dependencies. Open `home.html` in a browser, or serve the fold
 **Self-service (New Yorker).** Entered from `home.html`; sets `nyc.channel = 'self'`.
 
 ```
-home → programs → privacy → contact → review-info (check and edit details) → verify (text code) → profile-created
+home → preferred-language → privacy → contact → review-info (check and edit details) → verify (text code) → profile-created
      → first chosen program's screener → handoff → dashboard
 returning: signin (or returning, if contact details match) → code → welcome-back → dashboard
 ```

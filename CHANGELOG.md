@@ -8,6 +8,8 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 - Self-service: contact → **Check your information** (new `review-info.html`, editable) → verify by text code → profile created. Contact-method page is CHW-only.
 - Progress shows 2/4, 3/4, 4/4 for self-service.
 - Profile: "Your information" card is read-only (no Edit); only preferred contact method is editable.
+- Self-service: "I'm looking for support" (programs) page removed from the flow. New **Preferred language** page (`preferred-language.html`) comes first; a language picked with the header Translate control is carried over. Dashboard now shows all programs as featured rows until one is started.
+- Combobox: restoring a saved choice no longer opens the list.
 - `review-edit.js` skips `.review-card[data-readonly]`.
 
 ## v2.1 self-service — 2026-10-15

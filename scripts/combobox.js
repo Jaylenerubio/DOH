@@ -26,6 +26,7 @@
     var searchable = !!opts.searchable;
     var multi = !!opts.multi;
     var input = null;
+    var restoring = false;   // selectByValue() restores silently: no open list, no filter
 
     // Searchable: swap the static value span for a real text input and move
     // the combobox role onto it (the input is what the user types into).
@@ -193,6 +194,7 @@
       });
       input.addEventListener('focus', function () { if (!open) openList(); });
       input.addEventListener('input', function () {
+        if (restoring) { trigger.classList.toggle('is-placeholder', !input.value); return; }
         if (!open) openList();
         filter(input.value);
         trigger.classList.toggle('is-placeholder', !input.value);
@@ -246,7 +248,7 @@
       value: function () { return selectedIndex >= 0 ? options[selectedIndex].getAttribute('data-value') : null; },
       selectByValue: function (value) {
         for (var i = 0; i < options.length; i++) {
-          if (options[i].getAttribute('data-value') === value) { applySelection(i); return true; }
+          if (options[i].getAttribute('data-value') === value) { restoring = true; applySelection(i); restoring = false; return true; }
         }
         return false;
       },
