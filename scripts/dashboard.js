@@ -31,6 +31,7 @@
   function stateFor(key) {
     if (Pillars.outcome(key) === 'ineligible') return 'ineligible';
     if (Pillars.outcome(key) === 'notfit') return 'notfit';
+    if (key === 'snap') return Pillars.isCompleted(key) ? 'referral' : 'none';   /* SNAP: Referral sent, No match, or no chip (never In progress) */
     if (Pillars.isSubmitted(key)) return 'submitted';
     if (Pillars.isApplied(key)) return 'awaiting';
     if (Pillars.isCompleted(key)) return Pillars.APPLY[key] ? 'screened' : 'awaiting';
@@ -73,9 +74,14 @@
       html = '<span class="app-card__chip app-card__chip--applied">Awaiting response</span>' + head(key) +
         status(applied ? 'Application started ' + fmt(raw('nyc.applied.' + key)) + '.' : 'Submitted ' + fmt(raw('nyc.completed.' + key)) + '.') +
         '<div class="app-card__cta"><a class="btn btn--outline" href="' + details + '">View details</a></div>';
+    } else if (st === 'referral') {
+      c.classList.add('is-in-progress', 'is-submitted');
+      html = '<span class="app-card__chip app-card__chip--applied">Referral sent</span>' + head(key) +
+        status('Frontdoor Benefits will text you. Sent ' + fmt(raw('nyc.completed.' + key)) + '.') +
+        '<div class="app-card__cta"><a class="btn btn--outline" href="' + details + '">View details</a></div>';
     } else if (st === 'notfit') {
       c.classList.add('is-in-progress');
-      html = '<span class="app-card__chip app-card__chip--ineligible">Not a fit</span>' + head(key) +
+      html = '<span class="app-card__chip app-card__chip--ineligible">No match</span>' + head(key) +
         '<p class="app-card__desc">Frontdoor Benefits only offers help online and by text. See free help nearby.</p>' +
         '<div class="app-card__cta"><a class="btn btn--outline" href="' + INEL[key] + '?from=dashboard">View details</a></div>';
     } else {
