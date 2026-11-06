@@ -1,7 +1,8 @@
 /* Sign in (returning client). First name, last name, DOB, ZIP and phone must all
    match a record; then a code is texted (verify.html in sign-in mode).
    Prototype record: Ana Lopez, 03/15/1988, 10457, 917-555-2222.
-   A mismatch shows one generic error and does not say which field was wrong.
+   A mismatch shows one warning notice ("Account not found…" + create-account link)
+   and does not say which field was wrong.
    Sets nyc.channel = 'self'. */
 (function () {
   'use strict';
@@ -24,7 +25,7 @@
       if (!/^\d{3}-?\d{3}-?\d{4}$/.test(phone.value.trim())) { A11y.stepError(err, 'Enter your phone number'); phone.focus(); return; }
       var D = Mask.DEMO;
       var ok = norm(fn.value) === 'ana' && norm(ln.value) === 'lopez' && dob.value.trim() === D.dob && zip.value.trim() === D.zip && phone.value.replace(/\D/g, '') === D.phone;
-      if (!ok) { A11y.stepError(err, 'We couldn\u2019t find an account with those details. Check them and try again.'); noAccount.hidden = false; return; }
+      if (!ok) { noAccount.hidden = false; try { noAccount.scrollIntoView({ block: 'center', behavior: 'smooth' }); } catch (e) {} noAccount.focus({ preventScroll: true }); return; }
       noAccount.hidden = true;
       try {
         sessionStorage.setItem('nyc.signin', '1');

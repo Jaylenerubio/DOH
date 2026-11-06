@@ -45,5 +45,14 @@
 .signin__support .ext-link, .dash__help .ext-link, .support-line .ext-link,
 .signin__alt .signin__link { display: inline-flex; align-items: center; min-height: 44px; }
 .signin__support + .signin__support { margin-top: 0; }
-#noAccount { margin-top: var(--space-1); }
 .signin__alt .signin__link[hidden], .signin__support .ext-link[hidden] { display: none; }
+
+/* Warning notice (sign-in no match). The link is a 44px-tall target and stays whole. */
+.notice { display: flex; align-items: flex-start; gap: 12px; margin: var(--space-3) 0; padding: 16px; border-radius: 12px; outline: none; }
+.notice[hidden] { display: none; }
+.notice--warning { background: var(--color-warning-light); color: var(--color-warning-dark); }
+.notice__icon { flex: none; width: 24px; height: 24px; margin-top: 2px; }
+.notice__text { margin: 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); }
+.notice__link { display: inline-flex; align-items: center; min-height: 44px; color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.notice__link:hover { text-decoration-thickness: 2px; }
+.notice__link:focus-visible { outline: var(--focus-ring); outline-offset: 2px; border-radius: 2px; }

@@ -81,6 +81,8 @@
   --color-neutral-200: #EEEEEE;      /* inactive progress bar */
   --color-neutral-300: #DDDDDD;      /* borders / strokes / dividers */
   --color-neutral-700: #707070;      /* secondary text */
+  --color-warning-light: #FBF1D9;    /* warning banner background */
+  --color-warning-dark: #4D3800;     /* warning banner text and icon (about 9:1 on the light) */
   --color-bg-secondary: #F5F5F5;     /* secondary background (cards on white) */
   --color-pillar-card: #FAF8F5;      /* Program pillar card bg (Home + Dashboard) */
   --color-app-button: #FFFEFD;       /* Dashboard application button bg */

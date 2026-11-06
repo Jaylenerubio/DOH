@@ -56,8 +56,11 @@
     <main class="step__body" id="main" tabindex="-1">
       <h1 class="step__title">Sign in</h1>
       <p class="step__text">Enter the details you signed up with. We&rsquo;ll text you a code to confirm it&rsquo;s you.</p>
+      <div class="notice notice--warning" id="noAccount" role="alert" tabindex="-1" hidden>
+        <svg class="notice__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 9v4M12 17h.01M21.73 18 13.73 4a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p class="notice__text">Account not found. Check your details or <a class="notice__link" href="preferred-language.html">create a new account.</a></p>
+      </div>
       <p class="step-error" id="stepError" role="alert" hidden></p>
-      <p class="signin__support" id="noAccount" hidden>No account? <a class="ext-link" href="preferred-language.html">Create an account</a></p>
       <label class="field">
         <span class="field__label">First name</span>
         <input class="field__input" type="text" autocomplete="given-name" autocapitalize="words" id="firstName" placeholder="First name">
