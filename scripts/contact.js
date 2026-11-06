@@ -84,7 +84,7 @@
         if (MASKS[id]) inputs[id].value = MASKS[id](inputs[id].value);
         save();
         if (valid(id)) clearError(id);
-        if (id === 'phone') errEls.phone.textContent = 'Phone number required';
+        if (id === 'phone') { errEls.phone.textContent = 'Phone number required'; cont.removeAttribute('aria-disabled'); }
       });
       inputs[id].addEventListener('blur', function () {
         if (!valid(id)) showError(id);
@@ -110,8 +110,10 @@
       if (self && window.Mask && Mask.isReturning(data)) {
         if (!seen) { window.location.href = 'returning.html'; return; }
         /* They already saw Welcome back and chose "Create an account": the same number can't open a second account. */
-        errEls.phone.textContent = 'This number is linked to an account. Use a different number or sign in.';
-        showError('phone'); inputs.phone.focus(); return;
+        showError('phone');
+        errEls.phone.innerHTML = A11y.ERROR_ICON + '<span>Number already in use. <a class="field__error-link" href="signin.html">Sign in</a> or use a different number.</span>';
+        cont.setAttribute('aria-disabled', 'true');   /* stays off until the number changes; Sign in is the other way forward */
+        inputs.phone.focus(); return;
       }
       window.location.href = 'review-info.html';   /* check details, then verify by text */
     });

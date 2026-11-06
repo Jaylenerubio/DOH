@@ -799,6 +799,8 @@ body {
   line-height: 1.4;
 }
 .step-error { margin-top: 12px; outline: none; }
+.field__error-link { display: inline-flex; align-items: center; min-height: 44px; margin: -14px 0; color: var(--color-link); text-decoration: underline; }
+.field__error-link:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset); border-radius: 4px; }
 .step-error[hidden], .field__error[hidden] { display: none; }
 .error-icon { flex: 0 0 auto; width: 18px; height: 18px; }
 /* Attention: fade-drop in, then one ±4px nudge. Runs once per show. */

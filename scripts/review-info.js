@@ -14,6 +14,12 @@
       el.value = c[id] || '';
       el.addEventListener('input', function () { var d = contact(); d[id] = el.value; try { sessionStorage.setItem('nyc.contact', JSON.stringify(d)); } catch (e) {} });
     });
+    var lang = document.getElementById('lang');   /* preferred language, set on step 1; editable here */
+    if (lang) {
+      try { lang.value = sessionStorage.getItem('nyc.language') || 'en'; } catch (e) {}
+      if (!lang.value) lang.value = 'en';
+      lang.addEventListener('change', function () { try { sessionStorage.setItem('nyc.language', lang.value); } catch (e) {} });
+    }
     var back = document.getElementById('backBtn');
     if (back) back.addEventListener('click', function () { if (history.length > 1) history.back(); else window.location.href = 'contact.html'; });
     var cont = document.getElementById('continueBtn'), errorEl = document.getElementById('stepError');
