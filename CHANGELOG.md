@@ -6,7 +6,10 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 
 - Sign in ("Finish where you left off") asks first name, last name, phone, zip, DOB; email path removed; code step copy: 5 minutes, Resend code.
 - Header: language button on the landing page only (language is in My profile); Menu (My profile, Sign out) stays inside the tool.
-- De-dup page (returning.html) rebuilt from the mock: "Welcome back" with code entry, 0:30 resend, email alternative, "Having trouble signing in?" (Create an account).
+- Sign in: home CTA "Pick up where you left off" -> Sign in form (first, last, DOB, ZIP, phone; all must match; generic no-match error) -> Enter your code (verify.html) -> Welcome back -> dashboard. Demo record: Ana Lopez, 03/15/1988, 10457, 917-555-2222.
+- De-dup now matches on phone alone. "Create an account"/Back return to Contact info with fields cleared; re-entering the same number shows "This number is linked to an account. Use a different number or sign in." under the phone field.
+- New accounts go to the dashboard after "Welcome to the HART Connector."
+- De-dup page (returning.html) rebuilt from the mock: "Welcome back" with code entry, 0:30 resend, email alternative, "Changed numbers? Email" and "Not you? Create an account".
 - My profile: Preferred language card (editable, `nyc.language`); added missing profile list styles.
 
 **Flow**

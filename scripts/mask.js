@@ -16,14 +16,11 @@
     var local = s.slice(0, at), domain = s.slice(at);
     return local.charAt(0) + DOT + DOT + domain;
   }
-  /* Demo returning client: this phone + ZIP + DOB combination has a record. */
+  /* Demo returning client: this phone number has a record. */
   var DEMO = { phone: '9175552222', zip: '10457', dob: '03/15/1988', email: 'ana@example.com' };
   function isReturning(c) {
     if (!c) return false;
-    var d = String(c.phone || '').replace(/\D/g, '');
-    var e = String(c.email || '').trim().toLowerCase();
-    var byPhone = d === DEMO.phone, byEmail = e === DEMO.email;
-    return (byPhone || byEmail) && String(c.zip || '').trim() === DEMO.zip && String(c.dob || '').trim() === DEMO.dob;
+    return String(c.phone || '').replace(/\D/g, '') === DEMO.phone;   /* phone alone matches (email is optional) */
   }
   window.Mask = { phone: phone, email: email, isReturning: isReturning, DEMO: DEMO };
 })();

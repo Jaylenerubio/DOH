@@ -84,6 +84,7 @@
         if (MASKS[id]) inputs[id].value = MASKS[id](inputs[id].value);
         save();
         if (valid(id)) clearError(id);
+        if (id === 'phone') errEls.phone.textContent = 'Phone number required';
       });
       inputs[id].addEventListener('blur', function () {
         if (!valid(id)) showError(id);
@@ -103,10 +104,15 @@
       /* Self-service de-duplication: phone (or email) + ZIP + DOB match an
          existing record → verify with a code instead of creating a second one.
          'nyc.returning' = 'new' means they already said "not me". */
-      var self = false, decided = '';
-      try { self = sessionStorage.getItem('nyc.channel') === 'self'; decided = sessionStorage.getItem('nyc.returning') || ''; } catch (e) {}
+      var self = false, seen = '';
+      try { self = sessionStorage.getItem('nyc.channel') === 'self'; seen = sessionStorage.getItem('nyc.dedupSeen') || ''; } catch (e) {}
       var data = {}; FIELDS.forEach(function (id) { data[id] = inputs[id] ? inputs[id].value : ''; });
-      if (self && decided !== 'new' && window.Mask && Mask.isReturning(data)) { window.location.href = 'returning.html'; return; }
+      if (self && window.Mask && Mask.isReturning(data)) {
+        if (!seen) { window.location.href = 'returning.html'; return; }
+        /* They already saw Welcome back and chose "Create an account": the same number can't open a second account. */
+        errEls.phone.textContent = 'This number is linked to an account. Use a different number or sign in.';
+        showError('phone'); inputs.phone.focus(); return;
+      }
       window.location.href = self ? 'review-info.html' : 'contact-method.html';   /* self-service: check details, then verify by text; CHW picks a contact method */
     });
 

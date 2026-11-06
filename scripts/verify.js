@@ -13,7 +13,8 @@
     var via = 'text', sentTo = document.getElementById('sentTo'), alt = document.getElementById('viaAlt');
     var resend = document.getElementById('resend'), wait = document.getElementById('resendWait'), secs = document.getElementById('secs');
     var sending = document.getElementById('sending'), banner = document.getElementById('resentMsg'), bannerText = document.getElementById('resentText'), timer = null;
-    var hasEmail = !!(c.email && String(c.email).trim());
+    var signin = false; try { signin = sessionStorage.getItem('nyc.signin') === '1'; } catch (e) {}   /* arrived from Sign in */
+    var hasEmail = signin || !!(c.email && String(c.email).trim());
     function lastFour() { var d = String(c.phone || '').replace(/\D/g, ''); return d.slice(-4); }
     var sentAt = Date.now(), EXPIRES = 5 * 60 * 1000;   /* codes expire after 5 minutes */
     function fmt(n) { return Math.floor(n / 60) + ':' + ('0' + (n % 60)).slice(-2); }
@@ -27,6 +28,25 @@
       alt.textContent = via === 'text' ? 'Get a code by email instead' : 'Get a code by text instead';
       alt.hidden = via === 'text' && !hasEmail;
       document.getElementById('lostText').textContent = via === 'text' ? 'No longer have this number?' : 'No longer have this email?';
+    }
+    function seedReturningUser() {
+      /* The matched record. Programs picked this visit are merged in. */
+      var picked = []; try { picked = JSON.parse(sessionStorage.getItem('nyc.programs') || '[]'); } catch (e) {}
+      var existing = ['hospital-bills', 'financial-help'];
+      var merged = existing.slice(); picked.forEach(function (k) { if (merged.indexOf(k) === -1) merged.push(k); });
+      var c = {
+        firstName: 'Ana', lastName: 'Lopez', dob: Mask.DEMO.dob, zip: Mask.DEMO.zip,
+        phone: '917-555-2222', email: Mask.DEMO.email
+      };
+      try {
+        sessionStorage.setItem('nyc.contact', JSON.stringify(c));
+        if (!sessionStorage.getItem('nyc.contactMethod')) sessionStorage.setItem('nyc.contactMethod', 'text');
+        sessionStorage.setItem('nyc.recordId', 'NYC-2026-104877');
+        sessionStorage.setItem('nyc.programs', JSON.stringify(merged));
+        sessionStorage.setItem('nyc.completed', JSON.stringify(['hospital-bills']));
+        sessionStorage.setItem('nyc.df', JSON.stringify({ hospital: 'NYC Health + Hospitals/Bellevue', billMonth: 'August', billYear: '2026', amount: '3,240', household: '3', state: 'New York', city: 'New York' }));
+        sessionStorage.setItem('nyc.returning', 'verified');
+      } catch (e) {}
     }
     var busy = false;
     /* Prototype only: pause ~0.9s so a resend feels real before the banner appears. */
@@ -53,7 +73,7 @@
     code.focus();
     code.addEventListener('input', function () { code.value = code.value.replace(/\D/g, '').slice(0, 6); A11y.clearStepError(err); });
     resend.addEventListener('click', sent);
-    document.getElementById('backBtn').addEventListener('click', function () { if (history.length > 1) history.back(); else window.location.href = 'review-info.html'; });
+    document.getElementById('backBtn').addEventListener('click', function () { if (signin) window.location.href = 'signin.html'; else if (history.length > 1) history.back(); else window.location.href = 'review-info.html'; });
     document.getElementById('continueBtn').addEventListener('click', function () {
       if (!/^\d{6}$/.test(code.value.trim())) { A11y.stepError(err, 'Enter the 6-digit code we sent you'); code.focus(); return; }
       function fail(msg) { banner.hidden = true; A11y.stepError(err, msg); code.focus(); }
@@ -70,6 +90,7 @@
         return;
       }
       try { sessionStorage.removeItem('nyc.otpFails'); } catch (e) {}
+      if (signin) { seedReturningUser(); try { sessionStorage.removeItem('nyc.signin'); } catch (e) {} window.location.href = 'welcome-back.html'; return; }
       try {
         if (!sessionStorage.getItem('nyc.recordId')) sessionStorage.setItem('nyc.recordId', 'NYC-2026-' + String(100000 + Math.floor(Math.random() * 900000)));
         /* No contact-method step: texts are the default until they change it on their profile. */

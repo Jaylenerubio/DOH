@@ -20,8 +20,7 @@
   <script src="scripts/pillars.js"></script>
   <script>
     (function () {
-      var first = window.Pillars ? Pillars.first() : null;
-      var url = first ? Pillars.entryFor(first) : 'dashboard.html';
+      var url = 'dashboard.html';   /* no program picker: new accounts land on the dashboard */
       Interstitial.show(); Interstitial.go(url, 1600);
     })();
   </script>

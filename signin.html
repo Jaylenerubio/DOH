@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Return to your last session — NYC Health</title>
+<title>Sign in — NYC Health</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -54,48 +54,36 @@
     </header>
 
     <main class="step__body" id="main" tabindex="-1">
-      <section id="stepContact">
-        <h1 class="step__title">Finish where<br>you left off</h1>
-        <p class="step__text">Enter the information you used before. We&rsquo;ll text you a 6-digit code.</p>
-        <p class="step-error" id="stepError" role="alert" hidden></p>
-        <label class="field">
-          <span class="field__label">First name</span>
-          <input class="field__input" type="text" autocomplete="given-name" autocapitalize="words" id="firstName" placeholder="Enter your first name">
-        </label>
-        <label class="field">
-          <span class="field__label">Last name</span>
-          <input class="field__input" type="text" autocomplete="family-name" autocapitalize="words" id="lastName" placeholder="Enter your last name">
-        </label>
-        <label class="field" id="phoneField">
-          <span class="field__label">Phone number</span>
-          <input class="field__input" type="tel" inputmode="tel" autocomplete="tel" id="phone" maxlength="12" placeholder="000-000-0000">
-        </label>
-        <label class="field">
-          <span class="field__label">Zip code</span>
-          <input class="field__input" type="text" inputmode="numeric" autocomplete="postal-code" id="zip" maxlength="5" placeholder="00000">
-        </label>
-        <label class="field">
-          <span class="field__label">Date of birth</span>
-          <input class="field__input" type="text" inputmode="numeric" autocomplete="bday" id="dob" maxlength="10" placeholder="MM/DD/YYYY">
-        </label>
-      </section>
-
-      <section id="stepCode" hidden>
-        <h1 class="step__title">Enter your code</h1>
-        <p class="step__text">We sent a 6-digit code to <strong id="sentTo"></strong>. It expires in 5 minutes.</p>
-        <p class="step-error" id="codeError" role="alert" hidden></p>
-        <label class="field">
-          <span class="field__label">6-digit code</span>
-          <input class="field__input signin__code" type="text" inputmode="numeric" autocomplete="one-time-code" id="code" maxlength="6" placeholder="000000">
-        </label>
-        <p class="signin__alt">Didn&rsquo;t get it? <button class="signin__link" type="button" id="resend">Resend code</button><span id="sep"> &middot; </span><button class="signin__link" type="button" id="changeContact">Use a different number</button></p>
-      </section>
+      <h1 class="step__title">Sign in</h1>
+      <p class="step__text">Enter the details you signed up with. We&rsquo;ll text you a code to confirm it&rsquo;s you.</p>
+      <p class="step-error" id="stepError" role="alert" hidden></p>
+      <label class="field">
+        <span class="field__label">First name</span>
+        <input class="field__input" type="text" autocomplete="given-name" autocapitalize="words" id="firstName">
+      </label>
+      <label class="field">
+        <span class="field__label">Last name</span>
+        <input class="field__input" type="text" autocomplete="family-name" autocapitalize="words" id="lastName">
+      </label>
+      <label class="field">
+        <span class="field__label">Date of birth</span>
+        <input class="field__input" type="text" inputmode="numeric" autocomplete="bday" id="dob" maxlength="10" placeholder="MM/DD/YYYY">
+      </label>
+      <label class="field">
+        <span class="field__label">ZIP code</span>
+        <input class="field__input" type="text" inputmode="numeric" autocomplete="postal-code" id="zip" maxlength="5" placeholder="00000">
+      </label>
+      <label class="field">
+        <span class="field__label">Phone number</span>
+        <input class="field__input" type="tel" inputmode="tel" autocomplete="tel" id="phone" maxlength="12" placeholder="000-000-0000">
+      </label>
+      <p class="signin__support">Changed numbers? Email <a class="ext-link" href="mailto:HARTConnectorSupport@health.nyc.gov">HARTConnectorSupport@health.nyc.gov</a></p>
     </main>
 
     <div class="step__footer">
       <div class="step__actions">
         <button class="btn btn--secondary btn--back" type="button" id="backBtn">Back</button>
-        <button class="btn btn--primary btn--continue" type="button" id="continueBtn">Send code</button>
+        <button class="btn btn--primary btn--continue" type="button" id="continueBtn">Continue</button>
       </div>
     </div>
   </div>

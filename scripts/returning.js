@@ -28,7 +28,7 @@
       else { sentTo.textContent = ''; var st = document.createElement('strong'); st.style.whiteSpace = 'nowrap'; st.textContent = window.Mask ? Mask.email(c.email || '') : (c.email || ''); sentTo.appendChild(st); }
       alt.textContent = via === 'text' ? 'Get a code by email instead' : 'Get a code by text instead';
       alt.hidden = via === 'text' && !hasEmail;
-      var tr = document.querySelector('#trouble p'); if (tr) tr.firstChild.nodeValue = via === 'text' ? 'Changed numbers? Email ' : 'Changed email? Email ';
+      var tr = document.querySelector('.signin__support'); if (tr) tr.firstChild.nodeValue = via === 'text' ? 'Changed numbers? Email ' : 'Changed email? Email ';
     }
     function seedReturningUser() {
       /* The matched record. Programs picked this visit are merged in. */
@@ -72,10 +72,12 @@
     if (sendFails()) { A11y.stepError(err, 'Code didn\u2019t send. Check your number or try again.'); resend.hidden = false; wait.hidden = true; } else startCooldown();
     alt.addEventListener('click', function () { via = via === 'text' ? 'email' : 'text'; render(); sent(); });
     code.focus();
-    document.getElementById('notMe').addEventListener('click', function () { try { sessionStorage.setItem('nyc.returning', 'new'); } catch (e) {} });
+    function startOver() { try { sessionStorage.setItem('nyc.dedupSeen', '1'); sessionStorage.removeItem('nyc.contact'); } catch (e) {} }
+    try { sessionStorage.setItem('nyc.dedupSeen', '1'); } catch (e) {}
+    document.getElementById('notMe').addEventListener('click', startOver);
     code.addEventListener('input', function () { code.value = code.value.replace(/\D/g, '').slice(0, 6); A11y.clearStepError(err); });
     resend.addEventListener('click', sent);
-    document.getElementById('backBtn').addEventListener('click', function () { if (history.length > 1) history.back(); else window.location.href = 'contact.html'; });
+    document.getElementById('backBtn').addEventListener('click', function () { startOver(); window.location.href = 'contact.html'; });
     document.getElementById('continueBtn').addEventListener('click', function () {
       if (!/^\d{6}$/.test(code.value.trim())) { A11y.stepError(err, 'Enter the 6-digit code we sent you'); code.focus(); return; }
       function fail(msg) { banner.hidden = true; A11y.stepError(err, msg); code.focus(); }
