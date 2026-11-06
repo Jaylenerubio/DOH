@@ -54,7 +54,7 @@
 .review-card.is-editing .review-card__title { color: #FFFFFF; }
 .review-card.is-editing .review-card__rule { display: none; }
 .review-card.is-editing .review-fields, .review-card.is-editing .tsu-review__answers { padding: 0 4px; }
-.review-card.is-editing .field__input, .review-card.is-editing .combobox__trigger, .review-card.is-editing .program-tile { background: var(--color-bg); }
+.review-card.is-editing .field__input, .review-card.is-editing .combobox__trigger, .review-card.is-editing .program-tile { background-color: var(--color-bg); }   /* background-color, not the shorthand: keeps the dropdown caret image */
 
 .review-card__note {
   margin: var(--space-2) 4px 0;
