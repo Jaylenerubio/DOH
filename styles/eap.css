@@ -29,7 +29,7 @@
 .program-list { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
 .program-tile { padding: var(--space-2); background: var(--color-pillar-card); border-radius: 16px; }
 .program-tile .checkbox__label {
-  font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height);
+  font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height);
 }
 .program-list.is-invalid .program-tile { box-shadow: none; }   /* group error shows as text only */
 
