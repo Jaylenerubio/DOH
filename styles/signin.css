@@ -42,10 +42,9 @@
 
 /* Touch targets: links in support lines and the resend link are 44px tall.
    inline-flex keeps a link whole (an email address never splits across lines). */
-.signin__support .ext-link, .dash__help .ext-link, .support-line .ext-link,
-.signin__alt .signin__link { display: inline-flex; align-items: center; min-height: 44px; }
+.signin__alt .signin__link { display: inline-flex; align-items: center; min-height: 44px; }   /* the shared support-link rule is in components.css */
 .signin__support + .signin__support { margin-top: 0; }
-.signin__alt .signin__link[hidden], .signin__support .ext-link[hidden] { display: none; }
+.signin__alt .signin__link[hidden] { display: none; }
 
 /* Warning notice (sign-in no match). The link is a 44px-tall target and stays whole. */
 .notice { display: flex; align-items: flex-start; gap: 12px; margin: var(--space-3) 0; padding: 16px; border-radius: 12px; outline: none; }

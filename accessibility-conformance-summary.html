@@ -241,6 +241,7 @@
   .d-white { background:#fff; }
   .d-ink   { color:#191919; }  .d-sec { color:#565656; } .d-mut { color:#767676; }
   .d-brand { background:#225E7C; color:#fff; }
+  .d-err   { color:#CF2A46; }  .d-warn { background:#FBF1D9; color:#4D3800; }
 
   /* ── Cards / grids ───────────────────────────────────────────────────── */
   .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 16px; }
@@ -281,7 +282,6 @@
 </style>
 </head>
 <body>
-<div style="background:#FFF3CD;border:1px solid #D9B44A;padding:12px 16px;margin:0 0 16px;font:16px/1.5 sans-serif"><strong>Results below are for the v2.1 baseline (pre-split).</strong> They have not been re-run for v1.3 Save &amp; Continue, which removes the intake pages and the In progress / Awaiting response / Submitted states.</div>
 
 
 <header class="masthead">
@@ -299,7 +299,7 @@
     <div class="hero">
       <p class="eyebrow">Accessibility · WCAG 2.0 / 2.1 / 2.2 AA</p>
       <h1>Accessibility Conformance Summary</h1>
-      <p class="subline">NYC Health and Affordability Connector prototype — self-service (New Yorker) and CHW channels: intake, dashboard, and the Hospital bills, Health insurance, Eviction, Energy discounts &amp; Tax credits flows</p>
+      <p class="subline">NYC Health and Affordability Connector prototype — self-service (New Yorker) and CHW channels: intake, dashboard, and the Hospital bills, Health insurance, Eviction, Energy discounts, Tax credits &amp; Food assistance (SNAP) flows</p>
       <p class="lead">
         This summarizes the accessibility work built into the prototype and maps it to the
         success criteria that govern <strong>AA conformance for public-sector civic technology</strong>.
@@ -309,14 +309,16 @@
       </p>
 
       <p class="verdict"><b>Bottom line —</b> the prototype addresses the AA success criteria in code and
-        passes axe-core with <b>0 violations across 40 page states at phone and desktop widths</b>
+        passes axe-core with <b>0 violations across 95 page-state checks (41 pages and 7 interaction states, at phone and desktop widths)</b>
         (see <a href="#scan">Automated verification</a>). What remains is manual screen-reader testing,
         the carry-forwards in <a href="#gaps">Known gaps</a>, and the placeholders the vendor must
         replace in the production build.</p>
-      <p class="verdict" style="margin-top:12px"><b>Updated Oct&nbsp;14,&nbsp;2026 —</b> reflects the self-service
-        channel: home → programs → privacy → contact (returning-client check) → contact method → dashboard,
-        with sign-in by one-time code, a header Menu / language panel, a profile page, dashboard status
-        chips, and “View details” handoff views. See <a href="#changes">What changed</a> at the end.</p>
+      <p class="verdict" style="margin-top:12px"><b>Updated Nov&nbsp;6,&nbsp;2026 (v1.4) —</b> reflects the rebuilt self-service
+        channel: home → language → privacy → contact → review → one-time code → dashboard (5 steps), a
+        sign-in form (first and last name, date of birth, ZIP, phone) with its own “Account not found” notice,
+        a “Welcome back” code screen when a number already has an account, a Menu-only header inside the tool,
+        preferred language on the review page and in My profile, and a restyled SNAP hand-off. See
+        <a href="#changes">What changed</a> at the end.</p>
 
       <div class="badges">
         <span class="badge"><span class="tick" aria-hidden="true">✓</span> <b>WCAG&nbsp;2.0&nbsp;AA</b> <span>Section&nbsp;508 floor</span></span>
@@ -343,7 +345,7 @@
       supplies behavior for free; custom widgets follow the WAI-ARIA authoring patterns. Rows marked
       <em>self</em> exist only in the self-service channel; <em>CHW</em> only in the staff channel.</p>
 
-    <div class="table-scroll">
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Interactive elements table, scrollable">
       <table>
         <caption class="mono" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Interactive elements and their accessibility markup</caption>
         <thead>
@@ -357,12 +359,12 @@
           </tr>
           <tr>
             <th scope="row">Step progress indicator</th>
-            <td><span class="mk"><code>role="progressbar"</code> + <code>aria-valuemin/​max/​now</code> + <code>aria-label="Step 2 of 3"</code></span><span class="mk">wrapper is a <code>role="region" aria-label="Progress"</code> landmark</span><span class="note">3 steps in self-service (privacy → contact → contact method); 4 in CHW (adds review)</span></td>
+            <td><span class="mk"><code>role="progressbar"</code> + <code>aria-valuemin/​max/​now</code> + <code>aria-label="Step 3 of 5"</code></span><span class="mk">wrapper is a <code>role="region" aria-label="Progress"</code> landmark</span><span class="note">5 steps in self-service (language → privacy → contact → review → code); 4 in CHW. One shared script (<code>progress.js</code>) renders every bar and sets the label, so the count cannot drift between pages</span></td>
             <td><div class="sc"><b>1.3.1</b><b>2.4.1</b><b>4.1.2</b></div></td>
           </tr>
           <tr>
             <th scope="row">Header Menu &amp; English buttons <span class="note" style="display:inline">(self)</span></th>
-            <td><span class="mk"><code>&lt;button aria-expanded aria-controls&gt;</code>; visible label “Menu” / “English” becomes “Close” while open — the visible text <em>is</em> the accessible name</span><span class="mk">hamburger lines and translate icon are <code>aria-hidden</code>; the icon morph is decorative</span><span class="note">while a panel is open every other nav item is removed from the DOM flow (<code>display:none</code>), so there is one live control in the header</span></td>
+            <td><span class="mk"><code>&lt;button aria-expanded aria-controls&gt;</code>; visible label “Menu” becomes “Close” while open — the visible text <em>is</em> the accessible name</span><span class="mk">inside the tool the header shows <b>Menu only</b> (My profile, Sign out); the English / translate button appears on the landing page only. Hamburger lines and translate icon are <code>aria-hidden</code>; the icon morph is decorative</span><span class="note">while a panel is open every other nav item is removed from the DOM flow (<code>display:none</code>), so there is one live control in the header</span></td>
             <td><div class="sc"><b>2.5.3</b><b>4.1.2</b></div></td>
           </tr>
           <tr>
@@ -376,29 +378,19 @@
             <td><div class="sc"><b>2.4.4</b><b>2.5.8</b></div></td>
           </tr>
           <tr>
-            <th scope="row">Program cards <span class="note" style="display:inline">(programs page)</span></th>
-            <td><span class="mk"><code>role="group" aria-labelledby="stepTitle"</code></span><span class="mk">each <code>&lt;button aria-pressed&gt;</code>, toggled in JS</span><span class="note">CHW: screened pillars are <code>disabled aria-disabled="true"</code> with a visible “Screened” badge in the name</span></td>
-            <td><div class="sc"><b>1.3.1</b><b>4.1.2</b></div></td>
-          </tr>
-          <tr>
             <th scope="row">Dashboard program cards <span class="note" style="display:inline">(self)</span></th>
-            <td><span class="mk">list under an sr-only <code>&lt;h2&gt;Your programs&lt;/h2&gt;</code>; each card titled by an <code>&lt;h3&gt;</code>, icon <code>aria-hidden</code></span><span class="mk">status chip is plain text in the card (In progress · Screened · Awaiting response · Submitted · Not eligible), followed by a dated status sentence — state is never colour alone</span><span class="mk">CTAs are real buttons/links whose label names the action: Get started · Continue · Start your application · View details</span></td>
+            <td><span class="mk">list under an sr-only <code>&lt;h2&gt;Your programs&lt;/h2&gt;</code>; each card titled by an <code>&lt;h3&gt;</code>, icon <code>aria-hidden</code></span><span class="mk">status chip is plain text in the card (Referral sent · No match; Get started cards and the tax-credits card carry none), followed by a dated status sentence — state is never colour alone</span><span class="mk">CTAs are real buttons/links whose label names the action: Get started · Start application · View details</span></td>
             <td><div class="sc"><b>1.3.1</b><b>1.4.1</b><b>2.4.4</b><b>2.4.6</b></div></td>
           </tr>
           <tr>
             <th scope="row">Status chips — contrast</th>
-            <td><span class="mk">In progress <code>#5C3D00/#F8ECCE</code> 8.4:1 · Screened &amp; Submitted <code>#006333/#E2F2D5</code> 6.3:1 · Awaiting response <code>#1F4B66/#E3ECF3</code> 7.8:1 · Not eligible <code>#191919/#EEE</code> 13.3:1</span></td>
+            <td><span class="mk">Referral sent <code>#006333/#E2F2D5</code> 6.3:1 · No match <code>#191919/#EEEEEE</code> 15.2:1</span></td>
             <td><div class="sc"><b>1.4.3</b></div></td>
           </tr>
           <tr>
             <th scope="row">Answer chips <span class="note" style="display:inline">(Yes/No, Health insurance, utility)</span></th>
             <td><span class="mk">single-select: <code>role="radiogroup"</code> ▸ <code>role="radio" aria-checked</code></span><span class="mk">multi-select: <code>role="group"</code> ▸ <code>role="checkbox" aria-checked</code></span><span class="note">each group is a <code>&lt;fieldset&gt;</code> with a real <code>&lt;legend&gt;</code></span></td>
             <td><div class="sc"><b>1.3.1</b><b>4.1.2</b></div></td>
-          </tr>
-          <tr>
-            <th scope="row">Contact-method choice</th>
-            <td><span class="mk">native <code>&lt;input type="radio"&gt;</code> in <code>&lt;label&gt;</code>, wrapped in <code>role="radiogroup"</code></span><span class="note">Text me / Call me; on selection all text — value included — moves to <code>#191919</code></span></td>
-            <td><div class="sc"><b>1.3.1</b><b>1.4.3</b><b>4.1.2</b></div></td>
           </tr>
           <tr>
             <th scope="row">Eviction &amp; consent checkboxes</th>
@@ -426,23 +418,28 @@
             <td><div class="sc"><b>2.5.8</b><b>4.1.2</b></div></td>
           </tr>
           <tr>
-            <th scope="row">Text fields (contact, sign-in, profile)</th>
-            <td><span class="mk">native <code>&lt;label&gt;</code> + <code>autocomplete</code> (given-name, family-name, bday, postal-code, tel, email, <b>one-time-code</b>), <code>inputmode</code>, <code>type</code></span><span class="note">light input masks (DOB, zip, phone) keep values in the shape the placeholder shows; the profile and intake review fields had a conflicting <code>autocomplete="off"</code> removed Oct 14</span></td>
+            <th scope="row">Text fields (contact, sign-in, review)</th>
+            <td><span class="mk">native <code>&lt;label&gt;</code> + <code>autocomplete</code> (given-name, family-name, bday, postal-code, tel, email, <b>one-time-code</b>), <code>inputmode</code>, <code>type</code>; every field keeps a visible label and the placeholder repeats the label, never replaces it</span><span class="mk">email is optional and says so in the label (“Email (optional)”), in edit and read views</span><span class="note">light input masks (DOB, zip, phone) keep values in the shape the placeholder shows</span></td>
             <td><div class="sc"><b>1.3.5</b><b>3.3.2</b><b>4.1.2</b></div></td>
           </tr>
           <tr>
-            <th scope="row">Sign-in by one-time code <span class="note" style="display:inline">(self)</span></th>
-            <td><span class="mk">two <code>&lt;section&gt;</code>s (contact details → code), one shown at a time; each with its own <code>&lt;h1&gt;</code> and <code>role="alert"</code> error</span><span class="mk">code field: <code>inputmode="numeric" autocomplete="one-time-code"</code>, 6 digits; “Verify another way” swaps phone ⇄ email and refocuses</span><span class="note">the destination is masked — <code>(•••) •••-2222</code> or <code>••na@example.com</code> — in <code>&lt;strong&gt;</code> with <code>white-space:nowrap</code> so it is read as one token; Back is a real <code>&lt;button&gt;</code></span></td>
-            <td><div class="sc"><b>1.3.5</b><b>2.4.3</b><b>3.3.1</b><b>3.3.2</b></div></td>
+            <th scope="row">Inline errors</th>
+            <td><span class="mk">icon + text in <code>#CF2A46</code> (5.2:1 on white), regular weight; icon is Material “error” (circle with exclamation), <code>aria-hidden</code>; the field gets a 1.5px error border and <code>aria-invalid</code> + <code>aria-describedby</code></span><span class="mk">same treatment for one-time-code errors; “Number already in use. Sign in or use a different number.” puts a real link inside the message, 44px tall</span><span class="note">meaning is carried by the icon, the text and the border — never colour alone</span></td>
+            <td><div class="sc"><b>1.4.1</b><b>1.4.3</b><b>3.3.1</b><b>4.1.2</b></div></td>
           </tr>
           <tr>
-            <th scope="row">Returning-client interrupt <span class="note" style="display:inline">(self)</span></th>
-            <td><span class="mk">“Looks like you’ve been here before” page; Send code is primary, “Not you? Continue as a new client” is a link</span><span class="note">reached automatically when the contact details match an existing record; the user is told why before any code is sent</span></td>
-            <td><div class="sc"><b>3.2.2</b><b>3.3.2</b></div></td>
+            <th scope="row">Sign in &amp; one-time code <span class="note" style="display:inline">(self)</span></th>
+            <td><span class="mk"><code>signin.html</code>: five labelled fields (first name, last name, date of birth, ZIP, phone), each with its own <code>autocomplete</code>; a mismatch shows an “Account not found” warning notice (<code>role="alert"</code>, receives focus, clears when the person edits a field)</span><span class="mk"><code>verify.html</code> “Enter your code”: <code>inputmode="numeric" autocomplete="one-time-code"</code>, 6 digits; the destination is masked (“number ending in 2222”) in <code>&lt;strong&gt;</code>; “Resend in 0:30” is plain text that becomes a real <code>&lt;button&gt;</code>, and a <code>role="status"</code> message confirms a resend</span><span class="note">five wrong codes → “Try again later” page (<code>locked.html</code>) with the lock duration stated in text; Back is a real <code>&lt;button&gt;</code></span></td>
+            <td><div class="sc"><b>1.3.5</b><b>2.4.3</b><b>3.3.1</b><b>3.3.2</b><b>4.1.3</b></div></td>
+          </tr>
+          <tr>
+            <th scope="row">Welcome back <span class="note" style="display:inline">(self, existing number)</span></th>
+            <td><span class="mk"><code>returning.html</code>: a code screen that opens when the phone number on the contact page already has an account; it states why (“This number is already linked to an account”) before any code is entered</span><span class="mk">escape routes are real links: “Changed numbers? Email hartconnectorsupport@health.nyc.gov” and “Not you? Create an account”</span><span class="note">choosing Create an account returns to the contact page with the details cleared; entering the same number again shows the inline “Number already in use” error with Continue marked <code>aria-disabled</code> until the number changes</span></td>
+            <td><div class="sc"><b>3.2.2</b><b>3.3.1</b><b>3.3.2</b></div></td>
           </tr>
           <tr>
             <th scope="row">Profile page <span class="note" style="display:inline">(self)</span></th>
-            <td><span class="mk">one card: labelled native inputs (read-only until “Edit”), contact-method <code>&lt;select&gt;</code>; Edit ⇄ Done toggles and moves focus to the first field</span><span class="mk">“Back to dashboard” link above the <code>&lt;h1&gt;</code>, 44px tall, arrow icon <code>aria-hidden</code></span></td>
+            <td><span class="mk">“Your information” is a read-only <code>&lt;dl&gt;</code> card (name, date of birth, ZIP, phone, email); “Preferred language” is its own card with a native <code>&lt;select&gt;</code> and a visible label, saved on change</span><span class="mk">“Back to dashboard” link above the <code>&lt;h1&gt;</code>, 44px tall, arrow icon <code>aria-hidden</code>; the support email below is a 44px link (lowercase, no icon)</span></td>
             <td><div class="sc"><b>1.3.1</b><b>2.4.3</b><b>3.3.2</b></div></td>
           </tr>
           <tr>
@@ -462,12 +459,12 @@
           </tr>
           <tr>
             <th scope="row">Edit buttons &amp; review sections</th>
-            <td><span class="mk">visible “Edit” label + <code>aria-hidden</code> icon; Edit focuses the first field</span><span class="mk"><code>&lt;section aria-labelledby&gt;</code> + <code>&lt;h2&gt;</code>; editable answers are labelled native controls, not read-only text</span></td>
+            <td><span class="mk">visible “Edit” label + <code>aria-hidden</code> icon; Edit focuses the first field; while a card is being edited the page’s Continue is <code>aria-disabled</code> and a visually hidden hint (inside <code>&lt;main&gt;</code>) gives the reason</span><span class="mk"><code>&lt;section aria-labelledby&gt;</code> + <code>&lt;h2&gt;</code>; editable answers are labelled native controls, not read-only text</span></td>
             <td><div class="sc"><b>1.3.1</b><b>2.4.4</b><b>2.5.3</b><b>3.3.2</b></div></td>
           </tr>
           <tr>
-            <th scope="row">Interstitials <span class="note" style="display:inline">(Profile created · Welcome back · Creating record · All set · Starting…)</span></th>
-            <td><span class="mk"><code>role="status" aria-live="polite"</code> wrapper around a real <code>&lt;h1&gt;</code></span><span class="note">fade 200ms / hold 1.4–1.6s then auto-advance; <code>prefers-reduced-motion</code> removes the fades. “Profile created” names the first program the user chose before opening it</span></td>
+            <th scope="row">Interstitials <span class="note" style="display:inline">(Profile created · Welcome back)</span></th>
+            <td><span class="mk"><code>role="status" aria-live="polite"</code> wrapper around a real <code>&lt;h1&gt;</code></span><span class="note">fade 200ms / hold 1.4–1.6s then auto-advance; <code>prefers-reduced-motion</code> removes the fades. “Profile created” and “Welcome back” always continue to the dashboard</span></td>
             <td><div class="sc"><b>2.3.3</b><b>4.1.3</b></div></td>
           </tr>
           <tr>
@@ -511,6 +508,14 @@
         <div class="meta"><span class="hex">#767676 on&nbsp;#FFF</span><span class="ratio">4.5:1<small>AA</small></span></div>
       </div>
       <div class="sw">
+        <div class="demo d-white d-err">Error message</div>
+        <div class="meta"><span class="hex">#CF2A46 on&nbsp;#FFF</span><span class="ratio">5.2:1<small>AA</small></span></div>
+      </div>
+      <div class="sw">
+        <div class="demo d-warn">Account not found</div>
+        <div class="meta"><span class="hex">#4D3800 on&nbsp;#FBF1D9</span><span class="ratio">9.9:1<small>AAA</small></span></div>
+      </div>
+      <div class="sw">
         <div class="demo d-brand">Button label</div>
         <div class="meta"><span class="hex">#FFF on&nbsp;#225E7C</span><span class="ratio">7.1:1<small>AAA</small></span></div>
       </div>
@@ -518,15 +523,17 @@
     <p class="sec-intro" style="margin-top:20px">The muted grey was deliberately darkened from
       <code>#939393</code> (which failed at ~3:1) to <code>#767676</code> so the two-tone titles meet
       <span class="u">1.4.3 Contrast (Minimum)</span> exactly. Dashboard card descriptions and status
-      lines use <code>#565656</code> at 18px. Only two font weights are used (400 / 600); no bold.</p>
+      lines use <code>#565656</code> at 18px. Error text is #CF2A46 at regular weight (5.2:1 on white, 4.9:1 on the #FAF8F5 card colour); links are #225E7C (7.1:1 on white, 6.5:1 on the #F5F5F5 secondary background). Only two font weights are used (400 / 600); no bold.</p>
   </section>
 
   <!-- 3 · Always-enabled Continue ------------------------------------------ -->
   <section id="disabled" aria-labelledby="h-disabled">
     <div class="sec-head"><span class="sec-num" aria-hidden="true">03</span><h2 id="h-disabled">“Continue” is never disabled — errors explain themselves</h2></div>
     <p class="sec-intro">Gated “Continue” buttons don’t use the native <code>disabled</code> attribute —
-      which drops a control out of the tab order and leaves it silent. They stay enabled; an incomplete
-      step is answered with an inline message instead of a dead button.</p>
+      which drops a control out of the tab order and leaves it silent. An incomplete step is answered with an
+      inline message instead of a dead button. Two cases dim the button with <code>aria-disabled="true"</code>, which keeps it
+      focusable: the review page while a card is being edited, and the contact page while a number that already
+      has an account is in the phone field (the button re-enables as soon as the number changes).</p>
 
     <div class="grid2">
       <div class="card">
@@ -534,7 +541,7 @@
         <p>Pressing Continue (or Send code / Verify) on an incomplete step calls <code>A11y.stepError()</code>: a visible
           <code>role="alert"</code> message appears (“Select at least one option to continue”, “Enter the 6-digit
           code we sent you”, …), the alert text is announced, and focus moves to
-          the offending control. Making a valid choice hides the message. Multi-field forms use per-field
+          the offending control. Making a valid choice hides the message. When a dimmed button is pressed, nothing happens and the inline error (“Number already in use…”) or the hidden hint remains the explanation. Multi-field forms use per-field
           <code>aria-invalid</code> + <code>aria-describedby</code> instead.</p>
         <div class="sc"><b>3.3.1</b><b>3.3.2</b><b>4.1.2</b></div>
       </div>
@@ -547,8 +554,7 @@
       </div>
     </div>
     <p class="sec-intro" style="margin-top:18px">Native <code>disabled</code> is reserved for genuine
-      bound-limit or inert controls: the stepper’s − at 0 and + at 8 (20% opacity), and screened
-      program cards in the CHW channel.</p>
+      bound-limit or inert controls: the stepper’s − at 0 and + at 8 (20% opacity).</p>
   </section>
 
   <!-- 4 · Rest of the AA story -------------------------------------------- -->
@@ -560,11 +566,11 @@
       <div class="card"><h3>One unified focus ring</h3><p>Every control shares a single focus indicator (<code>--focus-ring</code>: 3px brand <code>#225E7C</code>, 2px offset, ~7:1 on white), including the header panels and language rows.</p><div class="sc"><b>2.4.7</b><b>1.4.11</b></div></div>
       <div class="card"><h3>Keyboard operable</h3><p>All flows work by keyboard, including the header panels (Tab loop, Esc), the searchable combobox (type to filter, ↓/↑, Enter, Esc) and the multi-select program list, which stays open between picks. No keyboard traps: a modal panel always has a reachable Close.</p><div class="sc"><b>2.1.1</b><b>2.1.2</b></div></div>
       <div class="card"><h3>Reduced motion</h3><p><code>prefers-reduced-motion</code> removes the interstitial fades, the hamburger/translate icon morph and panel slide, slows the spinner, and disables card press scaling. All nav motion is 0.3s on one easing curve; nothing flashes.</p><div class="sc"><b>2.3.3</b></div></div>
-      <div class="card"><h3>Target sizes</h3><p>Buttons and chips are ≥54px tall; stepper ± 56px; header Menu / English / nav links and “Back to dashboard” 44px; language rows 44px; pill remove 44×44; only the “copy” affordance (65×39) sits between the 24px minimum and 44px.</p><div class="sc"><b>2.5.8</b></div></div>
+      <div class="card"><h3>Target sizes</h3><p>Buttons and chips are ≥54px tall; stepper ± 56px; header Menu / nav links, “Back to dashboard” and every support-email link 44px; language rows 44px; pill remove 44×44. Between 24px and 44px: the Copy and Call buttons (80×39) and the stacked logo (65×30). In-sentence links (for example the partner links on the SNAP and tax-credit pages) are 20–24px tall and fall under the WCAG 2.5.8 inline exception.</p><div class="sc"><b>2.5.8</b></div></div>
       <div class="card"><h3>Reflow &amp; resize</h3><p>Chips share a row at equal widths and wrap when a label would truncate; the dashboard goes from one column to two at 768px; header panels are full-screen at every width; no horizontal scroll at 320px.</p><div class="sc"><b>1.4.4</b><b>1.4.10</b></div></div>
       <div class="card"><h3>Names match visible text</h3><p>Buttons whose visible label changes (Copy → Copied, Menu → Close, English → Close, Edit → Done, Start → Finish your application) keep the accessible name in sync because the visible text is the name.</p><div class="sc"><b>2.5.3</b></div></div>
       <div class="card"><h3>Identity is never shown in full</h3><p>Sign-in and returning screens show only the last four digits of a phone or the last two letters of an email plus the domain. Not a WCAG criterion, but it keeps screen-reader output from reading a full identifier aloud in public.</p><div class="sc"><b>—</b></div></div>
-      <div class="card"><h3>Timing</h3><p>Interstitials auto-advance after ~1.5s but carry no interaction, and the one-time code “expires in 10 minutes” wording is copy only — the prototype never times a user out.</p><div class="sc"><b>2.2.1</b></div></div>
+      <div class="card"><h3>Timing</h3><p>Interstitials auto-advance after ~1.5s but carry no interaction. The code “expires in 5 minutes” wording is copy only; the prototype enforces a 0:30 resend wait (shown as text) and a one-hour lockout after five wrong codes (stated on the lockout page). The vendor must enforce both on the server.</p><div class="sc"><b>2.2.1</b></div></div>
     </div>
   </section>
 
@@ -609,30 +615,33 @@
           <li><b>2.4.11</b> Focus not obscured <span class="st"><span class="pill ok">Built</span></span></li>
           <li><b>2.5.8</b> Target size (minimum) <span class="st"><span class="pill ok">Built</span></span></li>
           <li><b>3.2.6</b> Consistent help <span class="st"><span class="pill partial">Partial</span></span></li>
-          <li><b>3.3.7</b> Redundant entry <span class="st"><span class="pill ok">Built</span></span></li>
+          <li><b>3.3.7</b> Redundant entry <span class="st"><span class="pill partial">Partial</span></span></li>
           <li><b>3.3.8</b> Accessible authentication <span class="st"><span class="pill ok">Built</span></span></li>
         </ul>
       </div>
     </div>
     <p class="sec-intro" style="margin-top:18px"><b>3.3.8</b> is met by design: sign-in uses details the person
-      already knows (phone or email, zip, date of birth) plus a one-time code with <code>autocomplete="one-time-code"</code>
+      already knows (first and last name, date of birth, ZIP, phone) plus a one-time code with <code>autocomplete="one-time-code"</code>
       — no password, no puzzle, no transcription of an image.</p>
   </section>
 
   <!-- 6 · Automated verification ------------------------------------------ -->
   <section id="scan" aria-labelledby="h-scan">
     <div class="sec-head"><span class="sec-num" aria-hidden="true">06</span><h2 id="h-scan">Automated verification</h2></div>
-    <p class="sec-intro">Run Oct&nbsp;14,&nbsp;2026 with <b>axe-core 4.10.3</b> in headless Chromium (Playwright),
+    <p class="sec-intro">Run Nov&nbsp;6,&nbsp;2026 with <b>axe-core 4.10.3</b> in headless Chromium (Playwright),
       rule set <code>wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa, best-practice</code>, at 390×844 and 1280×800.
       The session was seeded as a signed-in self-service client with every program chosen so that all
-      dashboard states, handoff views and the not-eligible pages rendered.</p>
+      dashboard states, handoff views and the not-eligible pages rendered. Seven interaction states were also
+      scanned: dashboard with the Menu open (phone only; at 1280px the Menu is text links), contact with empty-field errors,
+      contact with “Number already in use”, sign-in with the “Account not found” notice, code entry after a wrong code,
+      review in edit mode, and the EAP programs list.</p>
     <div class="grid2">
-      <div class="card"><h3>Result</h3><p><b>0 violations</b> on 40 page states × 2 viewports, plus the dashboard with the Menu panel open and with the language panel open. The only remaining flag is the best-practice <em>region</em> rule on the searchable combobox while its list is open (the listbox is portaled to <code>&lt;body&gt;</code>); it is not a WCAG failure.</p></div>
-      <div class="card"><h3>Fixed during the scan</h3><p>Progress bars sat outside any landmark (now a labelled region on 15 pages) · sign-in Back was an <code>&lt;a&gt;</code> outside <code>&lt;main&gt;</code> (now a button) · the language combobox left <code>aria-expanded</code> on a role-less wrapper (critical 4.1.2) · the Welcome-back <code>&lt;h1&gt;</code> carried <code>role="status"</code> (now wrapped) · profile and intake-review fields had a conflicting <code>autocomplete="off"</code> (1.3.5).</p></div>
+      <div class="card"><h3>Result</h3><p><b>0 violations</b> across 95 checks: 41 pages and 6 interaction states at both widths, plus the Menu panel at phone width. The prototype’s own report page is excluded.</p></div>
+      <div class="card"><h3>Fixed during this scan</h3><p>The visually hidden “Finish editing to submit” hint sat outside any landmark (axe <em>region</em>); it now lives inside <code>&lt;main&gt;</code> · the 44px rule for support-email links was in a stylesheet the dashboard and profile pages did not load, leaving those links 20–24px; it now lives in the shared stylesheet.</p></div>
     </div>
     <p class="sec-intro" style="margin-top:18px">An automated scan catches roughly a third of WCAG issues. Manual
       screen-reader and keyboard passes (VoiceOver on iOS and Safari, NVDA on Windows) remain the next step and
-      belong to the vendor’s build, where the markup is final.</p>
+      belong to the vendor’s build, where the markup is final. Lighthouse performance numbers are separate and will be shared before the December performance testing; they cover the landing page only.</p>
   </section>
 
   <!-- 7 · Gaps ------------------------------------------------------------ -->
@@ -644,12 +653,13 @@
     <div class="callout">
       <ul>
         <li><span class="pill partial">Partial</span><p><b>Skip-to-content link.</b> Not present; <code>#main</code> targets are on every page, so the vendor should add a visible-on-focus “Skip to main content” link as the first focusable element (completes 2.4.1).</p></li>
-        <li><span class="pill partial">Partial</span><p><b>Translation.</b> The language panel stores and announces the choice but the prototype has no translated strings; the button keeps reading “English”. In production the choice must switch the page language and set <code>&lt;html lang&gt;</code> (3.1.1).</p></li>
+        <li><span class="pill partial">Partial</span><p><b>Translation.</b> The language chosen on step 1 is saved and shown on the review page and in My profile. Placeholder Spanish, Arabic and Traditional Chinese strings (not reviewed by a translator) cover only some older post-login screens; the v1.4 screens, the landing page and the header button are still English. In production the choice must switch the page language and set <code>&lt;html lang&gt;</code> (3.1.1).</p></li>
         <li><span class="pill partial">Partial</span><p><b>Consistent help (3.2.6).</b> 311 appears on the not-eligible pages and the Eviction handoff only. If a help mechanism ships (311 line, chat), it needs the same place on every page.</p></li>
         <li><span class="pill partial">Partial</span><p><b>Stacked logo.</b> PNG at 30px; “Health” renders at ~9px, at the DOHMH 8pt floor. Swap to SVG from comms and verify legibility on device.</p></li>
-        <li><span class="pill defer">Placeholder</span><p><b>Links the vendor must replace.</b> Energy discounts: the Benefits Enrollment Assistant intake URL (<code>#bea-partner-intake-placeholder</code>, flagged in <code>scripts/pillars.js</code> and <code>eeap-next.html</code>). Hospital bills: “Start your application” opens <code>dollarfor.org</code>, a stand-in for the simplified-application link. The privacy-policy link on the privacy page is <code>href="#"</code>. The Dollar For / CSS links (Hospital bills review) and the TSU link (Eviction review) are final.</p></li>
+        <li><span class="pill defer">Placeholder</span><p><b>Links the vendor must replace.</b> Energy discounts: the Benefits Enrollment Assistant intake URL (<code>#bea-partner-intake-placeholder</code>, flagged in <code>scripts/pillars.js</code> and <code>eeap-next.html</code>). Hospital bills: “Start your application” opens <code>dollarfor.org</code>, a stand-in for the simplified-application link. The NYC Health privacy-policy link on the privacy page is <code>href="#"</code>; the Frontdoor Benefits link on the SNAP review page now points to <code>openfrontdoor.com/privacy</code>. The Dollar For / CSS links (Hospital bills review) and the TSU link (Eviction review) are final.</p></li>
         <li><span class="pill defer">Placeholder</span><p><b>Demo data.</b> Enrollment-site names, addresses, hours and phone numbers; the returning-client demo record; and the hidden Health insurance consent subtext are fictional stand-ins. None are real people or numbers.</p></li>
-        <li><span class="pill defer">Depends on partner feed</span><p><b>“Submitted” state.</b> The dashboard only shows “Submitted” / “received” wording when the partner confirms receipt; until that feed exists the applied state reads “started” and “Awaiting response”. The <code>?demo=submitted</code> flag exists only to preview the state.</p></li>
+        <li><span class="pill defer">Depends on partner feed</span><p><b>“Referral sent” state.</b> The dashboard marks a program “Referral sent” when the person finishes its flow; the prototype never receives a partner confirmation. The <code>?demo=submitted</code> flag exists only to preview the state.</p></li>
+        <li><span class="pill partial">Partial</span><p><b>Redundant entry (3.3.7).</b> After “Create an account” on the Welcome back screen, the contact fields are cleared and must be retyped. This is intended (the number cannot be reused), but only the phone number needs to change; consider keeping the other fields filled.</p></li>
         <li><span class="pill defer">Deferred</span><p><b>Manual audit.</b> Automated scan is clean; a defensible AA <em>claim</em> still needs VoiceOver / NVDA testing on the production markup, plus a check of the live regions in the header panels and interstitials with a real screen reader.</p></li>
       </ul>
     </div>
@@ -657,21 +667,19 @@
 
   <!-- 8 · Changes since Sep 3 ------------------------------------------- -->
   <section id="changes" aria-labelledby="h-changes">
-    <div class="sec-head"><span class="sec-num" aria-hidden="true">08</span><h2 id="h-changes">What changed since Sep&nbsp;3</h2></div>
-    <p class="sec-intro">Accessibility-relevant changes in this round, so reviewers can re-test the right places.</p>
+    <div class="sec-head"><span class="sec-num" aria-hidden="true">08</span><h2 id="h-changes">What changed since Oct&nbsp;14</h2></div>
+    <p class="sec-intro">Accessibility-relevant changes in v1.4, so reviewers can re-test the right places.</p>
     <div class="callout">
       <ul>
-        <li><span class="pill ok">Built</span><p><b>Self-service channel.</b> home → programs → privacy (1/3) → contact (2/3) → contact method (3/3) → “Your profile has been created” → first chosen program’s screener → handoff → dashboard. Returning: sign-in or the returning-client interrupt → one-time code → “Welcome back” → dashboard. The CHW channel keeps its 4-step intake and review.</p></li>
-        <li><span class="pill ok">Built</span><p><b>Dashboard.</b> Program cards with text status chips, dated status sentences, and action-named CTAs; “View details” opens the handoff page with a “Back to dashboard” link above the title.</p></li>
-        <li><span class="pill ok">Built</span><p><b>Header.</b> Menu and English open the same full-screen modal panel (dialog semantics, focus trap, Esc, focus return); the language list reads native · English with <code>lang</code> attributes; desktop shows text links instead of the hamburger. Icon morph and panel share one 0.3s curve and switch off under reduced motion.</p></li>
-        <li><span class="pill ok">Built</span><p><b>Sign-in by code.</b> Phone-or-email + zip + DOB, masked destination, <code>autocomplete="one-time-code"</code>; meets 3.3.8 without a password.</p></li>
-        <li><span class="pill ok">Built</span><p><b>Profile page.</b> One editable card; Edit ⇄ Done with focus management; no record number shown.</p></li>
-        <li><span class="pill ok">Built</span><p><b>Helper text always shown.</b> “Read more / less” removed from the Hospital bills steps.</p></li>
-        <li><span class="pill ok">Built</span><p><b>Hospital bills “No” handoff.</b> Answering No to the first question now continues to “Need to resolve a medical bill?” (Community Health Advocates link + phone) instead of an inline notice with a blocked Continue; the dashboard shows Not eligible with View details.</p></li>
-        <li><span class="pill ok">Built</span><p><b>Header panel hardening (Oct 15).</b> Page content inert while a panel is open; iOS-safe scroll lock; label and sibling-button crossfades on the same 0.3s curve; RTL native names; panel closes on resize past 1024px and on bfcache restore. Hospital bills stepper − at 0 now matches the Energy stepper (20% opacity).</p></li>
-        <li><span class="pill ok">Built</span><p><b>Terminal-page consistency.</b> Copy buttons read “Copy / Copied” everywhere; every contact row is label-above-field with the field at its own width; subtitle text under the h1 is <code>#565656</code> and everything after a divider is <code>#191919</code> on all handoff and not-eligible pages; inline text links are <code>#225E7C</code> underlined (consent notes, checkbox labels, privacy page); the pill radius on footer secondaries is one shared rule.</p></li>
-        <li><span class="pill ok">Built</span><p><b>Scan fixes.</b> Progress regions, sign-in Back button, combobox wrapper attributes, Welcome-back heading, profile/intake autocomplete — see <a href="#scan">Automated verification</a>.</p></li>
-        <li><span class="pill ok">Built</span><p><b>Copy.</b> “Financial resources” → “Energy discounts”; Health insurance handoff gains an Important note on both views; not-eligible pages no longer offer “Start your application”.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Five-step intake.</b> Language → privacy → contact → review → code, with one shared progress script. The review step is new: the last place to edit details before the code is sent. Contact-method choice and the programs page are gone.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Sign in and Welcome back.</b> Sign in asks for first and last name, date of birth, ZIP and phone; a mismatch shows an “Account not found” notice with a link to create an account. A number that already has an account opens a Welcome back code screen; “Create an account” returns to the contact page, where reusing that number shows “Number already in use. Sign in or use a different number.”</p></li>
+        <li><span class="pill ok">Built</span><p><b>Errors.</b> One icon (Material “error”), regular weight, 1.5px red border, same treatment for one-time-code errors. The icon is a single shared constant.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Header.</b> Inside the tool the header shows Menu only (My profile, Sign out); the translate button is landing-page only.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Preferred language.</b> Shown and editable on the review page and in My profile.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Touch targets and type.</b> Every support-email link is 44px (now in the shared stylesheet); consent notes and EAP program options are 18px to match the page.</p></li>
+        <li><span class="pill ok">Built</span><p><b>SNAP hand-off.</b> Restyled “Need food now?” card with the link on its own line; the new external-link arrow (Material north-east) is used on every external link.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Review labels.</b> “Date of birth”, “ZIP code”, “Email (optional)”, matching the design.</p></li>
+        <li><span class="pill ok">Built</span><p><b>Verification.</b> Fresh axe-core scan (95 checks, 0 violations) and a target-size sweep; see <a href="#scan">Automated verification</a>.</p></li>
       </ul>
     </div>
   </section>
@@ -679,7 +687,7 @@
 
 <footer>
   <div class="wrap">
-    <span class="disclaimer">Prepared Aug&nbsp;28,&nbsp;2026 · Updated Oct&nbsp;14,&nbsp;2026 · Prototype, code-level conformance with an automated scan — a description of current coverage, not a certified audit.</span>
+    <span class="disclaimer">Prepared Aug&nbsp;28,&nbsp;2026 · Updated Nov&nbsp;6,&nbsp;2026 (v1.4) · Prototype, code-level conformance with an automated scan — a description of current coverage, not a certified audit.</span>
     <span>NYC Health · DOHMH — NYC Health and Affordability Connector</span>
   </div>
 </footer>

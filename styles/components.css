@@ -783,7 +783,7 @@ body {
    --color-error-dark (#CF2A46 = 5.15:1 on white, AA); the message TEXT (not
    just its colour) carries the meaning, satisfying 1.4.1.
    ========================================================================= */
-/* Error messages — icon + short text in --color-error-dark (#CF2A46, 5.7:1).
+/* Error messages — icon + short text in --color-error-dark (#CF2A46, 5.2:1 on white).
    .step-error  = one message for the page (list pages), sits under the subtext.
    .field__error = "Required" / "Selection required" under a control or group. */
 .step-error,
@@ -803,6 +803,10 @@ body {
 .field__error-link:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset); border-radius: 4px; }
 .step-error[hidden], .field__error[hidden] { display: none; }
 .error-icon { flex: 0 0 auto; width: 18px; height: 18px; }
+/* Touch targets: support-line links (the support email on sign-in, dashboard, profile and the code pages) are 44px tall.
+   inline-flex keeps an email address whole on one line. */
+.signin__support .ext-link, .dash__help .ext-link, .support-line .ext-link { display: inline-flex; align-items: center; min-height: 44px; }
+.signin__support .ext-link[hidden] { display: none; }
 /* Attention: fade-drop in, then one ±4px nudge. Runs once per show. */
 @keyframes error-in    { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes error-nudge { 0%,100% { transform: translateX(0); } 20%,60% { transform: translateX(-4px); } 40%,80% { transform: translateX(4px); } }
