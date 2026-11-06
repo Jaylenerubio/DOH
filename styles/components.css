@@ -2127,4 +2127,4 @@ body.menu-open { overflow: hidden; }
 .handoff-note__body { margin: 0; font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); color: var(--color-text); }
 
 /* Language pages: 16px between the subtext and the dropdown */
-#langCombo { margin-top: 16px; }
+.step__text ~ #langCombo { margin-top: 16px; }
