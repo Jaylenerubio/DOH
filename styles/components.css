@@ -1991,7 +1991,7 @@ a.featured-row { text-decoration: none; color: inherit; }
 }
 .ext-link:hover { color: var(--color-brand-dark, #1A4F68); }
 .ext-link:focus-visible { outline: var(--focus-ring); outline-offset: 2px; border-radius: 2px; }
-.ext-link__icon { display: inline-block; width: 0.9em; height: 0.9em; margin-inline-start: 4px; vertical-align: -0.1em; }
+.ext-link__icon { display: inline-block; width: 1.2em; height: 1.2em; margin-inline-start: 2px; vertical-align: -0.25em; }   /* Material north_east */
 
 /* Review card cue: plain text + decorative pencil, top-right of the header.
    Not a control — fields below are already editable. */
