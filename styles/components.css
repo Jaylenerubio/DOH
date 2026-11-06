@@ -1955,8 +1955,8 @@ a.featured-row { text-decoration: none; color: inherit; }
   background: var(--color-pillar-card);
   border-radius: 24px;
   font-family: var(--type-ui-16-family);
-  font-size: var(--type-ui-16-size);
-  line-height: var(--type-ui-16-line-height);
+  font-size: 18px;
+  line-height: 27px;
   color: var(--color-text);
 }
 .consent-note p { margin: 0; }
