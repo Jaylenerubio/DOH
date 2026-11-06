@@ -1,4 +1,4 @@
-/* Sign in (self-service) — email OTP. Mock: any 6 digits work. */
+/* Sign in, Enter your code, Welcome back, and the locked page. */
 .signin .step__body { padding-top: 56px; }
 .signin .field { margin-top: var(--space-3); }
 .signin__code { letter-spacing: 0.3em; font-variant-numeric: tabular-nums; }
@@ -9,12 +9,6 @@
 }
 .signin__link { padding: 0; border: 0; background: none; cursor: pointer; font: inherit; color: var(--color-link); text-decoration: underline; min-height: 44px; }
 .signin__link:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset); border-radius: 4px; }
-
-/* Returning client */
-.returning__text { margin: 12px 0 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text); }
-.returning__text + .returning__text { margin-top: var(--space-2); }
-.returning__id { font-weight: 600; white-space: nowrap; }
-.returning__new { margin-top: var(--space-3); }
 
 /* Verify: alternate-channel button + divider + support */
 .signin__alt-btn { width: auto; min-height: 0; margin-top: var(--space-2); padding: 16px 24px; border-radius: 999px; }
@@ -36,13 +30,6 @@
 #lockText strong { font-weight: 600; color: var(--color-text); font-variant-numeric: tabular-nums; }
 
 #codeError { margin: 0 0 var(--space-2); }
-
-/* Having trouble signing in? (returning client) */
-.signin__trouble summary { min-height: 44px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; list-style: none; font-weight: 400; }
-.signin__trouble summary::-webkit-details-marker { display: none; }
-.signin__trouble summary::after { content: ""; width: 10px; height: 10px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); margin-right: 6px; transition: transform .2s; }
-.signin__trouble[open] summary::after { transform: rotate(-135deg); }
-.signin__trouble p { margin: 8px 0 0; }
 
 /* Sign in: 16px between the last field and the support line */
 .field + .signin__support { margin-top: 16px; }

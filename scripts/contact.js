@@ -103,7 +103,7 @@
       if (firstInvalid) { firstInvalid.focus(); return; }   // stop + focus the first gap
       /* Self-service de-duplication: phone (or email) + ZIP + DOB match an
          existing record → verify with a code instead of creating a second one.
-         'nyc.returning' = 'new' means they already said "not me". */
+         'nyc.dedupSeen' = they already saw Welcome back and chose Create an account. */
       var self = false, seen = '';
       try { self = sessionStorage.getItem('nyc.channel') === 'self'; seen = sessionStorage.getItem('nyc.dedupSeen') || ''; } catch (e) {}
       var data = {}; FIELDS.forEach(function (id) { data[id] = inputs[id] ? inputs[id].value : ''; });

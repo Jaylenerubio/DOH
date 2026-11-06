@@ -1,10 +1,8 @@
-/* Returning client (de-duplication): contact details matched an existing record, so
-   the code opens it. Same code behavior as verify.js. 'Create an account' = not me.
-   (copied from verify.js:  Texts a 6-digit code to
-   the number entered on contact.html. Prototype: any 6 digits work.
-   Verifying creates the record (and so the profile), then goes to
-   profile-created → the first chosen program's screener.
-   The CHW channel never reaches this page (it uses contact-method → review). */
+/* Welcome back (de-duplication). The phone entered on contact.html matches an
+   existing record, so a code opens it. Same code behavior as verify.js.
+   "Not you? Create an account" and Back return to contact.html with the form
+   cleared; nyc.dedupSeen then blocks the same number (contact.js shows an
+   inline error). */
 (function () {
   'use strict';
   function init() {
@@ -29,25 +27,6 @@
       alt.textContent = via === 'text' ? 'Get a code by email instead' : 'Get a code by text instead';
       alt.hidden = via === 'text' && !hasEmail;
       var tr = document.querySelector('.signin__support'); if (tr) tr.firstChild.nodeValue = via === 'text' ? 'Changed numbers? Email ' : 'Changed email? Email ';
-    }
-    function seedReturningUser() {
-      /* The matched record. Programs picked this visit are merged in. */
-      var picked = []; try { picked = JSON.parse(sessionStorage.getItem('nyc.programs') || '[]'); } catch (e) {}
-      var existing = ['hospital-bills', 'financial-help'];
-      var merged = existing.slice(); picked.forEach(function (k) { if (merged.indexOf(k) === -1) merged.push(k); });
-      var c = {
-        firstName: 'Ana', lastName: 'Lopez', dob: Mask.DEMO.dob, zip: Mask.DEMO.zip,
-        phone: '917-555-2222', email: Mask.DEMO.email
-      };
-      try {
-        sessionStorage.setItem('nyc.contact', JSON.stringify(c));
-        if (!sessionStorage.getItem('nyc.contactMethod')) sessionStorage.setItem('nyc.contactMethod', 'text');
-        sessionStorage.setItem('nyc.recordId', 'NYC-2026-104877');
-        sessionStorage.setItem('nyc.programs', JSON.stringify(merged));
-        sessionStorage.setItem('nyc.completed', JSON.stringify(['hospital-bills']));
-        sessionStorage.setItem('nyc.df', JSON.stringify({ hospital: 'NYC Health + Hospitals/Bellevue', billMonth: 'August', billYear: '2026', amount: '3,240', household: '3', state: 'New York', city: 'New York' }));
-        sessionStorage.setItem('nyc.returning', 'verified');
-      } catch (e) {}
     }
     var busy = false;
     /* Prototype only: pause ~0.9s so a resend feels real before the banner appears. */
@@ -94,15 +73,8 @@
         return;
       }
       try { sessionStorage.removeItem('nyc.otpFails'); } catch (e) {}
-      seedReturningUser();
+      DemoRecord.seed();
       window.location.href = 'welcome-back.html';
-      return;
-      try {
-        if (!sessionStorage.getItem('nyc.recordId')) sessionStorage.setItem('nyc.recordId', 'NYC-2026-' + String(100000 + Math.floor(Math.random() * 900000)));
-        /* No contact-method step: texts are the default until they change it on their profile. */
-        if (!sessionStorage.getItem('nyc.contactMethod')) sessionStorage.setItem('nyc.contactMethod', 'text');
-      } catch (e) {}
-      window.location.href = 'profile-created.html';
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
