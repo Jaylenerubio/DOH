@@ -1050,10 +1050,10 @@ window.I18N_DICT = {
   "ar": "يمكنك الاختيار:",
   "zh": "您可以選擇："
  },
- "You can request to review, update, or delete your information by contacting us at <a><svg/>HARTConnectorSupport@health.nyc.gov</a>.": {
-  "es": "Puede solicitar revisar, actualizar o eliminar su información comunicándose con nosotros en <a><svg/>HARTConnectorSupport@health.nyc.gov</a>.",
-  "ar": "يمكنك طلب مراجعة معلوماتك أو تحديثها أو حذفها بالتواصل معنا عبر <a><svg/>HARTConnectorSupport@health.nyc.gov</a>.",
-  "zh": "您可以聯絡 <a><svg/>HARTConnectorSupport@health.nyc.gov</a>，要求檢視、更新或刪除您的資訊。"
+ "You can request to review, update, or delete your information by contacting us at <a>hartconnectorsupport@health.nyc.gov</a>.": {
+  "es": "Puede solicitar revisar, actualizar o eliminar su información comunicándose con nosotros en <a>hartconnectorsupport@health.nyc.gov</a>.",
+  "ar": "يمكنك طلب مراجعة معلوماتك أو تحديثها أو حذفها بالتواصل معنا عبر <a>hartconnectorsupport@health.nyc.gov</a>.",
+  "zh": "您可以聯絡 <a>hartconnectorsupport@health.nyc.gov</a>，要求檢視、更新或刪除您的資訊。"
  },
  "You have 14 days after applying to submit your proof of income for the last 28 days for everyone you share your utility costs with.": {
   "es": "Tiene 14 días después de solicitar para enviar el comprobante de ingresos de los últimos 28 días de todas las personas con quienes comparte los costos de servicios públicos.",
