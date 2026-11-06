@@ -73,7 +73,7 @@
     cards.forEach(function (c) { if (c !== active) c.btn.setAttribute('aria-disabled', 'true'); });
     if (submit) {
       submit.setAttribute('aria-disabled', 'true');
-      if (!hintEl) { hintEl = document.createElement('p'); hintEl.className = 'review-edit__hint'; hintEl.id = 'reviewEditHint'; submit.parentNode.parentNode.insertBefore(hintEl, submit.parentNode); }
+      if (!hintEl) { hintEl = document.createElement('p'); hintEl.className = 'sr-only';   /* visually hidden; the disabled button is the visible cue, screen readers still get the reason */ hintEl.id = 'reviewEditHint'; submit.parentNode.parentNode.insertBefore(hintEl, submit.parentNode); }
       hintEl.textContent = 'Finish editing to submit.'; hintEl.hidden = false;
       submit.setAttribute('aria-describedby', 'reviewEditHint');
     }
