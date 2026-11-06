@@ -2,7 +2,7 @@
 
 One entry per drop. Newest first. Dates are the day the drop was tagged.
 
-## v1.4 Self-service — 2026-11-05
+## v1.4 Self-service — 2026-11-06
 
 Self-service intake and sign-in return on top of v1.3. Translations (Spanish, Arabic, Traditional Chinese) are being re-added for the new screens; until then the new screens are English only.
 
