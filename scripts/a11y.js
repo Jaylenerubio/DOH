@@ -72,7 +72,7 @@
        groupError() — "Required" / "Selection required" under one control or
                       choice group; marks inputs/tiles invalid (red border).
        ------------------------------------------------------------------- */
-    ERROR_ICON: '<svg class="error-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 9v4M12 17h.01M21.73 18 13.73 4a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    ERROR_ICON: '<svg class="error-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 17q.425 0 .713-.288T13 16t-.288-.712T12 15t-.712.288T11 16t.288.713T12 17m0-4q.425 0 .713-.288T13 12V8q0-.425-.288-.712T12 7t-.712.288T11 8v4q0 .425.288.713T12 13m0 9q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9 2.137-3.175T8.1 2.788T12 2t3.9.788 3.175 2.137T21.212 8.1T22 12t-.788 3.9-2.137 3.175T15.9 21.212T12 22" fill="currentColor"/></svg>',
     setErrorText: function (el, message) {
       el.innerHTML = this.ERROR_ICON;
       el.appendChild(document.createTextNode(message));
