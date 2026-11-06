@@ -6,7 +6,7 @@
 .review-card { position: relative; overflow: hidden; }
 .review-card__head { gap: var(--space-2); }
 .review-card__title { min-width: 0; }
-.review-card__ctl { display: flex; align-items: center; gap: 12px; flex: 0 0 auto; margin-left: auto; }
+.review-card__ctl { display: flex; align-items: center; gap: 12px; flex: 0 0 auto; margin-inline-start: auto; }
 .review-card__badge {
   font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); font-weight: 600;
 }
@@ -62,10 +62,3 @@
   color: var(--color-info-dark); background: var(--color-info-light); padding: 10px 12px; border-radius: 8px;
 }
 .btn[aria-disabled="true"].btn--primary { background: var(--color-brand-disabled); }
-
-/* My profile: read-only information list and support line */
-.profile__list { margin: 16px 0 0; display: grid; gap: 16px; }
-.profile__row { display: grid; gap: 4px; }
-.profile__row dt { margin: 0; font-weight: 400; }
-.profile__row dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
-.support-mail__icon { width: 20px; height: 20px; vertical-align: -3px; margin-right: 4px; }

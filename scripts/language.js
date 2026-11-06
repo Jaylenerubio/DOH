@@ -48,7 +48,7 @@
     if (back) {
       back.addEventListener('click', function () {
         if (history.length > 1) history.back();
-        else window.location.href = (sessionStorage.getItem('nyc.channel') === 'self') ? 'home.html' : 'language.html';
+        else window.location.href = 'home.html';
       });
     }
   }

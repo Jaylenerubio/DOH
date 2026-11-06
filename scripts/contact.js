@@ -113,13 +113,13 @@
         errEls.phone.textContent = 'This number is linked to an account. Use a different number or sign in.';
         showError('phone'); inputs.phone.focus(); return;
       }
-      window.location.href = self ? 'review-info.html' : 'contact-method.html';   /* self-service: check details, then verify by text; CHW picks a contact method */
+      window.location.href = 'review-info.html';   /* check details, then verify by text */
     });
 
     if (back) {
       back.addEventListener('click', function () {
         if (history.length > 1) history.back();
-        else window.location.href = 'language.html';
+        else window.location.href = 'privacy.html';
       });
     }
   }

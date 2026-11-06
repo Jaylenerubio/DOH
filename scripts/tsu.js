@@ -55,7 +55,7 @@
     if (back) {
       back.addEventListener('click', function () {
         if (history.length > 1) history.back();
-        else window.location.href = 'programs.html';
+        else window.location.href = 'dashboard.html';
       });
     }
     cont.addEventListener('click', function () {

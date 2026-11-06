@@ -2,7 +2,9 @@
 
 One entry per drop. Newest first. Dates are the day the drop was tagged.
 
-## Unreleased (v1.4-Self-service) — 2026-11-04
+## v1.4 Self-service — 2026-11-05
+
+Self-service intake and sign-in return on top of v1.3. Translations (Spanish, Arabic, Traditional Chinese) are being re-added for the new screens; until then the new screens are English only.
 
 - Sign in ("Finish where you left off") asks first name, last name, phone, zip, DOB; email path removed; code step copy: 5 minutes, Resend code.
 - Header: language button on the landing page only (language is in My profile); Menu (My profile, Sign out) stays inside the tool.
@@ -24,9 +26,29 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 - Combobox: restoring a saved choice no longer opens the list; picking an option no longer reopens it filtered to that one option, so the language can be changed (preferred-language and CHW language pages).
 - `review-edit.js` skips `.review-card[data-readonly]`.
 
-## v2.1 self-service — 2026-10-15
 
-Baseline for the vendor hand-off.
+## v1.3 Save & Continue — 2026-10-21
+
+CHW starts in the Blooming Health CRM; the client finishes at home. Self-service intake moves to v1.4.
+
+**Added / changed**
+- Translations (placeholder, not reviewed): Spanish, Arabic (right-to-left) and Traditional Chinese for every screen after sign-in; three extra demo clients, one per language (see README). Shared CSS now uses logical properties; sign-in screens stay English.
+- Sign-in security demo: code `000000` counts as a wrong code ("Invalid code. You have N attempts left."); the fifth pauses sign-in. Account-not-found screen on desktop: 554px column with equal-width cards.
+- `COMPONENTS.md`: component inventory for the React build.
+- Landing: single "Resume your session" button.
+- Sign-in: email + phone + ZIP + DOB (email required, listed first; the phone/email toggle is gone); code expires in 5 minutes (unconfirmed); "Send a new code" shows a success alert under the code text and starts a 30-second countdown (placeholders); "Verify by email" / "Verify by text" offers a masked on-file email; no-match shows "We couldn't find your account" with the five NYC Health locations and a single Try again button.
+- Dashboard: two result states (Referral sent, No match) plus Get started; "Referral sent {full date}" with a program message; "Start your application" returns for Dollar For, Energy discounts and Tax credits; all programs except SNAP shown as "Get started" until completed, results first; support email line at the bottom.
+- Handoff pages from the dashboard are static; Back to dashboard on top.
+- My profile: "Your information" is read-only; "Preferred contact method" (Text me / Call me) is editable with Edit / Done; a support-email line replaces account deletion ("review, update, or delete your information by contacting us at HARTConnectorSupport@health.nyc.gov").
+
+**Removed**
+- Health insurance "Prefer a different site?" picker (site changes return later, bundled with editing).
+- Intake and account creation: language, privacy, contact, contact method, profile created, creating, all set, starting, programs, intake review, returning-client pages.
+- In progress, Awaiting response, Submitted states; `?demo=submitted`; applied/submitted tracking; "screen again".
+
+## v2.1 self-service — 2026-10-15 (pre-split baseline)
+
+Full self-service build before the release split. Not sent to vendors. Its flow now lives on branch `v1.4-Self-service`.
 
 **Flow**
 - Self-service channel: home → programs → privacy → contact (returning-client check) → contact method → "Your profile has been created" → first chosen program's screener → handoff → dashboard.

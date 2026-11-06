@@ -142,7 +142,7 @@
       window.location.href = 'eap-review.html';
     });
     if (back) back.addEventListener('click', function () {
-      if (history.length > 1) history.back(); else window.location.href = 'programs.html';
+      if (history.length > 1) history.back(); else window.location.href = 'dashboard.html';
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();

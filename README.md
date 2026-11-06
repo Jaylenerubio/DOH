@@ -4,17 +4,20 @@ Static HTML/CSS/JS prototype of the Connector: a screening tool that checks whet
 
 No build step. No dependencies. Open `home.html` in a browser, or serve the folder (`npx serve .`). The deployed copy on Vercel uses `vercel.json` (clean URLs).
 
-## Channels
+## Release: v1.3 Save & Continue
 
-**Self-service (New Yorker).** Entered from `home.html`; sets `nyc.channel = 'self'`.
+A HART employee (CHW) starts the client's record in the Blooming Health CRM; the client finishes at home. This branch has **no intake or account-creation pages**. The public self-service flow (landing, programs, privacy, contact, account created, "Starting [program]") is on branch `v1.4-Self-service`.
 
 ```
 home → preferred-language → privacy → contact → review-info (check and edit details) → verify (text code) → profile-created
      → first chosen program's screener → handoff → dashboard
 returning: signin (or returning, if contact details match) → code → welcome-back → dashboard
+dashboard → "View details" (static handoff page) · "Start your application" (partner link) · My profile
 ```
 
-**CHW-assisted (staff).** Entered from `language.html`; four-step intake with a review page, then programs chained one after another. Pages are shared with the self-service channel; `scripts/banner.js`, `scripts/pillars.js` and `scripts/handoff-view.js` switch behavior on `nyc.channel`.
+- Sign-in finds the record by email + phone + ZIP + DOB (all four must match; email is required at intake). No match shows "We couldn't find your account", the five NYC Health locations and a single "Try again" button.
+- "Verify by email" / "Verify by text" on the code step offers a masked email, only if an email is on file (phone first). Users never type an email.
+- Sets `nyc.channel = 'self'`.
 
 ## Programs
 
@@ -35,7 +38,7 @@ Program order, labels, descriptions, entry pages and partner application URLs li
 | `styles/tokens.css` | Design tokens — colors, type scale, spacing, radii. Change here first. |
 | `styles/components.css` | Shared components: buttons, chips, cards, header/nav panels, copy fields, handoff steps. |
 | `styles/<page>.css` | Page-specific layout only. |
-| `scripts/pillars.js` | Program config, completion/applied/outcome state, handoff wiring. |
+| `scripts/pillars.js` | Program config, completion/outcome state, handoff wiring. |
 | `scripts/dashboard.js` | Dashboard card states and CTAs. |
 | `scripts/handoff-view.js` | Handoff pages when opened from the dashboard (`?from=dashboard`). |
 | `scripts/banner.js` | Self-service header: Menu / language panels, desktop links, sign-out. |
@@ -44,7 +47,7 @@ Program order, labels, descriptions, entry pages and partner application URLs li
 | `assets/` | Logo, icons, illustrations. |
 | `accessibility-conformance-summary.html` | WCAG 2.2 AA conformance notes, automated-scan results, known gaps. |
 
-Runtime copy (dashboard status sentences, dated handoff intros, language list) is in the scripts above; everything else is in the HTML.
+Runtime copy (dashboard status sentences, language list) is in the scripts above; everything else is in the HTML.
 
 ## State
 
@@ -55,41 +58,54 @@ Everything is `sessionStorage`; nothing is sent anywhere. Clearing the tab reset
 | `nyc.channel` | `'self'` or unset (CHW) |
 | `nyc.contact` | `{ firstName, lastName, dob, zip, phone, email }` |
 | `nyc.contactMethod` | `'text'` / `'call'` / `'email'` |
-| `nyc.recordId` | set when the profile is created |
-| `nyc.programs` | chosen program keys, in page order |
+| `nyc.recordId` | set at sign-in (demo record) |
+| `nyc.programs` | programs with a result, seeded at sign-in |
 | `nyc.completed`, `nyc.completed.<key>` | screened programs, and when |
-| `nyc.applied`, `nyc.applied.<key>` | partner application started, and when |
-| `nyc.submitted.<key>` | partner confirmed receipt (demo only: `dashboard.html?demo=submitted`) |
-| `nyc.outcome.<key>` | `'eligible'` / `'ineligible'` |
-| `nyc.returning` | `'pending'` / `'verified'` / `'new'` |
+| `nyc.outcome.<key>` | `'eligible'` / `'ineligible'` (a completed program with no outcome counts as eligible) |
+| `nyc.returning` | `'verified'` |
 | `nyc.language` | chosen language code (stored and announced; no translation in the prototype) |
 | `nyc.df`, `nyc.hi`, `nyc.tsu`, `nyc.eap`, `nyc.eitc` | per-program answers |
 
-Demo returning client: phone `917-555-2222` or `ana@example.com`, ZIP `10457`, DOB `03/15/1988`. Any 6 digits verify. All names, numbers and sites are fictional.
+Demo client: email `ana@example.com`, phone `917-555-2222`, ZIP `10457`, DOB `03/15/1988` (anything else shows "We couldn't find your account"). Any 6 digits verify, except `000000`, which counts as a wrong code ("Invalid code. You have N attempts left."); the fifth pauses sign-in. The demo record seeds no results: every program shows "Get started" until a screener and handoff are completed. In production the vendor fills these from what the client did with the CHW in person. All names, numbers and sites are fictional.
+
+Translation demo (PLACEHOLDER translations, not reviewed by a translator). Three more demo clients each have a preferred language, and every screen after sign-in renders in it (welcome back, dashboard, profile, all program screeners, review and handoff pages, header menu). The sign-in screens stay English. Same sign-in steps; any 6-digit code:
+
+| Client | Language | Email | Phone | ZIP | DOB |
+|---|---|---|---|---|---|
+| Sofía | Spanish | sofia@example.com | 917-555-4444 | 10029 | 11/04/1985 |
+| ليلى (Layla) | Arabic (right-to-left) | layla@example.com | 917-555-3333 | 11201 | 07/22/1990 |
+| 美玲 (Mei) | Chinese, Traditional | mei@example.com | 917-555-5555 | 11354 | 02/09/1979 |
+
+How it works for the vendor: `scripts/i18n-strings.js` holds every string (English text → Spanish, Arabic, Traditional Chinese); `scripts/i18n.js` and `scripts/i18n-dom.js` swap them in at load and when scripts add text later; `nyc.language` picks the language; `<html lang>` and `dir` follow it (Arabic = right-to-left, with mirrored layout, icons and left-to-right numbers, emails and addresses). The header language menu also switches the page. Languages without translations show English. Production should replace this with real localization (message keys and locale files). Proper names (hospitals, cities, partner and utility names) are not translated.
 
 ## Dashboard states
 
-| State | Chip | CTA |
-|---|---|---|
-| Not started | — | Get started |
-| Screener incomplete | In progress | Continue |
-| Screened, not applied | Screened | Start your application + View details |
-| Application started | Awaiting response | View details |
-| Partner confirmed (demo) | Submitted | View details |
-| Not eligible | Not eligible | View details |
+Programs with a result come first, then the rest, under the two-tone "Explore programs & applications for you" H1 (small "Hi, {name}" above it). The support email line (envelope + mailto link) sits at the bottom. SNAP is hidden for now. Clicking a partner link does not change state.
+
+| State | Chip | Body | CTAs |
+|---|---|---|---|
+| Not started | none | Program description | Get started |
+| Eligible | Referral sent | "Referral sent {Month d, yyyy}. {program message}" | Start your application (Hospital bills, Energy discounts, Tax credits only) + View details |
+| Not eligible | No match | Program description | View details |
 
 ## Placeholders the production build must replace
 
+- Dollar For PIN shown as `####` in the Hospital bills dashboard message.
+- Code expiry ("5 minutes"), the 30-second resend countdown and the "We sent you a new code." alert copy are placeholders.
+- Not-found screen: confirm HART employees are at all five locations (two are Sexual Health Clinics, both linking to the generic clinics page) and walk-in vs appointment.
+- Support contact is the email HARTConnectorSupport@health.nyc.gov (dashboard, My profile, and the paused-sign-in screen once built). Account deletion is a request by email; what BH does with it (records are never hard-deleted) is TBD.
+- Health insurance: the "Prefer a different site?" picker is removed for v1.3; site changes return later, bundled with editing client information.
+- OTP rules are proposals pending security (not built in the prototype): 6-digit single-use code, expires in 5 minutes; 5 wrong codes per code, with a warning at 2 left, then sign-in pauses 15 minutes; 30-second resend cooldown, at most 3 new codes per 15 minutes; 5 failed detail lookups per 15 minutes per device, then a 15-minute pause (lock the device, not the account). The server enforces limits; the screen only displays them. Wrong-code message (placeholder): "Invalid code. You have 2 attempts left."
 - Energy discounts: Benefits Enrollment Assistant intake URL (`#bea-partner-intake-placeholder` in `scripts/pillars.js` and `eeap-next.html`).
 - Hospital bills: `https://dollarfor.org/` stands in for the simplified-application link.
-- Privacy policy link on `privacy.html` (`href="#"`).
 - Enrollment-site names, addresses, hours and phone numbers (`scripts/hi-sites.js`).
-- "Submitted" / "received" wording depends on a partner status feed that does not exist yet.
+- "Connect with a HART employee" link on No match cards: TBD, left out.
+- Program names and descriptions: pending JL content review.
 - No translated strings; no skip-to-content link (see the conformance summary).
 
 ## Conventions
 
 - Weights 400 and 600 only. Body 18px. Grey text `#565656`; black `#191919`; primary `#225E7C`.
-- Lucide icons on program cards; Material icons elsewhere.
+- Lucide icons on program cards; Material icons elsewhere (e.g. the dashboard help icon).
 - Commit messages: `area: what changed` (e.g. `copy: hospital bills handoff phone label`).
-- Each drop is a GitHub Release tagged `vX.Y-self-service`; see `CHANGELOG.md`.
+- Each drop is a GitHub Release tagged per release; see `CHANGELOG.md`.

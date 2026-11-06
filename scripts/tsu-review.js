@@ -144,7 +144,7 @@
     if (actions) actions.classList.add('is-single');   // single full-width action
     if (back) {
       back.textContent = 'Back to programs';
-      back.addEventListener('click', function () { window.location.href = 'programs.html'; });
+      back.addEventListener('click', function () { window.location.href = 'dashboard.html'; });
     }
   }
 
