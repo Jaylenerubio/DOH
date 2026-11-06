@@ -5,7 +5,7 @@
 (function () {
   'use strict';
   var FIELDS = ['firstName', 'lastName', 'dob', 'zip', 'phone', 'email'];
-  var LABELS = { firstName: 'First name', lastName: 'Last name', dob: 'Date of birth', zip: 'Zip code', phone: 'Phone number', email: 'Email' };
+  var LABELS = { firstName: 'First name', lastName: 'Last name', dob: 'Date of birth', zip: 'ZIP code', phone: 'Phone number', email: 'Email' };
   function contact() { try { return JSON.parse(sessionStorage.getItem('nyc.contact') || '{}'); } catch (e) { return {}; } }
   function init() {
     var c = contact();

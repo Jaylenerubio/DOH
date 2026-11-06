@@ -60,6 +60,7 @@
       field.insertBefore(r, field.firstChild);
     }
     var lab = fieldLabel(field) || (field.classList.contains('tsu-review__answers') ? 'Your situation' : '');
+    if (field.hasAttribute('data-show-optional') && field.querySelector('.field__optional')) lab += ' (optional)';   /* keep the optional cue in the read view */
     r.querySelector('.review-read__label').textContent = lab;
     var v = fieldValue(field);
     r.querySelector('.review-read__value').textContent = v || '—';
