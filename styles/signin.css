@@ -43,3 +43,6 @@
 .signin__trouble summary::after { content: ""; width: 10px; height: 10px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); margin-right: 6px; transition: transform .2s; }
 .signin__trouble[open] summary::after { transform: rotate(-135deg); }
 .signin__trouble p { margin: 8px 0 0; }
+
+/* Sign in: 16px between the last field and the support line */
+.field + .signin__support { margin-top: 16px; }
