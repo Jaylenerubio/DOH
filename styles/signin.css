@@ -39,3 +39,11 @@
 
 /* Locked page: the footer button fills the width, like the hand-off pages */
 #homeBtn { width: 100%; }
+
+/* Touch targets: links in support lines and the resend link are 44px tall.
+   inline-flex keeps a link whole (an email address never splits across lines). */
+.signin__support .ext-link, .dash__help .ext-link, .support-line .ext-link,
+.signin__alt .signin__link { display: inline-flex; align-items: center; min-height: 44px; }
+.signin__support + .signin__support { margin-top: 0; }
+#noAccount { margin-top: var(--space-1); }
+.signin__alt .signin__link[hidden], .signin__support .ext-link[hidden] { display: none; }
