@@ -794,7 +794,7 @@ body {
   margin: 8px 0 0;
   color: var(--color-error-dark);
   font-family: var(--type-ui-16-family);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.4;
 }
