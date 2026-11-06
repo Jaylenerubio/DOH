@@ -173,3 +173,20 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply); else apply();
 })();
+
+/* Self-service intake has five steps (language, privacy, contact, review, code).
+   privacy.html and contact.html are shared with the CHW flow, which keeps its four. */
+(function selfProgress() {
+  'use strict';
+  function init() {
+    var bar = document.querySelector('.progress'); if (!bar) return;
+    var self = false; try { self = sessionStorage.getItem('nyc.channel') === 'self'; } catch (e) {}
+    if (!self) return;
+    var pg = location.pathname.split('/').pop();
+    var n = { 'privacy.html': 2, 'contact.html': 3 }[pg]; if (!n) return;
+    bar.setAttribute('aria-valuemax', '5'); bar.setAttribute('aria-valuenow', String(n)); bar.setAttribute('aria-label', 'Step ' + n + ' of 5');
+    bar.innerHTML = '';
+    for (var i = 0; i < 5; i++) { var sp = document.createElement('span'); sp.className = 'progress__seg' + (i < n ? ' is-complete' : ''); bar.appendChild(sp); }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
