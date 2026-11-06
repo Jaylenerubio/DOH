@@ -46,3 +46,6 @@
 
 /* Sign in: 16px between the last field and the support line */
 .field + .signin__support { margin-top: 16px; }
+
+/* Welcome back: 16px between the two support lines so the inline links are not confused */
+.signin__support + .signin__support { margin-top: 16px; }
