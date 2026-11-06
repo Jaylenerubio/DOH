@@ -49,3 +49,6 @@
 
 /* Welcome back: 16px between the two support lines so the inline links are not confused */
 .signin__support + .signin__support { margin-top: 16px; }
+
+/* Locked page: the footer button fills the width, like the hand-off pages */
+#homeBtn { width: 100%; }
