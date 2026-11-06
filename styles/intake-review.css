@@ -39,4 +39,3 @@ select.review-value option { color: var(--color-text); }
 .profile__row { display: flex; flex-direction: column; gap: 2px; }
 .profile__row dt { font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); color: var(--color-text); }
 .profile__row dd { margin: 0; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); font-weight: 600; color: var(--color-text); }
-.profile__lang { margin-top: var(--space-2); }
