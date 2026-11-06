@@ -1,6 +1,5 @@
 /* My profile (v1.3). "Your information" is read-only (the HART employee entered
-   it); "Preferred contact method" (Text me / Call me) is editable and saved to
-   sessionStorage 'nyc.contactMethod'. "Request account deletion" is a
+   it); "Preferred language" is editable ('nyc.language'); contact method is no longer collected. "Request account deletion" is a
    placeholder: no modal or destination yet. */
 (function () {
   'use strict';
@@ -12,12 +11,6 @@
       var el = document.querySelector('[data-field="' + id + '"]');
       if (el && c[id]) el.textContent = c[id];
     });
-    var m = document.getElementById('method');
-    if (m) {
-      try { m.value = sessionStorage.getItem('nyc.contactMethod') || 'text'; } catch (e) {}
-      if (!m.value) m.value = 'text';
-      m.addEventListener('change', function () { try { sessionStorage.setItem('nyc.contactMethod', m.value); } catch (e) {} });
-    }
     var l = document.getElementById('lang');
     if (l) {
       try { l.value = sessionStorage.getItem('nyc.language') || 'en'; } catch (e) {}
