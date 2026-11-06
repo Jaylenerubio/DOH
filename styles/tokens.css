@@ -81,6 +81,7 @@
   --color-neutral-200: #EEEEEE;      /* inactive progress bar */
   --color-neutral-300: #DDDDDD;      /* borders / strokes / dividers */
   --color-neutral-700: #707070;      /* secondary text */
+  --color-bg-secondary: #F5F5F5;     /* secondary background (cards on white) */
   --color-pillar-card: #FAF8F5;      /* Program pillar card bg (Home + Dashboard) */
   --color-app-button: #FFFEFD;       /* Dashboard application button bg */
   --color-pillar-logo: #B1AEAC;      /* pillar logos + disabled text */
