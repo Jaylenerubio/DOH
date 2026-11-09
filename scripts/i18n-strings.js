@@ -775,12 +775,12 @@ window.I18N_DICT = {
   "ar": "اختر الولاية",
   "zh": "選擇州"
  },
- "Select the government assistance program(s) you are currently enrolled in.": {
+ "Select the government assistance program(s) you’re enrolled in:": {
   "es": "Seleccione los programas de asistencia del gobierno en los que está inscrito actualmente.",
   "ar": "اختر برنامج المساعدة الحكومية أو البرامج المسجَّل فيها حاليًا.",
   "zh": "請選擇您目前參加的政府援助計劃。"
  },
- "Select the government assistance program(s) you are currently enrolled in. <span>(Select all that apply)</span>": {
+ "Select the government assistance program(s) you&rsquo;re enrolled in: <span>(Select all that apply)</span>": {
   "es": "Seleccione los programas de asistencia del gobierno en los que está inscrito actualmente. <span>(Seleccione todos los que correspondan)</span>",
   "ar": "اختر برنامج المساعدة الحكومية أو البرامج المسجَّل فيها حاليًا. <span>(اختر كل ما ينطبق)</span>",
   "zh": "請選擇您目前參加的政府援助計劃。<span>（可多選）</span>"
