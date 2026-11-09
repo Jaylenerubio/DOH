@@ -645,7 +645,7 @@ window.I18N_DICT = {
   "ar": "لا، فاتتني سنة واحدة على الأقل",
   "zh": "否，我至少漏報了一年"
  },
- "None of the above (I have a different housing issue)": {
+ "None of the above. (I have a different housing issue)": {
   "es": "Ninguna de las anteriores (tengo otro problema de vivienda)",
   "ar": "لا شيء مما سبق (لديّ مشكلة سكن مختلفة)",
   "zh": "以上皆非（我有其他住房問題）"
