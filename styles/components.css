@@ -596,6 +596,7 @@ body {
 }
 .copy-field__btn:active,
 .copy-field__btn.is-pressed { background: var(--color-neutral-300); }   /* darker on press */
+.copy-field__call { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; min-height: 44px; }
 .copy-field__btn:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset); }
 /* Tablet: a wider minimum gap between the value and the copy button. */
 @media (min-width: 768px) {

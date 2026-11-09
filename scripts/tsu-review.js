@@ -34,12 +34,12 @@
   // it's chosen — or nothing is chosen — the applicant is not eligible for TSU
   // and Save and continue routes to the 311 referral instead.
   var OPTIONS = [
-    { id: 'notice', label: 'Your landlord gave you a notice that they<br>are starting eviction proceedings' },
-    { id: 'court', label: 'You have an eviction case in Housing Court' },
-    { id: 'utilities', label: 'Your landlord shut off your utilities to force you out' },
-    { id: 'lock', label: 'Your landlord changed or removed your apartment<br>lock without a court order' },
-    { id: 'belongings', label: 'Your landlord threw out your belongings without a court order' },
-    { id: 'none', label: 'None of the above (I have a different housing issue)' }
+    { id: 'notice', label: 'Your landlord gave you a notice that they<br>are starting eviction proceedings.' },
+    { id: 'court', label: 'You have an eviction case in Housing Court.' },
+    { id: 'utilities', label: 'Your landlord shut off your utilities to force you out.' },
+    { id: 'lock', label: 'Your landlord changed or removed your apartment<br>lock without a court order.' },
+    { id: 'belongings', label: 'Your landlord threw out your belongings without a court order.' },
+    { id: 'none', label: 'None of the above (I have a different housing issue).' }
   ];
   var CHECK = '<svg class="checkbox__check" viewBox="0 0 24 24" fill="none"><path d="M5 12 L10 17 L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   // Plain check for the read-only view (the checkbox__check class is hidden

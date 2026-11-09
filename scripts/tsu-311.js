@@ -14,7 +14,7 @@
     Array.prototype.forEach.call(document.querySelectorAll('.copy-field'), function (field) {
       var text = field.querySelector('.copy-field__text');
       var btn = field.querySelector('.copy-field__btn');
-      if (!text || !btn) return;
+      if (!text || !btn || btn.tagName === 'A') return;
       var value = text.getAttribute('data-copy') || text.textContent;
       var resetTimer = null;
       btn.addEventListener('click', function () {

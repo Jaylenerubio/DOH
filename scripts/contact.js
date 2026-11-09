@@ -34,7 +34,7 @@
     firstName: 'Enter your first name',
     lastName: 'Enter your last name',
     dob: 'Enter your date of birth',
-    zip: 'Enter your zip code',
+    zip: 'Enter your ZIP code',
     phone: 'Enter your phone number',
     email: 'Enter your email'
   };

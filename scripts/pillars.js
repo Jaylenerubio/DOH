@@ -67,6 +67,13 @@ window.Pillars = (function () {
     'financial-help': { label: 'Start your application', url: '#bea-partner-intake-placeholder', partner: 'the Energy Affordability Program', eeapUrl: 'https://nyeeap.com/program' },
     'tax-credits':    { label: 'Start your application', url: 'https://www.getyourrefund.org/en', partner: 'GetYourRefund' }
   };
+  /* Hospital bills: clients whose preferred language is Urdu, Arabic, French or
+     Polish are connected to a CSS health counselor instead of Dollar For. */
+  var CSS_LANGS = ['ur', 'ar', 'fr', 'pl'];
+  function usesCss() {
+    var l = ''; try { l = sessionStorage.getItem('nyc.language') || ''; } catch (e) {}
+    return CSS_LANGS.indexOf(l) !== -1;
+  }
   function applyUrl(key) {
     var a = APPLY[key]; if (!a) return '#';
     if (key === 'financial-help') { try { var e = JSON.parse(sessionStorage.getItem('nyc.eap') || '{}'); if (e.path === 'eeap' && a.eeapUrl) return a.eeapUrl; } catch (x) {} }
@@ -79,7 +86,7 @@ window.Pillars = (function () {
     markCompleted(currentKey);
     var btn = document.getElementById('nextPillarBtn');
     var rec = document.getElementById('recordBtn');
-    var app = outcome(currentKey) === 'ineligible' ? null : APPLY[currentKey];   /* not eligible: no application to start */
+    var app = (outcome(currentKey) === 'ineligible' || (currentKey === 'hospital-bills' && usesCss())) ? null : APPLY[currentKey];   /* not eligible: no application to start */
     if (btn) {
       if (app) {
         btn.innerHTML = app.label + '<span class="sr-only"> (opens in new tab)</span>';
@@ -97,6 +104,6 @@ window.Pillars = (function () {
   return { ORDER: ORDER, META: META, selected: selected, completed: completed, isCompleted: isCompleted,
            markCompleted: markCompleted, pending: pending, first: first, nextAfter: nextAfter,
            entryFor: entryFor, labelFor: labelFor, wireHandoff: wireHandoff,
-           isSelf: isSelf, APPLY: APPLY,
+           isSelf: isSelf, APPLY: APPLY, usesCss: usesCss,
            outcome: outcome, markOutcome: markOutcome, applyUrl: applyUrl };
 })();

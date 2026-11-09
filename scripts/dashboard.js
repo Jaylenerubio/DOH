@@ -26,7 +26,7 @@
   var INEL   = { 'hospital-bills': 'df-ineligible.html', 'financial-help': 'eap-ineligible.html', 'tax-credits': 'eitc-ineligible.html', 'anti-eviction': 'tsu-311.html', 'snap': 'snap-notfit.html' };
   /* Referral-sent text after "We shared your info on <date>." */
   var SENT   = {
-    'hospital-bills': function () { return 'You\u2019ll need PIN ' + pin() + ' to open your application.'; },
+    'hospital-bills': function () { return Pillars.usesCss() ? 'A CSS health counselor will call you within two business days.' : 'You\u2019ll need PIN ' + pin() + ' to open your application.'; },
     'medicaid': function () { return 'A NYC Health Department counselor will call you within 3 business days.'; },
     'financial-help': function () { return 'Open your application with the Benefits Enrollment Assistant.'; },
     'anti-eviction': function () { return 'A tenant specialist will reach out within 3 business days.'; },
@@ -36,7 +36,7 @@
     'hospital-bills': 'We did not send your info to a hospital. You can still ask your hospital about lowering your bills.',
     'financial-help': 'We did not send your info to your utility provider. Call 311 for more information about energy assistance.',
     'tax-credits': 'Next time you file taxes, NYC Health partner GetYourRefund can help you for free.',
-    'anti-eviction': 'We did not send your info to the NYC Tenant Support Unit. Call 311 for more information about housing assistance.',
+    'anti-eviction': 'We did not send your info to the Mayor\u2019s Tenant Support Unit. Call 311 for more information about housing assistance.',
     'snap': 'We did not send your info to NYC Health partner Frontdoor Benefits. Call 311 for more information about food assistance.'
   };
 
@@ -60,12 +60,12 @@
   function card(key) {
     var st = stateFor(key), c = el('article', 'app-card');
     c.setAttribute('data-key', key); c.setAttribute('data-state', st);
-    var html = '', details = NEXT[key] + '?from=dashboard';
+    var html = '', details = (key === 'hospital-bills' && Pillars.usesCss() ? 'df-css.html' : NEXT[key]) + '?from=dashboard';
     if (st === 'none') {
       html = head(key) + '<p class="app-card__desc">' + DESC[key] + '</p>' +
         '<div class="app-card__cta"><a class="btn btn--outline" href="' + ENTRY[key] + '">Get started</a></div>';
     } else if (st === 'referral') {
-      var applyBtn = Pillars.APPLY[key] ? '<a class="btn btn--primary" href="' + Pillars.applyUrl(key) + '" target="_blank" rel="noopener" data-apply="' + key + '">Start application<span class="sr-only"> (opens in new tab)</span></a>' : '';
+      var applyBtn = (Pillars.APPLY[key] && !(key === 'hospital-bills' && Pillars.usesCss())) ? '<a class="btn btn--primary" href="' + Pillars.applyUrl(key) + '" target="_blank" rel="noopener" data-apply="' + key + '">Start application<span class="sr-only"> (opens in new tab)</span></a>' : '';
       if (key === 'tax-credits') {   /* nothing is sent: no chip */
         html = head(key) + '<p class="app-card__status">Start your application with GetYourRefund, an NYC Health partner.</p>';
       } else {

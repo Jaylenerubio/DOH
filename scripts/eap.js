@@ -1,4 +1,4 @@
-/* Financial resources — EAP screener (step 1 of 3).
+/* Energy discounts — EAP screener (step 1 of 3).
    Branching:
      Con Edison and/or National Grid (multi; "Neither" exclusive) → "Enrolled in government assistance?"
        Yes → multi-select program combobox   → path 'eap'

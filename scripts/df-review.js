@@ -80,7 +80,7 @@
     var cont = document.getElementById('continueBtn');
     if (cont) {
       cont.addEventListener('click', function () {
-        window.location.href = 'df-next.html';      /* Submit → handoff */
+        window.location.href = (window.Pillars && Pillars.usesCss()) ? 'df-css.html' : 'df-next.html';      /* Submit → handoff */
       });
     }
   }

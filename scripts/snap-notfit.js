@@ -1,4 +1,4 @@
-/* SNAP — not the right fit (they need in-person or phone help). Records the
+/* SNAP — not the right fit (they need in person or phone help). Records the
    outcome so the dashboard card reads "Not a fit", then returns to the dashboard. */
 (function () {
   'use strict';

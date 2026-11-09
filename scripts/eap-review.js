@@ -1,4 +1,4 @@
-/* Financial resources — review (step 2 of 3). Every answer is editable in
+/* Energy discounts — review (step 2 of 3). Every answer is editable in
    place and two-way bound to EAPStore; rows follow the same branching as the
    screener (EAP: programs; EEAP: household + income). Continue → consent. */
 (function () {

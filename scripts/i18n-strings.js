@@ -255,7 +255,7 @@ window.I18N_DICT = {
   "ar": "هل لديك أطفال ترعاهم؟",
   "zh": "您有需要照顧的子女嗎？"
  },
- "Do you have private health insurance (Qualified Health Plan)?": {
+ "Do you have private health insurance (for example, Qualified Health Plan)?": {
   "es": "¿Tiene seguro médico privado (Plan de Salud Calificado)?",
   "ar": "هل لديك تأمين صحي خاص (خطة صحية مؤهلة Qualified Health Plan)؟",
   "zh": "您有私人健康保險（合格健康計劃，Qualified Health Plan）嗎？"
@@ -935,7 +935,7 @@ window.I18N_DICT = {
   "ar": "زر <a>GetYourRefund<svg/><span> (يفتح في علامة تبويب جديدة)</span></a> لبدء تقديم إقرارك الضريبي أو تعديله عن السنة أو السنوات المعنية.",
   "zh": "請造訪 <a>GetYourRefund<svg/><span>（在新分頁開啟）</span></a>，開始申報或修正相關年度的報稅表。"
  },
- "We found an NYC Health site closest to the zip code you gave us.": {
+ "We found an NYC Health site closest to the ZIP code you gave us.": {
   "es": "Encontramos el sitio de NYC Health más cercano al código postal que nos dio.",
   "ar": "وجدنا موقعًا تابعًا لـ NYC Health هو الأقرب إلى الرمز البريدي الذي أدخلته.",
   "zh": "我們已找到離您提供的郵遞區號最近的 NYC Health 據點。"
@@ -1165,7 +1165,7 @@ window.I18N_DICT = {
   "ar": "أنت غير مؤهل<br>لخصومات الطاقة<br>في الوقت الحالي.",
   "zh": "您目前不符合能源折扣資格。"
  },
- "Zip code": {
+ "ZIP code": {
   "es": "Código postal",
   "ar": "الرمز البريدي",
   "zh": "郵遞區號"

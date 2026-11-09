@@ -1,4 +1,4 @@
-/* Financial resources — not eligible (terminal). Reached from the review
+/* Energy discounts — not eligible (terminal). Reached from the review
    when the client answers "No" to the income threshold. Marks the pillar
    screened and chains to the next selected pillar. */
 (function () {

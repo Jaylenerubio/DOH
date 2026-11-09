@@ -1,4 +1,4 @@
-/* Financial resources — "What's next" (terminal). Shows the EAP steps for the
+/* Energy discounts — "What's next" (terminal). Shows the EAP steps for the
    program-enrolled path or the EEAP steps for the income path, then chains
    to the next selected pillar. */
 (function () {
