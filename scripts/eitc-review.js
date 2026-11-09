@@ -24,7 +24,7 @@
         missing.forEach(function (id) { var el = document.getElementById(id); A11y.groupError(el, 'Selection required'); });
         document.getElementById(missing[0]).focus(); return;
       }
-      window.location.href = store.eligible() ? 'eitc-eligible.html' : 'eitc-ineligible.html';
+      window.location.href = store.page();
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();

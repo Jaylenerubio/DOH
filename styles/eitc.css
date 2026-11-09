@@ -7,3 +7,10 @@
 .eitc-next .step__text + .step__text { margin-top: var(--space-2); }
 .eitc-next__actions { display: flex; flex-direction: column; gap: 12px; padding: var(--space-2) var(--page-margin-x) calc(var(--space-2) + env(safe-area-inset-bottom)); border-top: 1px solid var(--color-neutral-200); background: var(--color-bg); }
 .eitc-next .nstep__list strong { font-weight: 600; }
+/* Info page ("Did you claim the EITC?"): body-size bullets and the deadlines callout. */
+.eitc-claimed .step__body { padding-top: 56px; }
+.eitc-claimed__list { margin: var(--space-1) 0 0; padding-left: 24px; font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); }
+.eitc-claimed__list li + li { margin-top: var(--space-1); }
+.eitc-claimed__note { margin-top: var(--space-3); }
+.df-note__list { margin: 0; padding-left: 24px; font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); color: var(--color-text); }
+.df-note__list li + li { margin-top: 4px; }

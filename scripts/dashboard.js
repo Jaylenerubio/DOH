@@ -48,6 +48,14 @@
     if (!v) { v = String(1000 + Math.floor(Math.random() * 9000)); try { sessionStorage.setItem('nyc.df.pin', v); } catch (e) {} }
     return v;
   }
+  /* Tax credits: which results page this client saw (claimed / likely / maybe). */
+  function eitc() { try { return JSON.parse(sessionStorage.getItem('nyc.eitc') || '{}'); } catch (e) { return {}; } }
+  function eitcPage() {
+    var o = eitc();
+    if (o.filed === 'every') return 'eitc-claimed.html';
+    var kids = o.children === 'full' || o.children === 'part';
+    return kids ? 'eitc-eligible.html' : 'eitc-maybe.html';
+  }
   function stateFor(key) {
     var o = Pillars.outcome(key);
     if (key !== 'medicaid' && (o === 'ineligible' || o === 'notfit')) return 'nomatch';
@@ -60,14 +68,15 @@
   function card(key) {
     var st = stateFor(key), c = el('article', 'app-card');
     c.setAttribute('data-key', key); c.setAttribute('data-state', st);
-    var html = '', details = (key === 'hospital-bills' && Pillars.usesCss() ? 'df-css.html' : NEXT[key]) + '?from=dashboard';
+    var html = '', details = (key === 'hospital-bills' && Pillars.usesCss() ? 'df-css.html' : key === 'tax-credits' ? eitcPage() : NEXT[key]) + '?from=dashboard';
     if (st === 'none') {
       html = head(key) + '<p class="app-card__desc">' + DESC[key] + '</p>' +
         '<div class="app-card__cta"><a class="btn btn--outline" href="' + ENTRY[key] + '">Get started</a></div>';
     } else if (st === 'referral') {
       var applyBtn = (Pillars.APPLY[key] && !(key === 'hospital-bills' && Pillars.usesCss())) ? '<a class="btn btn--primary" href="' + Pillars.applyUrl(key) + '" target="_blank" rel="noopener" data-apply="' + key + '">Start application<span class="sr-only"> (opens in new tab)</span></a>' : '';
       if (key === 'tax-credits') {   /* nothing is sent: no chip */
-        html = head(key) + '<p class="app-card__status">Start your application with GetYourRefund, an NYC Health partner.</p>';
+        html = head(key) + '<p class="app-card__status">' + (eitc().filed === 'every' ? 'Check whether you claimed the Earned Income Tax Credit.' : 'Start your application with GetYourRefund, an NYC Health partner.') + '</p>';
+        if (eitc().filed === 'every') applyBtn = '';
       } else {
         c.classList.add('is-in-progress');
         html = '<span class="app-card__chip app-card__chip--done">Referral sent</span>' + head(key) +

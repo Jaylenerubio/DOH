@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Did you claim the Earned Income Tax Credit? — NYC Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/df-next.css">
+<link rel="stylesheet" href="styles/snap.css">
+<link rel="stylesheet" href="styles/eitc.css">
+</head>
+<body>
+  <div class="step df-next eitc-next eitc-claimed" data-handoff="tax-credits">
+
+    <!-- Top banner -->
+    <div class="top-banner">
+      <div class="top-banner__inner">
+        <button class="top-banner__toggle" type="button" aria-expanded="false" aria-controls="govPanel">
+          <span>Official website of the City of New York</span>
+          <svg class="top-banner__caret" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 5 L7 9 L11 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="top-banner__panel" id="govPanel" hidden>
+        <div class="top-banner__panel-inner">
+          <div class="top-banner__block">
+            <h2 class="top-banner__heading">Official websites use .gov</h2>
+            <p class="top-banner__copy">A .gov website belongs to an official government organization in the United States.</p>
+          </div>
+          <div class="top-banner__block">
+            <h2 class="top-banner__heading">Secure .gov websites use HTTPS</h2>
+            <p class="top-banner__copy">A lock (<span aria-label="locked">&#128274;</span>) or https:// means you&rsquo;ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service navigation -->
+    <header class="site-nav">
+      <div class="site-nav__inner">
+        <a href="dashboard.html" aria-label="NYC Health — your programs">
+          <img class="site-nav__logo" src="assets/nyc-health-stacked.png" width="65" height="30" alt="NYC Health">
+        </a>
+        <div class="site-nav__actions">
+          <button class="site-nav__translate" type="button" aria-label="English, translate this page">
+            <span class="site-nav__translate-label">English</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Scrollable content (no progress bar on this step) -->
+    <main class="step__body" id="main" tabindex="-1">
+      <h1 class="step__title">Did you claim the Earned Income Tax Credit?</h1>
+
+      <section class="snap-sec">
+        <h2 class="snap-sec__title">How to check</h2>
+        <p class="snap-sec__text">Look at line 27 of your Form 1040 for each of the past three years. If there&rsquo;s an amount there, you claimed it.</p>
+        <p class="snap-sec__text">Don&rsquo;t have your returns? You can request copies in your <a class="ext-link" href="https://www.irs.gov/payments/your-online-account" target="_blank" rel="noopener noreferrer">IRS online account&#8288;<svg class="ext-link__icon" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M14.2998 6.41634H9.1665C8.90678 6.41634 8.68907 6.32849 8.51338 6.1528C8.33768 5.97711 8.24984 5.7594 8.24984 5.49967C8.24984 5.23995 8.33768 5.02224 8.51338 4.84655C8.68907 4.67086 8.90678 4.58301 9.1665 4.58301H16.4998C16.7596 4.58301 16.9773 4.67086 17.153 4.84655C17.3287 5.02224 17.4165 5.23995 17.4165 5.49967V12.833C17.4165 13.0927 17.3287 13.3104 17.153 13.4861C16.9773 13.6618 16.7596 13.7497 16.4998 13.7497C16.2401 13.7497 16.0224 13.6618 15.8467 13.4861C15.671 13.3104 15.5832 13.0927 15.5832 12.833V7.69967L5.5915 17.6913C5.42345 17.8594 5.20956 17.9434 4.94984 17.9434C4.69011 17.9434 4.47623 17.8594 4.30817 17.6913C4.14011 17.5233 4.05609 17.3094 4.05609 17.0497C4.05609 16.79 4.14011 16.5761 4.30817 16.408L14.2998 6.41634Z" fill="currentColor"/></svg><span class="sr-only"> (opens in new tab)</span></a>.</p>
+      </section>
+      <hr class="snap-rule">
+      <section class="snap-sec">
+        <h2 class="snap-sec__title">If you didn&rsquo;t claim it</h2>
+        <p class="snap-sec__text">If you qualified for tax credits in past years, you can still get this money. Select File now to amend your return(s) for free with GetYourRefund, an NYC Health partner.</p>
+        <p class="snap-sec__text">You can choose:</p>
+        <ul class="eitc-claimed__list">
+          <li><strong>FileMyself:</strong> File on your own and chat with an expert if you need it.</li>
+          <li><strong>Assist (virtual or in person):</strong> Answer a few questions, then match with an expert who will prepare and submit your return.</li>
+        </ul>
+        <div class="df-note eitc-claimed__note">
+          <p class="df-note__title">You have three years from the tax deadline to file</p>
+          <ul class="df-note__list">
+            <li>To claim the 2025 EITC, file your tax return by April 16, 2029</li>
+            <li>For 2024, file by April 17, 2028</li>
+            <li>For 2023, file by April 15, 2027</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="step__footer">
+      <div class="eitc-next__actions">
+        <a class="btn btn--primary" id="fileBtn" href="https://getyourrefund.org/nychealth" target="_blank" rel="noopener noreferrer">File now<svg class="ext-link__icon" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M14.2998 6.41634H9.1665C8.90678 6.41634 8.68907 6.32849 8.51338 6.1528C8.33768 5.97711 8.24984 5.7594 8.24984 5.49967C8.24984 5.23995 8.33768 5.02224 8.51338 4.84655C8.68907 4.67086 8.90678 4.58301 9.1665 4.58301H16.4998C16.7596 4.58301 16.9773 4.67086 17.153 4.84655C17.3287 5.02224 17.4165 5.23995 17.4165 5.49967V12.833C17.4165 13.0927 17.3287 13.3104 17.153 13.4861C16.9773 13.6618 16.7596 13.7497 16.4998 13.7497C16.2401 13.7497 16.0224 13.6618 15.8467 13.4861C15.671 13.3104 15.5832 13.0927 15.5832 12.833V7.69967L5.5915 17.6913C5.42345 17.8594 5.20956 17.9434 4.94984 17.9434C4.69011 17.9434 4.47623 17.8594 4.30817 17.6913C4.14011 17.5233 4.05609 17.3094 4.05609 17.0497C4.05609 16.79 4.14011 16.5761 4.30817 16.408L14.2998 6.41634Z" fill="currentColor"/></svg><span class="sr-only"> (opens in new tab)</span></a>
+        <button class="btn btn--secondary" type="button" id="recordBtn">Return to dashboard</button>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="scripts/i18n.js"></script>
+  <script src="scripts/eitc-store.js"></script>
+  <script src="scripts/pillars.js"></script>
+  <script src="scripts/eitc-next.js"></script>
+  <script src="scripts/handoff-view.js"></script>
+  <script src="scripts/banner.js"></script>
+  <script src="scripts/nav-lang.js"></script>
+  <script src="scripts/i18n-strings.js"></script>
+  <script src="scripts/i18n-dom.js"></script>
+</body>
+</html>

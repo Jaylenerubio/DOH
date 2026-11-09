@@ -65,7 +65,7 @@ window.Pillars = (function () {
   var APPLY = {
     'hospital-bills': { label: 'Start your application', url: 'https://dollarfor.org/', partner: 'Dollar For' },
     'financial-help': { label: 'Start your application', url: '#bea-partner-intake-placeholder', partner: 'the Energy Affordability Program', eeapUrl: 'https://nyeeap.com/program' },
-    'tax-credits':    { label: 'Start your application', url: 'https://www.getyourrefund.org/en', partner: 'GetYourRefund' }
+    'tax-credits':    { label: 'Start your application', url: 'https://getyourrefund.org/nychealth', partner: 'GetYourRefund' }
   };
   /* Hospital bills: clients whose preferred language is Urdu, Arabic, French or
      Polish are connected to a CSS health counselor instead of Dollar For. */
