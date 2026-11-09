@@ -5,7 +5,7 @@ window.I18N_DICT = {
   "ar": "(تفتح في علامة تبويب جديدة)",
   "zh": "（在新分頁開啟）"
  },
- "<strong>Assist (virtual or in-person):</strong> Answer a few questions, then match with an expert who will prepare and submit your return.": {
+ "<strong>Assist (virtual or in person):</strong> Answer a few questions, then match with an expert who will prepare and submit your return.": {
   "es": "<strong>Assist (virtual o en persona):</strong> Responda unas preguntas y le asignaremos a un experto que preparará y enviará su declaración.",
   "ar": "<strong>المساعدة (Assist) عن بُعد أو شخصيًا:</strong> أجب عن بعض الأسئلة، ثم سنوصلك بخبير يُعدّ إقرارك الضريبي ويقدّمه.",
   "zh": "<strong>協助申報（線上或親自）：</strong>回答幾個問題，我們會為您配對專家，由專家為您準備並提交報稅表。"
