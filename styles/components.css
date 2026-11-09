@@ -2157,3 +2157,7 @@ bdi { white-space: nowrap; }   /* brand names and addresses stay in one piece in
 [dir="rtl"] .handoff__back svg { transform: scaleX(-1); }
 /* Phone numbers and street addresses stay left-to-right. */
 [dir="rtl"] .copy-field__text, [dir="rtl"] .site-card__addr { direction: ltr; text-align: right; unicode-bidi: isolate; }
+
+/* "What's next" handoffs: the grey subtitle already carries the quiet tone,
+   so the body copy under it is full-strength text to keep the block balanced. */
+.step__body:has(.df-next__subtitle, .hi-next__subtitle) .step__text { color: var(--color-text); }
