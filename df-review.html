@@ -66,14 +66,14 @@
     <!-- Scrollable content -->
     <main class="step__body" id="main" tabindex="-1">
       <h1 class="step__title">Review and submit</h1>
-      <p class="step__text">We&rsquo;ll share the information below with NYC Health partners Dollar For and the Community Service Society of New York (CSS).</p>
+      <p class="step__text">We&rsquo;ll share the information below with NYC Health partners Dollar For and the Community Service Society of New York (CSS). They&rsquo;ll use and store your data to help with your financial assistance application.</p>
 
       <div class="review-cards">
 
-        <!-- Medical debt relief (editable, from the Dollar For flow) -->
+        <!-- Hospital bill forgiveness (editable, from the Dollar For flow) -->
         <section class="review-card" aria-labelledby="debtTitle">
           <div class="review-card__head">
-            <h2 class="review-card__title" id="debtTitle">Medical debt relief</h2>
+            <h2 class="review-card__title" id="debtTitle">Hospital bill forgiveness</h2>
             <span class="review-card__hint"><svg viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4.58333 17.4167H5.88958L14.85 8.45625L13.5438 7.15L4.58333 16.1104V17.4167ZM3.66667 19.25C3.40694 19.25 3.18924 19.1622 3.01354 18.9865C2.83785 18.8108 2.75 18.5931 2.75 18.3333V16.1104C2.75 15.866 2.79583 15.633 2.8875 15.4115C2.97917 15.1899 3.10903 14.9951 3.27708 14.8271L14.85 3.27708C15.0333 3.10903 15.2358 2.97917 15.4573 2.8875C15.6788 2.79583 15.9118 2.75 16.1563 2.75C16.4007 2.75 16.6375 2.79583 16.8667 2.8875C17.0958 2.97917 17.2944 3.11667 17.4625 3.3L18.7229 4.58333C18.9063 4.75139 19.0399 4.95 19.1240 5.17917C19.208 5.40833 19.25 5.6375 19.25 5.86667C19.25 6.11111 19.208 6.34410 19.1240 6.56563C19.0399 6.78715 18.9063 6.98958 18.7229 7.17292L7.17292 18.7229C7.00486 18.891 6.81007 19.0208 6.58854 19.1125C6.36701 19.2042 6.13403 19.25 5.88958 19.25H3.66667ZM14.1854 7.81458L13.5438 7.15L14.85 8.45625L14.1854 7.81458Z" fill="currentColor"/></svg>Edit below</span>
           </div>
           <hr class="review-card__rule">
@@ -81,17 +81,17 @@
 
 
             <div class="review-field">
-              <label class="review-field__label" for="household">Household</label>
+              <label class="review-field__label" for="household">How many people are in your household?</label>
               <input class="field__input review-value" id="household" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="—" autocomplete="off">
             </div>
 
             <div class="review-field">
-              <label class="review-field__label" for="income">Income</label>
+              <label class="review-field__label" for="income">What&rsquo;s your total household income per year?</label>
               <input class="field__input review-value" id="income" type="text" inputmode="numeric" data-money placeholder="—" autocomplete="off">
             </div>
 
             <div class="review-field">
-              <label class="review-field__label" for="insurance">Insurance status</label>
+              <label class="review-field__label" for="insurance">Did you have health insurance when you went to the hospital?</label>
               <select class="field__input review-value" id="insurance" required>
                 <option value="" disabled selected>—</option>
                 <option value="yes">Yes</option>
@@ -117,7 +117,7 @@
               </select>
             </div>
             <div class="review-field">
-              <label class="review-field__label" for="hospital">Hospital name</label>
+              <label class="review-field__label" for="hospital">Which hospital treated you?</label>
               <select class="field__input review-value" id="hospital" required>
                 <option value="" disabled selected>—</option>
                 <option>NewYork-Presbyterian</option>
@@ -129,7 +129,7 @@
             </div>
 
             <div class="review-field">
-              <label class="review-field__label" id="billDateLabel">Bill date</label>
+              <label class="review-field__label" id="billDateLabel">When did you get your most recent bill?</label>
               <div class="review-daterow" role="group" aria-labelledby="billDateLabel">
                 <select class="field__input review-value" id="billMonth" required aria-label="Bill month">
                   <option value="" disabled selected>Month</option>
@@ -147,7 +147,7 @@
             </div>
 
             <div class="review-field">
-              <label class="review-field__label" for="amount">Amount owed</label>
+              <label class="review-field__label" for="amount">How much do you owe this hospital?</label>
               <input class="field__input review-value" id="amount" type="text" inputmode="numeric" data-money placeholder="—" autocomplete="off">
             </div>
 
@@ -159,7 +159,7 @@
       <div class="consent-note" id="consentNote"><p>By submitting this page, you agree to share your information with Dollar For and CSS, and you agree to receive texts, calls, and emails from Dollar For and CSS about your application. You may opt out at any time. Learn more about <a href="https://dollarfor.org/privacy-policy/" target="_blank" rel="noopener noreferrer">Dollar For&rsquo;s privacy policy<span class="sr-only"> (opens in new tab)</span></a> and <a href="https://www.cssny.org/pages/privacy-policy" target="_blank" rel="noopener noreferrer">CSS&rsquo;s privacy policy<span class="sr-only"> (opens in new tab)</span></a>.</p></div>
     </main>
 
-    <!-- Pinned footer: Back / Save and continue -->
+    <!-- Pinned footer: Back / Continue -->
     <div class="step__footer">
       <div class="step__actions">
         <button class="btn btn--secondary btn--back" type="button" id="backBtn">Back</button>

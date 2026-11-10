@@ -2,7 +2,7 @@
    Dollar For intake — "Review and submit".
    - Top card ("Your information") is read-only, populated from the initial
      intake (sessionStorage 'nyc.contact'); missing values show "<Selection>".
-   - Bottom card ("Medical debt relief") is editable in place. Each control is
+   - Bottom card ("Hospital bill forgiveness") is editable in place. Each control is
      seeded from the shared Dollar For store and writes straight back to it on
      change, so an edit here is reflected in the matching flow step.
    ========================================================================= */

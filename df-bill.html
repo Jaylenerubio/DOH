@@ -65,7 +65,6 @@
     <!-- Scrollable content -->
     <main class="step__body" id="main" tabindex="-1">
       <h1 class="step__title">Tell us about the bill.</h1>
-      <p class="step__text">If you have more than one bill, use the most recent one.</p>
 
       <div class="df-fields">
 
@@ -105,8 +104,8 @@
 
         <!-- Original bill date -->
         <div class="df-field">
-          <label class="field__label" id="billDateLabel">When did you get your most recent bill?</label>
-          <div class="df-daterow" role="group" aria-labelledby="billDateLabel" aria-describedby="dateHelp">
+          <label class="field__label" id="billDateLabel">When did you get your <strong>most recent</strong> bill?</label>
+          <div class="df-daterow" role="group" aria-labelledby="billDateLabel">
             <select class="field__input df-select" id="billMonth" required aria-label="Bill month">
               <option value="" disabled selected>Month</option>
               <option>January</option><option>February</option><option>March</option>
@@ -120,27 +119,26 @@
               <option>2022</option><option>2021</option><option>2020</option>
             </select>
           </div>
-          <p class="field__help" id="dateHelp">You can add other bills, including from other hospitals, later. Some bills may not qualify, depending on the date.</p>
         </div>
 
         <!-- Amount owed -->
         <div class="df-field">
-          <label class="field__label" for="amount">What is the total amount you owe?</label>
+          <label class="field__label" for="amount">How much do you owe this hospital?</label>
           <div class="df-money">
             <span class="df-money__prefix" aria-hidden="true">$</span>
             <input class="field__input df-money__input" id="amount" type="text" inputmode="numeric" placeholder="00000" autocomplete="off" aria-describedby="amountHelp">
           </div>
-          <p class="field__help" id="amountHelp">Add up all bills from this hospital. Use your best estimate of what you owe after insurance, Medicaid, health shares, or other contributions.</p>
+          <p class="field__help" id="amountHelp">Give your best guess of what you owe after insurance, Medicaid, health shares, or other contributions. We want to know how much you personally owe.</p>
         </div>
 
       </div>
     </main>
 
-    <!-- Pinned footer: Back / Save and continue -->
+    <!-- Pinned footer: Back / Continue -->
     <div class="step__footer">
       <div class="step__actions">
         <button class="btn btn--secondary btn--back" type="button" id="backBtn">Back</button>
-        <button class="btn btn--primary btn--continue" type="button" id="continueBtn">Save and continue</button>
+        <button class="btn btn--primary btn--continue" type="button" id="continueBtn">Continue</button>
       </div>
     </div>
 

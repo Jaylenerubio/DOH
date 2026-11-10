@@ -14,14 +14,10 @@
     var p1 = document.getElementById('sitePhone'), p2 = document.getElementById('sitePhone2');
     p1.textContent = s.phone; p1.setAttribute('data-copy', s.phone);
     p2.textContent = s.phone2; p2.setAttribute('data-copy', s.phone2);
-    Array.prototype.forEach.call(document.querySelectorAll('[data-copy-btn]'), function (btn) {
-      btn.addEventListener('click', function () {
-        var txt = btn.parentNode.querySelector('.copy-field__text');
-        var v = txt.getAttribute('data-copy') || txt.textContent;
-        if (navigator.clipboard && v) navigator.clipboard.writeText(v).catch(function () {});
-        btn.textContent = 'Copied'; A11y.announce('Copied');
-        window.setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
-      });
+    [[p1, 'callBtn1', ''], [p2, 'callBtn2', ' (second number)']].forEach(function (x) {
+      var a = document.getElementById(x[1]), digits = x[0].textContent.replace(/\D/g, '');
+      a.setAttribute('href', 'tel:' + digits);
+      a.setAttribute('aria-label', 'Call ' + x[0].textContent + x[2]);
     });
     if (window.Pillars) Pillars.wireHandoff('medicaid');
   }

@@ -28,7 +28,7 @@
       else { sentTo.textContent = ''; var st = document.createElement('strong'); st.style.whiteSpace = 'nowrap'; st.textContent = window.Mask ? Mask.email(c.email || '') : (c.email || ''); sentTo.appendChild(st); }
       alt.textContent = via === 'text' ? 'Get a code by email instead' : 'Get a code by text instead';
       alt.hidden = via === 'text' && !hasEmail;
-      document.getElementById('lostText').textContent = via === 'text' ? 'No longer have this number?' : 'No longer have this email?';
+      document.getElementById('lostText').textContent = via === 'text' ? 'Changed numbers?' : 'No longer have this email?';
     }
     var busy = false;
     /* Prototype only: pause ~0.9s so a resend feels real before the banner appears. */
