@@ -18,3 +18,8 @@
 
 /* Keeps a link's last word and its arrow icon together */
 .nobr { white-space: nowrap; }
+
+/* "Not a fit" page: each question is a card (same shape, equal weight). */
+.snap-card--lg p { font-family: var(--type-body-family); font-size: var(--type-body-size); line-height: var(--type-body-line-height); }
+.snap-card__lead { margin-top: 0; margin-bottom: var(--space-1); font-family: var(--type-card-family); font-size: var(--type-card-size); line-height: var(--type-card-line-height); }
+.snap-card--lg .snap-card__links { margin-top: var(--space-1); }

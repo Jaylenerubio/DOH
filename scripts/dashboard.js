@@ -26,7 +26,7 @@
   var INEL   = { 'hospital-bills': 'df-ineligible.html', 'financial-help': 'eap-ineligible.html', 'tax-credits': 'eitc-ineligible.html', 'anti-eviction': 'tsu-311.html', 'snap': 'snap-notfit.html' };
   /* Referral-sent text after "We shared your info on <date>." */
   var SENT   = {
-    'hospital-bills': function () { return Pillars.usesCss() ? 'A CSS health counselor will call you within two business days.' : 'You\u2019ll need PIN ' + pin() + ' to open your application.'; },
+    'hospital-bills': function () { return Pillars.usesCss() ? 'A Community Service Society health counselor will call you within 2 business days.' : 'You\u2019ll need PIN ' + pin() + ' to open your application.'; },
     'medicaid': function () { return 'A NYC Health Department counselor will call you within 3 business days.'; },
     'financial-help': function () { return 'Open your application with the Benefits Enrollment Assistant.'; },
     'anti-eviction': function () { return 'A tenant specialist will reach out within 3 business days.'; },
@@ -63,7 +63,7 @@
   }
   function el(tag, cls, html) { var n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; }
   function head(key) {
-    return '<span class="app-card__head"><span class="app-card__icon">' + ICONS[key] + '</span><h3 class="app-card__title">' + TITLE[key] + '</h3></span><hr class="app-card__rule">';
+    return '<span class="app-card__head"><span class="app-card__icon">' + ICONS[key] + '</span><h3 class="app-card__title">' + (key === 'hospital-bills' && Pillars.usesCss() ? 'Hospital bill forgiveness: CSS' : TITLE[key]) + '</h3></span><hr class="app-card__rule">';
   }
   function card(key) {
     var st = stateFor(key), c = el('article', 'app-card');
