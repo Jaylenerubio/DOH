@@ -18,7 +18,7 @@
     cont.addEventListener('click', function () {
       if (!store.get(field)) { A11y.groupError(list, 'Selection required'); cards[0].focus(); return; }
       A11y.clearGroupError(list);
-      window.location.href = 'snap-fit.html';
+      window.location.href = store.get(field) === 'none' ? 'snap-notfit.html' : 'snap-fit.html';   /* None of the above → hand-off */
     });
     if (back) back.addEventListener('click', function () { if (history.length > 1) history.back(); else window.location.href = 'dashboard.html'; });
   }

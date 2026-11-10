@@ -65,7 +65,7 @@
 
     <main class="step__body" id="main" tabindex="-1">
       <h1 class="step__title">Review and submit</h1>
-      <p class="step__text">We&rsquo;ll share the information below with NYC Health partner Frontdoor Benefits. They&rsquo;ll use and store your data to help with your SNAP application.</p>
+      <p class="step__text">We&rsquo;ll share the information below with NYC Health partner Frontdoor Benefits. They&rsquo;ll use and store your data to help with your SNAP application or case.</p>
       <p class="step-error" id="stepError" role="alert" hidden></p>
 
       <div class="review-cards">
@@ -83,10 +83,11 @@
                 <option value="apply">I want to check if I qualify for SNAP and apply</option>
                 <option value="enroll">I applied for SNAP but haven&rsquo;t gotten my benefits yet</option>
                 <option value="renew">I want to keep my SNAP benefits (renew, meet work rules, or update my case)</option>
+                <option value="none">None of the above</option>
               </select>
             </div>
             <div class="review-field">
-              <label class="review-field__label" for="fit">Does text and online help work for you?</label>
+              <label class="review-field__label" for="fit">Does text-based help work for you?</label>
               <select class="field__input review-value" id="fit" required>
                 <option value="" disabled selected>&#8212;</option>
                 <option value="yes">Yes, that works for me</option>
@@ -97,7 +98,7 @@
         </section>
       </div>
 
-      <div class="consent-note" id="consentNote"><p>By submitting this page, you agree to share your information with Frontdoor Benefits and to receive texts from them. You can opt out at any time. Learn more about <a class="ext-link" href="https://www.openfrontdoor.com/privacy" target="_blank" rel="noopener">Frontdoor Benefits&rsquo; privacy policy<span class="sr-only"> (opens in new tab)</span></a>.</p></div>
+      <div class="consent-note" id="consentNote"><p>By submitting this page, you agree to share your information with and receive texts from Frontdoor Benefits. You may opt out at any time. Learn more about <a class="ext-link" href="https://www.openfrontdoor.com/privacy" target="_blank" rel="noopener">Frontdoor Benefits&rsquo;s privacy policy<span class="sr-only"> (opens in new tab)</span></a>.</p></div>
     </main>
 
     <footer class="step__footer">

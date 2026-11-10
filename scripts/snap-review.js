@@ -15,10 +15,10 @@
     var cont = document.getElementById('continueBtn');
     if (cont) cont.addEventListener('click', function () {
       if (cont.getAttribute('aria-disabled') === 'true') return;   /* a card is being edited */
-      var missing = ids.filter(function (id) { var el = document.getElementById(id); return el && !el.value; });
+      var missing = ids.filter(function (id) { var el = document.getElementById(id); return el && !el.value && !(id === 'fit' && store.get('need') === 'none'); });   /* None of the above skips the text-help question */
       ids.forEach(function (id) { A11y.clearGroupError(document.getElementById(id)); });
       if (missing.length) { missing.forEach(function (id) { A11y.groupError(document.getElementById(id), 'Selection required'); }); document.getElementById(missing[0]).focus(); return; }
-      window.location.href = store.get('fit') === 'no' ? 'snap-notfit.html' : 'snap-next.html';
+      window.location.href = (store.get('fit') === 'no' || store.get('need') === 'none') ? 'snap-notfit.html' : 'snap-next.html';
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
