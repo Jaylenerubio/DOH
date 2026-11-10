@@ -106,7 +106,7 @@
       qProg.hidden = !(hasUtil && a === 'yes');
       var p = progs();
       var onlyOther = p.length > 0 && p.every(function (k) { return k === 'other'; });
-      var incomeRoute = neither || (hasUtil && a === 'no') || (hasUtil && a === 'yes' && onlyOther);
+      var incomeRoute = (hasUtil && a === 'no') || (hasUtil && a === 'yes' && onlyOther);
       qHH.hidden = !incomeRoute;
       qInc.hidden = !(incomeRoute && hh() >= 1);        // appears once household ≥ 1
       store.set('path', incomeRoute ? 'eeap' : (hasUtil && a === 'yes' && p.length ? 'eap' : ''));
@@ -127,6 +127,11 @@
       var uList = document.querySelector('#qUtility .qgroup__chips'), aList = document.querySelector('#qAssistance .qgroup__row'), iList = document.querySelector('#qIncome .qgroup__row'), hStep = document.querySelector('#qHousehold .eap-stepper');
       [uList, aList, iList, hStep].forEach(function (el) { A11y.clearGroupError(el); }); A11y.clearGroupError(progList);
       if (!checked(utilCards).length) { A11y.groupError(uList, 'Selection required'); utilCards[0].focus(); return; }
+      if (utilCards.some(function (c) { return c.getAttribute('aria-checked') === 'true' && c.getAttribute('data-value') === 'neither'; })) {
+        A11y.clearStepError(errorEl);
+        window.location.href = 'eap-ineligible.html';   /* Neither utility → not eligible */
+        return;
+      }
       var path = store.get('path');
       if (path === 'eap') {
         if (!progs().length) { A11y.groupError(progList, 'Selection required'); progBoxes[0].focus(); return; }

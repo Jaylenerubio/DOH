@@ -63,7 +63,7 @@
       var a = store.get('assistance');
       var p = arr('programs');
       var onlyOther = p.length > 0 && p.every(function (k) { return k === 'other'; });
-      var incomeRoute = neither || (hasUtil && a === 'no') || (hasUtil && a === 'yes' && onlyOther);
+      var incomeRoute = (hasUtil && a === 'no') || (hasUtil && a === 'yes' && onlyOther);
       rows.assistance.hidden = !hasUtil;
       rows.programs.hidden = !(hasUtil && a === 'yes');
       var hh = Math.min(8, Math.max(0, parseInt(store.get('household') || '0', 10) || 0));
@@ -92,6 +92,7 @@
       [selUtil, progList, inHH, selIncome, selAssist].forEach(function (el) { if (el) A11y.clearGroupError(el); });
       if (!arr('utility').length) { A11y.groupError(selUtil, 'Selection required'); selUtil.focus(); return; }
       var path = store.get('path');
+      if (arr('utility').indexOf('neither') !== -1) { window.location.href = 'eap-ineligible.html'; return; }   /* Neither utility → not eligible */
       if (!path && store.get('assistance') === 'yes') { A11y.groupError(progList, 'Selection required'); progBoxes[0].focus(); return; }
       if (path === 'eeap' && !store.get('household')) { A11y.groupError(inHH, 'Required'); inHH.focus(); return; }
       if (path === 'eeap' && !store.get('income')) { A11y.groupError(selIncome, 'Selection required'); selIncome.focus(); return; }
