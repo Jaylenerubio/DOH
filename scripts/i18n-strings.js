@@ -715,11 +715,6 @@ window.I18N_DICT = {
   "ar": "تجديد التأمين الصحي الحالي",
   "zh": "續保現有健康保險"
  },
- "Return to dashboard": {
-  "es": "Volver al panel",
-  "ar": "العودة إلى لوحة المعلومات",
-  "zh": "返回儀表板"
- },
  "Review and submit": {
   "es": "Revisar y enviar",
   "ar": "المراجعة والإرسال",

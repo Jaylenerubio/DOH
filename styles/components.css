@@ -274,7 +274,7 @@ body {
 .btn--secondary.is-pressed { background: var(--color-neutral-300); }  /* darkened */
 
 /* Secondary buttons in step footers and interstitials are pills (Back,
-   Return to dashboard, Open client record). One rule; pages add none. */
+   Back to dashboard, Open client record). One rule; pages add none. */
 .step__footer .btn--secondary, .interstitial__actions .btn--secondary { border-radius: 999px; }
 .btn--back {
   border-radius: 999px;

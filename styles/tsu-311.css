@@ -2,7 +2,7 @@
    NYC DOH Affordability Navigator — TSU intake, "Call 311 for housing
    support" (terminal referral for the "None of the above" path). No progress
    bar. Contact rows with copy-to-clipboard fields + a 311 Online link, and a
-   single "Return to dashboard" action. Depends on: tokens.css, components.css.
+   single "Back to dashboard" action. Depends on: tokens.css, components.css.
    ========================================================================= */
 
 .tsu-311 .step__body { padding-top: 56px; }        /* no progress bar above; ~64px header→title */

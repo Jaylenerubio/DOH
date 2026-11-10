@@ -1,7 +1,7 @@
 /* =========================================================================
    NYC DOH Affordability Navigator — TSU intake, "Get connected" (completion).
    No progress bar; a two-line dark title + description and a single
-   "Return to dashboard" pill action. Depends on: tokens.css, components.css.
+   "Back to dashboard" pill action. Depends on: tokens.css, components.css.
    ========================================================================= */
 
 .tsu-connected .step__body { padding-top: 56px; }        /* no progress bar above; ~64px header→title */

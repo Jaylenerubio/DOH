@@ -1,7 +1,7 @@
 /* =========================================================================
    Handoff pages opened from the dashboard ("View details").
    Same page as the end of screening, with:
-   - "Back to dashboard" above the title; no bottom "Return to dashboard".
+   - "Back to dashboard" above the title; no bottom "Back to dashboard".
    - Intro text in #191919.
    - Partner-application programs (Hospital bills, Energy discounts, Tax
      credits): before applying → primary "Start your application";

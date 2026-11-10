@@ -1,7 +1,7 @@
 /* =========================================================================
    TSU intake — "Call 311 for housing support" (referral).
    Copy buttons put the number on the clipboard (with a brief check-mark);
-   "Return to dashboard" goes home.
+   "Back to dashboard" goes home.
    ========================================================================= */
 (function () {
   'use strict';

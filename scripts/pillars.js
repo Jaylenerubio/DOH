@@ -4,7 +4,7 @@
    - 'nyc.completed' : pillar keys whose handoff screen has been reached
    Terminal ("What's next") screens call Pillars.wireHandoff(currentKey):
    marks it screened and wires the primary CTA (partner application link, or
-   Return to dashboard).
+   Back to dashboard).
    ========================================================================= */
 window.Pillars = (function () {
   'use strict';
@@ -92,12 +92,12 @@ window.Pillars = (function () {
         btn.innerHTML = app.label + '<span class="sr-only"> (opens in new tab)</span>';
         btn.addEventListener('click', function () { var u = applyUrl(currentKey); if (u.charAt(0) !== '#') window.open(u, '_blank', 'noopener'); });
       } else {
-        btn.textContent = 'Return to dashboard';
+        btn.textContent = 'Back to dashboard';
         btn.addEventListener('click', function () { window.location.href = 'dashboard.html'; });
       }
     }
     if (rec) {
-      if (app) { rec.textContent = 'Return to dashboard'; rec.addEventListener('click', function () { window.location.href = 'dashboard.html'; }); }
+      if (app) { rec.textContent = 'Back to dashboard'; rec.addEventListener('click', function () { window.location.href = 'dashboard.html'; }); }
       else rec.hidden = true;
     }
   }

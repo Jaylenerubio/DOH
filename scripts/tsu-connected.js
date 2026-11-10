@@ -1,5 +1,5 @@
 /* =========================================================================
-   TSU intake — "Get connected" (completion). "Return to dashboard" goes home.
+   TSU intake — "Get connected" (completion). "Back to dashboard" goes home.
    ========================================================================= */
 (function () {
   'use strict';
