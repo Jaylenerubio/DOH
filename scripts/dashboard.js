@@ -103,6 +103,12 @@
     }
     var c = {}; try { c = JSON.parse(sessionStorage.getItem('nyc.contact') || '{}'); } catch (e) {}
     if (c.firstName) document.getElementById('greeting').textContent = 'Hi, ' + c.firstName;
+    /* Leaving a pillar before finishing discards its answers: coming back starts fresh.
+       Finished pillars (handoff reached or an outcome recorded) keep theirs for "View details". */
+    var STORE = { 'hospital-bills': 'nyc.df', 'medicaid': 'nyc.hi', 'financial-help': 'nyc.eap', 'tax-credits': 'nyc.eitc', 'anti-eviction': 'nyc.tsu', 'snap': 'nyc.snap' };
+    ORDER.forEach(function (k) {
+      try { if (!Pillars.isCompleted(k) && !sessionStorage.getItem('nyc.outcome.' + k)) sessionStorage.removeItem(STORE[k]); } catch (e) {}
+    });
     var stack = document.getElementById('appStack');
     ORDER.forEach(function (k) { stack.appendChild(card(k)); });
     var fs = document.getElementById('featuredSection'); if (fs) fs.hidden = true;
