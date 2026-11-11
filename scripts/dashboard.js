@@ -41,7 +41,7 @@
   };
 
   function raw(k) { try { return sessionStorage.getItem(k) || ''; } catch (e) { return ''; } }
-  function fmtLong(iso) { var d = iso ? new Date(iso) : new Date(); if (isNaN(d.getTime())) d = new Date(); return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }); }
+  function fmtLong(iso) { var d = iso ? new Date(iso) : new Date(); if (isNaN(d.getTime())) d = new Date(); if (window.I18n && I18n.lang() !== 'en') return I18n.date(d); return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }); }
   /* Demo PIN for the Dollar For application (real value comes from the partner). */
   function pin() {
     var v = raw('nyc.df.pin');

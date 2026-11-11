@@ -121,11 +121,89 @@ window.I18n = (function () {
       msg_financial: '開始申請。每次登入時，您都會收到一次性驗證碼。',
       msg_tax: '透過 GetYourRefund 開始申請，以報稅或修改報稅表。',
       support_pre: '您可以透過 ', support_post: ' 聯絡我們以尋求協助。'
+    },
+    ur: {
+      menu: 'مینو', close: 'بند کریں', my_profile: 'میری پروفائل', sign_out: 'سائن آؤٹ', account_menu: 'اکاؤنٹ مینو', account: 'اکاؤنٹ', choose_language: 'زبان منتخب کریں', language: 'زبان', current: ' (موجودہ)',
+      gov_site: 'شہر نیویارک کی سرکاری ویب سائٹ',
+      gov_h1: 'سرکاری ویب سائٹس .gov استعمال کرتی ہیں',
+      gov_p1: 'ایک .gov ویب سائٹ ریاستہائے متحدہ کی کسی سرکاری تنظیم کی ہوتی ہے۔',
+      gov_h2: 'محفوظ .gov ویب سائٹس HTTPS استعمال کرتی ہیں',
+      gov_p2: 'تالا (' + LOCK.replace('LOCKED', 'مقفل') + ') یا https:// کا مطلب ہے کہ آپ محفوظ طریقے سے .gov ویب سائٹ سے جڑ گئے ہیں۔ حساس معلومات صرف سرکاری اور محفوظ ویب سائٹس پر شیئر کریں۔',
+      home_aria: 'NYC Health — آپ کا ڈیش بورڈ',
+      translate_suffix: '، اس صفحے کا ترجمہ کریں',
+      welcome: 'خوش آمدید', welcome_name: 'خوش آمدید، {name}',
+      hi_there: 'السلام علیکم', hi_name: 'السلام علیکم، {name}',
+      dash_title: 'پروگرامز دریافت کریں', dash_title_muted: 'اور آپ کے لیے درخواستیں',
+      'hospital-bills': 'ہسپتال کے بل', 'hospital-bills_desc': 'معلوم کریں کہ آیا آپ کا ہسپتال آپ کے بل کم یا معاف کرے گا۔',
+      'medicaid': 'ہیلتھ انشورنس', 'medicaid_desc': 'مفت ہیلتھ انشورنس میں اندراج کروائیں یا اس کی تجدید کریں۔',
+      'anti-eviction': 'بے دخلی', 'anti-eviction_desc': 'اپنے گھر میں رہنے کے لیے مدد حاصل کریں۔',
+      'financial-help': 'توانائی پر رعایت', 'financial-help_desc': 'اپنے ماہانہ Con Edison اور National Grid کے بل کم کریں۔',
+      'tax-credits': 'ٹیکس کریڈٹ', 'tax-credits_desc': 'زیادہ سے زیادہ 3 سال کے ٹیکس کریڈٹ اور نقد ادائیگیوں کا دعویٰ کریں۔',
+      get_started: 'شروع کریں', referral_sent: 'ریفرل بھیج دیا گیا', sent_on: 'ریفرل {date} کو بھیجا گیا۔ ', no_match: 'کوئی مطابقت نہیں',
+      start_app: 'اپنی درخواست شروع کریں', new_tab: ' (نئے ٹیب میں کھلتا ہے)', view_details: 'تفصیلات دیکھیں',
+      msg_hospital: 'اپنا PIN #### استعمال کرتے ہوئے اپنی درخواست شروع کریں۔',
+      msg_medicaid: 'اندراج کا کاؤنسلر تین کاروباری دنوں کے اندر آپ کو کال کرے گا۔',
+      msg_eviction: 'کرایہ داروں کی معاونت کا ماہر 2–3 کاروباری دنوں میں آپ سے رابطہ کرے گا۔',
+      msg_financial: 'اپنی درخواست شروع کریں۔ ہر بار سائن ان کرنے پر آپ کو ایک بار استعمال ہونے والا کوڈ ملے گا۔',
+      msg_tax: '<bdi>GetYourRefund</bdi> کے ساتھ اپنی درخواست شروع کریں تاکہ اپنا ٹیکس ریٹرن فائل یا ترمیم کریں۔',
+      support_pre: 'آپ ہم سے اس پر رابطہ کر کے مدد کی درخواست کر سکتے ہیں: ', support_post: '۔'
+    },
+    fr: {
+      menu: 'Menu', close: 'Fermer', my_profile: 'Mon profil', sign_out: 'Se déconnecter', account_menu: 'Menu du compte', account: 'Compte', choose_language: 'Choisir une langue', language: 'Langue', current: ' (actuelle)',
+      gov_site: 'Site Web officiel de la Ville de New York',
+      gov_h1: 'Les sites officiels utilisent .gov',
+      gov_p1: 'Un site Web .gov appartient à une organisation gouvernementale officielle des États-Unis.',
+      gov_h2: 'Les sites .gov sécurisés utilisent HTTPS',
+      gov_p2: 'Un cadenas (' + LOCK.replace('LOCKED', 'verrouillé') + ') ou https:// signifie que vous êtes connecté en toute sécurité à un site .gov. Ne communiquez des informations sensibles que sur des sites officiels et sécurisés.',
+      home_aria: 'NYC Health — votre tableau de bord',
+      translate_suffix: ', traduire cette page',
+      welcome: 'Bon retour', welcome_name: 'Bon retour, {name}',
+      hi_there: 'Bonjour', hi_name: 'Bonjour, {name}',
+      dash_title: 'Découvrez les programmes', dash_title_muted: 'et demandes pour vous',
+      'hospital-bills': 'Factures d’hôpital', 'hospital-bills_desc': 'Découvrez si votre hôpital réduira ou annulera vos factures.',
+      'medicaid': 'Assurance maladie', 'medicaid_desc': 'Inscrivez-vous à une assurance maladie gratuite ou renouvelez-la.',
+      'anti-eviction': 'Expulsion', 'anti-eviction_desc': 'Obtenez de l’aide pour rester dans votre logement.',
+      'financial-help': 'Réductions d’énergie', 'financial-help_desc': 'Réduisez vos factures mensuelles de Con Edison et National Grid.',
+      'tax-credits': 'Crédits d’impôt', 'tax-credits_desc': 'Réclamez jusqu’à 3 ans de crédits d’impôt et de paiements en espèces.',
+      get_started: 'Commencer', referral_sent: 'Orientation envoyée', sent_on: 'Orientation envoyée le {date}. ', no_match: 'Aucune correspondance',
+      start_app: 'Commencer votre demande', new_tab: ' (s’ouvre dans un nouvel onglet)', view_details: 'Voir les détails',
+      msg_hospital: 'Commencez votre demande avec votre code PIN ####.',
+      msg_medicaid: 'Un conseiller d’inscription vous appellera dans un délai de trois jours ouvrables.',
+      msg_eviction: 'Un spécialiste de l’aide aux locataires vous contactera sous 2 à 3 jours ouvrables.',
+      msg_financial: 'Commencez votre demande. Vous recevrez un code à usage unique à chaque connexion.',
+      msg_tax: 'Commencez votre demande avec <bdi>GetYourRefund</bdi> pour déclarer ou modifier votre déclaration d’impôts.',
+      support_pre: 'Vous pouvez demander de l’aide en nous contactant à ', support_post: '.'
+    },
+    pl: {
+      menu: 'Menu', close: 'Zamknij', my_profile: 'Mój profil', sign_out: 'Wyloguj się', account_menu: 'Menu konta', account: 'Konto', choose_language: 'Wybierz język', language: 'Język', current: ' (bieżący)',
+      gov_site: 'Oficjalna strona internetowa miasta Nowy Jork',
+      gov_h1: 'Oficjalne strony używają domeny .gov',
+      gov_p1: 'Strona z domeną .gov należy do oficjalnej organizacji rządowej w Stanach Zjednoczonych.',
+      gov_h2: 'Bezpieczne strony .gov używają protokołu HTTPS',
+      gov_p2: 'Kłódka (' + LOCK.replace('LOCKED', 'zamknięta') + ') lub https:// oznacza, że połączono się bezpiecznie ze stroną .gov. Poufne informacje podawaj tylko na oficjalnych, bezpiecznych stronach.',
+      home_aria: 'NYC Health — Twój panel',
+      translate_suffix: ', przetłumacz tę stronę',
+      welcome: 'Witamy ponownie', welcome_name: 'Witamy ponownie, {name}',
+      hi_there: 'Cześć', hi_name: 'Cześć, {name}',
+      dash_title: 'Poznaj programy', dash_title_muted: 'i wnioski dla Ciebie',
+      'hospital-bills': 'Rachunki szpitalne', 'hospital-bills_desc': 'Sprawdź, czy Twój szpital obniży lub umorzy Twoje rachunki.',
+      'medicaid': 'Ubezpieczenie zdrowotne', 'medicaid_desc': 'Zapisz się na bezpłatne ubezpieczenie zdrowotne lub odnów je.',
+      'anti-eviction': 'Eksmisja', 'anti-eviction_desc': 'Uzyskaj pomoc, aby zostać w swoim domu.',
+      'financial-help': 'Zniżki na energię', 'financial-help_desc': 'Obniż swoje miesięczne rachunki od Con Edison i National Grid.',
+      'tax-credits': 'Ulgi podatkowe', 'tax-credits_desc': 'Odbierz ulgi podatkowe i wypłaty gotówkowe za maksymalnie 3 lata.',
+      get_started: 'Zacznij', referral_sent: 'Skierowanie wysłane', sent_on: 'Skierowanie wysłane {date}. ', no_match: 'Brak dopasowania',
+      start_app: 'Rozpocznij wniosek', new_tab: ' (otwiera się w nowej karcie)', view_details: 'Zobacz szczegóły',
+      msg_hospital: 'Rozpocznij wniosek, używając swojego kodu PIN ####.',
+      msg_medicaid: 'Doradca ds. rejestracji zadzwoni do Ciebie w ciągu trzech dni roboczych.',
+      msg_eviction: 'Specjalista ds. wsparcia najemców skontaktuje się z Tobą w ciągu 2–3 dni roboczych.',
+      msg_financial: 'Rozpocznij wniosek. Przy każdym logowaniu otrzymasz jednorazowy kod.',
+      msg_tax: 'Rozpocznij wniosek w <bdi>GetYourRefund</bdi>, aby złożyć lub poprawić zeznanie podatkowe.',
+      support_pre: 'Możesz poprosić o pomoc, kontaktując się z nami pod adresem ', support_post: '.'
     }
   };
   var RTL = { ar: 1, ur: 1, yi: 1, he: 1 };
-  var LOCALE = { en: 'en-US', es: 'es-US', ar: 'ar-u-nu-latn', zh: 'zh-TW' };
-  var FONTS = { ar: 'Noto+Sans+Arabic:wght@400;600', zh: 'Noto+Sans+TC:wght@400;600' };
+  var LOCALE = { en: 'en-US', es: 'es-US', ar: 'ar-u-nu-latn', zh: 'zh-TW', ur: 'ur-PK-u-nu-latn', fr: 'fr-FR', pl: 'pl-PL' };
+  var FONTS = { ar: 'Noto+Sans+Arabic:wght@400;600', ur: 'Noto+Sans+Arabic:wght@400;600', zh: 'Noto+Sans+TC:wght@400;600' };
   var listeners = [];
 
   function lang() { var l = ''; try { l = sessionStorage.getItem('nyc.language') || ''; } catch (e) {} return S[l] ? l : 'en'; }

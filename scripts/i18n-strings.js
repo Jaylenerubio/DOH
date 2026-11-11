@@ -1,9 +1,12 @@
-/* PLACEHOLDER translations (Spanish, Arabic, Traditional Chinese). Not reviewed by a translator. Key = English text. */
+/* PLACEHOLDER translations (Spanish, Arabic, Traditional Chinese; Urdu, French, Polish for the CSS path). Not reviewed by a translator. Key = English text. */
 window.I18N_DICT = {
  "(opens in new tab)": {
   "es": "(se abre en una pestaña nueva)",
   "ar": "(تفتح في علامة تبويب جديدة)",
-  "zh": "（在新分頁開啟）"
+  "zh": "（在新分頁開啟）",
+  "ur": "(نئے ٹیب میں کھلتا ہے)",
+  "fr": "(s’ouvre dans un nouvel onglet)",
+  "pl": "(otwiera się w nowej karcie)"
  },
  "<strong>Assist (virtual or in person):</strong> Answer a few questions, then match with an expert who will prepare and submit your return.": {
   "es": "<strong>Assist (virtual o en persona):</strong> Responda unas preguntas y le asignaremos a un experto que preparará y enviará su declaración.",
@@ -108,7 +111,10 @@ window.I18N_DICT = {
  "Back to dashboard": {
   "es": "Volver al panel",
   "ar": "العودة إلى لوحة المعلومات",
-  "zh": "返回儀表板"
+  "zh": "返回儀表板",
+  "ur": "ڈیش بورڈ پر واپس جائیں",
+  "fr": "Retour au tableau de bord",
+  "pl": "Wróć do panelu"
  },
  "Bank statements": {
   "es": "Estados de cuenta bancarios",
@@ -138,7 +144,10 @@ window.I18N_DICT = {
  "By submitting this page, you agree to share your information with Dollar For and CSS, and you agree to receive texts, calls, and emails from Dollar For and CSS about your application. You may opt out at any time. Learn more about <a>Dollar For’s privacy policy<span> (opens in new tab)</span></a> and <a>CSS’s privacy policy<span> (opens in new tab)</span></a>.": {
   "es": "Al enviar esta página, usted acepta compartir su información con Dollar For y CSS, y acepta recibir mensajes de texto, llamadas y correos electrónicos de Dollar For y CSS sobre su solicitud. Puede cancelar en cualquier momento. Obtenga más información sobre <a>la política de privacidad de Dollar For<span> (se abre en una pestaña nueva)</span></a> y <a>la política de privacidad de CSS<span> (se abre en una pestaña nueva)</span></a>.",
   "ar": "بإرسال هذه الصفحة، فإنك توافق على مشاركة معلوماتك مع Dollar For وCSS، وتوافق على تلقي رسائل نصية ومكالمات ورسائل بريد إلكتروني من Dollar For وCSS بشأن طلبك. يمكنك إلغاء الاشتراك في أي وقت. اطّلع على المزيد حول <a>سياسة الخصوصية لدى Dollar For<span> (تفتح في علامة تبويب جديدة)</span></a> و<a>سياسة الخصوصية لدى CSS<span> (تفتح في علامة تبويب جديدة)</span></a>.",
-  "zh": "提交此頁面即表示，您同意與 Dollar For 和 CSS 分享您的資訊，並同意 Dollar For 和 CSS 就您的申請透過簡訊、電話和電子郵件與您聯絡。您可隨時選擇退出。進一步了解 <a>Dollar For 的隱私權政策<span>（在新分頁開啟）</span></a>和 <a>CSS 的隱私權政策<span>（在新分頁開啟）</span></a>。"
+  "zh": "提交此頁面即表示，您同意與 Dollar For 和 CSS 分享您的資訊，並同意 Dollar For 和 CSS 就您的申請透過簡訊、電話和電子郵件與您聯絡。您可隨時選擇退出。進一步了解 <a>Dollar For 的隱私權政策<span>（在新分頁開啟）</span></a>和 <a>CSS 的隱私權政策<span>（在新分頁開啟）</span></a>。",
+  "ur": "اس صفحے کو جمع کروا کر، آپ Dollar For اور CSS کے ساتھ اپنی معلومات شیئر کرنے سے اتفاق کرتے ہیں، اور آپ اپنی درخواست کے بارے میں Dollar For اور CSS سے ٹیکسٹ پیغامات، کالز اور ای میلز موصول کرنے سے اتفاق کرتے ہیں۔ آپ کسی بھی وقت اس سے دستبردار ہو سکتے ہیں۔ <a>Dollar For کی پرائیویسی پالیسی<span> (نئے ٹیب میں کھلتا ہے)</span></a> اور <a>CSS کی پرائیویسی پالیسی<span> (نئے ٹیب میں کھلتا ہے)</span></a> کے بارے میں مزید جانیں۔",
+  "fr": "En envoyant cette page, vous acceptez que vos informations soient transmises à Dollar For et à CSS, ainsi que de recevoir des SMS, des appels et des courriels de Dollar For et de CSS au sujet de votre demande. Vous pouvez vous désabonner à tout moment. En savoir plus sur <a>la politique de confidentialité de Dollar For<span> (s’ouvre dans un nouvel onglet)</span></a> et <a>la politique de confidentialité de CSS<span> (s’ouvre dans un nouvel onglet)</span></a>.",
+  "pl": "Wysyłając tę stronę, zgadzasz się na udostępnienie swoich danych firmom Dollar For i CSS oraz na otrzymywanie od nich SMS-ów, połączeń telefonicznych i e-maili dotyczących Twojego wniosku. W dowolnym momencie możesz zrezygnować. Dowiedz się więcej o <a>polityce prywatności Dollar For<span> (otwiera się w nowej karcie)</span></a> i <a>polityce prywatności CSS<span> (otwiera się w nowej karcie)</span></a>."
  },
  "By submitting this page, you agree to share your information with GetYourRefund to help you claim your tax credits.": {
   "es": "Al enviar esta página, usted acepta compartir su información con GetYourRefund para ayudarle a reclamar sus créditos fiscales.",
@@ -203,7 +212,10 @@ window.I18N_DICT = {
  "Continue": {
   "es": "Continuar",
   "ar": "متابعة",
-  "zh": "繼續"
+  "zh": "繼續",
+  "ur": "جاری رکھیں",
+  "fr": "Continuer",
+  "pl": "Dalej"
  },
  "Copy": {
   "es": "Copiar",
@@ -943,7 +955,10 @@ window.I18N_DICT = {
  "We’ll share the information below with NYC Health partners Dollar For and the Community Service Society of New York (CSS).": {
   "es": "Compartiremos la información de abajo con Dollar For y la Community Service Society of New York (CSS), socios de NYC Health.",
   "ar": "سنشارك المعلومات أدناه مع شريكتَي NYC Health: Dollar For وجمعية الخدمة المجتمعية في نيويورك (CSS).",
-  "zh": "我們會將以下資訊分享給 NYC Health 的合作夥伴 Dollar For 和紐約社區服務協會 (CSS)。"
+  "zh": "我們會將以下資訊分享給 NYC Health 的合作夥伴 Dollar For 和紐約社區服務協會 (CSS)。",
+  "ur": "ہم نیچے دی گئی معلومات NYC Health کے شراکت داروں Dollar For اور کمیونٹی سروس سوسائٹی آف نیویارک (CSS) کے ساتھ شیئر کریں گے۔",
+  "fr": "Nous transmettrons les informations ci-dessous à Dollar For et à la Community Service Society of New York (CSS), partenaires de NYC Health.",
+  "pl": "Przekażemy poniższe informacje partnerom NYC Health: Dollar For oraz Community Service Society of New York (CSS)."
  },
  "We’ll use your responses to connect you with the Mayor’s <br>Tenant Support Unit, who will follow up to help with your housing situation.": {
   "es": "Usaremos sus respuestas para comunicarle con la Unidad de <br>Apoyo para Inquilinos de la Alcaldía, que le dará seguimiento para ayudarle con su situación de vivienda.",
@@ -1379,5 +1394,69 @@ window.I18N_DICT = {
   "es": "Al enviar esta página, usted acepta recibir llamadas de nuestros consejeros de inscripción.",
   "ar": "بإرسال هذه الصفحة، فإنك توافق على تلقي مكالمات من مستشاري التسجيل لدينا.",
   "zh": "提交此頁面即表示，您同意接聽我們註冊顧問打來的電話。"
+ },
+ "Get connected with a CSS health counselor <span>What’s next</span>": {
+  "es": "Comuníquese con un consejero de salud de CSS <span>Qué sigue</span>",
+  "ar": "تواصل مع مستشار صحي من CSS <span>الخطوة التالية</span>",
+  "zh": "與 CSS 健康輔導員聯繫 <span>下一步</span>",
+  "ur": "CSS کے ہیلتھ کاؤنسلر سے رابطہ کریں <span>آگے کیا ہوگا</span>",
+  "fr": "Contactez un conseiller en santé de CSS <span>Et ensuite</span>",
+  "pl": "Skontaktuj się z doradcą zdrowotnym CSS <span>Co dalej</span>"
+ },
+ "The Community Service Society of New York (CSS) can help you with your hospital bill. A CSS health counselor will call you within two business days.": {
+  "es": "La Community Service Society of New York (CSS) puede ayudarle con su factura del hospital. Un consejero de salud de CSS le llamará en un plazo de dos días hábiles.",
+  "ar": "يمكن لجمعية الخدمة المجتمعية في نيويورك (CSS) مساعدتك في فاتورة المستشفى. سيتصل بك مستشار صحي من CSS خلال يومَي عمل.",
+  "zh": "紐約社區服務協會 (CSS) 可以協助您處理醫院帳單。CSS 健康輔導員將在兩個工作天內致電給您。",
+  "ur": "کمیونٹی سروس سوسائٹی آف نیویارک (CSS) آپ کے ہسپتال کے بل میں آپ کی مدد کر سکتی ہے۔ CSS کا ہیلتھ کاؤنسلر دو کاروباری دنوں کے اندر آپ کو کال کرے گا۔",
+  "fr": "La Community Service Society of New York (CSS) peut vous aider avec votre facture d’hôpital. Un conseiller en santé de CSS vous appellera dans un délai de deux jours ouvrables.",
+  "pl": "Community Service Society of New York (CSS) może pomóc w sprawie rachunku ze szpitala. Doradca zdrowotny CSS zadzwoni do Ciebie w ciągu dwóch dni roboczych."
+ },
+ "Hospital bill forgiveness: CSS": {
+  "es": "Perdón de facturas de hospital: CSS",
+  "ar": "إعفاء فواتير المستشفى: CSS",
+  "zh": "醫院帳單減免：CSS",
+  "ur": "ہسپتال کے بل کی معافی: CSS",
+  "fr": "Remise de factures d’hôpital : CSS",
+  "pl": "Umorzenie rachunków szpitalnych: CSS"
+ },
+ "Hospital bill forgiveness": {
+  "es": "Perdón de facturas de hospital",
+  "ar": "إعفاء فواتير المستشفى",
+  "zh": "醫院帳單減免",
+  "ur": "ہسپتال کے بل کی معافی",
+  "fr": "Remise de factures d’hôpital",
+  "pl": "Umorzenie rachunków szpitalnych"
+ },
+ "We shared your info on {x}. A Community Service Society health counselor will call you within 2 business days.": {
+  "es": "Compartimos su información el {x}. Un consejero de salud de Community Service Society le llamará en un plazo de 2 días hábiles.",
+  "ar": "شاركنا معلوماتك في {x}. سيتصل بك مستشار صحي من جمعية الخدمة المجتمعية خلال يومَي عمل.",
+  "zh": "我們已於 {x} 分享您的資訊。社區服務協會的健康輔導員將在 2 個工作天內致電給您。",
+  "ur": "ہم نے آپ کی معلومات {x} کو شیئر کیں۔ کمیونٹی سروس سوسائٹی کا ہیلتھ کاؤنسلر 2 کاروباری دنوں کے اندر آپ کو کال کرے گا۔",
+  "fr": "Nous avons transmis vos informations le {x}. Un conseiller en santé de la Community Service Society vous appellera dans un délai de 2 jours ouvrables.",
+  "pl": "Przekazaliśmy Twoje dane dnia {x}. Doradca zdrowotny Community Service Society zadzwoni do Ciebie w ciągu 2 dni roboczych."
+ },
+ "Referral sent": {
+  "es": "Derivación enviada",
+  "ar": "تم إرسال الإحالة",
+  "zh": "已發送轉介",
+  "ur": "ریفرل بھیج دیا گیا",
+  "fr": "Orientation envoyée",
+  "pl": "Skierowanie wysłane"
+ },
+ "View details": {
+  "es": "Ver detalles",
+  "ar": "عرض التفاصيل",
+  "zh": "查看詳情",
+  "ur": "تفصیلات دیکھیں",
+  "fr": "Voir les détails",
+  "pl": "Zobacz szczegóły"
+ },
+ "No match": {
+  "es": "Sin coincidencia",
+  "ar": "لا توجد مطابقة",
+  "zh": "無符合項目",
+  "ur": "کوئی مطابقت نہیں",
+  "fr": "Aucune correspondance",
+  "pl": "Brak dopasowania"
  }
 };
