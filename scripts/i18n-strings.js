@@ -3194,11 +3194,11 @@ window.I18N_DICT = {
   "pl": "Wyślij ponownie"
  },
  "Get a code by email instead": {
-  "es": "Recibir un código por correo electrónico",
-  "ar": "احصل على رمز عبر البريد الإلكتروني بدلًا من ذلك",
+  "es": "Recibir código por correo",
+  "ar": "احصل على الرمز عبر البريد الإلكتروني",
   "zh": "改用電子郵件接收驗證碼",
-  "ur": "اس کے بجائے ای میل پر کوڈ حاصل کریں",
-  "fr": "Recevoir un code par e-mail à la place",
+  "ur": "ای میل پر کوڈ حاصل کریں",
+  "fr": "Recevoir le code par e-mail",
   "pl": "Otrzymaj kod e-mailem"
  },
  "<span>Changed numbers?</span> Email <a>hartconnectorsupport@health.nyc.gov</a>": {

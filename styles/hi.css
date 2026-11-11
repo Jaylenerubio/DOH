@@ -17,7 +17,7 @@
 .qgroup__list .choice-card { min-height: 56px; padding: var(--space-2); justify-content: flex-start; text-align: start; }
 /* Two-up row (Morning / Evening) hugs too, for consistency. */
 .qgroup__row { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: 12px; }
-.qgroup__row .choice-card { flex: 1 1 0; min-width: 0; white-space: nowrap; min-height: 56px; padding: var(--space-1) var(--space-2); }
+.qgroup__row .choice-card { flex: 1 1 0; min-width: 0; white-space: normal; text-align: center; overflow-wrap: anywhere; min-height: 56px; padding: var(--space-1) var(--space-2); }
 /* Chips: square-cornered cards sharing the row at equal widths; a chip wraps
    to the next row only when its label would otherwise truncate. */
 .qgroup__chips { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: 12px; }
