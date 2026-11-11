@@ -1458,5 +1458,645 @@ window.I18N_DICT = {
   "ur": "کوئی مطابقت نہیں",
   "fr": "Aucune correspondance",
   "pl": "Brak dopasowania"
+ },
+ "When did you get your <strong>most recent</strong> bill?": {
+  "es": "¿Cuándo recibió su factura <strong>más reciente</strong>?",
+  "ar": "متى تلقيت <strong>أحدث</strong> فاتورة لديك؟",
+  "zh": "您<strong>最近一次</strong>收到帳單是什麼時候？",
+  "ur": "آپ کو آپ کا <strong>تازہ ترین</strong> بل کب ملا؟",
+  "fr": "Quand avez-vous reçu votre facture <strong>la plus récente</strong> ?",
+  "pl": "Kiedy otrzymałeś(-aś) swój <strong>ostatni</strong> rachunek?"
+ },
+ "How much do you owe this hospital?": {
+  "es": "¿Cuánto le debe a este hospital?",
+  "ar": "كم المبلغ الذي تدين به لهذا المستشفى؟",
+  "zh": "您欠這家醫院多少錢？",
+  "ur": "آپ پر اس ہسپتال کا کتنا بقایا ہے؟",
+  "fr": "Combien devez-vous à cet hôpital ?",
+  "pl": "Ile jesteś winien(-na) temu szpitalowi?"
+ },
+ "Give your best guess of what you owe after insurance, Medicaid, health shares, or other contributions. We want to know how much you personally owe.": {
+  "es": "Dé su mejor estimación de lo que debe después del seguro, Medicaid, las cooperativas de salud u otras contribuciones. Queremos saber cuánto debe usted personalmente.",
+  "ar": "قدّم أفضل تقدير لما تدين به بعد التأمين وMedicaid ومشاركات الرعاية الصحية أو أي مساهمات أخرى. نريد أن نعرف المبلغ الذي تدين به أنت شخصيًا.",
+  "zh": "請盡量估算在扣除保險、Medicaid、健康分擔計劃或其他補助後，您個人還欠多少。",
+  "ur": "بیمہ، Medicaid، ہیلتھ شیئرز یا دیگر ادائیگیوں کے بعد آپ پر جو رقم واجب ہے اس کا اپنا بہترین اندازہ بتائیں۔ ہم جاننا چاہتے ہیں کہ آپ پر ذاتی طور پر کتنی رقم واجب ہے۔",
+  "fr": "Donnez votre meilleure estimation de ce que vous devez après l’assurance, Medicaid, les partages de frais de santé ou d’autres contributions. Nous voulons savoir combien vous devez personnellement.",
+  "pl": "Podaj swoje najlepsze oszacowanie kwoty, którą jesteś winien(-na) po uwzględnieniu ubezpieczenia, Medicaid, wspólnot zdrowotnych lub innych wpłat. Chcemy wiedzieć, ile osobiście jesteś winien(-na)."
+ },
+ "Tell us about yourself.": {
+  "es": "Cuéntenos sobre usted.",
+  "ar": "أخبرنا عن نفسك.",
+  "zh": "請告訴我們您的情況。",
+  "ur": "ہمیں اپنے بارے میں بتائیں۔",
+  "fr": "Parlez-nous de vous.",
+  "pl": "Opowiedz nam o sobie."
+ },
+ "Include spouses and dependents.": {
+  "es": "Incluya a su cónyuge y a las personas a su cargo.",
+  "ar": "أدرِج الأزواج والمعالين.",
+  "zh": "請包含配偶和受撫養人。",
+  "ur": "شریکِ حیات اور زیرِ کفالت افراد کو شامل کریں۔",
+  "fr": "Incluez votre conjoint(e) et les personnes à charge.",
+  "pl": "Uwzględnij małżonków i osoby na utrzymaniu."
+ },
+ "What’s your total household income per year?": {
+  "es": "¿Cuál es el ingreso total anual de su hogar?",
+  "ar": "ما إجمالي دخل أسرتك السنوي؟",
+  "zh": "您家庭每年的總收入是多少？",
+  "ur": "آپ کے گھرانے کی کل سالانہ آمدنی کتنی ہے؟",
+  "fr": "Quel est le revenu total annuel de votre foyer ?",
+  "pl": "Jaki jest łączny roczny dochód Twojego gospodarstwa domowego?"
+ },
+ "Give your best guess of what you and, if applicable, your spouse and dependents receive from paychecks, Social Security, unemployment and disability benefits, and child support.": {
+  "es": "Dé su mejor estimación de lo que usted y, si corresponde, su cónyuge y las personas a su cargo reciben de sueldos, Seguro Social, beneficios por desempleo y discapacidad, y manutención de menores.",
+  "ar": "قدّم أفضل تقدير لما تتلقاه أنت، وزوجك/زوجتك والمعالون إن وُجدوا، من الرواتب والضمان الاجتماعي وإعانات البطالة والإعاقة ونفقة الأطفال.",
+  "zh": "請盡量估算您（以及配偶和受撫養人，如適用）從薪資、社會安全金、失業和殘疾福利以及子女撫養費所得到的收入。",
+  "ur": "اپنا بہترین اندازہ بتائیں کہ آپ، اور اگر لاگو ہو تو آپ کے شریکِ حیات اور زیرِ کفالت افراد، تنخواہوں، سوشل سیکیورٹی، بے روزگاری اور معذوری کے فوائد، اور بچوں کے نان نفقہ سے کتنی رقم وصول کرتے ہیں۔",
+  "fr": "Donnez votre meilleure estimation de ce que vous recevez, vous et, le cas échéant, votre conjoint(e) et les personnes à charge, de la part des salaires, de la Sécurité sociale, des allocations de chômage et d’invalidité et des pensions alimentaires pour enfants.",
+  "pl": "Podaj swoje najlepsze oszacowanie kwoty, którą Ty oraz, jeśli dotyczy, Twój małżonek i osoby na utrzymaniu otrzymujecie z wynagrodzeń, ubezpieczenia społecznego, zasiłków dla bezrobotnych i niepełnosprawnych oraz alimentów na dzieci."
+ },
+ "Do you have an unaffordable hospital bill?": {
+  "es": "¿Tiene una factura de hospital que no puede pagar?",
+  "ar": "هل لديك فاتورة مستشفى لا تستطيع تحمّلها؟",
+  "zh": "您有負擔不起的醫院帳單嗎？",
+  "ur": "کیا آپ کے پاس ہسپتال کا ایسا بل ہے جسے ادا کرنا آپ کے بس میں نہیں؟",
+  "fr": "Avez-vous une facture d’hôpital que vous ne pouvez pas payer ?",
+  "pl": "Czy masz rachunek ze szpitala, którego nie jesteś w stanie zapłacić?"
+ },
+ "NYC Health partners with Dollar For and the Community Service Society of New York (CSS) to help you apply for hospital financial assistance. Your hospital decides if you qualify.": {
+  "es": "NYC Health colabora con Dollar For y la Community Service Society of New York (CSS) para ayudarle a solicitar asistencia financiera hospitalaria. Su hospital decide si usted califica.",
+  "ar": "تتعاون NYC Health مع Dollar For وجمعية الخدمة المجتمعية في نيويورك (CSS) لمساعدتك في التقدّم بطلب للحصول على مساعدة مالية للمستشفى. يقرر مستشفاك ما إذا كنت مؤهلًا.",
+  "zh": "NYC Health 與 Dollar For 及紐約社區服務協會 (CSS) 合作，協助您申請醫院財務援助。您是否符合資格由醫院決定。",
+  "ur": "NYC Health ہسپتال کی مالی امداد کے لیے درخواست دینے میں آپ کی مدد کے لیے Dollar For اور کمیونٹی سروس سوسائٹی آف نیویارک (CSS) کے ساتھ شراکت کرتا ہے۔ آپ اہل ہیں یا نہیں، اس کا فیصلہ آپ کا ہسپتال کرتا ہے۔",
+  "fr": "NYC Health s’associe à Dollar For et à la Community Service Society of New York (CSS) pour vous aider à demander une aide financière hospitalière. C’est votre hôpital qui décide si vous y avez droit.",
+  "pl": "NYC Health współpracuje z Dollar For i Community Service Society of New York (CSS), aby pomóc Ci złożyć wniosek o pomoc finansową szpitala. To szpital decyduje, czy się kwalifikujesz."
+ },
+ "We’ll share the information below with NYC Health partners Dollar For and the Community Service Society of New York (CSS). They’ll use and store your data to help with your financial assistance application.": {
+  "es": "Compartiremos la información de abajo con Dollar For y la Community Service Society of New York (CSS), socios de NYC Health. Usarán y guardarán sus datos para ayudarle con su solicitud de asistencia financiera.",
+  "ar": "سنشارك المعلومات أدناه مع شريكتَي NYC Health: Dollar For وجمعية الخدمة المجتمعية في نيويورك (CSS). وسيستخدمان بياناتك ويحتفظان بها لمساعدتك في طلب المساعدة المالية.",
+  "zh": "我們會將以下資訊分享給 NYC Health 的合作夥伴 Dollar For 和紐約社區服務協會 (CSS)。他們會使用並儲存您的資料，以協助您申請財務援助。",
+  "ur": "ہم نیچے دی گئی معلومات NYC Health کے شراکت داروں Dollar For اور کمیونٹی سروس سوسائٹی آف نیویارک (CSS) کے ساتھ شیئر کریں گے۔ وہ آپ کی مالی امداد کی درخواست میں مدد کے لیے آپ کا ڈیٹا استعمال اور محفوظ کریں گے۔",
+  "fr": "Nous transmettrons les informations ci-dessous à Dollar For et à la Community Service Society of New York (CSS), partenaires de NYC Health. Ils utiliseront et conserveront vos données pour vous aider avec votre demande d’aide financière.",
+  "pl": "Przekażemy poniższe informacje partnerom NYC Health: Dollar For oraz Community Service Society of New York (CSS). Będą oni wykorzystywać i przechowywać Twoje dane, aby pomóc w Twoim wniosku o pomoc finansową."
+ },
+ "Community Health Advocates": {
+  "es": "Community Health Advocates",
+  "ar": "Community Health Advocates",
+  "zh": "Community Health Advocates",
+  "ur": "Community Health Advocates",
+  "fr": "Community Health Advocates",
+  "pl": "Community Health Advocates"
+ },
+ "Call Community Health Advocates, (888) 614-5400": {
+  "es": "Llame a Community Health Advocates, (888) 614-5400",
+  "ar": "اتصل بـ Community Health Advocates على الرقم ‎(888) 614-5400‎",
+  "zh": "致電 Community Health Advocates，(888) 614-5400",
+  "ur": "Community Health Advocates کو کال کریں، (888) 614-5400",
+  "fr": "Appelez Community Health Advocates, (888) 614-5400",
+  "pl": "Zadzwoń do Community Health Advocates, (888) 614-5400"
+ },
+ "Call": {
+  "es": "Llamar",
+  "ar": "اتصل",
+  "zh": "撥打",
+  "ur": "کال کریں",
+  "fr": "Appeler",
+  "pl": "Zadzwoń"
+ },
+ "You’re not eligible for energy discounts at this time.": {
+  "es": "Por el momento, no es elegible para los descuentos de energía.",
+  "ar": "أنت غير مؤهل للحصول على خصومات الطاقة في الوقت الحالي.",
+  "zh": "您目前不符合能源折扣資格。",
+  "ur": "آپ فی الحال توانائی پر رعایت کے اہل نہیں ہیں۔",
+  "fr": "Vous n’êtes pas admissible aux réductions d’énergie pour le moment.",
+  "pl": "Obecnie nie kwalifikujesz się do zniżek na energię."
+ },
+ "Select the government assistance program(s) you’re enrolled in: <span>(Select all that apply)</span>": {
+  "es": "Seleccione los programas de asistencia del gobierno en los que está inscrito: <span>(Seleccione todos los que correspondan)</span>",
+  "ar": "اختر برامج المساعدة الحكومية المسجَّل فيها: <span>(اختر كل ما ينطبق)</span>",
+  "zh": "請選擇您已加入的政府援助計劃：<span>（可複選）</span>",
+  "ur": "وہ سرکاری امدادی پروگرام منتخب کریں جن میں آپ کا اندراج ہے: <span>(جو بھی لاگو ہوں سب منتخب کریں)</span>",
+  "fr": "Sélectionnez les programmes d’aide gouvernementale auxquels vous êtes inscrit(e) : <span>(Sélectionnez toutes les réponses qui s’appliquent)</span>",
+  "pl": "Wybierz rządowe programy pomocy, w których uczestniczysz: <span>(Zaznacz wszystkie, które mają zastosowanie)</span>"
+ },
+ "SNAP (food stamps)": {
+  "es": "SNAP (cupones de alimentos)",
+  "ar": "SNAP (قسائم الغذاء)",
+  "zh": "SNAP（食品券）",
+  "ur": "SNAP (فوڈ اسٹیمپس)",
+  "fr": "SNAP (bons alimentaires)",
+  "pl": "SNAP (kupony żywnościowe)"
+ },
+ "Medicaid": {
+  "es": "Medicaid",
+  "ar": "Medicaid",
+  "zh": "Medicaid",
+  "ur": "Medicaid",
+  "fr": "Medicaid",
+  "pl": "Medicaid"
+ },
+ "Cash Assistance (TANF)": {
+  "es": "Asistencia en efectivo (TANF)",
+  "ar": "المساعدة النقدية (TANF)",
+  "zh": "現金援助 (TANF)",
+  "ur": "نقد امداد (TANF)",
+  "fr": "Aide en espèces (TANF)",
+  "pl": "Pomoc pieniężna (TANF)"
+ },
+ "Family Assistance or Safety Net Assistance": {
+  "es": "Asistencia Familiar o Asistencia de Red de Seguridad",
+  "ar": "مساعدة الأسرة أو مساعدة شبكة الأمان",
+  "zh": "家庭援助或安全網援助",
+  "ur": "فیملی اسسٹنس یا سیفٹی نیٹ اسسٹنس",
+  "fr": "Aide aux familles ou Aide du filet de sécurité",
+  "pl": "Pomoc dla rodzin lub Pomoc z sieci bezpieczeństwa"
+ },
+ "Lifeline": {
+  "es": "Lifeline",
+  "ar": "Lifeline",
+  "zh": "Lifeline",
+  "ur": "Lifeline",
+  "fr": "Lifeline",
+  "pl": "Lifeline"
+ },
+ "Utility Guarantee/Direct Vendor programs": {
+  "es": "Programas de Garantía de Servicios Públicos/Pago Directo a Proveedores",
+  "ar": "برامج ضمان المرافق/الدفع المباشر للمورّد",
+  "zh": "公用事業擔保／直接付款給供應商計劃",
+  "ur": "یوٹیلیٹی گارنٹی/ڈائریکٹ وینڈر پروگرامز",
+  "fr": "Programmes de garantie des services publics/paiement direct au fournisseur",
+  "pl": "Programy gwarancji usług komunalnych/bezpośredniej płatności dla dostawcy"
+ },
+ "Federal Public Housing Assistance": {
+  "es": "Asistencia federal de vivienda pública",
+  "ar": "المساعدة الفيدرالية للإسكان العام",
+  "zh": "聯邦公共住房援助",
+  "ur": "وفاقی پبلک ہاؤسنگ اسسٹنس",
+  "fr": "Aide fédérale au logement public",
+  "pl": "Federalna pomoc w zakresie mieszkań publicznych"
+ },
+ "Veterans Disability or Survivors Pension": {
+  "es": "Pensión por discapacidad de veteranos o pensión de sobrevivientes",
+  "ar": "معاش إعاقة المحاربين القدامى أو معاش الورثة",
+  "zh": "退伍軍人殘疾或遺屬撫卹金",
+  "ur": "سابق فوجیوں کی معذوری یا پسماندگان کی پنشن",
+  "fr": "Pension d’invalidité des anciens combattants ou pension de survivants",
+  "pl": "Renta inwalidzka dla weteranów lub renta rodzinna"
+ },
+ "Other/not listed": {
+  "es": "Otro/no aparece en la lista",
+  "ar": "أخرى/غير مدرجة",
+  "zh": "其他／未列出",
+  "ur": "دیگر/فہرست میں شامل نہیں",
+  "fr": "Autre/non répertorié",
+  "pl": "Inne/nie ma na liście"
+ },
+ "By submitting this page, you agree to share your information with your utility company. They may verify it and share it with other organizations to process your application, manage your participation, and make sure program rules are followed.": {
+  "es": "Al enviar esta página, usted acepta compartir su información con su compañía de servicios públicos. Podrán verificarla y compartirla con otras organizaciones para procesar su solicitud, administrar su participación y asegurarse de que se cumplan las reglas del programa.",
+  "ar": "بإرسال هذه الصفحة، فإنك توافق على مشاركة معلوماتك مع شركة المرافق الخاصة بك. وقد تتحقق منها وتشاركها مع جهات أخرى لمعالجة طلبك وإدارة مشاركتك والتأكد من الالتزام بقواعد البرنامج.",
+  "zh": "提交此頁面即表示，您同意與您的公用事業公司分享您的資訊。他們可能會核實這些資訊，並與其他機構分享，以處理您的申請、管理您的參與，並確保遵守計劃規定。",
+  "ur": "اس صفحے کو جمع کروا کر، آپ اپنی معلومات اپنی یوٹیلیٹی کمپنی کے ساتھ شیئر کرنے سے اتفاق کرتے ہیں۔ وہ اس کی تصدیق کر سکتے ہیں اور آپ کی درخواست پر کارروائی، آپ کی شرکت کے انتظام اور پروگرام کے قواعد کی پابندی یقینی بنانے کے لیے اسے دیگر اداروں کے ساتھ شیئر کر سکتے ہیں۔",
+  "fr": "En envoyant cette page, vous acceptez que vos informations soient transmises à votre fournisseur de services publics. Il pourra les vérifier et les partager avec d’autres organisations afin de traiter votre demande, de gérer votre participation et de veiller au respect des règles du programme.",
+  "pl": "Wysyłając tę stronę, zgadzasz się na udostępnienie swoich danych firmie świadczącej usługi komunalne. Może ona je zweryfikować i udostępnić innym organizacjom w celu rozpatrzenia wniosku, zarządzania Twoim udziałem i dopilnowania przestrzegania zasad programu."
+ },
+ "We’ll guide you through your utility company’s application, step-by-step.": {
+  "es": "Le guiaremos paso a paso en la solicitud de su compañía de servicios públicos.",
+  "ar": "سنرشدك خطوة بخطوة خلال طلب شركة المرافق الخاصة بك.",
+  "zh": "我們會逐步引導您完成公用事業公司的申請。",
+  "ur": "ہم آپ کی یوٹیلیٹی کمپنی کی درخواست میں قدم بہ قدم آپ کی رہنمائی کریں گے۔",
+  "fr": "Nous vous guiderons pas à pas dans la demande auprès de votre fournisseur de services publics.",
+  "pl": "Przeprowadzimy Cię krok po kroku przez wniosek do Twojej firmy świadczącej usługi komunalne."
+ },
+ "Tenant support": {
+  "es": "Apoyo para inquilinos",
+  "ar": "دعم المستأجرين",
+  "zh": "租戶支援",
+  "ur": "کرایہ داروں کی معاونت",
+  "fr": "Soutien aux locataires",
+  "pl": "Wsparcie dla najemców"
+ },
+ "If you are facing eviction, we’ll share the information below with the NYC Mayor’s Tenant Support Unit (TSU) to help you get the support you need.": {
+  "es": "Si enfrenta un desalojo, compartiremos la información de abajo con la Unidad de Apoyo a Inquilinos (TSU) de la Alcaldía de NYC para ayudarle a obtener el apoyo que necesita.",
+  "ar": "إذا كنت تواجه الإخلاء، فسنشارك المعلومات أدناه مع وحدة دعم المستأجرين (TSU) التابعة لعمدة نيويورك لمساعدتك في الحصول على الدعم الذي تحتاج إليه.",
+  "zh": "如果您面臨驅逐，我們會將以下資訊分享給紐約市市長辦公室租戶支援小組 (TSU)，協助您獲得所需的支援。",
+  "ur": "اگر آپ کو بے دخلی کا سامنا ہے، تو ہم نیچے دی گئی معلومات NYC کے میئر کے ٹیننٹ سپورٹ یونٹ (TSU) کے ساتھ شیئر کریں گے تاکہ آپ کو مطلوبہ مدد حاصل کرنے میں مدد ملے۔",
+  "fr": "Si vous risquez d’être expulsé(e), nous transmettrons les informations ci-dessous à l’Unité de soutien aux locataires (TSU) du maire de NYC afin de vous aider à obtenir le soutien dont vous avez besoin.",
+  "pl": "Jeśli grozi Ci eksmisja, przekażemy poniższe informacje Jednostce Wsparcia Najemców (TSU) przy burmistrzu NYC, aby pomóc Ci uzyskać potrzebne wsparcie."
+ },
+ "Your landlord gave you a notice that they<br>are starting eviction proceedings.": {
+  "es": "Su arrendador le entregó un aviso de que<br>está iniciando un proceso de desalojo.",
+  "ar": "أبلغك مالك العقار بإشعار بأنه<br>يبدأ إجراءات الإخلاء.",
+  "zh": "您的房東通知您，<br>他們正在啟動驅逐程序。",
+  "ur": "آپ کے مالک مکان نے آپ کو نوٹس دیا ہے کہ وہ<br>بے دخلی کی کارروائی شروع کر رہے ہیں۔",
+  "fr": "Votre propriétaire vous a remis un avis indiquant qu’il<br>engage une procédure d’expulsion.",
+  "pl": "Właściciel mieszkania wręczył Ci zawiadomienie,<br>że wszczyna postępowanie eksmisyjne."
+ },
+ "Your landlord gave you a notice that they are starting eviction proceedings.": {
+  "es": "Su arrendador le entregó un aviso de que está iniciando un proceso de desalojo.",
+  "ar": "أبلغك مالك العقار بإشعار بأنه يبدأ إجراءات الإخلاء.",
+  "zh": "您的房東通知您，他們正在啟動驅逐程序。",
+  "ur": "آپ کے مالک مکان نے آپ کو نوٹس دیا ہے کہ وہ بے دخلی کی کارروائی شروع کر رہے ہیں۔",
+  "fr": "Votre propriétaire vous a remis un avis indiquant qu’il engage une procédure d’expulsion.",
+  "pl": "Właściciel mieszkania wręczył Ci zawiadomienie, że wszczyna postępowanie eksmisyjne."
+ },
+ "You have an eviction case in Housing Court.": {
+  "es": "Tiene un caso de desalojo en el Tribunal de Vivienda.",
+  "ar": "لديك قضية إخلاء في محكمة الإسكان.",
+  "zh": "您在住房法庭有一宗驅逐案件。",
+  "ur": "آپ کے خلاف ہاؤسنگ کورٹ میں بے دخلی کا مقدمہ چل رہا ہے۔",
+  "fr": "Vous avez une affaire d’expulsion devant le tribunal du logement (Housing Court).",
+  "pl": "Toczy się przeciwko Tobie sprawa eksmisyjna w sądzie mieszkaniowym (Housing Court)."
+ },
+ "Your landlord shut off your utilities to force you out.": {
+  "es": "Su arrendador le cortó los servicios públicos para obligarle a irse.",
+  "ar": "قطع مالك العقار عنك المرافق لإجبارك على المغادرة.",
+  "zh": "您的房東切斷了水電等公用服務，以逼您搬走。",
+  "ur": "آپ کے مالک مکان نے آپ کو نکالنے کے لیے آپ کی یوٹیلیٹیز بند کر دیں۔",
+  "fr": "Votre propriétaire a coupé vos services publics pour vous forcer à partir.",
+  "pl": "Właściciel odciął Ci media, aby zmusić Cię do wyprowadzki."
+ },
+ "Your landlord changed or removed your apartment<br>lock without a court order.": {
+  "es": "Su arrendador cambió o quitó la cerradura<br>de su apartamento sin una orden judicial.",
+  "ar": "غيّر مالك العقار أو أزال قفل شقتك<br>دون أمر من المحكمة.",
+  "zh": "您的房東在沒有法院命令的情況下<br>更換或拆除了您公寓的門鎖。",
+  "ur": "آپ کے مالک مکان نے عدالتی حکم کے بغیر آپ کے اپارٹمنٹ کا<br>تالا تبدیل کر دیا یا ہٹا دیا۔",
+  "fr": "Votre propriétaire a changé ou retiré la serrure<br>de votre appartement sans ordonnance du tribunal.",
+  "pl": "Właściciel zmienił lub usunął zamek<br>w Twoim mieszkaniu bez nakazu sądowego."
+ },
+ "Your landlord changed or removed your apartment lock without a court order.": {
+  "es": "Su arrendador cambió o quitó la cerradura de su apartamento sin una orden judicial.",
+  "ar": "غيّر مالك العقار أو أزال قفل شقتك دون أمر من المحكمة.",
+  "zh": "您的房東在沒有法院命令的情況下更換或拆除了您公寓的門鎖。",
+  "ur": "آپ کے مالک مکان نے عدالتی حکم کے بغیر آپ کے اپارٹمنٹ کا تالا تبدیل کر دیا یا ہٹا دیا۔",
+  "fr": "Votre propriétaire a changé ou retiré la serrure de votre appartement sans ordonnance du tribunal.",
+  "pl": "Właściciel zmienił lub usunął zamek w Twoim mieszkaniu bez nakazu sądowego."
+ },
+ "Your landlord threw out your belongings without a court order.": {
+  "es": "Su arrendador tiró sus pertenencias sin una orden judicial.",
+  "ar": "ألقى مالك العقار بأغراضك خارج المسكن دون أمر من المحكمة.",
+  "zh": "您的房東在沒有法院命令的情況下丟棄了您的物品。",
+  "ur": "آپ کے مالک مکان نے عدالتی حکم کے بغیر آپ کا سامان پھینک دیا۔",
+  "fr": "Votre propriétaire a jeté vos affaires sans ordonnance du tribunal.",
+  "pl": "Właściciel wyrzucił Twoje rzeczy bez nakazu sądowego."
+ },
+ "Call 311 for housing support": {
+  "es": "Llame al 311 para recibir apoyo con la vivienda",
+  "ar": "اتصل بالرقم 311 للحصول على دعم في مجال الإسكان",
+  "zh": "致電 311 尋求住房支援",
+  "ur": "رہائش کی معاونت کے لیے 311 پر کال کریں",
+  "fr": "Appelez le 311 pour obtenir de l’aide en matière de logement",
+  "pl": "Zadzwoń pod 311 po wsparcie w sprawie mieszkaniowej"
+ },
+ "Tell 311 what’s going on and they’ll connect you with the right team.": {
+  "es": "Cuéntele al 311 lo que está pasando y le comunicarán con el equipo adecuado.",
+  "ar": "أخبر 311 بما يحدث وسيوصلونك بالفريق المناسب.",
+  "zh": "請告訴 311 您的情況，他們會為您轉接適當的團隊。",
+  "ur": "311 کو بتائیں کہ کیا ہو رہا ہے اور وہ آپ کو درست ٹیم سے ملا دیں گے۔",
+  "fr": "Dites au 311 ce qui se passe et il vous mettra en relation avec la bonne équipe.",
+  "pl": "Powiedz 311, co się dzieje, a połączą Cię z odpowiednim zespołem."
+ },
+ "Get connected with the NYC Tenant Support Unit <span>What’s next</span>": {
+  "es": "Comuníquese con la Unidad de Apoyo a Inquilinos de NYC <span>Qué sigue</span>",
+  "ar": "تواصل مع وحدة دعم المستأجرين في نيويورك <span>الخطوة التالية</span>",
+  "zh": "與紐約市租戶支援小組聯繫 <span>下一步</span>",
+  "ur": "NYC کے ٹیننٹ سپورٹ یونٹ سے رابطہ کریں <span>آگے کیا ہوگا</span>",
+  "fr": "Contactez l’Unité de soutien aux locataires de NYC <span>Et ensuite</span>",
+  "pl": "Skontaktuj się z Jednostką Wsparcia Najemców NYC <span>Co dalej</span>"
+ },
+ "A tenant helpline specialist will call you within three business days (72 hours). The call will come from an unknown number between 9:30 a.m. to 5 p.m., Monday to Friday.": {
+  "es": "Un especialista de la línea de ayuda para inquilinos le llamará en un plazo de tres días hábiles (72 horas). La llamada vendrá de un número desconocido entre las 9:30 a. m. y las 5 p. m., de lunes a viernes.",
+  "ar": "سيتصل بك أخصائي من خط مساعدة المستأجرين خلال ثلاثة أيام عمل (72 ساعة). ستأتي المكالمة من رقم غير معروف بين الساعة 9:30 صباحًا و5 مساءً، من الاثنين إلى الجمعة.",
+  "zh": "租戶協助專線專員將在三個工作天（72 小時）內致電給您。來電可能顯示為未知號碼，時間為週一至週五上午 9:30 至下午 5:00。",
+  "ur": "ٹیننٹ ہیلپ لائن کا ماہر تین کاروباری دنوں (72 گھنٹے) کے اندر آپ کو کال کرے گا۔ کال پیر سے جمعہ، صبح 9:30 سے شام 5 بجے کے درمیان کسی نامعلوم نمبر سے آئے گی۔",
+  "fr": "Un spécialiste de la ligne d’assistance aux locataires vous appellera dans un délai de trois jours ouvrables (72 heures). L’appel proviendra d’un numéro inconnu, entre 9 h 30 et 17 h, du lundi au vendredi.",
+  "pl": "Specjalista infolinii dla najemców zadzwoni do Ciebie w ciągu trzech dni roboczych (72 godzin). Połączenie nadejdzie z nieznanego numeru między 9:30 a 17:00, od poniedziałku do piątku."
+ },
+ "Need help with food?": {
+  "es": "¿Necesita ayuda con la comida?",
+  "ar": "هل تحتاج إلى مساعدة في الطعام؟",
+  "zh": "需要食物方面的協助嗎？",
+  "ur": "کھانے کے لیے مدد چاہیے؟",
+  "fr": "Besoin d’aide pour vous nourrir ?",
+  "pl": "Potrzebujesz pomocy z jedzeniem?"
+ },
+ "Get one-on-one help applying for, renewing, and keeping SNAP (food stamps). NYC Health partners with Frontdoor Benefits to offer this service.": {
+  "es": "Reciba ayuda personalizada para solicitar, renovar y mantener SNAP (cupones de alimentos). NYC Health se asocia con Frontdoor Benefits para ofrecer este servicio.",
+  "ar": "احصل على مساعدة فردية في التقدّم بطلب SNAP (قسائم الغذاء) وتجديده والاحتفاظ به. تتعاون NYC Health مع Frontdoor Benefits لتقديم هذه الخدمة.",
+  "zh": "獲得一對一協助，申請、續期並保有 SNAP（食品券）。NYC Health 與 Frontdoor Benefits 合作提供此服務。",
+  "ur": "SNAP (فوڈ اسٹیمپس) کے لیے درخواست دینے، تجدید کرنے اور اسے برقرار رکھنے میں ون آن ون مدد حاصل کریں۔ NYC Health یہ سروس فراہم کرنے کے لیے Frontdoor Benefits کے ساتھ شراکت کرتا ہے۔",
+  "fr": "Obtenez une aide personnalisée pour demander, renouveler et conserver le SNAP (bons alimentaires). NYC Health s’associe à Frontdoor Benefits pour offrir ce service.",
+  "pl": "Uzyskaj indywidualną pomoc w ubieganiu się o SNAP (kupony żywnościowe), jego odnawianiu i utrzymaniu. NYC Health współpracuje z Frontdoor Benefits, aby zapewnić tę usługę."
+ },
+ "What do you need help with?": {
+  "es": "¿Con qué necesita ayuda?",
+  "ar": "ما الذي تحتاج إلى مساعدة فيه؟",
+  "zh": "您需要什麼協助？",
+  "ur": "آپ کو کس چیز میں مدد چاہیے؟",
+  "fr": "De quoi avez-vous besoin ?",
+  "pl": "W czym potrzebujesz pomocy?"
+ },
+ "I want to check if I qualify for SNAP and apply": {
+  "es": "Quiero saber si califico para SNAP y solicitarlo",
+  "ar": "أريد معرفة ما إذا كنت مؤهلًا للحصول على SNAP والتقدّم بطلب",
+  "zh": "我想確認自己是否符合 SNAP 資格並申請",
+  "ur": "میں یہ جانچنا چاہتا/چاہتی ہوں کہ آیا میں SNAP کا اہل ہوں اور درخواست دینا چاہتا/چاہتی ہوں",
+  "fr": "Je veux savoir si je remplis les conditions pour le SNAP et faire une demande",
+  "pl": "Chcę sprawdzić, czy kwalifikuję się do SNAP, i złożyć wniosek"
+ },
+ "I applied for SNAP but haven’t gotten my benefits yet": {
+  "es": "Solicité SNAP pero todavía no he recibido mis beneficios",
+  "ar": "تقدّمت بطلب للحصول على SNAP لكنني لم أحصل على مزاياي بعد",
+  "zh": "我已申請 SNAP，但還沒有收到福利",
+  "ur": "میں نے SNAP کے لیے درخواست دی ہے لیکن مجھے ابھی تک فوائد نہیں ملے",
+  "fr": "J’ai demandé le SNAP, mais je n’ai pas encore reçu mes prestations",
+  "pl": "Złożyłem(-am) wniosek o SNAP, ale jeszcze nie otrzymałem(-am) świadczeń"
+ },
+ "I want to keep my SNAP benefits (renew, meet work rules, or update my case)": {
+  "es": "Quiero mantener mis beneficios de SNAP (renovar, cumplir con los requisitos de trabajo o actualizar mi caso)",
+  "ar": "أريد الاحتفاظ بمزايا SNAP الخاصة بي (التجديد أو استيفاء شروط العمل أو تحديث ملفي)",
+  "zh": "我想保有我的 SNAP 福利（續期、符合工作規定或更新個案）",
+  "ur": "میں اپنے SNAP کے فوائد برقرار رکھنا چاہتا/چاہتی ہوں (تجدید، کام کے قواعد کی تکمیل، یا اپنے کیس کی تازہ کاری)",
+  "fr": "Je veux conserver mes prestations SNAP (renouvellement, respect des règles de travail ou mise à jour de mon dossier)",
+  "pl": "Chcę zachować swoje świadczenia SNAP (odnowienie, spełnienie wymogów pracy lub aktualizacja sprawy)"
+ },
+ "None of the above": {
+  "es": "Ninguna de las anteriores",
+  "ar": "لا شيء مما سبق",
+  "zh": "以上皆非",
+  "ur": "ان میں سے کوئی نہیں",
+  "fr": "Aucune de ces réponses",
+  "pl": "Żadne z powyższych"
+ },
+ "Does text-based help work for you?": {
+  "es": "¿Le funciona la ayuda por mensaje de texto?",
+  "ar": "هل تناسبك المساعدة عبر الرسائل النصية؟",
+  "zh": "簡訊協助對您可行嗎？",
+  "ur": "کیا ٹیکسٹ پر مبنی مدد آپ کے لیے کارآمد ہے؟",
+  "fr": "L’aide par SMS vous convient-elle ?",
+  "pl": "Czy pomoc przez SMS Ci odpowiada?"
+ },
+ "Frontdoor Benefits helps you entirely by text and online. You can fill out forms and upload documents from your phone, all in one place. SNAP specialists will text you with next steps, so just reply when you’re ready.": {
+  "es": "Frontdoor Benefits le ayuda completamente por mensaje de texto y en línea. Puede completar formularios y subir documentos desde su teléfono, todo en un solo lugar. Los especialistas de SNAP le enviarán mensajes con los próximos pasos; solo responda cuando esté listo.",
+  "ar": "تساعدك Frontdoor Benefits بالكامل عبر الرسائل النصية والإنترنت. يمكنك تعبئة النماذج وتحميل المستندات من هاتفك، كل ذلك في مكان واحد. وسيرسل لك أخصائيو SNAP رسائل نصية بالخطوات التالية، فما عليك سوى الرد عندما تكون مستعدًا.",
+  "zh": "Frontdoor Benefits 完全透過簡訊和線上方式為您提供協助。您可以用手機填寫表格並上傳文件，一切都在同一處完成。SNAP 專員會以簡訊告知後續步驟，準備好時回覆即可。",
+  "ur": "Frontdoor Benefits مکمل طور پر ٹیکسٹ اور آن لائن آپ کی مدد کرتا ہے۔ آپ اپنے فون سے فارم بھر سکتے ہیں اور دستاویزات اپ لوڈ کر سکتے ہیں، سب ایک ہی جگہ پر۔ SNAP کے ماہرین آپ کو اگلے مراحل کے بارے میں ٹیکسٹ کریں گے، بس تیار ہونے پر جواب دیں۔",
+  "fr": "Frontdoor Benefits vous aide entièrement par SMS et en ligne. Vous pouvez remplir des formulaires et téléverser des documents depuis votre téléphone, le tout au même endroit. Les spécialistes SNAP vous enverront les prochaines étapes par SMS ; répondez simplement quand vous serez prêt(e).",
+  "pl": "Frontdoor Benefits pomaga w całości przez SMS-y i online. Możesz wypełniać formularze i przesyłać dokumenty z telefonu, wszystko w jednym miejscu. Specjaliści SNAP wyślą Ci SMS-em kolejne kroki, a Ty odpowiesz, gdy będziesz gotowy(-wa)."
+ },
+ "Yes, that works for me": {
+  "es": "Sí, me funciona",
+  "ar": "نعم، هذا مناسب لي",
+  "zh": "是的，這對我可行",
+  "ur": "جی ہاں، یہ میرے لیے کارآمد ہے",
+  "fr": "Oui, cela me convient",
+  "pl": "Tak, to mi odpowiada"
+ },
+ "No, I want to speak to someone in person or over the phone": {
+  "es": "No, quiero hablar con alguien en persona o por teléfono",
+  "ar": "لا، أريد التحدث مع شخص ما شخصيًا أو عبر الهاتف",
+  "zh": "不，我想親自或透過電話與人交談",
+  "ur": "نہیں، میں کسی سے بالمشافہ یا فون پر بات کرنا چاہتا/چاہتی ہوں",
+  "fr": "Non, je préfère parler à quelqu’un en personne ou par téléphone",
+  "pl": "Nie, wolę porozmawiać z kimś osobiście lub przez telefon"
+ },
+ "We’ll share the information below with NYC Health partner Frontdoor Benefits. They’ll use and store your data to help with your SNAP application or case.": {
+  "es": "Compartiremos la información de abajo con Frontdoor Benefits, socio de NYC Health. Usarán y guardarán sus datos para ayudarle con su solicitud o caso de SNAP.",
+  "ar": "سنشارك المعلومات أدناه مع Frontdoor Benefits، شريكة NYC Health. وستستخدم بياناتك وتحتفظ بها لمساعدتك في طلب SNAP أو ملفك.",
+  "zh": "我們會將以下資訊分享給 NYC Health 的合作夥伴 Frontdoor Benefits。他們會使用並儲存您的資料，以協助您處理 SNAP 申請或個案。",
+  "ur": "ہم نیچے دی گئی معلومات NYC Health کے شراکت دار Frontdoor Benefits کے ساتھ شیئر کریں گے۔ وہ آپ کی SNAP کی درخواست یا کیس میں مدد کے لیے آپ کا ڈیٹا استعمال اور محفوظ کریں گے۔",
+  "fr": "Nous transmettrons les informations ci-dessous à Frontdoor Benefits, partenaire de NYC Health. Elle utilisera et conservera vos données pour vous aider avec votre demande ou votre dossier SNAP.",
+  "pl": "Przekażemy poniższe informacje partnerowi NYC Health, Frontdoor Benefits. Będzie on wykorzystywał i przechowywał Twoje dane, aby pomóc w Twoim wniosku lub sprawie SNAP."
+ },
+ "By submitting this page, you agree to share your information with and receive texts from Frontdoor Benefits. You may opt out at any time. Learn more about <a>Frontdoor Benefits’s privacy policy<span> (opens in new tab)</span></a>.": {
+  "es": "Al enviar esta página, usted acepta compartir su información con Frontdoor Benefits y recibir mensajes de texto de esa organización. Puede cancelar en cualquier momento. Obtenga más información sobre <a>la política de privacidad de Frontdoor Benefits<span> (se abre en una pestaña nueva)</span></a>.",
+  "ar": "بإرسال هذه الصفحة، فإنك توافق على مشاركة معلوماتك مع Frontdoor Benefits وتلقّي رسائل نصية منها. يمكنك إلغاء الاشتراك في أي وقت. اعرف المزيد عن <a>سياسة الخصوصية الخاصة بـ Frontdoor Benefits<span> (تفتح في علامة تبويب جديدة)</span></a>.",
+  "zh": "提交此頁面即表示，您同意與 Frontdoor Benefits 分享您的資訊，並同意接收其簡訊。您可隨時退出。進一步了解 <a>Frontdoor Benefits 的隱私權政策<span>（在新分頁開啟）</span></a>。",
+  "ur": "اس صفحے کو جمع کروا کر، آپ Frontdoor Benefits کے ساتھ اپنی معلومات شیئر کرنے اور ان سے ٹیکسٹ پیغامات موصول کرنے سے اتفاق کرتے ہیں۔ آپ کسی بھی وقت اس سے دستبردار ہو سکتے ہیں۔ <a>Frontdoor Benefits کی پرائیویسی پالیسی<span> (نئے ٹیب میں کھلتا ہے)</span></a> کے بارے میں مزید جانیں۔",
+  "fr": "En envoyant cette page, vous acceptez que vos informations soient transmises à Frontdoor Benefits et de recevoir des SMS de leur part. Vous pouvez vous désabonner à tout moment. En savoir plus sur <a>la politique de confidentialité de Frontdoor Benefits<span> (s’ouvre dans un nouvel onglet)</span></a>.",
+  "pl": "Wysyłając tę stronę, zgadzasz się na udostępnienie swoich danych firmie Frontdoor Benefits i na otrzymywanie od niej SMS-ów. W dowolnym momencie możesz zrezygnować. Dowiedz się więcej o <a>polityce prywatności Frontdoor Benefits<span> (otwiera się w nowej karcie)</span></a>."
+ },
+ "Frontdoor Benefits can help you get started with SNAP": {
+  "es": "Frontdoor Benefits puede ayudarle a comenzar con SNAP",
+  "ar": "يمكن لـ Frontdoor Benefits مساعدتك على البدء مع SNAP",
+  "zh": "Frontdoor Benefits 可以協助您開始申請 SNAP",
+  "ur": "Frontdoor Benefits SNAP شروع کرنے میں آپ کی مدد کر سکتا ہے",
+  "fr": "Frontdoor Benefits peut vous aider à démarrer avec le SNAP",
+  "pl": "Frontdoor Benefits pomoże Ci zacząć z SNAP"
+ },
+ "Get a text with your application link": {
+  "es": "Reciba un mensaje de texto con el enlace de su solicitud",
+  "ar": "احصل على رسالة نصية تحتوي على رابط طلبك",
+  "zh": "收取含申請連結的簡訊",
+  "ur": "اپنی درخواست کے لنک کے ساتھ ایک ٹیکسٹ حاصل کریں",
+  "fr": "Recevez un SMS avec le lien de votre demande",
+  "pl": "Otrzymaj SMS z linkiem do wniosku"
+ },
+ "Frontdoor Benefits will text you a link within a minute. The link walks you through each step of getting SNAP: filling out a simple application, uploading documents, and preparing for your interview. Once you have your EBT card, you can get help renewing too.": {
+  "es": "Frontdoor Benefits le enviará un enlace por mensaje de texto en un minuto. El enlace le guía en cada paso para obtener SNAP: completar una solicitud sencilla, subir documentos y prepararse para su entrevista. Cuando tenga su tarjeta EBT, también podrá recibir ayuda para renovar.",
+  "ar": "سترسل لك Frontdoor Benefits رابطًا نصيًا خلال دقيقة. يرشدك الرابط خلال كل خطوة للحصول على SNAP: تعبئة طلب بسيط وتحميل المستندات والاستعداد لمقابلتك. وبعد حصولك على بطاقة EBT، يمكنك أيضًا الحصول على مساعدة في التجديد.",
+  "zh": "Frontdoor Benefits 會在一分鐘內以簡訊傳送連結給您。該連結會引導您完成取得 SNAP 的每個步驟：填寫簡單的申請表、上傳文件並準備面談。取得 EBT 卡後，您也可以獲得續期協助。",
+  "ur": "Frontdoor Benefits ایک منٹ کے اندر آپ کو ایک لنک ٹیکسٹ کرے گا۔ یہ لنک SNAP حاصل کرنے کے ہر مرحلے میں آپ کی رہنمائی کرتا ہے: ایک سادہ درخواست بھرنا، دستاویزات اپ لوڈ کرنا اور اپنے انٹرویو کی تیاری کرنا۔ جب آپ کے پاس EBT کارڈ آ جائے تو آپ تجدید میں بھی مدد حاصل کر سکتے ہیں۔",
+  "fr": "Frontdoor Benefits vous enverra un lien par SMS en moins d’une minute. Ce lien vous guide à chaque étape pour obtenir le SNAP : remplir une demande simple, téléverser des documents et préparer votre entretien. Une fois que vous avez votre carte EBT, vous pouvez aussi être aidé(e) pour le renouvellement.",
+  "pl": "Frontdoor Benefits wyśle Ci SMS-em link w ciągu minuty. Link poprowadzi Cię przez każdy etap uzyskania SNAP: wypełnienie prostego wniosku, przesłanie dokumentów i przygotowanie do rozmowy. Gdy będziesz mieć kartę EBT, możesz też uzyskać pomoc w odnowieniu."
+ },
+ "Get reminders and personalized help": {
+  "es": "Reciba recordatorios y ayuda personalizada",
+  "ar": "احصل على تذكيرات ومساعدة مخصصة",
+  "zh": "獲得提醒與個人化協助",
+  "ur": "یاد دہانیاں اور ذاتی نوعیت کی مدد حاصل کریں",
+  "fr": "Recevez des rappels et une aide personnalisée",
+  "pl": "Otrzymuj przypomnienia i spersonalizowaną pomoc"
+ },
+ "Frontdoor Benefits will text you reminders for each enrollment step. Human text support is available to answer your questions.": {
+  "es": "Frontdoor Benefits le enviará recordatorios por mensaje de texto para cada paso de la inscripción. Hay asistencia humana por mensaje de texto para responder sus preguntas.",
+  "ar": "سترسل لك Frontdoor Benefits تذكيرات نصية لكل خطوة من خطوات التسجيل. ويتوفر دعم بشري عبر الرسائل النصية للإجابة عن أسئلتك.",
+  "zh": "Frontdoor Benefits 會以簡訊提醒您每一個登記步驟。您也可以透過真人簡訊支援來詢問問題。",
+  "ur": "Frontdoor Benefits اندراج کے ہر مرحلے کے لیے آپ کو ٹیکسٹ پر یاد دہانیاں بھیجے گا۔ آپ کے سوالات کے جواب کے لیے انسانی ٹیکسٹ سپورٹ دستیاب ہے۔",
+  "fr": "Frontdoor Benefits vous enverra des rappels par SMS pour chaque étape de l’inscription. Une assistance humaine par SMS est disponible pour répondre à vos questions.",
+  "pl": "Frontdoor Benefits będzie wysyłać Ci SMS-owe przypomnienia o każdym etapie rejestracji. Do odpowiadania na Twoje pytania dostępna jest pomoc człowieka przez SMS."
+ },
+ "Answer a few quick questions by text": {
+  "es": "Responda unas preguntas rápidas por mensaje de texto",
+  "ar": "أجب عن بضعة أسئلة سريعة عبر الرسائل النصية",
+  "zh": "以簡訊回答幾個簡單的問題",
+  "ur": "ٹیکسٹ کے ذریعے چند فوری سوالات کے جواب دیں",
+  "fr": "Répondez à quelques questions rapides par SMS",
+  "pl": "Odpowiedz na kilka krótkich pytań przez SMS"
+ },
+ "Within a minute, a SNAP specialist will text to ask things like when and how you applied and if you’ve had your interview. Just reply with your answers.": {
+  "es": "En un minuto, un especialista de SNAP le enviará un mensaje para preguntarle, por ejemplo, cuándo y cómo presentó su solicitud y si ya tuvo su entrevista. Solo responda con sus respuestas.",
+  "ar": "خلال دقيقة، سيراسلك أخصائي SNAP ليسأل عن أمور مثل متى وكيف تقدّمت بطلبك وهل أجريت مقابلتك. فقط أجب برسائلك.",
+  "zh": "一分鐘內，SNAP 專員會傳簡訊詢問您何時以及如何申請，以及是否已完成面談等問題。直接回覆答案即可。",
+  "ur": "ایک منٹ کے اندر، SNAP کا ماہر آپ کو ٹیکسٹ کر کے پوچھے گا کہ آپ نے کب اور کیسے درخواست دی اور کیا آپ کا انٹرویو ہو چکا ہے۔ بس اپنے جوابات کے ساتھ جواب دیں۔",
+  "fr": "En moins d’une minute, un spécialiste SNAP vous enverra un SMS pour vous demander, par exemple, quand et comment vous avez fait votre demande et si vous avez déjà passé votre entretien. Répondez simplement.",
+  "pl": "W ciągu minuty specjalista SNAP wyśle Ci SMS z pytaniami, np. kiedy i jak złożyłeś(-aś) wniosek i czy odbyła się już rozmowa. Wystarczy odpowiedzieć."
+ },
+ "Find out the status of your application": {
+  "es": "Conozca el estado de su solicitud",
+  "ar": "اعرف حالة طلبك",
+  "zh": "了解您的申請進度",
+  "ur": "اپنی درخواست کی صورتحال معلوم کریں",
+  "fr": "Découvrez où en est votre demande",
+  "pl": "Sprawdź status swojego wniosku"
+ },
+ "A SNAP specialist can help if there is a problem with your application. That might mean resending documents, preparing for your interview, or following up with the NYC Human Resources Administration (HRA).": {
+  "es": "Un especialista de SNAP puede ayudarle si hay un problema con su solicitud. Esto puede incluir volver a enviar documentos, prepararse para su entrevista o dar seguimiento con la Administración de Recursos Humanos de NYC (HRA).",
+  "ar": "يمكن لأخصائي SNAP مساعدتك إذا كانت هناك مشكلة في طلبك. قد يعني ذلك إعادة إرسال المستندات أو الاستعداد لمقابلتك أو المتابعة مع إدارة الموارد البشرية في مدينة نيويورك (HRA).",
+  "zh": "如果您的申請出現問題，SNAP 專員可以協助您。這可能包括重新提交文件、準備面談，或向紐約市人力資源管理局 (HRA) 追蹤進度。",
+  "ur": "اگر آپ کی درخواست میں کوئی مسئلہ ہو تو SNAP کا ماہر مدد کر سکتا ہے۔ اس کا مطلب دستاویزات دوبارہ بھیجنا، انٹرویو کی تیاری کرنا، یا NYC ہیومن ریسورسز ایڈمنسٹریشن (HRA) سے رابطہ کرنا ہو سکتا ہے۔",
+  "fr": "Un spécialiste SNAP peut vous aider en cas de problème avec votre demande. Il peut s’agir de renvoyer des documents, de préparer votre entretien ou de relancer l’Administration des ressources humaines de NYC (HRA).",
+  "pl": "Specjalista SNAP może pomóc, jeśli wystąpi problem z Twoim wnioskiem. Może to oznaczać ponowne wysłanie dokumentów, przygotowanie do rozmowy lub kontakt z Administracją Zasobów Ludzkich NYC (HRA)."
+ },
+ "Fill out a short form": {
+  "es": "Complete un formulario corto",
+  "ar": "املأ نموذجًا قصيرًا",
+  "zh": "填寫簡短表格",
+  "ur": "ایک مختصر فارم بھریں",
+  "fr": "Remplissez un court formulaire",
+  "pl": "Wypełnij krótki formularz"
+ },
+ "A SNAP specialist will text you a link within a minute. Tell them what you need, like renewing, meeting work rules, or reporting a change like a new job or a new baby. Got a letter from the NYC Human Resources Administration (HRA) and aren’t sure how to respond? Upload your case notices to the Frontdoor Benefits link.": {
+  "es": "Un especialista de SNAP le enviará un enlace por mensaje de texto en un minuto. Dígale qué necesita, como renovar, cumplir con los requisitos de trabajo o informar un cambio, como un nuevo empleo o un bebé. ¿Recibió una carta de la Administración de Recursos Humanos de NYC (HRA) y no sabe cómo responder? Suba los avisos de su caso al enlace de Frontdoor Benefits.",
+  "ar": "سيرسل لك أخصائي SNAP رابطًا نصيًا خلال دقيقة. أخبره بما تحتاج إليه، مثل التجديد أو استيفاء شروط العمل أو الإبلاغ عن تغيير كوظيفة جديدة أو مولود جديد. هل تلقيت رسالة من إدارة الموارد البشرية في مدينة نيويورك (HRA) ولا تعرف كيف ترد؟ حمّل إشعارات ملفك عبر رابط Frontdoor Benefits.",
+  "zh": "SNAP 專員會在一分鐘內以簡訊傳送連結給您。請告訴他們您的需求，例如續期、符合工作規定，或通報新工作或新生兒等變動。收到紐約市人力資源管理局 (HRA) 的信函卻不知如何回應？請將個案通知上傳至 Frontdoor Benefits 連結。",
+  "ur": "SNAP کا ماہر ایک منٹ کے اندر آپ کو ایک لنک ٹیکسٹ کرے گا۔ انہیں بتائیں کہ آپ کو کیا چاہیے، جیسے تجدید، کام کے قواعد کی تکمیل، یا نئی ملازمت یا نئے بچے جیسی تبدیلی کی اطلاع۔ کیا آپ کو NYC ہیومن ریسورسز ایڈمنسٹریشن (HRA) کی طرف سے خط ملا ہے اور آپ کو جواب دینا نہیں آتا؟ اپنے کیس کے نوٹس Frontdoor Benefits کے لنک پر اپ لوڈ کریں۔",
+  "fr": "Un spécialiste SNAP vous enverra un lien par SMS en moins d’une minute. Dites-lui ce dont vous avez besoin, par exemple un renouvellement, le respect des règles de travail ou le signalement d’un changement comme un nouvel emploi ou une naissance. Vous avez reçu une lettre de l’Administration des ressources humaines de NYC (HRA) et ne savez pas comment répondre ? Téléversez vos avis de dossier sur le lien de Frontdoor Benefits.",
+  "pl": "Specjalista SNAP wyśle Ci SMS-em link w ciągu minuty. Powiedz mu, czego potrzebujesz, np. odnowienia, spełnienia wymogów pracy lub zgłoszenia zmiany, takiej jak nowa praca lub narodziny dziecka. Dostałeś(-aś) pismo z Administracji Zasobów Ludzkich NYC (HRA) i nie wiesz, jak odpowiedzieć? Prześlij zawiadomienia dotyczące swojej sprawy przez link Frontdoor Benefits."
+ },
+ "A SNAP specialist will text you if they have questions and help you send your paperwork to HRA on time. Human phone support is available to answer your questions.": {
+  "es": "Un especialista de SNAP le enviará un mensaje si tiene preguntas y le ayudará a enviar sus documentos a HRA a tiempo. Hay asistencia humana por teléfono para responder sus preguntas.",
+  "ar": "سيراسلك أخصائي SNAP إذا كانت لديه أسئلة، وسيساعدك في إرسال أوراقك إلى HRA في الوقت المحدد. ويتوفر دعم بشري عبر الهاتف للإجابة عن أسئلتك.",
+  "zh": "如果有疑問，SNAP 專員會傳簡訊給您，並協助您準時將文件送交 HRA。您也可以透過真人電話支援來詢問問題。",
+  "ur": "اگر ماہر کے پاس سوالات ہوں تو SNAP کا ماہر آپ کو ٹیکسٹ کرے گا اور آپ کے کاغذات وقت پر HRA کو بھیجنے میں مدد کرے گا۔ آپ کے سوالات کے جواب کے لیے انسانی فون سپورٹ دستیاب ہے۔",
+  "fr": "Un spécialiste SNAP vous enverra un SMS s’il a des questions et vous aidera à transmettre vos documents à HRA dans les délais. Une assistance humaine par téléphone est disponible pour répondre à vos questions.",
+  "pl": "Specjalista SNAP wyśle Ci SMS, jeśli będzie miał pytania, i pomoże w terminowym przesłaniu dokumentów do HRA. Do odpowiadania na Twoje pytania dostępna jest pomoc człowieka przez telefon."
+ },
+ "Need food now?": {
+  "es": "¿Necesita comida ahora?",
+  "ar": "هل تحتاج إلى طعام الآن؟",
+  "zh": "現在需要食物嗎？",
+  "ur": "ابھی کھانا چاہیے؟",
+  "fr": "Besoin de nourriture maintenant ?",
+  "pl": "Potrzebujesz jedzenia teraz?"
+ },
+ "<a>Find free meals and groceries near you⁠<svg/></a><br>or call the National Hunger Hotline <span>while you wait for your SNAP benefits to arrive.</span>": {
+  "es": "<a>Encuentre comidas y alimentos gratuitos cerca de usted⁠<svg/></a><br>o llame a la Línea Nacional contra el Hambre <span>mientras espera que lleguen sus beneficios de SNAP.</span>",
+  "ar": "<a>اعثر على وجبات ومواد غذائية مجانية بالقرب منك⁠<svg/></a><br>أو اتصل بالخط الوطني لمكافحة الجوع <span>بينما تنتظر وصول مزايا SNAP.</span>",
+  "zh": "<a>尋找您附近的免費餐點和食品雜貨⁠<svg/></a><br>或致電全國飢餓熱線 <span>等待您的 SNAP 福利送達。</span>",
+  "ur": "<a>اپنے قریب مفت کھانا اور راشن تلاش کریں⁠<svg/></a><br>یا نیشنل ہنگر ہاٹ لائن پر کال کریں <span>جب تک آپ کے SNAP کے فوائد نہیں پہنچ جاتے۔</span>",
+  "fr": "<a>Trouvez des repas et des produits d’épicerie gratuits près de chez vous⁠<svg/></a><br>ou appelez la ligne nationale contre la faim <span>en attendant l’arrivée de vos prestations SNAP.</span>",
+  "pl": "<a>Znajdź bezpłatne posiłki i artykuły spożywcze w pobliżu⁠<svg/></a><br>lub zadzwoń na krajową infolinię przeciw głodowi <span>w oczekiwaniu na świadczenia SNAP.</span>"
+ },
+ "Call the National Hunger Hotline, (866) 348-6479": {
+  "es": "Llame a la Línea Nacional contra el Hambre, (866) 348-6479",
+  "ar": "اتصل بالخط الوطني لمكافحة الجوع على الرقم ‎(866) 348-6479‎",
+  "zh": "致電全國飢餓熱線，(866) 348-6479",
+  "ur": "نیشنل ہنگر ہاٹ لائن کو کال کریں، (866) 348-6479",
+  "fr": "Appelez la ligne nationale contre la faim, (866) 348-6479",
+  "pl": "Zadzwoń na krajową infolinię przeciw głodowi, (866) 348-6479"
+ },
+ "Free in-person help is nearby": {
+  "es": "Hay ayuda gratuita en persona cerca de usted",
+  "ar": "تتوفر مساعدة مجانية شخصية بالقرب منك",
+  "zh": "附近有免費的面對面協助",
+  "ur": "مفت بالمشافہ مدد قریب ہی دستیاب ہے",
+  "fr": "Une aide gratuite en personne est disponible près de chez vous",
+  "pl": "Bezpłatna pomoc osobista jest w pobliżu"
+ },
+ "For in-person or immediate food assistance, try these free services:": {
+  "es": "Para recibir ayuda en persona o asistencia alimentaria inmediata, pruebe estos servicios gratuitos:",
+  "ar": "للحصول على مساعدة شخصية أو مساعدة غذائية فورية، جرّب هذه الخدمات المجانية:",
+  "zh": "如需面對面協助或即時食物援助，請嘗試這些免費服務：",
+  "ur": "بالمشافہ یا فوری خوراک کی امداد کے لیے، ان مفت خدمات کو آزمائیں:",
+  "fr": "Pour une aide en personne ou une aide alimentaire immédiate, essayez ces services gratuits :",
+  "pl": "Aby uzyskać pomoc osobistą lub natychmiastową pomoc żywnościową, skorzystaj z tych bezpłatnych usług:"
+ },
+ "Need food today?": {
+  "es": "¿Necesita comida hoy?",
+  "ar": "هل تحتاج إلى طعام اليوم؟",
+  "zh": "今天需要食物嗎？",
+  "ur": "آج کھانا چاہیے؟",
+  "fr": "Besoin de nourriture aujourd’hui ?",
+  "pl": "Potrzebujesz jedzenia dzisiaj?"
+ },
+ "Find a food pantry near you⁠": {
+  "es": "Encuentre un banco de alimentos cerca de usted⁠",
+  "ar": "اعثر على بنك طعام بالقرب منك⁠",
+  "zh": "尋找您附近的食物銀行⁠",
+  "ur": "اپنے قریب فوڈ پینٹری تلاش کریں⁠",
+  "fr": "Trouvez une banque alimentaire près de chez vous⁠",
+  "pl": "Znajdź bank żywności w pobliżu⁠"
+ },
+ "Need help with SNAP?": {
+  "es": "¿Necesita ayuda con SNAP?",
+  "ar": "هل تحتاج إلى مساعدة مع SNAP؟",
+  "zh": "需要 SNAP 方面的協助嗎？",
+  "ur": "SNAP میں مدد چاہیے؟",
+  "fr": "Besoin d’aide avec le SNAP ?",
+  "pl": "Potrzebujesz pomocy z SNAP?"
+ },
+ "A local partner can help you apply, one-on-one.": {
+  "es": "Un socio local puede ayudarle a presentar su solicitud, de forma personalizada.",
+  "ar": "يمكن لشريك محلي مساعدتك في التقدّم بالطلب بشكل فردي.",
+  "zh": "在地合作夥伴可以一對一協助您申請。",
+  "ur": "ایک مقامی شراکت دار ون آن ون آپ کی درخواست دینے میں مدد کر سکتا ہے۔",
+  "fr": "Un partenaire local peut vous aider à faire votre demande, en tête-à-tête.",
+  "pl": "Lokalny partner może pomóc Ci złożyć wniosek, indywidualnie."
+ },
+ "Find a SNAP partner in NYC⁠": {
+  "es": "Encuentre un socio de SNAP en NYC⁠",
+  "ar": "اعثر على شريك SNAP في مدينة نيويورك⁠",
+  "zh": "尋找紐約市的 SNAP 合作夥伴⁠",
+  "ur": "NYC میں SNAP شراکت دار تلاش کریں⁠",
+  "fr": "Trouvez un partenaire SNAP à NYC⁠",
+  "pl": "Znajdź partnera SNAP w NYC⁠"
+ },
+ "Find a SNAP partner anywhere in New York State⁠": {
+  "es": "Encuentre un socio de SNAP en cualquier parte del estado de Nueva York⁠",
+  "ar": "اعثر على شريك SNAP في أي مكان في ولاية نيويورك⁠",
+  "zh": "尋找紐約州任何地方的 SNAP 合作夥伴⁠",
+  "ur": "نیویارک ریاست میں کہیں بھی SNAP شراکت دار تلاش کریں⁠",
+  "fr": "Trouvez un partenaire SNAP partout dans l’État de New York⁠",
+  "pl": "Znajdź partnera SNAP w dowolnym miejscu w stanie Nowy Jork⁠"
+ },
+ "See if your hospital can lower or erase your medical bills.": {
+  "es": "Vea si su hospital puede reducir o eliminar sus facturas médicas.",
+  "ar": "تحقق مما إذا كان بإمكان مستشفاك خفض فواتيرك الطبية أو إلغاؤها.",
+  "zh": "了解您的醫院能否減少或免除您的醫療帳單。",
+  "ur": "دیکھیں کہ کیا آپ کا ہسپتال آپ کے طبی بل کم یا ختم کر سکتا ہے۔",
+  "fr": "Voyez si votre hôpital peut réduire ou annuler vos factures médicales.",
+  "pl": "Sprawdź, czy Twój szpital może obniżyć lub umorzyć Twoje rachunki medyczne."
+ },
+ "Sign up for or renew your coverage.": {
+  "es": "Inscríbase o renueve su cobertura.",
+  "ar": "سجّل أو جدّد تغطيتك.",
+  "zh": "加入或續保您的保險。",
+  "ur": "اپنی کوریج کے لیے اندراج کروائیں یا اس کی تجدید کریں۔",
+  "fr": "Inscrivez-vous ou renouvelez votre couverture.",
+  "pl": "Zapisz się lub odnów swoje ubezpieczenie."
+ },
+ "Get money back from up to 3 years of taxes.": {
+  "es": "Recupere dinero de hasta 3 años de impuestos.",
+  "ar": "استرد أموالًا من ضرائب تصل إلى 3 سنوات.",
+  "zh": "取回最多 3 年稅款中的退款。",
+  "ur": "زیادہ سے زیادہ 3 سال کے ٹیکسوں میں سے رقم واپس حاصل کریں۔",
+  "fr": "Récupérez de l’argent sur jusqu’à 3 ans d’impôts.",
+  "pl": "Odzyskaj pieniądze z podatków za maksymalnie 3 lata."
+ },
+ "Enroll or renew SNAP/EBT benefits.": {
+  "es": "Inscríbase o renueve los beneficios de SNAP/EBT.",
+  "ar": "سجّل في مزايا SNAP/EBT أو جدّدها.",
+  "zh": "加入或續領 SNAP/EBT 福利。",
+  "ur": "SNAP/EBT کے فوائد کے لیے اندراج کروائیں یا ان کی تجدید کریں۔",
+  "fr": "Inscrivez-vous aux prestations SNAP/EBT ou renouvelez-les.",
+  "pl": "Zapisz się na świadczenia SNAP/EBT lub je odnów."
+ },
+ "Your programs": {
+  "es": "Sus programas",
+  "ar": "برامجك",
+  "zh": "您的計劃",
+  "ur": "آپ کے پروگرامز",
+  "fr": "Vos programmes",
+  "pl": "Twoje programy"
  }
 };
