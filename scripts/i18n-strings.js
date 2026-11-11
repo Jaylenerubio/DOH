@@ -296,7 +296,10 @@ window.I18N_DICT = {
  "Date of birth": {
   "es": "Fecha de nacimiento",
   "ar": "تاريخ الميلاد",
-  "zh": "出生日期"
+  "zh": "出生日期",
+  "ur": "تاریخِ پیدائش",
+  "fr": "Date de naissance",
+  "pl": "Data urodzenia"
  },
  "December": {
   "es": "Diciembre",
@@ -401,7 +404,10 @@ window.I18N_DICT = {
  "Email": {
   "es": "Correo electrónico",
   "ar": "البريد الإلكتروني",
-  "zh": "電子郵件"
+  "zh": "電子郵件",
+  "ur": "ای میل",
+  "fr": "E-mail",
+  "pl": "E-mail"
  },
  "Energy Affordability Program — NYC Health": {
   "es": "Programa de Asequibilidad de Energía — NYC Health",
@@ -494,7 +500,10 @@ window.I18N_DICT = {
  "First name": {
   "es": "Nombre",
   "ar": "الاسم الأول",
-  "zh": "名字"
+  "zh": "名字",
+  "ur": "پہلا نام",
+  "fr": "Prénom",
+  "pl": "Imię"
  },
  "Get connected with<br>the NYC Tenant <br>Support Unit": {
   "es": "Conéctese con<br>la Unidad de Apoyo<br>para Inquilinos de NYC",
@@ -721,7 +730,10 @@ window.I18N_DICT = {
  "Last name": {
   "es": "Apellido",
   "ar": "اسم العائلة",
-  "zh": "姓氏"
+  "zh": "姓氏",
+  "ur": "آخری نام",
+  "fr": "Nom de famille",
+  "pl": "Nazwisko"
  },
  "Learn more about medical bill assistance": {
   "es": "Obtenga más información sobre la ayuda con facturas médicas",
@@ -942,7 +954,10 @@ window.I18N_DICT = {
  "Phone number": {
   "es": "Número de teléfono",
   "ar": "رقم الهاتف",
-  "zh": "電話號碼"
+  "zh": "電話號碼",
+  "ur": "فون نمبر",
+  "fr": "Numéro de téléphone",
+  "pl": "Numer telefonu"
  },
  "Preferred contact method": {
   "es": "Método de contacto preferido",
@@ -1417,7 +1432,10 @@ window.I18N_DICT = {
  "You can request to review, update, or delete your information by contacting us at <a>hartconnectorsupport@health.nyc.gov</a>.": {
   "es": "Puede solicitar revisar, actualizar o eliminar su información comunicándose con nosotros en <a>hartconnectorsupport@health.nyc.gov</a>.",
   "ar": "يمكنك طلب مراجعة معلوماتك أو تحديثها أو حذفها بالتواصل معنا عبر <a>hartconnectorsupport@health.nyc.gov</a>.",
-  "zh": "您可以聯絡 <a>hartconnectorsupport@health.nyc.gov</a>，要求檢視、更新或刪除您的資訊。"
+  "zh": "您可以聯絡 <a>hartconnectorsupport@health.nyc.gov</a>，要求檢視、更新或刪除您的資訊。",
+  "ur": "آپ ہم سے <a>hartconnectorsupport@health.nyc.gov</a> پر رابطہ کر کے اپنی معلومات کا جائزہ لینے، انہیں اپ ڈیٹ کرنے یا حذف کرنے کی درخواست کر سکتے ہیں۔",
+  "fr": "Vous pouvez demander à consulter, mettre à jour ou supprimer vos informations en nous contactant à <a>hartconnectorsupport@health.nyc.gov</a>.",
+  "pl": "Możesz poprosić o przejrzenie, aktualizację lub usunięcie swoich danych, kontaktując się z nami pod adresem <a>hartconnectorsupport@health.nyc.gov</a>."
  },
  "You have 14 days after applying to submit your proof of income for the last 28 days for everyone you share your utility costs with.": {
   "es": "Tiene 14 días después de solicitar para enviar el comprobante de ingresos de los últimos 28 días de todas las personas con quienes comparte los costos de servicios públicos.",
@@ -1464,7 +1482,10 @@ window.I18N_DICT = {
  "Your information": {
   "es": "Su información",
   "ar": "معلوماتك",
-  "zh": "您的資訊"
+  "zh": "您的資訊",
+  "ur": "آپ کی معلومات",
+  "fr": "Vos informations",
+  "pl": "Twoje dane"
  },
  "Your landlord changed or removed your apartment lock without a court order": {
   "es": "Su arrendador cambió o quitó la cerradura de su apartamento sin una orden del tribunal",
@@ -1556,7 +1577,10 @@ window.I18N_DICT = {
  "ZIP code": {
   "es": "Código postal",
   "ar": "الرمز البريدي",
-  "zh": "郵遞區號"
+  "zh": "郵遞區號",
+  "ur": "ZIP کوڈ",
+  "fr": "Code postal",
+  "pl": "Kod pocztowy"
  },
  "Required": {
   "es": "Obligatorio",
@@ -1736,7 +1760,10 @@ window.I18N_DICT = {
  "My profile": {
   "es": "Mi perfil",
   "ar": "ملفي الشخصي",
-  "zh": "我的個人資料"
+  "zh": "我的個人資料",
+  "ur": "میری پروفائل",
+  "fr": "Mon profil",
+  "pl": "Mój profil"
  },
  "Anytime": {
   "es": "Cualquier hora",
@@ -2781,5 +2808,501 @@ window.I18N_DICT = {
   "ur": "کرایہ داروں کی معاونت میں ترمیم کریں",
   "fr": "Modifier Soutien aux locataires",
   "pl": "Edytuj Wsparcie dla najemców"
+ },
+ "Step 1 of 4": {
+  "es": "Paso 1 de 4",
+  "ar": "الخطوة 1 من 4",
+  "zh": "第 1 步，共 4 步",
+  "ur": "مرحلہ 1 از 4",
+  "fr": "Étape 1 sur 4",
+  "pl": "Krok 1 z 4"
+ },
+ "What you should<br>know before we begin": {
+  "es": "Lo que debe saber<br>antes de comenzar",
+  "ar": "ما يجب أن تعرفه<br>قبل أن نبدأ",
+  "zh": "開始之前<br>您應了解的事項",
+  "ur": "شروع کرنے سے پہلے<br>آپ کو کیا جاننا چاہیے",
+  "fr": "Ce que vous devez<br>savoir avant de commencer",
+  "pl": "Co powinieneś(-nnaś)<br>wiedzieć, zanim zaczniemy"
+ },
+ "You can use the NYC Health and Affordability Connector to find services that will help lower the cost of living.": {
+  "es": "Puede usar el Conector de Salud y Asequibilidad de NYC (NYC Health and Affordability Connector) para encontrar servicios que ayuden a reducir el costo de vida.",
+  "ar": "يمكنك استخدام NYC Health and Affordability Connector للعثور على خدمات تساعد في خفض تكلفة المعيشة.",
+  "zh": "您可以使用 NYC Health and Affordability Connector 尋找有助於降低生活成本的服務。",
+  "ur": "آپ NYC Health and Affordability Connector کو استعمال کر کے ایسی خدمات تلاش کر سکتے ہیں جو رہن سہن کے اخراجات کم کرنے میں مدد کریں۔",
+  "fr": "Vous pouvez utiliser le NYC Health and Affordability Connector pour trouver des services qui aident à réduire le coût de la vie.",
+  "pl": "Możesz skorzystać z NYC Health and Affordability Connector, aby znaleźć usługi, które pomogą obniżyć koszty życia."
+ },
+ "To simplify the process of enrolling in multiple services, the NYC Department of Health and Mental Hygiene (“NYC Health”) will collect and save your <strong>full name, date of birth, ZIP code,</strong> and <strong>contact information.</strong>": {
+  "es": "Para simplificar el proceso de inscripción en varios servicios, el Departamento de Salud e Higiene Mental de NYC («NYC Health») recopilará y guardará su <strong>nombre completo, fecha de nacimiento, código postal</strong> y <strong>información de contacto.</strong>",
+  "ar": "لتبسيط عملية التسجيل في عدة خدمات، ستجمع إدارة الصحة والصحة النفسية في مدينة نيويورك («NYC Health») <strong>اسمك الكامل وتاريخ ميلادك والرمز البريدي</strong> و<strong>معلومات الاتصال الخاصة بك</strong> وتحفظها.",
+  "zh": "為了簡化登記多項服務的流程，紐約市衛生與心理衛生局（「NYC Health」）將收集並儲存您的<strong>全名、出生日期、郵遞區號</strong>和<strong>聯絡資訊。</strong>",
+  "ur": "متعدد خدمات میں اندراج کے عمل کو آسان بنانے کے لیے، نیویارک سٹی ڈیپارٹمنٹ آف ہیلتھ اینڈ مینٹل ہائجین («NYC Health») آپ کا <strong>پورا نام، تاریخِ پیدائش، ZIP کوڈ</strong> اور <strong>رابطے کی معلومات</strong> جمع کر کے محفوظ کرے گا۔",
+  "fr": "Pour simplifier l’inscription à plusieurs services, le Département de la santé et de l’hygiène mentale de NYC (« NYC Health ») recueillera et conservera votre <strong>nom complet, date de naissance, code postal</strong> et <strong>coordonnées.</strong>",
+  "pl": "Aby uprościć proces zapisywania się do wielu usług, Departament Zdrowia i Higieny Psychicznej NYC („NYC Health”) zbierze i zapisze Twoje <strong>imię i nazwisko, datę urodzenia, kod pocztowy</strong> oraz <strong>dane kontaktowe.</strong>"
+ },
+ "If you pick an NYC Health partner organization’s services, we will also share your information with them so you don’t need to re-enter it. Your activity with our partners will remain linked to your account on this platform.": {
+  "es": "Si elige los servicios de una organización asociada de NYC Health, también compartiremos su información con ella para que no tenga que volver a ingresarla. Su actividad con nuestros socios seguirá vinculada a su cuenta en esta plataforma.",
+  "ar": "إذا اخترت خدمات إحدى المنظمات الشريكة لـ NYC Health، فسنشارك معلوماتك معها أيضًا حتى لا تضطر إلى إدخالها مرة أخرى. وسيظل نشاطك مع شركائنا مرتبطًا بحسابك على هذه المنصة.",
+  "zh": "如果您選擇 NYC Health 合作機構的服務，我們也會與其分享您的資訊，讓您無需重新輸入。您與合作夥伴的活動將持續與您在本平台的帳戶連結。",
+  "ur": "اگر آپ NYC Health کی کسی شراکت دار تنظیم کی خدمات منتخب کرتے ہیں تو ہم آپ کی معلومات ان کے ساتھ بھی شیئر کریں گے تاکہ آپ کو انہیں دوبارہ درج نہ کرنا پڑے۔ ہمارے شراکت داروں کے ساتھ آپ کی سرگرمی اس پلیٹ فارم پر آپ کے اکاؤنٹ سے منسلک رہے گی۔",
+  "fr": "Si vous choisissez les services d’une organisation partenaire de NYC Health, nous partagerons aussi vos informations avec elle pour que vous n’ayez pas à les saisir à nouveau. Votre activité auprès de nos partenaires restera liée à votre compte sur cette plateforme.",
+  "pl": "Jeśli wybierzesz usługi organizacji partnerskiej NYC Health, udostępnimy jej również Twoje dane, abyś nie musiał(-a) wpisywać ich ponownie. Twoja aktywność u naszych partnerów pozostanie powiązana z Twoim kontem na tej platformie."
+ },
+ "How we use your information": {
+  "es": "Cómo usamos su información",
+  "ar": "كيف نستخدم معلوماتك",
+  "zh": "我們如何使用您的資訊",
+  "ur": "ہم آپ کی معلومات کیسے استعمال کرتے ہیں",
+  "fr": "Comment nous utilisons vos informations",
+  "pl": "Jak wykorzystujemy Twoje dane"
+ },
+ "To best serve you, we will track your enrollment progress and contact you with reminders by email, phone, or text. You may opt out at any time.": {
+  "es": "Para atenderle mejor, haremos un seguimiento de su progreso de inscripción y nos comunicaremos con usted con recordatorios por correo electrónico, teléfono o mensaje de texto. Puede cancelar en cualquier momento.",
+  "ar": "لخدمتك على أفضل وجه، سنتتبع تقدمك في التسجيل ونتواصل معك بتذكيرات عبر البريد الإلكتروني أو الهاتف أو الرسائل النصية. يمكنك إلغاء الاشتراك في أي وقت.",
+  "zh": "為了提供您最好的服務，我們會追蹤您的登記進度，並以電子郵件、電話或簡訊提醒您。您可隨時退出。",
+  "ur": "آپ کی بہتر خدمت کے لیے، ہم آپ کے اندراج کی پیش رفت کو ٹریک کریں گے اور ای میل، فون یا ٹیکسٹ کے ذریعے آپ کو یاد دہانیاں بھیجیں گے۔ آپ کسی بھی وقت اس سے دستبردار ہو سکتے ہیں۔",
+  "fr": "Pour mieux vous servir, nous suivrons l’avancement de votre inscription et vous enverrons des rappels par e-mail, téléphone ou SMS. Vous pouvez vous désabonner à tout moment.",
+  "pl": "Aby jak najlepiej Ci służyć, będziemy śledzić postęp Twojej rejestracji i wysyłać przypomnienia e-mailem, telefonicznie lub SMS-em. W dowolnym momencie możesz zrezygnować."
+ },
+ "If you choose to use a partner organization’s services, we will share the information they need to help you. Some partners may ask you to read and agree to their own privacy rules before they assist you.": {
+  "es": "Si decide usar los servicios de una organización asociada, compartiremos la información que necesite para ayudarle. Algunos socios pueden pedirle que lea y acepte sus propias normas de privacidad antes de atenderle.",
+  "ar": "إذا اخترت استخدام خدمات إحدى المنظمات الشريكة، فسنشارك المعلومات التي تحتاج إليها لمساعدتك. وقد يطلب بعض الشركاء منك قراءة قواعد الخصوصية الخاصة بهم والموافقة عليها قبل مساعدتك.",
+  "zh": "如果您選擇使用合作機構的服務，我們會分享他們協助您所需的資訊。部分合作夥伴可能會要求您在提供協助前，先閱讀並同意其自身的隱私規定。",
+  "ur": "اگر آپ کسی شراکت دار تنظیم کی خدمات استعمال کرنے کا انتخاب کرتے ہیں تو ہم وہ معلومات شیئر کریں گے جو انہیں آپ کی مدد کے لیے درکار ہوں۔ کچھ شراکت دار آپ کی مدد کرنے سے پہلے آپ سے اپنے پرائیویسی قواعد پڑھنے اور ان سے اتفاق کرنے کو کہہ سکتے ہیں۔",
+  "fr": "Si vous choisissez d’utiliser les services d’une organisation partenaire, nous partagerons les informations dont elle a besoin pour vous aider. Certains partenaires peuvent vous demander de lire et d’accepter leurs propres règles de confidentialité avant de vous aider.",
+  "pl": "Jeśli zdecydujesz się skorzystać z usług organizacji partnerskiej, udostępnimy informacje potrzebne do udzielenia Ci pomocy. Niektórzy partnerzy mogą poprosić Cię o zapoznanie się z ich własnymi zasadami prywatności i ich akceptację, zanim Ci pomogą."
+ },
+ "NYC Health may use data from this platform and our partners to study, evaluate, and improve the program. All of your data will be handled in a secure manner. Anything we share publicly will not include identifying information.": {
+  "es": "NYC Health puede usar datos de esta plataforma y de nuestros socios para estudiar, evaluar y mejorar el programa. Todos sus datos se manejarán de forma segura. Nada de lo que compartamos públicamente incluirá información que lo identifique.",
+  "ar": "قد تستخدم NYC Health بيانات من هذه المنصة ومن شركائنا لدراسة البرنامج وتقييمه وتحسينه. وستُعالَج جميع بياناتك بطريقة آمنة. ولن يتضمن أي شيء نشاركه علنًا معلومات تحدد هويتك.",
+  "zh": "NYC Health 可能會使用本平台及合作夥伴的資料來研究、評估和改善此計劃。您的所有資料都將以安全的方式處理。我們公開分享的任何內容都不會包含可識別身分的資訊。",
+  "ur": "NYC Health اس پروگرام کا مطالعہ، جائزہ اور بہتری کے لیے اس پلیٹ فارم اور ہمارے شراکت داروں کا ڈیٹا استعمال کر سکتا ہے۔ آپ کا تمام ڈیٹا محفوظ طریقے سے سنبھالا جائے گا۔ ہم جو کچھ بھی عوامی طور پر شیئر کریں گے اس میں شناخت ظاہر کرنے والی معلومات شامل نہیں ہوں گی۔",
+  "fr": "NYC Health peut utiliser les données de cette plateforme et de nos partenaires pour étudier, évaluer et améliorer le programme. Toutes vos données seront traitées de manière sécurisée. Rien de ce que nous partagerons publiquement ne comportera d’informations permettant de vous identifier.",
+  "pl": "NYC Health może wykorzystywać dane z tej platformy i od naszych partnerów do badania, oceny i ulepszania programu. Wszystkie Twoje dane będą przetwarzane w bezpieczny sposób. Informacje udostępniane publicznie nie będą zawierać danych identyfikujących."
+ },
+ "Learn more about <a>NYC Health’s privacy policy</a>.": {
+  "es": "Obtenga más información sobre <a>la política de privacidad de NYC Health</a>.",
+  "ar": "اعرف المزيد عن <a>سياسة الخصوصية الخاصة بـ NYC Health</a>.",
+  "zh": "進一步了解 <a>NYC Health 的隱私權政策</a>。",
+  "ur": "<a>NYC Health کی پرائیویسی پالیسی</a> کے بارے میں مزید جانیں۔",
+  "fr": "En savoir plus sur <a>la politique de confidentialité de NYC Health</a>.",
+  "pl": "Dowiedz się więcej o <a>polityce prywatności NYC Health</a>."
+ },
+ "I agree.": {
+  "es": "Acepto.",
+  "ar": "أوافق.",
+  "zh": "我同意。",
+  "ur": "میں اتفاق کرتا/کرتی ہوں۔",
+  "fr": "J’accepte.",
+  "pl": "Zgadzam się."
+ },
+ "Step 2 of 4": {
+  "es": "Paso 2 de 4",
+  "ar": "الخطوة 2 من 4",
+  "zh": "第 2 步，共 4 步",
+  "ur": "مرحلہ 2 از 4",
+  "fr": "Étape 2 sur 4",
+  "pl": "Krok 2 z 4"
+ },
+ "Don’t miss out on<br>personalized support": {
+  "es": "No se pierda el<br>apoyo personalizado",
+  "ar": "لا تفوّت<br>الدعم المخصص لك",
+  "zh": "別錯過<br>個人化支援",
+  "ur": "ذاتی نوعیت کی معاونت<br>سے محروم نہ ہوں",
+  "fr": "Ne manquez pas<br>l’aide personnalisée",
+  "pl": "Nie przegap<br>spersonalizowanego wsparcia"
+ },
+ "Tell us how to keep in touch — we’ll never spam you or share your information without your consent.": {
+  "es": "Díganos cómo mantenernos en contacto — nunca le enviaremos spam ni compartiremos su información sin su consentimiento.",
+  "ar": "أخبرنا كيف نبقى على تواصل — لن نرسل إليك رسائل مزعجة ولن نشارك معلوماتك دون موافقتك.",
+  "zh": "請告訴我們如何與您保持聯絡 — 我們絕不會發送垃圾訊息，也不會在未經您同意的情況下分享您的資訊。",
+  "ur": "ہمیں بتائیں کہ رابطے میں کیسے رہنا ہے — ہم کبھی آپ کو سپیم نہیں بھیجیں گے اور آپ کی رضامندی کے بغیر آپ کی معلومات شیئر نہیں کریں گے۔",
+  "fr": "Dites-nous comment rester en contact — nous ne vous enverrons jamais de spam et ne partagerons jamais vos informations sans votre consentement.",
+  "pl": "Powiedz nam, jak się z Tobą kontaktować — nigdy nie wyślemy Ci spamu ani nie udostępnimy Twoich danych bez Twojej zgody."
+ },
+ "First name required": {
+  "es": "Se requiere el nombre",
+  "ar": "الاسم الأول مطلوب",
+  "zh": "須填寫名字",
+  "ur": "پہلا نام درکار ہے",
+  "fr": "Prénom obligatoire",
+  "pl": "Imię jest wymagane"
+ },
+ "Last name required": {
+  "es": "Se requiere el apellido",
+  "ar": "اسم العائلة مطلوب",
+  "zh": "須填寫姓氏",
+  "ur": "آخری نام درکار ہے",
+  "fr": "Nom de famille obligatoire",
+  "pl": "Nazwisko jest wymagane"
+ },
+ "MM/DD/YYYY": {
+  "es": "MM/DD/AAAA",
+  "ar": "شهر/يوم/سنة (MM/DD/YYYY)",
+  "zh": "月/日/年 (MM/DD/YYYY)",
+  "ur": "MM/DD/YYYY",
+  "fr": "MM/JJ/AAAA",
+  "pl": "MM/DD/RRRR"
+ },
+ "Date of birth required": {
+  "es": "Se requiere la fecha de nacimiento",
+  "ar": "تاريخ الميلاد مطلوب",
+  "zh": "須填寫出生日期",
+  "ur": "تاریخِ پیدائش درکار ہے",
+  "fr": "Date de naissance obligatoire",
+  "pl": "Data urodzenia jest wymagana"
+ },
+ "ZIP code required": {
+  "es": "Se requiere el código postal",
+  "ar": "الرمز البريدي مطلوب",
+  "zh": "須填寫郵遞區號",
+  "ur": "ZIP کوڈ درکار ہے",
+  "fr": "Code postal obligatoire",
+  "pl": "Kod pocztowy jest wymagany"
+ },
+ "Phone number required": {
+  "es": "Se requiere el número de teléfono",
+  "ar": "رقم الهاتف مطلوب",
+  "zh": "須填寫電話號碼",
+  "ur": "فون نمبر درکار ہے",
+  "fr": "Numéro de téléphone obligatoire",
+  "pl": "Numer telefonu jest wymagany"
+ },
+ "Email<span> (optional)</span>": {
+  "es": "Correo electrónico<span> (opcional)</span>",
+  "ar": "البريد الإلكتروني<span> (اختياري)</span>",
+  "zh": "電子郵件<span>（選填）</span>",
+  "ur": "ای میل<span> (اختیاری)</span>",
+  "fr": "E-mail<span> (facultatif)</span>",
+  "pl": "E-mail<span> (opcjonalnie)</span>"
+ },
+ "you@email.com": {
+  "es": "usted@correo.com",
+  "ar": "you@email.com",
+  "zh": "you@email.com",
+  "ur": "you@email.com",
+  "fr": "vous@email.com",
+  "pl": "ty@email.com"
+ },
+ "Email required": {
+  "es": "Se requiere el correo electrónico",
+  "ar": "البريد الإلكتروني مطلوب",
+  "zh": "須填寫電子郵件",
+  "ur": "ای میل درکار ہے",
+  "fr": "E-mail obligatoire",
+  "pl": "E-mail jest wymagany"
+ },
+ "Step 4 of 5": {
+  "es": "Paso 4 de 5",
+  "ar": "الخطوة 4 من 5",
+  "zh": "第 4 步，共 5 步",
+  "ur": "مرحلہ 4 از 5",
+  "fr": "Étape 4 sur 5",
+  "pl": "Krok 4 z 5"
+ },
+ "Confirm your information": {
+  "es": "Confirme su información",
+  "ar": "أكّد معلوماتك",
+  "zh": "確認您的資訊",
+  "ur": "اپنی معلومات کی تصدیق کریں",
+  "fr": "Confirmez vos informations",
+  "pl": "Potwierdź swoje dane"
+ },
+ "Edit Your information": {
+  "es": "Editar su información",
+  "ar": "تعديل معلوماتك",
+  "zh": "編輯您的資訊",
+  "ur": "اپنی معلومات میں ترمیم کریں",
+  "fr": "Modifier vos informations",
+  "pl": "Edytuj swoje dane"
+ },
+ "Email (optional)": {
+  "es": "Correo electrónico (opcional)",
+  "ar": "البريد الإلكتروني (اختياري)",
+  "zh": "電子郵件（選填）",
+  "ur": "ای میل (اختیاری)",
+  "fr": "E-mail (facultatif)",
+  "pl": "E-mail (opcjonalnie)"
+ },
+ "Preferred language": {
+  "es": "Idioma preferido",
+  "ar": "اللغة المفضلة",
+  "zh": "偏好語言",
+  "ur": "پسندیدہ زبان",
+  "fr": "Langue préférée",
+  "pl": "Preferowany język"
+ },
+ "Urdu": {
+  "es": "Urdu",
+  "ar": "الأردية",
+  "zh": "烏爾都語",
+  "ur": "اردو",
+  "fr": "Ourdou",
+  "pl": "Urdu"
+ },
+ "English": {
+  "es": "Inglés",
+  "ar": "الإنجليزية",
+  "zh": "英文",
+  "ur": "انگریزی",
+  "fr": "Anglais",
+  "pl": "Angielski"
+ },
+ "Spanish": {
+  "es": "Español",
+  "ar": "الإسبانية",
+  "zh": "西班牙文",
+  "ur": "ہسپانوی",
+  "fr": "Espagnol",
+  "pl": "Hiszpański"
+ },
+ "Chinese (Traditional)": {
+  "es": "Chino (tradicional)",
+  "ar": "الصينية (التقليدية)",
+  "zh": "中文（繁體）",
+  "ur": "چینی (روایتی)",
+  "fr": "Chinois (traditionnel)",
+  "pl": "Chiński (tradycyjny)"
+ },
+ "Russian": {
+  "es": "Ruso",
+  "ar": "الروسية",
+  "zh": "俄文",
+  "ur": "روسی",
+  "fr": "Russe",
+  "pl": "Rosyjski"
+ },
+ "Bengali": {
+  "es": "Bengalí",
+  "ar": "البنغالية",
+  "zh": "孟加拉文",
+  "ur": "بنگالی",
+  "fr": "Bengali",
+  "pl": "Bengalski"
+ },
+ "Haitian Creole": {
+  "es": "Criollo haitiano",
+  "ar": "الكريولية الهايتية",
+  "zh": "海地克里奧爾語",
+  "ur": "ہیٹی کریول",
+  "fr": "Créole haïtien",
+  "pl": "Kreolski haitański"
+ },
+ "Korean": {
+  "es": "Coreano",
+  "ar": "الكورية",
+  "zh": "韓文",
+  "ur": "کورین",
+  "fr": "Coréen",
+  "pl": "Koreański"
+ },
+ "Arabic": {
+  "es": "Árabe",
+  "ar": "العربية",
+  "zh": "阿拉伯文",
+  "ur": "عربی",
+  "fr": "Arabe",
+  "pl": "Arabski"
+ },
+ "French": {
+  "es": "Francés",
+  "ar": "الفرنسية",
+  "zh": "法文",
+  "ur": "فرانسیسی",
+  "fr": "Français",
+  "pl": "Francuski"
+ },
+ "Polish": {
+  "es": "Polaco",
+  "ar": "البولندية",
+  "zh": "波蘭文",
+  "ur": "پولش",
+  "fr": "Polonais",
+  "pl": "Polski"
+ },
+ "Step 5 of 5": {
+  "es": "Paso 5 de 5",
+  "ar": "الخطوة 5 من 5",
+  "zh": "第 5 步，共 5 步",
+  "ur": "مرحلہ 5 از 5",
+  "fr": "Étape 5 sur 5",
+  "pl": "Krok 5 z 5"
+ },
+ "Enter your code": {
+  "es": "Ingrese su código",
+  "ar": "أدخل رمزك",
+  "zh": "輸入您的驗證碼",
+  "ur": "اپنا کوڈ درج کریں",
+  "fr": "Saisissez votre code",
+  "pl": "Wpisz swój kod"
+ },
+ "Enter the 6-digit code sent to <span>the number ending in <strong></strong></span>. The code expires in 5 minutes.": {
+  "es": "Ingrese el código de 6 dígitos enviado al <span>número que termina en <strong></strong></span>. El código vence en 5 minutos.",
+  "ar": "أدخل الرمز المكوّن من 6 أرقام المرسل إلى <span>الرقم المنتهي بـ <strong></strong></span>. تنتهي صلاحية الرمز خلال 5 دقائق.",
+  "zh": "請輸入傳送至<span>末碼為 <strong></strong> 的號碼</span>的 6 位數驗證碼。驗證碼將於 5 分鐘後失效。",
+  "ur": "<span>اس نمبر پر جس کا اختتام <strong></strong> پر ہوتا ہے</span> بھیجا گیا 6 ہندسوں کا کوڈ درج کریں۔ کوڈ 5 منٹ میں ختم ہو جاتا ہے۔",
+  "fr": "Saisissez le code à 6 chiffres envoyé au <span>numéro se terminant par <strong></strong></span>. Le code expire dans 5 minutes.",
+  "pl": "Wpisz 6-cyfrowy kod wysłany na <span>numer kończący się na <strong></strong></span>. Kod wygasa po 5 minutach."
+ },
+ "New code sent.": {
+  "es": "Se envió un código nuevo.",
+  "ar": "تم إرسال رمز جديد.",
+  "zh": "已傳送新驗證碼。",
+  "ur": "نیا کوڈ بھیج دیا گیا۔",
+  "fr": "Nouveau code envoyé.",
+  "pl": "Wysłano nowy kod."
+ },
+ "6-digit code": {
+  "es": "Código de 6 dígitos",
+  "ar": "رمز من 6 أرقام",
+  "zh": "6 位數驗證碼",
+  "ur": "6 ہندسوں کا کوڈ",
+  "fr": "Code à 6 chiffres",
+  "pl": "6-cyfrowy kod"
+ },
+ "Need a new code?": {
+  "es": "¿Necesita un código nuevo?",
+  "ar": "هل تحتاج إلى رمز جديد؟",
+  "zh": "需要新的驗證碼嗎？",
+  "ur": "نیا کوڈ چاہیے؟",
+  "fr": "Besoin d’un nouveau code ?",
+  "pl": "Potrzebujesz nowego kodu?"
+ },
+ "Resend in <span>0:30</span>.": {
+  "es": "Reenviar en <span>0:30</span>.",
+  "ar": "إعادة الإرسال خلال <span>0:30</span>.",
+  "zh": "<span>0:30</span> 後可重新傳送。",
+  "ur": "<span>0:30</span> میں دوبارہ بھیجیں۔",
+  "fr": "Renvoyer dans <span>0:30</span>.",
+  "pl": "Wyślij ponownie za <span>0:30</span>."
+ },
+ "Sending a new code…": {
+  "es": "Enviando un código nuevo…",
+  "ar": "جارٍ إرسال رمز جديد…",
+  "zh": "正在傳送新驗證碼…",
+  "ur": "نیا کوڈ بھیجا جا رہا ہے…",
+  "fr": "Envoi d’un nouveau code…",
+  "pl": "Wysyłanie nowego kodu…"
+ },
+ "Resend": {
+  "es": "Reenviar",
+  "ar": "إعادة الإرسال",
+  "zh": "重新傳送",
+  "ur": "دوبارہ بھیجیں",
+  "fr": "Renvoyer",
+  "pl": "Wyślij ponownie"
+ },
+ "Get a code by email instead": {
+  "es": "Recibir un código por correo electrónico",
+  "ar": "احصل على رمز عبر البريد الإلكتروني بدلًا من ذلك",
+  "zh": "改用電子郵件接收驗證碼",
+  "ur": "اس کے بجائے ای میل پر کوڈ حاصل کریں",
+  "fr": "Recevoir un code par e-mail à la place",
+  "pl": "Otrzymaj kod e-mailem"
+ },
+ "<span>Changed numbers?</span> Email <a>hartconnectorsupport@health.nyc.gov</a>": {
+  "es": "<span>¿Cambió de número?</span> Escriba a <a>hartconnectorsupport@health.nyc.gov</a>",
+  "ar": "<span>هل غيّرت رقمك؟</span> راسلنا على <a>hartconnectorsupport@health.nyc.gov</a>",
+  "zh": "<span>更換了號碼？</span>請寄電子郵件至 <a>hartconnectorsupport@health.nyc.gov</a>",
+  "ur": "<span>نمبر تبدیل ہو گیا؟</span> <a>hartconnectorsupport@health.nyc.gov</a> پر ای میل کریں",
+  "fr": "<span>Numéro changé ?</span> Écrivez à <a>hartconnectorsupport@health.nyc.gov</a>",
+  "pl": "<span>Zmieniłeś(-aś) numer?</span> Napisz na <a>hartconnectorsupport@health.nyc.gov</a>"
+ },
+ "Welcome to the<br>HART Connector.": {
+  "es": "Le damos la bienvenida al<br>HART Connector.",
+  "ar": "مرحبًا بك في<br>HART Connector.",
+  "zh": "歡迎使用<br>HART Connector。",
+  "ur": "HART Connector میں<br>خوش آمدید۔",
+  "fr": "Bienvenue sur le<br>HART Connector.",
+  "pl": "Witamy w<br>HART Connector."
+ },
+ "Edit Preferred language": {
+  "es": "Editar idioma preferido",
+  "ar": "تعديل اللغة المفضلة",
+  "zh": "編輯偏好語言",
+  "ur": "پسندیدہ زبان میں ترمیم کریں",
+  "fr": "Modifier la langue préférée",
+  "pl": "Edytuj preferowany język"
+ },
+ "Language": {
+  "es": "Idioma",
+  "ar": "اللغة",
+  "zh": "語言",
+  "ur": "زبان",
+  "fr": "Langue",
+  "pl": "Język"
+ },
+ "Welcome back": {
+  "es": "Le damos la bienvenida de nuevo",
+  "ar": "مرحبًا بعودتك",
+  "zh": "歡迎回來",
+  "ur": "خوش آمدید",
+  "fr": "Bon retour",
+  "pl": "Witamy ponownie"
+ },
+ "This number is already linked to an account. Enter the 6-digit code sent to <span>the number ending in <strong></strong></span> to sign in. The code expires in 5 minutes.": {
+  "es": "Este número ya está vinculado a una cuenta. Ingrese el código de 6 dígitos enviado al <span>número que termina en <strong></strong></span> para iniciar sesión. El código vence en 5 minutos.",
+  "ar": "هذا الرقم مرتبط بحساب بالفعل. أدخل الرمز المكوّن من 6 أرقام المرسل إلى <span>الرقم المنتهي بـ <strong></strong></span> لتسجيل الدخول. تنتهي صلاحية الرمز خلال 5 دقائق.",
+  "zh": "此號碼已連結至一個帳戶。請輸入傳送至<span>末碼為 <strong></strong> 的號碼</span>的 6 位數驗證碼以登入。驗證碼將於 5 分鐘後失效。",
+  "ur": "یہ نمبر پہلے ہی ایک اکاؤنٹ سے منسلک ہے۔ سائن ان کرنے کے لیے <span>اس نمبر پر جس کا اختتام <strong></strong> پر ہوتا ہے</span> بھیجا گیا 6 ہندسوں کا کوڈ درج کریں۔ کوڈ 5 منٹ میں ختم ہو جاتا ہے۔",
+  "fr": "Ce numéro est déjà associé à un compte. Saisissez le code à 6 chiffres envoyé au <span>numéro se terminant par <strong></strong></span> pour vous connecter. Le code expire dans 5 minutes.",
+  "pl": "Ten numer jest już powiązany z kontem. Aby się zalogować, wpisz 6-cyfrowy kod wysłany na <span>numer kończący się na <strong></strong></span>. Kod wygasa po 5 minutach."
+ },
+ "Changed numbers? Email <a>hartconnectorsupport@health.nyc.gov</a>": {
+  "es": "¿Cambió de número? Escriba a <a>hartconnectorsupport@health.nyc.gov</a>",
+  "ar": "هل غيّرت رقمك؟ راسلنا على <a>hartconnectorsupport@health.nyc.gov</a>",
+  "zh": "更換了號碼？請寄電子郵件至 <a>hartconnectorsupport@health.nyc.gov</a>",
+  "ur": "نمبر تبدیل ہو گیا؟ <a>hartconnectorsupport@health.nyc.gov</a> پر ای میل کریں",
+  "fr": "Numéro changé ? Écrivez à <a>hartconnectorsupport@health.nyc.gov</a>",
+  "pl": "Zmieniłeś(-aś) numer? Napisz na <a>hartconnectorsupport@health.nyc.gov</a>"
+ },
+ "Not you? <a>Create an account</a>": {
+  "es": "¿No es usted? <a>Cree una cuenta</a>",
+  "ar": "لست أنت؟ <a>أنشئ حسابًا</a>",
+  "zh": "不是您本人？<a>建立帳戶</a>",
+  "ur": "آپ نہیں ہیں؟ <a>اکاؤنٹ بنائیں</a>",
+  "fr": "Ce n’est pas vous ? <a>Créez un compte</a>",
+  "pl": "To nie Ty? <a>Utwórz konto</a>"
+ },
+ "Pick up where you left off.": {
+  "es": "Continúe donde lo dejó.",
+  "ar": "تابع من حيث توقفت.",
+  "zh": "從上次中斷的地方繼續。",
+  "ur": "وہیں سے جاری رکھیں جہاں آپ نے چھوڑا تھا۔",
+  "fr": "Reprenez là où vous vous êtes arrêté(e).",
+  "pl": "Kontynuuj od miejsca, w którym skończyłeś(-aś)."
+ },
+ "Try again later": {
+  "es": "Intente de nuevo más tarde",
+  "ar": "حاول مرة أخرى لاحقًا",
+  "zh": "請稍後再試",
+  "ur": "بعد میں دوبارہ کوشش کریں",
+  "fr": "Réessayez plus tard",
+  "pl": "Spróbuj ponownie później"
+ },
+ "For your security, sign-in is paused for 1 hour. You can try again in <strong>59:59</strong>.": {
+  "es": "Por su seguridad, el inicio de sesión está en pausa durante 1 hora. Podrá intentarlo de nuevo en <strong>59:59</strong>.",
+  "ar": "لأمانك، تم إيقاف تسجيل الدخول مؤقتًا لمدة ساعة واحدة. يمكنك المحاولة مرة أخرى خلال <strong>59:59</strong>.",
+  "zh": "為了您的安全，登入已暫停 1 小時。您可在 <strong>59:59</strong> 後再試。",
+  "ur": "آپ کی سیکیورٹی کے لیے، سائن ان 1 گھنٹے کے لیے روک دیا گیا ہے۔ آپ <strong>59:59</strong> میں دوبارہ کوشش کر سکتے ہیں۔",
+  "fr": "Pour votre sécurité, la connexion est suspendue pendant 1 heure. Vous pourrez réessayer dans <strong>59:59</strong>.",
+  "pl": "Ze względów bezpieczeństwa logowanie jest wstrzymane na 1 godzinę. Możesz spróbować ponownie za <strong>59:59</strong>."
+ },
+ "Return home": {
+  "es": "Volver al inicio",
+  "ar": "العودة إلى الصفحة الرئيسية",
+  "zh": "返回首頁",
+  "ur": "ہوم پر واپس جائیں",
+  "fr": "Retour à l’accueil",
+  "pl": "Wróć do strony głównej"
+ },
+ "(optional)": {
+  "es": "(opcional)",
+  "ar": "(اختياري)",
+  "zh": "（選填）",
+  "ur": "(اختیاری)",
+  "fr": "(facultatif)",
+  "pl": "(opcjonalnie)"
  }
 };
