@@ -11,7 +11,10 @@ window.I18N_DICT = {
  "<strong>Assist (virtual or in person):</strong> Answer a few questions, then match with an expert who will prepare and submit your return.": {
   "es": "<strong>Assist (virtual o en persona):</strong> Responda unas preguntas y le asignaremos a un experto que preparará y enviará su declaración.",
   "ar": "<strong>المساعدة (Assist) عن بُعد أو شخصيًا:</strong> أجب عن بعض الأسئلة، ثم سنوصلك بخبير يُعدّ إقرارك الضريبي ويقدّمه.",
-  "zh": "<strong>協助申報（線上或親自）：</strong>回答幾個問題，我們會為您配對專家，由專家為您準備並提交報稅表。"
+  "zh": "<strong>協助申報（線上或親自）：</strong>回答幾個問題，我們會為您配對專家，由專家為您準備並提交報稅表。",
+  "ur": "<strong>معاونت (Assist) آن لائن یا بالمشافہ:</strong> چند سوالات کے جواب دیں، پھر ایک ماہر سے ملائے جائیں جو آپ کا ریٹرن تیار کر کے جمع کرائے گا۔",
+  "fr": "<strong>Assist (virtuel ou en personne) :</strong> Répondez à quelques questions, puis soyez mis(e) en relation avec un expert qui préparera et déposera votre déclaration.",
+  "pl": "<strong>Assist (wirtualnie lub osobiście):</strong> Odpowiedz na kilka pytań, a zostaniesz połączony(-a) z ekspertem, który przygotuje i złoży Twoje zeznanie."
  },
  "<strong>FileMyself:</strong> File on your own and chat with an expert if you need it": {
   "es": "<strong>FileMyself:</strong> Presente su declaración por su cuenta y converse con un experto si lo necesita",
@@ -21,12 +24,18 @@ window.I18N_DICT = {
  "A .gov website belongs to an official government organization in the United States.": {
   "es": "Un sitio web .gov pertenece a una organización oficial del gobierno de los Estados Unidos.",
   "ar": "الموقع الذي ينتهي بـ .gov يخص جهة حكومية رسمية في الولايات المتحدة.",
-  "zh": "以 .gov 結尾的網站屬於美國的官方政府機構。"
+  "zh": "以 .gov 結尾的網站屬於美國的官方政府機構。",
+  "ur": "ایک .gov ویب سائٹ ریاستہائے متحدہ کی کسی سرکاری تنظیم کی ہوتی ہے۔",
+  "fr": "Un site Web .gov appartient à une organisation gouvernementale officielle des États-Unis.",
+  "pl": "Strona z domeną .gov należy do oficjalnej organizacji rządowej w Stanach Zjednoczonych."
  },
  "A lock (<span>🔒</span>) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.": {
   "es": "Un candado (<span>🔒</span>) o https:// significa que se conectó de forma segura a un sitio web .gov. Comparta información confidencial solo en sitios web oficiales y seguros.",
   "ar": "يعني القفل (<span>🔒</span>) أو https:// أنك اتصلت بموقع .gov بأمان. شارك المعلومات الحساسة فقط على المواقع الرسمية والآمنة.",
-  "zh": "鎖頭圖示（<span>🔒</span>）或 https:// 表示您已安全連線至 .gov 網站。請僅在官方的安全網站上分享敏感資訊。"
+  "zh": "鎖頭圖示（<span>🔒</span>）或 https:// 表示您已安全連線至 .gov 網站。請僅在官方的安全網站上分享敏感資訊。",
+  "ur": "تالا (<span>🔒</span>) یا https:// کا مطلب ہے کہ آپ محفوظ طریقے سے .gov ویب سائٹ سے جڑ گئے ہیں۔ حساس معلومات صرف سرکاری اور محفوظ ویب سائٹس پر شیئر کریں۔",
+  "fr": "Un cadenas (<span>🔒</span>) ou https:// signifie que vous êtes connecté en toute sécurité à un site .gov. Ne communiquez des informations sensibles que sur des sites officiels et sécurisés.",
+  "pl": "Kłódka (<span>🔒</span>) lub https:// oznacza, że połączono się bezpiecznie ze stroną .gov. Poufne informacje podawaj tylko na oficjalnych, bezpiecznych stronach."
  },
  "A tenant support specialist will contact you in 2-3 business days.": {
   "es": "Un especialista de apoyo para inquilinos se comunicará con usted en 2 a 3 días hábiles.",
@@ -51,7 +60,10 @@ window.I18N_DICT = {
  "Answer a few questions and schedule a free call with an enrollment counselor.": {
   "es": "Responda unas preguntas y programe una llamada gratuita con un consejero de inscripción.",
   "ar": "أجب عن بعض الأسئلة، ثم حدّد موعدًا لمكالمة مجانية مع مستشار التسجيل.",
-  "zh": "回答幾個問題，並預約與登記輔導員的免費通話。"
+  "zh": "回答幾個問題，並預約與登記輔導員的免費通話。",
+  "ur": "چند سوالات کے جواب دیں اور اندراج کاؤنسلر کے ساتھ ایک مفت کال شیڈول کریں۔",
+  "fr": "Répondez à quelques questions et planifiez un appel gratuit avec un conseiller d’inscription.",
+  "pl": "Odpowiedz na kilka pytań i umów bezpłatną rozmowę z doradcą ds. rejestracji."
  },
  "Answer a few quick questions to find out if you can claim tax credits.": {
   "es": "Responda unas preguntas rápidas para saber si puede reclamar créditos fiscales.",
@@ -66,47 +78,74 @@ window.I18N_DICT = {
  "Apply for energy assistance using the NYC Health <a>Benefits Enrollment Assistant<svg/><span> (opens in new tab)</span></a>": {
   "es": "Solicite ayuda para la energía con el <a>Asistente de Inscripción de Beneficios<svg/><span> (se abre en una pestaña nueva)</span></a> de NYC Health",
   "ar": "قدّم طلب المساعدة في الطاقة عبر <a>مساعد التسجيل في المزايا<svg/><span> (يفتح في علامة تبويب جديدة)</span></a> من NYC Health",
-  "zh": "使用 NYC Health <a>福利登記助手<svg/><span>（在新分頁開啟）</span></a>申請能源補助"
+  "zh": "使用 NYC Health <a>福利登記助手<svg/><span>（在新分頁開啟）</span></a>申請能源補助",
+  "ur": "NYC Health کے <a>بینیفٹس اینرولمنٹ اسسٹنٹ<svg/><span> (نئے ٹیب میں کھلتا ہے)</span></a> کے ذریعے توانائی کی امداد کے لیے درخواست دیں",
+  "fr": "Demandez une aide énergétique avec l’<a>assistant d’inscription aux prestations<svg/><span> (s’ouvre dans un nouvel onglet)</span></a> de NYC Health",
+  "pl": "Złóż wniosek o pomoc energetyczną za pomocą <a>Asystenta Zapisów na Świadczenia<svg/><span> (otwiera się w nowej karcie)</span></a> NYC Health"
  },
  "April": {
   "es": "Abril",
   "ar": "أبريل",
-  "zh": "4月"
+  "zh": "4月",
+  "ur": "اپریل",
+  "fr": "avril",
+  "pl": "kwiecień"
  },
  "Are any of the following situations happening to you?": {
   "es": "¿Le está pasando alguna de las siguientes situaciones?",
   "ar": "هل تواجه أيًا من الحالات التالية؟",
-  "zh": "您是否遇到以下任何情況？"
+  "zh": "您是否遇到以下任何情況？",
+  "ur": "کیا آپ کے ساتھ درج ذیل میں سے کوئی صورتحال پیش آ رہی ہے؟",
+  "fr": "L’une des situations suivantes vous concerne-t-elle ?",
+  "pl": "Czy dotyczy Cię któraś z poniższych sytuacji?"
  },
  "Are you a Con Edison and/or National Grid customer?": {
   "es": "¿Es cliente de Con Edison o National Grid?",
   "ar": "هل أنت من عملاء Con Edison و/أو National Grid؟",
-  "zh": "您是 Con Edison 和／或 National Grid 的客戶嗎？"
+  "zh": "您是 Con Edison 和／或 National Grid 的客戶嗎？",
+  "ur": "کیا آپ Con Edison اور/یا National Grid کے صارف ہیں؟",
+  "fr": "Êtes-vous client de Con Edison et/ou de National Grid ?",
+  "pl": "Czy jesteś klientem Con Edison i/lub National Grid?"
  },
  "Are you blind or have low vision?": {
   "es": "¿Es ciego o tiene baja visión?",
   "ar": "هل لديك إعاقة بصرية أو ضعف في النظر؟",
-  "zh": "您是否失明或視力不佳？"
+  "zh": "您是否失明或視力不佳？",
+  "ur": "کیا آپ نابینا ہیں یا آپ کی بینائی کمزور ہے؟",
+  "fr": "Êtes-vous aveugle ou malvoyant(e) ?",
+  "pl": "Czy jesteś niewidomy(-a) lub niedowidzący(-a)?"
  },
  "Are you currently enrolled in any government assistance programs?": {
   "es": "¿Está inscrito actualmente en algún programa de asistencia del gobierno?",
   "ar": "هل أنت مسجَّل حاليًا في أي برامج مساعدة حكومية؟",
-  "zh": "您目前是否參加任何政府援助計劃？"
+  "zh": "您目前是否參加任何政府援助計劃？",
+  "ur": "کیا آپ فی الحال کسی سرکاری امدادی پروگرام میں اندراج شدہ ہیں؟",
+  "fr": "Êtes-vous actuellement inscrit(e) à un programme d’aide gouvernementale ?",
+  "pl": "Czy obecnie uczestniczysz w jakimkolwiek rządowym programie pomocy?"
  },
  "Are you living with a disability?": {
   "es": "¿Vive con una discapacidad?",
   "ar": "هل لديك إعاقة؟",
-  "zh": "您是否有殘疾？"
+  "zh": "您是否有殘疾？",
+  "ur": "کیا آپ کسی معذوری کے ساتھ زندگی گزار رہے ہیں؟",
+  "fr": "Vivez-vous avec un handicap ?",
+  "pl": "Czy żyjesz z niepełnosprawnością?"
  },
  "August": {
   "es": "Agosto",
   "ar": "أغسطس",
-  "zh": "8月"
+  "zh": "8月",
+  "ur": "اگست",
+  "fr": "août",
+  "pl": "sierpień"
  },
  "Back": {
   "es": "Atrás",
   "ar": "رجوع",
-  "zh": "返回"
+  "zh": "返回",
+  "ur": "واپس",
+  "fr": "Retour",
+  "pl": "Wstecz"
  },
  "Back to dashboard": {
   "es": "Volver al panel",
@@ -119,7 +158,10 @@ window.I18N_DICT = {
  "Bank statements": {
   "es": "Estados de cuenta bancarios",
   "ar": "كشوف الحساب المصرفي",
-  "zh": "銀行對帳單"
+  "zh": "銀行對帳單",
+  "ur": "بینک اسٹیٹمنٹس",
+  "fr": "Relevés bancaires",
+  "pl": "Wyciągów bankowych"
  },
  "Bill date": {
   "es": "Fecha de la factura",
@@ -129,17 +171,26 @@ window.I18N_DICT = {
  "Bill month": {
   "es": "Mes de la factura",
   "ar": "شهر الفاتورة",
-  "zh": "帳單月份"
+  "zh": "帳單月份",
+  "ur": "بل کا مہینہ",
+  "fr": "Mois de la facture",
+  "pl": "Miesiąc rachunku"
  },
  "Bill year": {
   "es": "Año de la factura",
   "ar": "سنة الفاتورة",
-  "zh": "帳單年份"
+  "zh": "帳單年份",
+  "ur": "بل کا سال",
+  "fr": "Année de la facture",
+  "pl": "Rok rachunku"
  },
  "Both": {
   "es": "Ambos",
   "ar": "كلاهما",
-  "zh": "兩者皆是"
+  "zh": "兩者皆是",
+  "ur": "دونوں",
+  "fr": "Les deux",
+  "pl": "Oba"
  },
  "By submitting this page, you agree to share your information with Dollar For and CSS, and you agree to receive texts, calls, and emails from Dollar For and CSS about your application. You may opt out at any time. Learn more about <a>Dollar For’s privacy policy<span> (opens in new tab)</span></a> and <a>CSS’s privacy policy<span> (opens in new tab)</span></a>.": {
   "es": "Al enviar esta página, usted acepta compartir su información con Dollar For y CSS, y acepta recibir mensajes de texto, llamadas y correos electrónicos de Dollar For y CSS sobre su solicitud. Puede cancelar en cualquier momento. Obtenga más información sobre <a>la política de privacidad de Dollar For<span> (se abre en una pestaña nueva)</span></a> y <a>la política de privacidad de CSS<span> (se abre en una pestaña nueva)</span></a>.",
@@ -152,12 +203,18 @@ window.I18N_DICT = {
  "By submitting this page, you agree to share your information with GetYourRefund to help you claim your tax credits.": {
   "es": "Al enviar esta página, usted acepta compartir su información con GetYourRefund para ayudarle a reclamar sus créditos fiscales.",
   "ar": "بإرسال هذه الصفحة، فإنك توافق على مشاركة معلوماتك مع GetYourRefund لمساعدتك في المطالبة بإعفاءاتك الضريبية.",
-  "zh": "提交此頁面即表示，您同意與 GetYourRefund 分享您的資訊，以協助您申請稅務抵免。"
+  "zh": "提交此頁面即表示，您同意與 GetYourRefund 分享您的資訊，以協助您申請稅務抵免。",
+  "ur": "اس صفحے کو جمع کروا کر، آپ اپنے ٹیکس کریڈٹ کا دعویٰ کرنے میں مدد کے لیے GetYourRefund کے ساتھ اپنی معلومات شیئر کرنے سے اتفاق کرتے ہیں۔",
+  "fr": "En envoyant cette page, vous acceptez que vos informations soient transmises à GetYourRefund pour vous aider à demander vos crédits d’impôt.",
+  "pl": "Wysyłając tę stronę, zgadzasz się na udostępnienie swoich danych GetYourRefund, aby pomóc Ci ubiegać się o ulgi podatkowe."
  },
  "By submitting this page, you agree to share your information with TSU and you agree to receive calls and texts from TSU about your eviction case. You may opt out at any time. Learn more about <a>TSU’s privacy policy<span> (opens in new tab)</span></a>.": {
   "es": "Al enviar esta página, usted acepta compartir su información con TSU y acepta recibir llamadas y mensajes de texto de TSU sobre su caso de desalojo. Puede cancelar en cualquier momento. Obtenga más información sobre <a>la política de privacidad de TSU<span> (se abre en una pestaña nueva)</span></a>.",
   "ar": "بإرسال هذه الصفحة، فإنك توافق على مشاركة معلوماتك مع TSU، وتوافق على تلقي مكالمات ورسائل نصية من TSU بشأن قضية الإخلاء الخاصة بك. يمكنك إلغاء الاشتراك في أي وقت. اطّلع على المزيد حول <a>سياسة الخصوصية لدى TSU<span> (تفتح في علامة تبويب جديدة)</span></a>.",
-  "zh": "提交此頁面即表示，您同意與 TSU 分享您的資訊，並同意 TSU 就您的驅逐案件透過電話和簡訊與您聯絡。您可隨時選擇退出。進一步了解 <a>TSU 的隱私權政策<span>（在新分頁開啟）</span></a>。"
+  "zh": "提交此頁面即表示，您同意與 TSU 分享您的資訊，並同意 TSU 就您的驅逐案件透過電話和簡訊與您聯絡。您可隨時選擇退出。進一步了解 <a>TSU 的隱私權政策<span>（在新分頁開啟）</span></a>。",
+  "ur": "اس صفحے کو جمع کروا کر، آپ TSU کے ساتھ اپنی معلومات شیئر کرنے اور اپنے بے دخلی کے کیس کے بارے میں TSU سے کالز اور ٹیکسٹ پیغامات موصول کرنے سے اتفاق کرتے ہیں۔ آپ کسی بھی وقت اس سے دستبردار ہو سکتے ہیں۔ <a>TSU کی پرائیویسی پالیسی<span> (نئے ٹیب میں کھلتا ہے)</span></a> کے بارے میں مزید جانیں۔",
+  "fr": "En envoyant cette page, vous acceptez que vos informations soient transmises à la TSU et de recevoir des appels et des SMS de la TSU au sujet de votre dossier d’expulsion. Vous pouvez vous désabonner à tout moment. En savoir plus sur <a>la politique de confidentialité de la TSU<span> (s’ouvre dans un nouvel onglet)</span></a>.",
+  "pl": "Wysyłając tę stronę, zgadzasz się na udostępnienie swoich danych TSU oraz na otrzymywanie od TSU telefonów i SMS-ów dotyczących Twojej sprawy eksmisyjnej. W dowolnym momencie możesz zrezygnować. Dowiedz się więcej o <a>polityce prywatności TSU<span> (otwiera się w nowej karcie)</span></a>."
  },
  "By submitting this page, you agree to share your information with your utility company and the NYC Health Benefits Enrollment Assistant team to help you get the energy discounts you qualify for.": {
   "es": "Al enviar esta página, usted acepta compartir su información con su compañía de servicios públicos y con el equipo del Asistente de Inscripción de Beneficios de NYC Health para ayudarle a obtener los descuentos de energía para los que califica.",
@@ -167,7 +224,10 @@ window.I18N_DICT = {
  "Call 311": {
   "es": "Llame al 311",
   "ar": "اتصل بالرقم 311",
-  "zh": "致電 311"
+  "zh": "致電 311",
+  "ur": "311 پر کال کریں",
+  "fr": "Appeler le 311",
+  "pl": "Zadzwoń pod 311"
  },
  "Call 311 for housing support — NYC Health": {
   "es": "Llame al 311 para recibir ayuda con la vivienda — NYC Health",
@@ -177,7 +237,10 @@ window.I18N_DICT = {
  "Call 311 for more information about energy assistance.": {
   "es": "Llame al 311 para obtener más información sobre la ayuda para la energía.",
   "ar": "اتصل بالرقم 311 لمزيد من المعلومات حول المساعدة في الطاقة.",
-  "zh": "請致電 311 了解更多能源補助資訊。"
+  "zh": "請致電 311 了解更多能源補助資訊。",
+  "ur": "توانائی کی امداد کے بارے میں مزید معلومات کے لیے 311 پر کال کریں۔",
+  "fr": "Appelez le 311 pour en savoir plus sur l’aide énergétique.",
+  "pl": "Zadzwoń pod 311, aby uzyskać więcej informacji o pomocy energetycznej."
  },
  "Call 311 for<br>housing support": {
   "es": "Llame al 311 para<br>recibir ayuda con la vivienda",
@@ -197,7 +260,10 @@ window.I18N_DICT = {
  "Con Edison and National Grid": {
   "es": "Con Edison y National Grid",
   "ar": "Con Edison وNational Grid",
-  "zh": "Con Edison 和 National Grid"
+  "zh": "Con Edison 和 National Grid",
+  "ur": "Con Edison اور National Grid",
+  "fr": "Con Edison et National Grid",
+  "pl": "Con Edison i National Grid"
  },
  "Connect with an NYC<br>Health Department<br>enrollment counselor <span>What’s next</span>": {
   "es": "Comuníquese con un consejero<br>de inscripción del Departamento<br>de Salud de NYC <span>Qué sigue</span>",
@@ -235,22 +301,34 @@ window.I18N_DICT = {
  "December": {
   "es": "Diciembre",
   "ar": "ديسمبر",
-  "zh": "12月"
+  "zh": "12月",
+  "ur": "دسمبر",
+  "fr": "décembre",
+  "pl": "grudzień"
  },
  "Decrease household size": {
   "es": "Reducir el tamaño del hogar",
   "ar": "تقليل حجم الأسرة",
-  "zh": "減少家庭人數"
+  "zh": "減少家庭人數",
+  "ur": "گھرانے کا سائز کم کریں",
+  "fr": "Diminuer la taille du foyer",
+  "pl": "Zmniejsz liczbę osób w gospodarstwie"
  },
  "Did you have health insurance when you went to the hospital?": {
   "es": "¿Tenía seguro médico cuando fue al hospital?",
   "ar": "هل كان لديك تأمين صحي عندما ذهبت إلى المستشفى؟",
-  "zh": "您去醫院時有健康保險嗎？"
+  "zh": "您去醫院時有健康保險嗎？",
+  "ur": "جب آپ ہسپتال گئے تو کیا آپ کے پاس ہیلتھ انشورنس تھی؟",
+  "fr": "Aviez-vous une assurance maladie lorsque vous êtes allé(e) à l’hôpital ?",
+  "pl": "Czy miałeś(-aś) ubezpieczenie zdrowotne, gdy zgłosiłeś(-aś) się do szpitala?"
  },
  "Did you have income from work in the last three years?": {
   "es": "¿Tuvo ingresos del trabajo en los últimos tres años?",
   "ar": "هل كان لديك دخل من العمل خلال السنوات الثلاث الماضية؟",
-  "zh": "過去三年內您有工作收入嗎？"
+  "zh": "過去三年內您有工作收入嗎？",
+  "ur": "کیا پچھلے تین سالوں میں آپ کی کام سے آمدنی تھی؟",
+  "fr": "Avez-vous eu un revenu du travail au cours des trois dernières années ?",
+  "pl": "Czy w ciągu ostatnich trzech lat miałeś(-aś) dochód z pracy?"
  },
  "Direct Vendor or Utility Guarantee": {
   "es": "Pago directo al proveedor o Garantía de servicios públicos",
@@ -260,17 +338,26 @@ window.I18N_DICT = {
  "Do you have Medicare?": {
   "es": "¿Tiene Medicare?",
   "ar": "هل لديك Medicare؟",
-  "zh": "您有聯邦醫療保險 (Medicare) 嗎？"
+  "zh": "您有聯邦醫療保險 (Medicare) 嗎？",
+  "ur": "کیا آپ کے پاس Medicare ہے؟",
+  "fr": "Avez-vous Medicare ?",
+  "pl": "Czy masz Medicare?"
  },
  "Do you have children that you care for?": {
   "es": "¿Tiene hijos a su cargo?",
   "ar": "هل لديك أطفال ترعاهم؟",
-  "zh": "您有需要照顧的子女嗎？"
+  "zh": "您有需要照顧的子女嗎？",
+  "ur": "کیا آپ کے بچے ہیں جن کی آپ دیکھ بھال کرتے ہیں؟",
+  "fr": "Avez-vous des enfants dont vous vous occupez ?",
+  "pl": "Czy opiekujesz się dziećmi?"
  },
  "Do you have private health insurance (for example, Qualified Health Plan)?": {
   "es": "¿Tiene seguro médico privado (Plan de Salud Calificado)?",
   "ar": "هل لديك تأمين صحي خاص (خطة صحية مؤهلة Qualified Health Plan)؟",
-  "zh": "您有私人健康保險（合格健康計劃，Qualified Health Plan）嗎？"
+  "zh": "您有私人健康保險（合格健康計劃，Qualified Health Plan）嗎？",
+  "ur": "کیا آپ کے پاس نجی ہیلتھ انشورنس ہے (مثلاً کوالیفائیڈ ہیلتھ پلان)؟",
+  "fr": "Avez-vous une assurance maladie privée (par exemple, un Qualified Health Plan) ?",
+  "pl": "Czy masz prywatne ubezpieczenie zdrowotne (na przykład Qualified Health Plan)?"
  },
  "Do you make less than {x} per year?": {
   "es": "¿Gana menos de {x} al año?",
@@ -290,17 +377,26 @@ window.I18N_DICT = {
  "Dollar For can help <span>What’s next</span>": {
   "es": "Dollar For puede ayudarle <span>Qué sigue</span>",
   "ar": "يمكن أن تساعدك Dollar For <span>الخطوة التالية</span>",
-  "zh": "Dollar For 可以協助您 <span>下一步</span>"
+  "zh": "Dollar For 可以協助您 <span>下一步</span>",
+  "ur": "Dollar For مدد کر سکتا ہے <span>آگے کیا ہوگا</span>",
+  "fr": "Dollar For peut vous aider <span>Et ensuite</span>",
+  "pl": "Dollar For może pomóc <span>Co dalej</span>"
  },
  "Dollar For will prepare<br>and submit your application.": {
   "es": "Dollar For preparará<br>y enviará su solicitud.",
   "ar": "ستُعدّ Dollar For طلبك<br>وتقدّمه.",
-  "zh": "Dollar For 將為您準備並提交申請。"
+  "zh": "Dollar For 將為您準備並提交申請。",
+  "ur": "Dollar For آپ کی درخواست<br>تیار کر کے جمع کرائے گا۔",
+  "fr": "Dollar For préparera et déposera<br>votre demande.",
+  "pl": "Dollar For przygotuje<br>i złoży Twój wniosek."
  },
  "Edit": {
   "es": "Editar",
   "ar": "تعديل",
-  "zh": "編輯"
+  "zh": "編輯",
+  "ur": "ترمیم کریں",
+  "fr": "Modifier",
+  "pl": "Edytuj"
  },
  "Email": {
   "es": "Correo electrónico",
@@ -315,12 +411,18 @@ window.I18N_DICT = {
  "Energy discounts": {
   "es": "Descuentos de energía",
   "ar": "خصومات الطاقة",
-  "zh": "能源折扣"
+  "zh": "能源折扣",
+  "ur": "توانائی پر رعایت",
+  "fr": "Réductions d’énergie",
+  "pl": "Zniżki na energię"
  },
  "Energy discounts are only available to Con Edison and National Grid customers enrolled in a qualifying government program or who meet the income limit.": {
   "es": "Los descuentos de energía solo están disponibles para clientes de Con Edison y National Grid que estén inscritos en un programa del gobierno que califique o que cumplan con el límite de ingresos.",
   "ar": "خصومات الطاقة متاحة فقط لعملاء Con Edison وNational Grid المسجَّلين في برنامج حكومي مؤهِّل أو الذين تنطبق عليهم حدود الدخل.",
-  "zh": "能源折扣僅提供給參加符合資格政府計劃或符合收入限制的 Con Edison 和 National Grid 客戶。"
+  "zh": "能源折扣僅提供給參加符合資格政府計劃或符合收入限制的 Con Edison 和 National Grid 客戶。",
+  "ur": "توانائی پر رعایت صرف Con Edison اور National Grid کے ان صارفین کے لیے دستیاب ہے جو کسی اہل سرکاری پروگرام میں اندراج شدہ ہوں یا آمدنی کی حد پر پورا اترتے ہوں۔",
+  "fr": "Les réductions d’énergie sont réservées aux clients de Con Edison et de National Grid inscrits à un programme gouvernemental admissible ou dont le revenu est inférieur au plafond.",
+  "pl": "Zniżki na energię są dostępne tylko dla klientów Con Edison i National Grid uczestniczących w kwalifikującym się programie rządowym lub spełniających limit dochodów."
  },
  "Energy discounts — NYC Health": {
   "es": "Descuentos de energía — NYC Health",
@@ -330,7 +432,10 @@ window.I18N_DICT = {
  "Enroll in health insurance": {
   "es": "Inscribirse en un seguro médico",
   "ar": "التسجيل في التأمين الصحي",
-  "zh": "登記健康保險"
+  "zh": "登記健康保險",
+  "ur": "ہیلتھ انشورنس میں اندراج کروائیں",
+  "fr": "S’inscrire à une assurance maladie",
+  "pl": "Zapisz się do ubezpieczenia zdrowotnego"
  },
  "Enroll in or renew free health insurance.": {
   "es": "Inscríbase o renueve su seguro médico gratuito.",
@@ -340,7 +445,10 @@ window.I18N_DICT = {
  "Evening": {
   "es": "Tarde",
   "ar": "مساءً",
-  "zh": "晚上"
+  "zh": "晚上",
+  "ur": "شام",
+  "fr": "Soir",
+  "pl": "Wieczorem"
  },
  "Eviction": {
   "es": "Desalojo",
@@ -350,7 +458,10 @@ window.I18N_DICT = {
  "Facing eviction?": {
   "es": "¿Enfrenta un desalojo?",
   "ar": "هل تواجه الإخلاء؟",
-  "zh": "面臨驅逐？"
+  "zh": "面臨驅逐？",
+  "ur": "بے دخلی کا سامنا ہے؟",
+  "fr": "Vous risquez l’expulsion ?",
+  "pl": "Grozi Ci eksmisja?"
  },
  "Facing eviction? — NYC Health": {
   "es": "¿Enfrenta un desalojo? — NYC Health",
@@ -360,7 +471,10 @@ window.I18N_DICT = {
  "February": {
   "es": "Febrero",
   "ar": "فبراير",
-  "zh": "2月"
+  "zh": "2月",
+  "ur": "فروری",
+  "fr": "février",
+  "pl": "luty"
  },
  "Federal public housing assistance": {
   "es": "Asistencia federal de vivienda pública",
@@ -395,22 +509,34 @@ window.I18N_DICT = {
  "Get help staying in your home.": {
   "es": "Reciba ayuda para quedarse en su hogar.",
   "ar": "احصل على المساعدة للبقاء في منزلك.",
-  "zh": "獲得協助，繼續住在您的家中。"
+  "zh": "獲得協助，繼續住在您的家中。",
+  "ur": "اپنے گھر میں رہنے کے لیے مدد حاصل کریں۔",
+  "fr": "Obtenez de l’aide pour rester dans votre logement.",
+  "pl": "Uzyskaj pomoc, aby zostać w swoim domu."
  },
  "Get started": {
   "es": "Comenzar",
   "ar": "ابدأ",
-  "zh": "開始使用"
+  "zh": "開始使用",
+  "ur": "شروع کریں",
+  "fr": "Commencer",
+  "pl": "Zacznij"
  },
  "Have you filed taxes in the last three years?": {
   "es": "¿Ha presentado impuestos en los últimos tres años?",
   "ar": "هل قدّمت إقرارات ضريبية خلال السنوات الثلاث الماضية؟",
-  "zh": "過去三年內您報過稅嗎？"
+  "zh": "過去三年內您報過稅嗎？",
+  "ur": "کیا آپ نے پچھلے تین سالوں میں ٹیکس فائل کیے ہیں؟",
+  "fr": "Avez-vous déposé une déclaration d’impôts au cours des trois dernières années ?",
+  "pl": "Czy składałeś(-aś) zeznania podatkowe w ciągu ostatnich trzech lat?"
  },
  "Health insurance": {
   "es": "Seguro médico",
   "ar": "التأمين الصحي",
-  "zh": "健康保險"
+  "zh": "健康保險",
+  "ur": "ہیلتھ انشورنس",
+  "fr": "Assurance maladie",
+  "pl": "Ubezpieczenie zdrowotne"
  },
  "Health insurance — NYC Health": {
   "es": "Seguro médico — NYC Health",
@@ -420,7 +546,10 @@ window.I18N_DICT = {
  "Home Energy Assistance Program (HEAP)": {
   "es": "Programa de Asistencia de Energía para el Hogar (HEAP)",
   "ar": "برنامج المساعدة في الطاقة المنزلية (HEAP)",
-  "zh": "家庭能源援助計劃 (HEAP)"
+  "zh": "家庭能源援助計劃 (HEAP)",
+  "ur": "ہوم انرجی اسسٹنس پروگرام (HEAP)",
+  "fr": "Programme d’aide énergétique aux ménages (HEAP)",
+  "pl": "Program pomocy energetycznej dla gospodarstw domowych (HEAP)"
  },
  "Hospital bill forgiveness — NYC Health": {
   "es": "Perdón de facturas de hospital — NYC Health",
@@ -445,17 +574,26 @@ window.I18N_DICT = {
  "Household size": {
   "es": "Tamaño del hogar",
   "ar": "حجم الأسرة",
-  "zh": "家庭人數"
+  "zh": "家庭人數",
+  "ur": "گھرانے کا سائز",
+  "fr": "Taille du foyer",
+  "pl": "Liczba osób w gospodarstwie"
  },
  "How many people are in your household?": {
   "es": "¿Cuántas personas hay en su hogar?",
   "ar": "كم عدد الأشخاص في أسرتك؟",
-  "zh": "您的家庭有多少人？"
+  "zh": "您的家庭有多少人？",
+  "ur": "آپ کے گھرانے میں کتنے افراد ہیں؟",
+  "fr": "Combien de personnes y a-t-il dans votre foyer ?",
+  "pl": "Ile osób liczy Twoje gospodarstwo domowe?"
  },
  "How many people do you share utility costs with?": {
   "es": "¿Con cuántas personas comparte los costos de servicios públicos?",
   "ar": "كم عدد الأشخاص الذين تتشاركون معهم تكاليف المرافق؟",
-  "zh": "您與多少人分擔公用事業費用？"
+  "zh": "您與多少人分擔公用事業費用？",
+  "ur": "آپ یوٹیلیٹی کے اخراجات کتنے افراد کے ساتھ بانٹتے ہیں؟",
+  "fr": "Avec combien de personnes partagez-vous les frais de services publics ?",
+  "pl": "Z iloma osobami dzielisz koszty mediów?"
  },
  "How should we contact you?": {
   "es": "¿Cómo debemos comunicarnos con usted?",
@@ -465,7 +603,10 @@ window.I18N_DICT = {
  "If one line is busy, try the next number.": {
   "es": "Si una línea está ocupada, pruebe con el siguiente número.",
   "ar": "إذا كان أحد الخطوط مشغولًا، جرّب الرقم التالي.",
-  "zh": "如果一條線路忙線，請撥打下一個號碼。"
+  "zh": "如果一條線路忙線，請撥打下一個號碼。",
+  "ur": "اگر ایک لائن مصروف ہو تو اگلا نمبر آزمائیں۔",
+  "fr": "Si une ligne est occupée, essayez le numéro suivant.",
+  "pl": "Jeśli jedna linia jest zajęta, spróbuj następnego numeru."
  },
  "If you have more than one bill, use the most recent one.": {
   "es": "Si tiene más de una factura, use la más reciente.",
@@ -475,22 +616,34 @@ window.I18N_DICT = {
  "If you qualify, we’ll share the information below with our partner GetYourRefund to help you file.": {
   "es": "Si califica, compartiremos la información de abajo con nuestro socio GetYourRefund para ayudarle a presentar su declaración.",
   "ar": "إذا كنت مؤهلًا، فسنشارك المعلومات أدناه مع شريكنا GetYourRefund لمساعدتك في تقديم الإقرار.",
-  "zh": "如果您符合資格，我們會將以下資訊分享給我們的合作夥伴 GetYourRefund，以協助您報稅。"
+  "zh": "如果您符合資格，我們會將以下資訊分享給我們的合作夥伴 GetYourRefund，以協助您報稅。",
+  "ur": "اگر آپ اہل ہوں تو ہم نیچے دی گئی معلومات اپنے شراکت دار GetYourRefund کے ساتھ شیئر کریں گے تاکہ فائل کرنے میں مدد ملے۔",
+  "fr": "Si vous remplissez les conditions, nous transmettrons les informations ci-dessous à notre partenaire GetYourRefund pour vous aider à déclarer.",
+  "pl": "Jeśli się kwalifikujesz, przekażemy poniższe informacje naszemu partnerowi GetYourRefund, aby pomóc Ci złożyć zeznanie."
  },
  "If you qualify, we’ll share the information below with your utility company to help you get the support you need.": {
   "es": "Si califica, compartiremos la información de abajo con su compañía de servicios públicos para ayudarle a obtener el apoyo que necesita.",
   "ar": "إذا كنت مؤهلًا، فسنشارك المعلومات أدناه مع شركة المرافق التي تتعامل معها لمساعدتك في الحصول على الدعم الذي تحتاج إليه.",
-  "zh": "如果您符合資格，我們會將以下資訊分享給您的公用事業公司，以協助您獲得所需的支援。"
+  "zh": "如果您符合資格，我們會將以下資訊分享給您的公用事業公司，以協助您獲得所需的支援。",
+  "ur": "اگر آپ اہل ہوں تو ہم نیچے دی گئی معلومات آپ کی یوٹیلیٹی کمپنی کے ساتھ شیئر کریں گے تاکہ آپ کو مطلوبہ مدد حاصل کرنے میں مدد ملے۔",
+  "fr": "Si vous remplissez les conditions, nous transmettrons les informations ci-dessous à votre fournisseur de services publics pour vous aider à obtenir le soutien dont vous avez besoin.",
+  "pl": "Jeśli się kwalifikujesz, przekażemy poniższe informacje Twojej firmie świadczącej usługi komunalne, aby pomóc Ci uzyskać potrzebne wsparcie."
  },
  "If your electric and natural gas services are with different companies, you can apply for both in a single application — as long as both accounts are at the same address.": {
   "es": "Si sus servicios de electricidad y gas natural son de compañías diferentes, puede solicitar ambos en una sola solicitud, siempre que ambas cuentas estén en la misma dirección.",
   "ar": "إذا كانت خدمات الكهرباء والغاز الطبيعي لديك مع شركتين مختلفتين، فيمكنك التقدم للاثنتين بطلب واحد، بشرط أن يكون الحسابان على العنوان نفسه.",
-  "zh": "如果您的電力和天然氣服務由不同公司提供，只要兩個帳戶位於同一地址，您可以用一份申請同時申請兩者。"
+  "zh": "如果您的電力和天然氣服務由不同公司提供，只要兩個帳戶位於同一地址，您可以用一份申請同時申請兩者。",
+  "ur": "اگر آپ کی بجلی اور قدرتی گیس کی خدمات مختلف کمپنیوں سے ہیں، تو آپ ایک ہی درخواست میں دونوں کے لیے درخواست دے سکتے ہیں — بشرطیکہ دونوں اکاؤنٹس ایک ہی پتے پر ہوں۔",
+  "fr": "Si votre électricité et votre gaz naturel dépendent de sociétés différentes, vous pouvez faire une seule demande pour les deux — à condition que les deux comptes soient à la même adresse.",
+  "pl": "Jeśli usługi energii elektrycznej i gazu ziemnego świadczą różne firmy, możesz złożyć jeden wniosek na oba — o ile oba konta są pod tym samym adresem."
  },
  "Important note": {
   "es": "Nota importante",
   "ar": "ملاحظة مهمة",
-  "zh": "重要提示"
+  "zh": "重要提示",
+  "ur": "اہم نوٹ",
+  "fr": "Remarque importante",
+  "pl": "Ważna uwaga"
  },
  "Include everyone on your tax return, including dependents.": {
   "es": "Incluya a todas las personas de su declaración de impuestos, incluidos los dependientes.",
@@ -510,12 +663,18 @@ window.I18N_DICT = {
  "Increase household size": {
   "es": "Aumentar el tamaño del hogar",
   "ar": "زيادة حجم الأسرة",
-  "zh": "增加家庭人數"
+  "zh": "增加家庭人數",
+  "ur": "گھرانے کا سائز بڑھائیں",
+  "fr": "Augmenter la taille du foyer",
+  "pl": "Zwiększ liczbę osób w gospodarstwie"
  },
  "Information on health insurance only": {
   "es": "Información solo sobre seguro médico",
   "ar": "معلومات عن التأمين الصحي فقط",
-  "zh": "僅提供健康保險資訊"
+  "zh": "僅提供健康保險資訊",
+  "ur": "صرف ہیلتھ انشورنس کی معلومات",
+  "fr": "Informations sur l’assurance maladie uniquement",
+  "pl": "Tylko informacje o ubezpieczeniu zdrowotnym"
  },
  "Insurance status": {
   "es": "Estado del seguro",
@@ -530,22 +689,34 @@ window.I18N_DICT = {
  "I’m not sure": {
   "es": "No estoy seguro",
   "ar": "لست متأكدًا",
-  "zh": "我不確定"
+  "zh": "我不確定",
+  "ur": "مجھے یقین نہیں",
+  "fr": "Je ne suis pas sûr(e)",
+  "pl": "Nie jestem pewien(-na)"
  },
  "January": {
   "es": "Enero",
   "ar": "يناير",
-  "zh": "1月"
+  "zh": "1月",
+  "ur": "جنوری",
+  "fr": "janvier",
+  "pl": "styczeń"
  },
  "July": {
   "es": "Julio",
   "ar": "يوليو",
-  "zh": "7月"
+  "zh": "7月",
+  "ur": "جولائی",
+  "fr": "juillet",
+  "pl": "lipiec"
  },
  "June": {
   "es": "Junio",
   "ar": "يونيو",
-  "zh": "6月"
+  "zh": "6月",
+  "ur": "جون",
+  "fr": "juin",
+  "pl": "czerwiec"
  },
  "Last name": {
   "es": "Apellido",
@@ -555,7 +726,10 @@ window.I18N_DICT = {
  "Learn more about medical bill assistance": {
   "es": "Obtenga más información sobre la ayuda con facturas médicas",
   "ar": "اعرف المزيد عن المساعدة في الفواتير الطبية",
-  "zh": "進一步了解醫療帳單援助"
+  "zh": "進一步了解醫療帳單援助",
+  "ur": "طبی بل کی امداد کے بارے میں مزید جانیں",
+  "fr": "En savoir plus sur l’aide pour les factures médicales",
+  "pl": "Dowiedz się więcej o pomocy w sprawie rachunków medycznych"
  },
  "Let’s see if you qualify for a cash refund from the IRS.": {
   "es": "Veamos si califica para un reembolso en efectivo del IRS.",
@@ -565,7 +739,10 @@ window.I18N_DICT = {
  "Let’s see if you qualify for monthly energy discounts": {
   "es": "Veamos si califica para descuentos mensuales de energía",
   "ar": "لنرَ ما إذا كنت مؤهلًا لخصومات الطاقة الشهرية",
-  "zh": "讓我們看看您是否符合每月能源折扣的資格"
+  "zh": "讓我們看看您是否符合每月能源折扣的資格",
+  "ur": "آئیے دیکھتے ہیں کہ کیا آپ ماہانہ توانائی رعایت کے اہل ہیں",
+  "fr": "Voyons si vous avez droit aux réductions d’énergie mensuelles",
+  "pl": "Sprawdźmy, czy kwalifikujesz się do miesięcznych zniżek na energię"
  },
  "Lifeline telephone service program": {
   "es": "Programa de servicio telefónico Lifeline",
@@ -575,17 +752,26 @@ window.I18N_DICT = {
  "Lower your monthly Con Edison and National Grid bills.": {
   "es": "Reduzca sus facturas mensuales de Con Edison y National Grid.",
   "ar": "خفّض فواتيرك الشهرية لدى Con Edison وNational Grid.",
-  "zh": "降低您每月的 Con Edison 和 National Grid 帳單。"
+  "zh": "降低您每月的 Con Edison 和 National Grid 帳單。",
+  "ur": "اپنے ماہانہ Con Edison اور National Grid کے بل کم کریں۔",
+  "fr": "Réduisez vos factures mensuelles de Con Edison et National Grid.",
+  "pl": "Obniż swoje miesięczne rachunki od Con Edison i National Grid."
  },
  "March": {
   "es": "Marzo",
   "ar": "مارس",
-  "zh": "3月"
+  "zh": "3月",
+  "ur": "مارچ",
+  "fr": "mars",
+  "pl": "marzec"
  },
  "May": {
   "es": "Mayo",
   "ar": "مايو",
-  "zh": "5月"
+  "zh": "5月",
+  "ur": "مئی",
+  "fr": "mai",
+  "pl": "maj"
  },
  "Medical debt relief": {
   "es": "Alivio de deuda médica",
@@ -605,32 +791,50 @@ window.I18N_DICT = {
  "Month": {
   "es": "Mes",
   "ar": "الشهر",
-  "zh": "月份"
+  "zh": "月份",
+  "ur": "مہینہ",
+  "fr": "Mois",
+  "pl": "Miesiąc"
  },
  "Morning": {
   "es": "Mañana",
   "ar": "صباحًا",
-  "zh": "上午"
+  "zh": "上午",
+  "ur": "صبح",
+  "fr": "Matin",
+  "pl": "Rano"
  },
  "NYC Health can help<br>you find the right<br>insurance": {
   "es": "NYC Health puede ayudarle<br>a encontrar el seguro<br>adecuado",
   "ar": "يمكن أن تساعدك NYC Health<br>في العثور على<br>التأمين المناسب",
-  "zh": "NYC Health 可協助您找到合適的保險"
+  "zh": "NYC Health 可協助您找到合適的保險",
+  "ur": "NYC Health صحیح<br>انشورنس تلاش کرنے میں<br>آپ کی مدد کر سکتا ہے",
+  "fr": "NYC Health peut vous aider<br>à trouver la bonne<br>assurance",
+  "pl": "NYC Health może pomóc<br>Ci znaleźć odpowiednie<br>ubezpieczenie"
  },
  "NYC Health currently helps with certain hospital bills. For other types of medical bills, contact Community Health Advocates.": {
   "es": "Actualmente, NYC Health ayuda con ciertas facturas de hospital. Para otros tipos de facturas médicas, comuníquese con Community Health Advocates.",
   "ar": "تساعد NYC Health حاليًا في بعض فواتير المستشفى. للحصول على المساعدة في أنواع أخرى من الفواتير الطبية، تواصل مع Community Health Advocates.",
-  "zh": "NYC Health 目前協助處理特定的醫院帳單。其他類型的醫療帳單，請聯絡社區健康倡導者 (Community Health Advocates)。"
+  "zh": "NYC Health 目前協助處理特定的醫院帳單。其他類型的醫療帳單，請聯絡社區健康倡導者 (Community Health Advocates)。",
+  "ur": "NYC Health فی الحال ہسپتال کے بعض بلوں میں مدد کرتا ہے۔ دیگر قسم کے طبی بلوں کے لیے Community Health Advocates سے رابطہ کریں۔",
+  "fr": "NYC Health aide actuellement pour certaines factures d’hôpital. Pour les autres types de factures médicales, contactez Community Health Advocates.",
+  "pl": "NYC Health obecnie pomaga w przypadku niektórych rachunków szpitalnych. W sprawie innych rachunków medycznych skontaktuj się z Community Health Advocates."
  },
  "NYC Health will use the information below to help you get health insurance or stay covered. We may also use your information to improve our services.": {
   "es": "NYC Health usará la información de abajo para ayudarle a obtener seguro médico o a mantener su cobertura. También podemos usar su información para mejorar nuestros servicios.",
   "ar": "ستستخدم NYC Health المعلومات أدناه لمساعدتك في الحصول على تأمين صحي أو الحفاظ على تغطيتك. وقد نستخدم معلوماتك أيضًا لتحسين خدماتنا.",
-  "zh": "NYC Health 將使用以下資訊協助您取得健康保險或維持保障。我們也可能使用您的資訊來改善我們的服務。"
+  "zh": "NYC Health 將使用以下資訊協助您取得健康保險或維持保障。我們也可能使用您的資訊來改善我們的服務。",
+  "ur": "NYC Health نیچے دی گئی معلومات آپ کو ہیلتھ انشورنس حاصل کرنے یا کوریج برقرار رکھنے میں مدد کے لیے استعمال کرے گا۔ ہم اپنی خدمات بہتر بنانے کے لیے بھی آپ کی معلومات استعمال کر سکتے ہیں۔",
+  "fr": "NYC Health utilisera les informations ci-dessous pour vous aider à obtenir une assurance maladie ou à la conserver. Nous pouvons aussi les utiliser pour améliorer nos services.",
+  "pl": "NYC Health wykorzysta poniższe informacje, aby pomóc Ci uzyskać ubezpieczenie zdrowotne lub je utrzymać. Możemy też użyć Twoich danych do ulepszania naszych usług."
  },
  "Need to resolve a <br>medical bill?": {
   "es": "¿Necesita resolver una <br>factura médica?",
   "ar": "هل تحتاج إلى حل<br>مشكلة فاتورة طبية؟",
-  "zh": "需要處理醫療帳單？"
+  "zh": "需要處理醫療帳單？",
+  "ur": "طبی بل حل کرنا<br>ہے؟",
+  "fr": "Besoin de régler une<br>facture médicale ?",
+  "pl": "Chcesz uregulować<br>rachunek medyczny?"
  },
  "Need to resolve a medical bill? — NYC Health": {
   "es": "¿Necesita resolver una factura médica? — NYC Health",
@@ -640,27 +844,42 @@ window.I18N_DICT = {
  "Neither": {
   "es": "Ninguno",
   "ar": "لا هذا ولا ذاك",
-  "zh": "兩者皆非"
+  "zh": "兩者皆非",
+  "ur": "کوئی نہیں",
+  "fr": "Aucun des deux",
+  "pl": "Żaden z nich"
  },
  "No": {
   "es": "No",
   "ar": "لا",
-  "zh": "否"
+  "zh": "否",
+  "ur": "نہیں",
+  "fr": "Non",
+  "pl": "Nie"
  },
  "No, I do not have children": {
   "es": "No, no tengo hijos",
   "ar": "لا، ليس لدي أطفال",
-  "zh": "否，我沒有子女"
+  "zh": "否，我沒有子女",
+  "ur": "نہیں، میرے بچے نہیں ہیں",
+  "fr": "Non, je n’ai pas d’enfants",
+  "pl": "Nie, nie mam dzieci"
  },
  "No, I missed at least one year": {
   "es": "No, me perdí al menos un año",
   "ar": "لا، فاتتني سنة واحدة على الأقل",
-  "zh": "否，我至少漏報了一年"
+  "zh": "否，我至少漏報了一年",
+  "ur": "نہیں، میں کم از کم ایک سال چھوڑ گیا/گئی",
+  "fr": "Non, j’ai manqué au moins une année",
+  "pl": "Nie, pominąłem(-ęłam) co najmniej jeden rok"
  },
  "None of the above. (I have a different housing issue.)": {
   "es": "Ninguna de las anteriores (tengo otro problema de vivienda)",
   "ar": "لا شيء مما سبق (لديّ مشكلة سكن مختلفة)",
-  "zh": "以上皆非（我有其他住房問題）"
+  "zh": "以上皆非（我有其他住房問題）",
+  "ur": "ان میں سے کوئی نہیں۔ (مجھے رہائش کا کوئی اور مسئلہ ہے۔)",
+  "fr": "Aucune de ces situations. (J’ai un autre problème de logement.)",
+  "pl": "Żadne z powyższych. (Mam inny problem mieszkaniowy.)"
  },
  "Not eligible for EITC — NYC Health": {
   "es": "No es elegible para el EITC — NYC Health",
@@ -675,32 +894,50 @@ window.I18N_DICT = {
  "Not sure": {
   "es": "No estoy seguro",
   "ar": "لست متأكدًا",
-  "zh": "不確定"
+  "zh": "不確定",
+  "ur": "یقین نہیں",
+  "fr": "Je ne sais pas",
+  "pl": "Nie jestem pewien(-na)"
  },
  "November": {
   "es": "Noviembre",
   "ar": "نوفمبر",
-  "zh": "11月"
+  "zh": "11月",
+  "ur": "نومبر",
+  "fr": "novembre",
+  "pl": "listopad"
  },
  "October": {
   "es": "Octubre",
   "ar": "أكتوبر",
-  "zh": "10月"
+  "zh": "10月",
+  "ur": "اکتوبر",
+  "fr": "octobre",
+  "pl": "październik"
  },
  "Official website of the City of New York": {
   "es": "Sitio web oficial de la Ciudad de Nueva York",
   "ar": "الموقع الرسمي لمدينة نيويورك",
-  "zh": "紐約市官方網站"
+  "zh": "紐約市官方網站",
+  "ur": "شہر نیویارک کی سرکاری ویب سائٹ",
+  "fr": "Site Web officiel de la Ville de New York",
+  "pl": "Oficjalna strona internetowa miasta Nowy Jork"
  },
  "Official websites use .gov": {
   "es": "Los sitios web oficiales usan .gov",
   "ar": "المواقع الرسمية تستخدم .gov",
-  "zh": "官方網站使用 .gov"
+  "zh": "官方網站使用 .gov",
+  "ur": "سرکاری ویب سائٹس .gov استعمال کرتی ہیں",
+  "fr": "Les sites officiels utilisent .gov",
+  "pl": "Oficjalne strony używają domeny .gov"
  },
  "Once you’re approved, you’ll receive the EAP discount within two billing cycles.": {
   "es": "Una vez que lo aprueben, recibirá el descuento del EAP en un plazo de dos ciclos de facturación.",
   "ar": "بعد الموافقة عليك، ستحصل على خصم EAP خلال دورتَي فوترة.",
-  "zh": "一旦獲批，您將在兩個帳單週期內收到 EAP 折扣。"
+  "zh": "一旦獲批，您將在兩個帳單週期內收到 EAP 折扣。",
+  "ur": "منظوری کے بعد آپ کو دو بلنگ سائیکلز کے اندر EAP رعایت مل جائے گی۔",
+  "fr": "Une fois approuvé(e), vous recevrez la réduction EAP dans un délai de deux cycles de facturation.",
+  "pl": "Po zatwierdzeniu otrzymasz zniżkę EAP w ciągu dwóch cykli rozliczeniowych."
  },
  "Phone number": {
   "es": "Número de teléfono",
@@ -715,22 +952,34 @@ window.I18N_DICT = {
  "Progress": {
   "es": "Progreso",
   "ar": "التقدم",
-  "zh": "進度"
+  "zh": "進度",
+  "ur": "پیش رفت",
+  "fr": "Progression",
+  "pl": "Postęp"
  },
  "Recent paystubs": {
   "es": "Talones de pago recientes",
   "ar": "كشوف الرواتب الأخيرة",
-  "zh": "近期薪資單"
+  "zh": "近期薪資單",
+  "ur": "حالیہ تنخواہ کی پرچیاں",
+  "fr": "Vos bulletins de paie récents",
+  "pl": "Ostatnich odcinków wypłat"
  },
  "Renew current health insurance": {
   "es": "Renovar el seguro médico actual",
   "ar": "تجديد التأمين الصحي الحالي",
-  "zh": "續保現有健康保險"
+  "zh": "續保現有健康保險",
+  "ur": "موجودہ ہیلتھ انشورنس کی تجدید کریں",
+  "fr": "Renouveler l’assurance maladie actuelle",
+  "pl": "Odnów obecne ubezpieczenie zdrowotne"
  },
  "Review and submit": {
   "es": "Revisar y enviar",
   "ar": "المراجعة والإرسال",
-  "zh": "檢閱並提交"
+  "zh": "檢閱並提交",
+  "ur": "جائزہ لیں اور جمع کروائیں",
+  "fr": "Vérifier et envoyer",
+  "pl": "Przejrzyj i wyślij"
  },
  "Review and submit — NYC Health": {
   "es": "Revisar y enviar — NYC Health",
@@ -765,27 +1014,42 @@ window.I18N_DICT = {
  "Secure .gov websites use HTTPS": {
   "es": "Los sitios web .gov seguros usan HTTPS",
   "ar": "المواقع الآمنة بامتداد .gov تستخدم HTTPS",
-  "zh": "安全的 .gov 網站使用 HTTPS"
+  "zh": "安全的 .gov 網站使用 HTTPS",
+  "ur": "محفوظ .gov ویب سائٹس HTTPS استعمال کرتی ہیں",
+  "fr": "Les sites .gov sécurisés utilisent HTTPS",
+  "pl": "Bezpieczne strony .gov używają protokołu HTTPS"
  },
  "Select city": {
   "es": "Seleccione la ciudad",
   "ar": "اختر المدينة",
-  "zh": "選擇城市"
+  "zh": "選擇城市",
+  "ur": "شہر منتخب کریں",
+  "fr": "Sélectionnez la ville",
+  "pl": "Wybierz miasto"
  },
  "Select hospital": {
   "es": "Seleccione el hospital",
   "ar": "اختر المستشفى",
-  "zh": "選擇醫院"
+  "zh": "選擇醫院",
+  "ur": "ہسپتال منتخب کریں",
+  "fr": "Sélectionnez l’hôpital",
+  "pl": "Wybierz szpital"
  },
  "Select state": {
   "es": "Seleccione el estado",
   "ar": "اختر الولاية",
-  "zh": "選擇州"
+  "zh": "選擇州",
+  "ur": "ریاست منتخب کریں",
+  "fr": "Sélectionnez l’État",
+  "pl": "Wybierz stan"
  },
  "Select the government assistance program(s) you’re enrolled in:": {
   "es": "Seleccione los programas de asistencia del gobierno en los que está inscrito actualmente.",
   "ar": "اختر برنامج المساعدة الحكومية أو البرامج المسجَّل فيها حاليًا.",
-  "zh": "請選擇您目前參加的政府援助計劃。"
+  "zh": "請選擇您目前參加的政府援助計劃。",
+  "ur": "وہ سرکاری امدادی پروگرام منتخب کریں جن میں آپ کا اندراج ہے: <span>(جو بھی لاگو ہوں سب منتخب کریں)</span>",
+  "fr": "Sélectionnez les programmes d’aide gouvernementale auxquels vous êtes inscrit(e) : <span>(Sélectionnez toutes les réponses qui s’appliquent)</span>",
+  "pl": "Wybierz rządowe programy pomocy, w których uczestniczysz: <span>(Zaznacz wszystkie, które mają zastosowanie)</span>"
  },
  "Select the government assistance program(s) you&rsquo;re enrolled in: <span>(Select all that apply)</span>": {
   "es": "Seleccione los programas de asistencia del gobierno en los que está inscrito actualmente. <span>(Seleccione todos los que correspondan)</span>",
@@ -795,12 +1059,18 @@ window.I18N_DICT = {
  "September": {
   "es": "Septiembre",
   "ar": "سبتمبر",
-  "zh": "9月"
+  "zh": "9月",
+  "ur": "ستمبر",
+  "fr": "septembre",
+  "pl": "wrzesień"
  },
  "Share proof of your benefits.": {
   "es": "Comparta un comprobante de sus beneficios.",
   "ar": "شارك إثباتًا لمزاياك.",
-  "zh": "分享您的福利證明。"
+  "zh": "分享您的福利證明。",
+  "ur": "اپنے فوائد کا ثبوت شیئر کریں۔",
+  "fr": "Partagez la preuve de vos prestations.",
+  "pl": "Prześlij potwierdzenie swoich świadczeń."
  },
  "Since none of those situations apply, the Tenant Support Unit <br>isn’t the right fit — but 311 can connect you with the right team.": {
   "es": "Como ninguna de esas situaciones aplica, la Unidad de Apoyo para Inquilinos <br>no es la opción adecuada, pero el 311 puede comunicarle con el equipo correcto.",
@@ -815,7 +1085,10 @@ window.I18N_DICT = {
  "Start your <a>EEAP application<svg/><span> (opens in new tab)</span></a>": {
   "es": "Comience su <a>solicitud del EEAP<svg/><span> (se abre en una pestaña nueva)</span></a>",
   "ar": "ابدأ <a>طلب EEAP<svg/><span> (يفتح في علامة تبويب جديدة)</span></a>",
-  "zh": "開始您的 <a>EEAP 申請<svg/><span>（在新分頁開啟）</span></a>"
+  "zh": "開始您的 <a>EEAP 申請<svg/><span>（在新分頁開啟）</span></a>",
+  "ur": "اپنی <a>EEAP درخواست<svg/><span> (نئے ٹیب میں کھلتا ہے)</span></a> شروع کریں",
+  "fr": "Commencez votre <a>demande EEAP<svg/><span> (s’ouvre dans un nouvel onglet)</span></a>",
+  "pl": "Rozpocznij <a>wniosek EEAP<svg/><span> (otwiera się w nowej karcie)</span></a>"
  },
  "Start your application<span> (opens in new tab)</span>": {
   "es": "Comience su solicitud<span> (se abre en una pestaña nueva)</span>",
@@ -825,7 +1098,10 @@ window.I18N_DICT = {
  "Submit": {
   "es": "Enviar",
   "ar": "إرسال",
-  "zh": "提交"
+  "zh": "提交",
+  "ur": "جمع کروائیں",
+  "fr": "Envoyer",
+  "pl": "Wyślij"
  },
  "Supplemental Nutrition Assistance Program (SNAP)": {
   "es": "Programa de Asistencia Nutricional Suplementaria (SNAP)",
@@ -835,17 +1111,26 @@ window.I18N_DICT = {
  "Supplemental Security Income (SSI)": {
   "es": "Seguridad de Ingreso Suplementario (SSI)",
   "ar": "دخل الضمان التكميلي (SSI)",
-  "zh": "補充保障收入 (SSI)"
+  "zh": "補充保障收入 (SSI)",
+  "ur": "سپلیمینٹل سیکیورٹی انکم (SSI)",
+  "fr": "Revenu de sécurité supplémentaire (SSI)",
+  "pl": "Dodatkowy dochód z ubezpieczenia społecznego (SSI)"
  },
  "Take 15 minutes to fill out<br>Dollar For’s simplified application.": {
   "es": "Tómese 15 minutos para llenar<br>la solicitud simplificada de Dollar For.",
   "ar": "خصّص 15 دقيقة لتعبئة<br>طلب Dollar For المبسّط.",
-  "zh": "請花 15 分鐘填寫 Dollar For 的簡化申請表。"
+  "zh": "請花 15 分鐘填寫 Dollar For 的簡化申請表。",
+  "ur": "Dollar For کی آسان درخواست<br>بھرنے کے لیے 15 منٹ لیں۔",
+  "fr": "Prenez 15 minutes pour remplir<br>la demande simplifiée de Dollar For.",
+  "pl": "Poświęć 15 minut na wypełnienie<br>uproszczonego wniosku Dollar For."
  },
  "Tax credits": {
   "es": "Créditos fiscales",
   "ar": "الإعفاءات الضريبية",
-  "zh": "稅務抵免"
+  "zh": "稅務抵免",
+  "ur": "ٹیکس کریڈٹ",
+  "fr": "Crédits d’impôt",
+  "pl": "Ulgi podatkowe"
  },
  "Tax credits are generally available to working people and people with children. You probably don’t qualify for money back right now, but our partners at GetYourRefund can give you more information.": {
   "es": "Los créditos fiscales generalmente están disponibles para personas que trabajan y personas con hijos. Es probable que ahora no califique para recibir dinero, pero nuestros socios de GetYourRefund pueden darle más información.",
@@ -865,7 +1150,10 @@ window.I18N_DICT = {
  "Tax returns": {
   "es": "Declaraciones de impuestos",
   "ar": "الإقرارات الضريبية",
-  "zh": "報稅表"
+  "zh": "報稅表",
+  "ur": "ٹیکس ریٹرنز",
+  "fr": "Déclarations d’impôts",
+  "pl": "Zeznań podatkowych"
  },
  "Tell us about the bill — NYC Health": {
   "es": "Cuéntenos sobre la factura — NYC Health",
@@ -875,7 +1163,10 @@ window.I18N_DICT = {
  "Tell us about the bill.": {
   "es": "Cuéntenos sobre la factura.",
   "ar": "أخبرنا عن الفاتورة.",
-  "zh": "請告訴我們帳單的情況。"
+  "zh": "請告訴我們帳單的情況。",
+  "ur": "ہمیں بل کے بارے میں بتائیں۔",
+  "fr": "Parlez-nous de la facture.",
+  "pl": "Opowiedz nam o rachunku."
  },
  "Tell us about yourself — NYC Health": {
   "es": "Cuéntenos sobre usted — NYC Health",
@@ -900,17 +1191,26 @@ window.I18N_DICT = {
  "That includes paystubs, Social Security, unemployment and disability payments, and child support. Photos and uploaded documents are both accepted.": {
   "es": "Eso incluye talones de pago, Seguro Social, pagos de desempleo y discapacidad, y manutención de menores. Se aceptan tanto fotos como documentos subidos.",
   "ar": "يشمل ذلك كشوف الرواتب والضمان الاجتماعي (Social Security) ودفعات البطالة والإعاقة ونفقة الأطفال. نقبل الصور والمستندات المرفوعة.",
-  "zh": "包括薪資單、社會安全金、失業金和殘疾給付，以及子女撫養費。照片和上傳的文件均可接受。"
+  "zh": "包括薪資單、社會安全金、失業金和殘疾給付，以及子女撫養費。照片和上傳的文件均可接受。",
+  "ur": "اس میں تنخواہ کی پرچیاں، سوشل سیکیورٹی، بے روزگاری اور معذوری کی ادائیگیاں، اور بچوں کا نان نفقہ شامل ہے۔ تصاویر اور اپ لوڈ کی گئی دستاویزات دونوں قبول کی جاتی ہیں۔",
+  "fr": "Cela comprend les bulletins de paie, la Sécurité sociale, les allocations de chômage et d’invalidité et les pensions alimentaires pour enfants. Les photos et les documents téléversés sont acceptés.",
+  "pl": "Obejmuje to odcinki wypłat, ubezpieczenie społeczne, zasiłki dla bezrobotnych i niepełnosprawnych oraz alimenty na dzieci. Akceptowane są zarówno zdjęcia, jak i przesłane dokumenty."
  },
  "The Mayor’s Tenant Support Unit is here for New Yorkers <br>being pushed out of their homes or facing landlord harassment.": {
   "es": "La Unidad de Apoyo para Inquilinos de la Alcaldía está aquí para los neoyorquinos <br>que son forzados a dejar sus hogares o enfrentan acoso de su arrendador.",
   "ar": "وحدة دعم المستأجرين التابعة للعمدة موجودة لمساعدة سكان نيويورك <br>الذين يتعرضون للإخراج من منازلهم أو لمضايقات من المالك.",
-  "zh": "市長辦公室的租戶支援組為被迫搬離住家或遭受房東騷擾的紐約市民提供協助。"
+  "zh": "市長辦公室的租戶支援組為被迫搬離住家或遭受房東騷擾的紐約市民提供協助。",
+  "ur": "میئر کا ٹیننٹ سپورٹ یونٹ ان نیویارکرز کے لیے حاضر ہے<br>جنہیں اپنے گھروں سے نکالا جا رہا ہے یا جو مالک مکان کی ہراسانی کا سامنا کر رہے ہیں۔",
+  "fr": "L’Unité de soutien aux locataires du maire est là pour les New-Yorkais<br>poussés hors de chez eux ou victimes de harcèlement de la part de leur propriétaire.",
+  "pl": "Jednostka Wsparcia Najemców burmistrza jest dla mieszkańców Nowego Jorku,<br>których zmusza się do opuszczenia domów lub którzy doświadczają nękania ze strony właściciela."
  },
  "The document should have your name, the name of the government assistance program, a government agency name, and the date your benefits started.": {
   "es": "El documento debe incluir su nombre, el nombre del programa de asistencia del gobierno, el nombre de una agencia del gobierno y la fecha en que comenzaron sus beneficios.",
   "ar": "يجب أن يتضمن المستند اسمك واسم برنامج المساعدة الحكومية واسم الجهة الحكومية وتاريخ بدء مزاياك.",
-  "zh": "文件上應載有您的姓名、政府援助計劃名稱、政府機構名稱，以及您的福利開始日期。"
+  "zh": "文件上應載有您的姓名、政府援助計劃名稱、政府機構名稱，以及您的福利開始日期。",
+  "ur": "دستاویز میں آپ کا نام، سرکاری امدادی پروگرام کا نام، کسی سرکاری ایجنسی کا نام اور آپ کے فوائد شروع ہونے کی تاریخ ہونی چاہیے۔",
+  "fr": "Le document doit indiquer votre nom, le nom du programme d’aide gouvernementale, le nom d’un organisme gouvernemental et la date de début de vos prestations.",
+  "pl": "Dokument powinien zawierać Twoje imię i nazwisko, nazwę rządowego programu pomocy, nazwę agencji rządowej oraz datę rozpoczęcia świadczeń."
  },
  "There’s a good chance <span>{h}</span><br>will reduce or forgive your bill.": {
   "es": "Hay buenas probabilidades de que <span>{h}</span><br>reduzca o perdone su factura.",
@@ -920,12 +1220,18 @@ window.I18N_DICT = {
  "They will work with you and the hospital<br>to fill in any gaps.": {
   "es": "Trabajarán con usted y con el hospital<br>para completar cualquier información que falte.",
   "ar": "سيعملون معك ومع المستشفى<br>لسدّ أي فجوات.",
-  "zh": "他們會與您和醫院合作，補齊任何缺漏的部分。"
+  "zh": "他們會與您和醫院合作，補齊任何缺漏的部分。",
+  "ur": "وہ کسی بھی کمی کو پورا کرنے کے لیے<br>آپ اور ہسپتال کے ساتھ کام کریں گے۔",
+  "fr": "Ils travailleront avec vous et l’hôpital<br>pour combler les éventuelles lacunes.",
+  "pl": "Będą współpracować z Tobą i szpitalem,<br>aby uzupełnić ewentualne braki."
  },
  "This includes bills from providers who treated you during your hospital visit, like radiologists, surgeons, or ER doctors.": {
   "es": "Esto incluye facturas de proveedores que lo atendieron durante su visita al hospital, como radiólogos, cirujanos o médicos de la sala de emergencias.",
   "ar": "يشمل ذلك الفواتير من مقدّمي الرعاية الذين عالجوك أثناء زيارتك للمستشفى، مثل أطباء الأشعة أو الجراحين أو أطباء الطوارئ.",
-  "zh": "這包括在您就診期間為您治療的醫療提供者開出的帳單，例如放射科醫師、外科醫師或急診室醫師。"
+  "zh": "這包括在您就診期間為您治療的醫療提供者開出的帳單，例如放射科醫師、外科醫師或急診室醫師。",
+  "ur": "اس میں ان فراہم کنندگان کے بل شامل ہیں جنہوں نے آپ کے ہسپتال کے دورے کے دوران آپ کا علاج کیا، جیسے ریڈیولوجسٹ، سرجن یا ایمرجنسی روم کے ڈاکٹر۔",
+  "fr": "Cela comprend les factures des prestataires qui vous ont soigné(e) pendant votre séjour à l’hôpital, comme les radiologues, les chirurgiens ou les médecins des urgences.",
+  "pl": "Obejmuje to rachunki od lekarzy, którzy Cię leczyli podczas pobytu w szpitalu, np. radiologów, chirurgów lub lekarzy z izby przyjęć."
  },
  "Veterans disability or survivors pension": {
   "es": "Pensión de veteranos por discapacidad o de sobrevivientes",
@@ -945,12 +1251,18 @@ window.I18N_DICT = {
  "We found an NYC Health site closest to the ZIP code you gave us.": {
   "es": "Encontramos el sitio de NYC Health más cercano al código postal que nos dio.",
   "ar": "وجدنا موقعًا تابعًا لـ NYC Health هو الأقرب إلى الرمز البريدي الذي أدخلته.",
-  "zh": "我們已找到離您提供的郵遞區號最近的 NYC Health 據點。"
+  "zh": "我們已找到離您提供的郵遞區號最近的 NYC Health 據點。",
+  "ur": "ہمیں آپ کے دیے گئے ZIP کوڈ کے قریب ترین NYC Health سائٹ مل گئی ہے۔",
+  "fr": "Nous avons trouvé le site NYC Health le plus proche du code postal que vous nous avez donné.",
+  "pl": "Znaleźliśmy placówkę NYC Health najbliższą podanemu kodowi pocztowemu."
  },
  "We’ll also email you this site information so you can find it later.": {
   "es": "También le enviaremos por correo electrónico la información de este sitio para que pueda encontrarla después.",
   "ar": "سنرسل إليك معلومات هذا الموقع بالبريد الإلكتروني أيضًا لتتمكن من الرجوع إليها لاحقًا.",
-  "zh": "我們也會透過電子郵件寄給您此據點資訊，方便您日後查閱。"
+  "zh": "我們也會透過電子郵件寄給您此據點資訊，方便您日後查閱。",
+  "ur": "ہم آپ کو اس سائٹ کی معلومات ای میل بھی کریں گے تاکہ آپ بعد میں اسے تلاش کر سکیں۔",
+  "fr": "Nous vous enverrons aussi ces informations sur le site par e-mail pour que vous puissiez les retrouver plus tard.",
+  "pl": "Wyślemy Ci też informacje o tej placówce e-mailem, abyś mógł(-ogła) je później znaleźć."
  },
  "We’ll share the information below with NYC Health partners Dollar For and the Community Service Society of New York (CSS).": {
   "es": "Compartiremos la información de abajo con Dollar For y la Community Service Society of New York (CSS), socios de NYC Health.",
@@ -973,7 +1285,10 @@ window.I18N_DICT = {
  "What do you need?": {
   "es": "¿Qué necesita?",
   "ar": "ماذا تحتاج؟",
-  "zh": "您需要什麼？"
+  "zh": "您需要什麼？",
+  "ur": "آپ کو کیا چاہیے؟",
+  "fr": "De quoi avez-vous besoin ?",
+  "pl": "Czego potrzebujesz?"
  },
  "What is the total amount you owe?": {
   "es": "¿Cuál es el monto total que debe?",
@@ -993,57 +1308,90 @@ window.I18N_DICT = {
  "What’s next": {
   "es": "Qué sigue",
   "ar": "الخطوة التالية",
-  "zh": "下一步"
+  "zh": "下一步",
+  "ur": "آگے کیا ہوگا",
+  "fr": "Et ensuite",
+  "pl": "Co dalej"
  },
  "What’s the best time to reach you?": {
   "es": "¿Cuál es el mejor momento para comunicarnos con usted?",
   "ar": "ما أفضل وقت للتواصل معك؟",
-  "zh": "什麼時間最方便聯絡您？"
+  "zh": "什麼時間最方便聯絡您？",
+  "ur": "آپ سے رابطہ کرنے کا بہترین وقت کون سا ہے؟",
+  "fr": "Quel est le meilleur moment pour vous joindre ?",
+  "pl": "Kiedy najlepiej się z Tobą skontaktować?"
  },
  "When did you get your most recent bill?": {
   "es": "¿Cuándo recibió su factura más reciente?",
   "ar": "متى حصلت على أحدث فاتورة لديك؟",
-  "zh": "您何時收到最近的帳單？"
+  "zh": "您何時收到最近的帳單？",
+  "ur": "آپ کو اپنا تازہ ترین بل کب ملا؟",
+  "fr": "Quand avez-vous reçu votre facture la plus récente ?",
+  "pl": "Kiedy otrzymałeś(-aś) swój ostatni rachunek?"
  },
  "Where is your hospital bill from?": {
   "es": "¿De dónde es su factura del hospital?",
   "ar": "من أين صدرت فاتورة المستشفى؟",
-  "zh": "您的醫院帳單來自哪裡？"
+  "zh": "您的醫院帳單來自哪裡？",
+  "ur": "آپ کا ہسپتال کا بل کہاں سے ہے؟",
+  "fr": "D’où provient votre facture d’hôpital ?",
+  "pl": "Skąd pochodzi Twój rachunek ze szpitala?"
  },
  "Which city is your hospital in?": {
   "es": "¿En qué ciudad está su hospital?",
   "ar": "في أي مدينة يقع مستشفاك؟",
-  "zh": "您的醫院位於哪個城市？"
+  "zh": "您的醫院位於哪個城市？",
+  "ur": "آپ کا ہسپتال کس شہر میں ہے؟",
+  "fr": "Dans quelle ville se trouve votre hôpital ?",
+  "pl": "W jakim mieście znajduje się Twój szpital?"
  },
  "Which hospital treated you?": {
   "es": "¿Qué hospital lo atendió?",
   "ar": "أي مستشفى عالجك؟",
-  "zh": "哪家醫院為您治療？"
+  "zh": "哪家醫院為您治療？",
+  "ur": "کس ہسپتال نے آپ کا علاج کیا؟",
+  "fr": "Quel hôpital vous a soigné(e) ?",
+  "pl": "Który szpital Cię leczył?"
  },
  "Year": {
   "es": "Año",
   "ar": "السنة",
-  "zh": "年份"
+  "zh": "年份",
+  "ur": "سال",
+  "fr": "Année",
+  "pl": "Rok"
  },
  "Yes": {
   "es": "Sí",
   "ar": "نعم",
-  "zh": "是"
+  "zh": "是",
+  "ur": "جی ہاں",
+  "fr": "Oui",
+  "pl": "Tak"
  },
  "Yes, I care for children full-time": {
   "es": "Sí, cuido a niños a tiempo completo",
   "ar": "نعم، أرعى أطفالًا بدوام كامل",
-  "zh": "是，我全職照顧子女"
+  "zh": "是，我全職照顧子女",
+  "ur": "جی ہاں، میں کل وقتی بچوں کی دیکھ بھال کرتا/کرتی ہوں",
+  "fr": "Oui, je m’occupe d’enfants à temps plein",
+  "pl": "Tak, opiekuję się dziećmi w pełnym wymiarze"
  },
  "Yes, I care for children part-time": {
   "es": "Sí, cuido a niños a tiempo parcial",
   "ar": "نعم، أرعى أطفالًا بدوام جزئي",
-  "zh": "是，我兼職照顧子女"
+  "zh": "是，我兼職照顧子女",
+  "ur": "جی ہاں، میں جز وقتی بچوں کی دیکھ بھال کرتا/کرتی ہوں",
+  "fr": "Oui, je m’occupe d’enfants à temps partiel",
+  "pl": "Tak, opiekuję się dziećmi w niepełnym wymiarze"
  },
  "Yes, I filed every year": {
   "es": "Sí, presenté todos los años",
   "ar": "نعم، قدّمت إقرارًا كل سنة",
-  "zh": "是，我每年都報稅"
+  "zh": "是，我每年都報稅",
+  "ur": "جی ہاں، میں نے ہر سال فائل کیا",
+  "fr": "Oui, j’ai déclaré chaque année",
+  "pl": "Tak, składałem(-am) zeznanie co roku"
  },
  "You can add other bills, including from other hospitals, later. Some bills may not qualify, depending on the date.": {
   "es": "Puede agregar otras facturas, incluidas las de otros hospitales, más adelante. Es posible que algunas facturas no califiquen, según la fecha.",
@@ -1053,12 +1401,18 @@ window.I18N_DICT = {
  "You can also do this later. We’ve sent a link to your email and phone, so you can pick it up anytime. Some hospitals have application deadlines, so complete Dollar For’s patient form and send in your documents as soon as possible.": {
   "es": "También puede hacerlo después. Le enviamos un enlace a su correo electrónico y teléfono para que pueda continuar cuando quiera. Algunos hospitales tienen fechas límite para las solicitudes, así que complete el formulario de paciente de Dollar For y envíe sus documentos lo antes posible.",
   "ar": "يمكنك أيضًا فعل ذلك لاحقًا. أرسلنا رابطًا إلى بريدك الإلكتروني وهاتفك، لتتمكن من المتابعة في أي وقت. لدى بعض المستشفيات مواعيد نهائية للتقديم، لذا أكمل نموذج المريض الخاص بـ Dollar For وأرسل مستنداتك في أقرب وقت ممكن.",
-  "zh": "您也可以稍後再做。我們已將連結寄到您的電子郵件和手機，您隨時可以繼續。部分醫院設有申請截止日期，因此請盡快填寫 Dollar For 的病人表格並送交您的文件。"
+  "zh": "您也可以稍後再做。我們已將連結寄到您的電子郵件和手機，您隨時可以繼續。部分醫院設有申請截止日期，因此請盡快填寫 Dollar For 的病人表格並送交您的文件。",
+  "ur": "آپ یہ بعد میں بھی کر سکتے ہیں۔ ہم نے آپ کے ای میل اور فون پر ایک لنک بھیجا ہے، تاکہ آپ جب چاہیں اسے دوبارہ شروع کر سکیں۔ کچھ ہسپتالوں میں درخواست کی آخری تاریخیں ہوتی ہیں، اس لیے Dollar For کا مریض فارم مکمل کریں اور اپنی دستاویزات جلد از جلد بھیج دیں۔",
+  "fr": "Vous pouvez aussi le faire plus tard. Nous avons envoyé un lien à votre adresse e-mail et à votre téléphone pour que vous puissiez reprendre à tout moment. Certains hôpitaux ont des dates limites de demande ; remplissez donc le formulaire patient de Dollar For et envoyez vos documents dès que possible.",
+  "pl": "Możesz to też zrobić później. Wysłaliśmy link na Twój adres e-mail i telefon, abyś mógł(-ogła) wrócić w dowolnym momencie. Niektóre szpitale mają terminy składania wniosków, więc jak najszybciej wypełnij formularz pacjenta Dollar For i prześlij dokumenty."
  },
  "You can choose:": {
   "es": "Puede elegir:",
   "ar": "يمكنك الاختيار:",
-  "zh": "您可以選擇："
+  "zh": "您可以選擇：",
+  "ur": "آپ انتخاب کر سکتے ہیں:",
+  "fr": "Vous pouvez choisir :",
+  "pl": "Możesz wybrać:"
  },
  "You can request to review, update, or delete your information by contacting us at <a>hartconnectorsupport@health.nyc.gov</a>.": {
   "es": "Puede solicitar revisar, actualizar o eliminar su información comunicándose con nosotros en <a>hartconnectorsupport@health.nyc.gov</a>.",
@@ -1068,7 +1422,10 @@ window.I18N_DICT = {
  "You have 14 days after applying to submit your proof of income for the last 28 days for everyone you share your utility costs with.": {
   "es": "Tiene 14 días después de solicitar para enviar el comprobante de ingresos de los últimos 28 días de todas las personas con quienes comparte los costos de servicios públicos.",
   "ar": "لديك 14 يومًا بعد التقديم لإرسال إثبات الدخل عن آخر 28 يومًا لكل من تتشاركون معهم تكاليف المرافق.",
-  "zh": "申請後您有 14 天的時間，提交與您分擔公用事業費用的所有人過去 28 天的收入證明。"
+  "zh": "申請後您有 14 天的時間，提交與您分擔公用事業費用的所有人過去 28 天的收入證明。",
+  "ur": "درخواست دینے کے بعد آپ کے پاس 14 دن ہیں کہ آپ ان تمام افراد کی پچھلے 28 دنوں کی آمدنی کا ثبوت جمع کروائیں جن کے ساتھ آپ یوٹیلیٹی اخراجات بانٹتے ہیں۔",
+  "fr": "Vous avez 14 jours après votre demande pour fournir la preuve de revenu des 28 derniers jours de toutes les personnes avec qui vous partagez vos frais de services publics.",
+  "pl": "Po złożeniu wniosku masz 14 dni na przedstawienie dowodu dochodów z ostatnich 28 dni dla wszystkich osób, z którymi dzielisz koszty mediów."
  },
  "You have an eviction case in Housing Court": {
   "es": "Tiene un caso de desalojo en el Tribunal de Vivienda",
@@ -1083,17 +1440,26 @@ window.I18N_DICT = {
  "Your NYC Health<br>enrollment site": {
   "es": "Su sitio de inscripción<br>de NYC Health",
   "ar": "موقع التسجيل<br>التابع لـ NYC Health",
-  "zh": "您的 NYC Health 登記據點"
+  "zh": "您的 NYC Health 登記據點",
+  "ur": "آپ کی NYC Health<br>اندراج کی سائٹ",
+  "fr": "Votre site d’inscription<br>NYC Health",
+  "pl": "Twoja placówka rejestracji<br>NYC Health"
  },
  "Your credit will last 18 months. You’ll need to reapply after that.": {
   "es": "Su crédito durará 18 meses. Después deberá volver a solicitarlo.",
   "ar": "سيستمر رصيدك 18 شهرًا. ستحتاج إلى إعادة التقدم بعد ذلك.",
-  "zh": "您的抵免額將持續 18 個月。之後需要重新申請。"
+  "zh": "您的抵免額將持續 18 個月。之後需要重新申請。",
+  "ur": "آپ کا کریڈٹ 18 ماہ تک رہے گا۔ اس کے بعد آپ کو دوبارہ درخواست دینی ہوگی۔",
+  "fr": "Votre crédit durera 18 mois. Vous devrez refaire une demande ensuite.",
+  "pl": "Twój kredyt będzie obowiązywał przez 18 miesięcy. Potem trzeba będzie złożyć wniosek ponownie."
  },
  "Your data is only shared with the hospital": {
   "es": "Sus datos solo se comparten con el hospital",
   "ar": "تتم مشاركة بياناتك مع المستشفى فقط",
-  "zh": "您的資料只會與醫院分享"
+  "zh": "您的資料只會與醫院分享",
+  "ur": "آپ کا ڈیٹا صرف ہسپتال کے ساتھ شیئر کیا جاتا ہے",
+  "fr": "Vos données ne sont partagées qu’avec l’hôpital",
+  "pl": "Twoje dane są udostępniane wyłącznie szpitalowi"
  },
  "Your information": {
   "es": "Su información",
@@ -1138,22 +1504,34 @@ window.I18N_DICT = {
  "Your situation": {
   "es": "Su situación",
   "ar": "وضعك",
-  "zh": "您的情況"
+  "zh": "您的情況",
+  "ur": "آپ کی صورتحال",
+  "fr": "Votre situation",
+  "pl": "Twoja sytuacja"
  },
  "You’ll hear back from most<br>hospitals within 3-8 weeks.": {
   "es": "La mayoría de los hospitales<br>responde en 3 a 8 semanas.",
   "ar": "ستصلك الردود من معظم<br>المستشفيات خلال 3-8 أسابيع.",
-  "zh": "大多數醫院會在 3-8 週內回覆。"
+  "zh": "大多數醫院會在 3-8 週內回覆。",
+  "ur": "زیادہ تر ہسپتالوں سے<br>3-8 ہفتوں میں جواب مل جاتا ہے۔",
+  "fr": "La plupart des hôpitaux répondent<br>sous 3 à 8 semaines.",
+  "pl": "Większość szpitali odpowiada<br>w ciągu 3-8 tygodni."
  },
  "You’ll need:": {
   "es": "Necesitará:",
   "ar": "ستحتاج إلى:",
-  "zh": "您需要準備："
+  "zh": "您需要準備：",
+  "ur": "آپ کو درکار ہوگا:",
+  "fr": "Vous aurez besoin de :",
+  "pl": "Będziesz potrzebować:"
  },
  "You’re eligible for the Energy Affordability Program (EAP).": {
   "es": "Usted es elegible para el Programa de Asequibilidad de Energía (EAP).",
   "ar": "أنت مؤهل لبرنامج القدرة على تحمّل تكاليف الطاقة (EAP).",
-  "zh": "您符合能源可負擔計劃 (EAP) 的資格。"
+  "zh": "您符合能源可負擔計劃 (EAP) 的資格。",
+  "ur": "آپ انرجی افورڈیبلٹی پروگرام (EAP) کے اہل ہیں۔",
+  "fr": "Vous avez droit au programme d’accessibilité énergétique (EAP).",
+  "pl": "Kwalifikujesz się do programu Energy Affordability Program (EAP)."
  },
  "You’re likely eligible for a tax refund — NYC Health": {
   "es": "Probablemente es elegible para un reembolso de impuestos — NYC Health",
@@ -1363,7 +1741,10 @@ window.I18N_DICT = {
  "Anytime": {
   "es": "Cualquier hora",
   "ar": "في أي وقت",
-  "zh": "任何時間"
+  "zh": "任何時間",
+  "ur": "کسی بھی وقت",
+  "fr": "À tout moment",
+  "pl": "W dowolnym momencie"
  },
  "Copy second phone number": {
   "es": "Copiar el segundo número de teléfono",
@@ -1393,7 +1774,10 @@ window.I18N_DICT = {
  "By submitting this page, you agree to receive calls from our enrollment counselors.": {
   "es": "Al enviar esta página, usted acepta recibir llamadas de nuestros consejeros de inscripción.",
   "ar": "بإرسال هذه الصفحة، فإنك توافق على تلقي مكالمات من مستشاري التسجيل لدينا.",
-  "zh": "提交此頁面即表示，您同意接聽我們註冊顧問打來的電話。"
+  "zh": "提交此頁面即表示，您同意接聽我們註冊顧問打來的電話。",
+  "ur": "اس صفحے کو جمع کروا کر، آپ ہمارے اندراج کاؤنسلرز کی کالز موصول کرنے سے اتفاق کرتے ہیں۔",
+  "fr": "En envoyant cette page, vous acceptez de recevoir des appels de nos conseillers d’inscription.",
+  "pl": "Wysyłając tę stronę, zgadzasz się na otrzymywanie telefonów od naszych doradców ds. rejestracji."
  },
  "Get connected with a CSS health counselor <span>What’s next</span>": {
   "es": "Comuníquese con un consejero de salud de CSS <span>Qué sigue</span>",
@@ -2098,5 +2482,304 @@ window.I18N_DICT = {
   "ur": "آپ کے پروگرامز",
   "fr": "Vos programmes",
   "pl": "Twoje programy"
+ },
+ "Hi there": {
+  "es": "Hola",
+  "ar": "مرحبًا",
+  "zh": "您好",
+  "ur": "السلام علیکم",
+  "fr": "Bonjour",
+  "pl": "Cześć"
+ },
+ "Explore programs <span>&amp; applications for you</span>": {
+  "es": "Explore programas <span>y solicitudes para usted</span>",
+  "ar": "استكشف البرامج <span>والطلبات المناسبة لك</span>",
+  "zh": "探索計劃 <span>與適合您的申請</span>",
+  "ur": "پروگرامز دریافت کریں <span>اور آپ کے لیے درخواستیں</span>",
+  "fr": "Découvrez les programmes <span>et demandes pour vous</span>",
+  "pl": "Poznaj programy <span>i wnioski dla Ciebie</span>"
+ },
+ "Need help? Email <a>hartconnectorsupport@health.nyc.gov</a>": {
+  "es": "¿Necesita ayuda? Escriba a <a>hartconnectorsupport@health.nyc.gov</a>",
+  "ar": "هل تحتاج إلى مساعدة؟ راسلنا على <a>hartconnectorsupport@health.nyc.gov</a>",
+  "zh": "需要協助嗎？請寄電子郵件至 <a>hartconnectorsupport@health.nyc.gov</a>",
+  "ur": "مدد چاہیے؟ <a>hartconnectorsupport@health.nyc.gov</a> پر ای میل کریں",
+  "fr": "Besoin d’aide ? Écrivez à <a>hartconnectorsupport@health.nyc.gov</a>",
+  "pl": "Potrzebujesz pomocy? Napisz na adres <a>hartconnectorsupport@health.nyc.gov</a>"
+ },
+ "Did you claim the Earned Income Tax Credit?": {
+  "es": "¿Reclamó el Crédito Tributario por Ingreso del Trabajo?",
+  "ar": "هل طالبت بالائتمان الضريبي على الدخل المكتسب؟",
+  "zh": "您申請過勞動所得稅額抵免 (EITC) 嗎？",
+  "ur": "کیا آپ نے ارنڈ انکم ٹیکس کریڈٹ کا دعویٰ کیا تھا؟",
+  "fr": "Avez-vous demandé le crédit d’impôt sur le revenu du travail (EITC) ?",
+  "pl": "Czy ubiegałeś(-aś) się o ulgę podatkową Earned Income Tax Credit?"
+ },
+ "How to check": {
+  "es": "Cómo comprobarlo",
+  "ar": "كيف تتحقق",
+  "zh": "如何確認",
+  "ur": "کیسے جانچیں",
+  "fr": "Comment vérifier",
+  "pl": "Jak to sprawdzić"
+ },
+ "Look at line 27 of your Form 1040 for each of the past three years. If there’s an amount there, you claimed it.": {
+  "es": "Mire la línea 27 de su Formulario 1040 de cada uno de los últimos tres años. Si hay un monto allí, lo reclamó.",
+  "ar": "انظر إلى السطر 27 في نموذج 1040 الخاص بك لكل سنة من السنوات الثلاث الماضية. إذا كان هناك مبلغ فيه، فقد طالبت به.",
+  "zh": "查看您過去三年每年 1040 表第 27 行。若該處有金額，表示您已申請過。",
+  "ur": "پچھلے تین سالوں میں سے ہر سال کے اپنے فارم 1040 کی لائن 27 دیکھیں۔ اگر وہاں کوئی رقم درج ہے تو آپ نے اس کا دعویٰ کیا تھا۔",
+  "fr": "Regardez la ligne 27 de votre formulaire 1040 pour chacune des trois dernières années. S’il y a un montant, vous l’avez demandé.",
+  "pl": "Spójrz na wiersz 27 swojego formularza 1040 za każdy z ostatnich trzech lat. Jeśli widnieje tam kwota, to ubiegałeś(-aś) się o ulgę."
+ },
+ "Don’t have your returns? You can request copies in your <a>IRS online account⁠<svg/><span> (opens in new tab)</span></a>.": {
+  "es": "¿No tiene sus declaraciones? Puede solicitar copias en su <a>cuenta en línea del IRS⁠<svg/><span> (se abre en una pestaña nueva)</span></a>.",
+  "ar": "ليس لديك إقراراتك الضريبية؟ يمكنك طلب نسخ منها في <a>حسابك الإلكتروني لدى IRS⁠<svg/><span> (تفتح في علامة تبويب جديدة)</span></a>.",
+  "zh": "沒有您的報稅表？您可以在 <a>IRS 線上帳戶⁠<svg/><span>（在新分頁開啟）</span></a> 申請副本。",
+  "ur": "آپ کے پاس آپ کے ریٹرنز نہیں ہیں؟ آپ اپنے <a>IRS آن لائن اکاؤنٹ⁠<svg/><span> (نئے ٹیب میں کھلتا ہے)</span></a> میں ان کی کاپیاں طلب کر سکتے ہیں۔",
+  "fr": "Vous n’avez pas vos déclarations ? Vous pouvez en demander des copies dans votre <a>compte en ligne IRS⁠<svg/><span> (s’ouvre dans un nouvel onglet)</span></a>.",
+  "pl": "Nie masz swoich zeznań? Możesz poprosić o kopie w swoim <a>koncie internetowym IRS⁠<svg/><span> (otwiera się w nowej karcie)</span></a>."
+ },
+ "If you didn’t claim it": {
+  "es": "Si no lo reclamó",
+  "ar": "إذا لم تطالب به",
+  "zh": "如果您沒有申請",
+  "ur": "اگر آپ نے دعویٰ نہیں کیا",
+  "fr": "Si vous ne l’avez pas demandé",
+  "pl": "Jeśli nie ubiegałeś(-aś) się o ulgę"
+ },
+ "If you qualified for tax credits in past years, you can still get this money. Select File now to amend your return(s) for free with GetYourRefund, an NYC Health partner.": {
+  "es": "Si cumplía los requisitos para créditos tributarios en años anteriores, aún puede recibir ese dinero. Seleccione Presentar ahora para modificar su(s) declaración(es) gratis con GetYourRefund, socio de NYC Health.",
+  "ar": "إذا كنت مؤهلًا للحصول على ائتمانات ضريبية في سنوات سابقة، فلا يزال بإمكانك الحصول على هذه الأموال. اختر «قدّم الآن» لتعديل إقراراتك مجانًا مع GetYourRefund، شريكة NYC Health.",
+  "zh": "如果您在過去幾年符合稅額抵免資格，仍可取得這筆錢。請選擇「立即報稅」，透過 NYC Health 合作夥伴 GetYourRefund 免費修改您的報稅表。",
+  "ur": "اگر آپ پچھلے سالوں میں ٹیکس کریڈٹ کے اہل تھے تو آپ اب بھی یہ رقم حاصل کر سکتے ہیں۔ NYC Health کے شراکت دار GetYourRefund کے ساتھ مفت اپنے ریٹرن میں ترمیم کرنے کے لیے «ابھی فائل کریں» منتخب کریں۔",
+  "fr": "Si vous remplissiez les conditions pour des crédits d’impôt les années précédentes, vous pouvez encore obtenir cet argent. Sélectionnez Déclarer maintenant pour modifier gratuitement votre ou vos déclarations avec GetYourRefund, partenaire de NYC Health.",
+  "pl": "Jeśli w poprzednich latach spełniałeś(-aś) warunki do ulg podatkowych, nadal możesz otrzymać te pieniądze. Wybierz Złóż teraz, aby bezpłatnie skorygować zeznania z GetYourRefund, partnerem NYC Health."
+ },
+ "<strong>FileMyself:</strong> File on your own and chat with an expert if you need it.": {
+  "es": "<strong>FileMyself:</strong> Presente su declaración por su cuenta y converse con un experto si lo necesita.",
+  "ar": "<strong>التقديم بنفسك (FileMyself):</strong> قدّم إقرارك بنفسك، وتحدّث مع خبير إذا احتجت إلى ذلك.",
+  "zh": "<strong>FileMyself：</strong>自行報稅，需要時可與專家聊天。",
+  "ur": "<strong>FileMyself:</strong> خود فائل کریں اور ضرورت ہو تو کسی ماہر سے چیٹ کریں۔",
+  "fr": "<strong>FileMyself :</strong> Déclarez par vous-même et discutez avec un expert si besoin.",
+  "pl": "<strong>FileMyself:</strong> Złóż zeznanie samodzielnie i w razie potrzeby porozmawiaj z ekspertem."
+ },
+ "You have three years from the tax deadline to file": {
+  "es": "Tiene tres años desde la fecha límite de impuestos para presentar",
+  "ar": "لديك ثلاث سنوات من الموعد النهائي للضرائب للتقديم",
+  "zh": "您可在報稅截止日後三年內報稅",
+  "ur": "آپ کے پاس ٹیکس کی آخری تاریخ سے تین سال تک فائل کرنے کا وقت ہے",
+  "fr": "Vous avez trois ans à compter de la date limite fiscale pour déclarer",
+  "pl": "Masz trzy lata od terminu rozliczenia podatkowego na złożenie zeznania"
+ },
+ "To claim the 2025 EITC, file your tax return by April 16, 2029": {
+  "es": "Para reclamar el EITC de 2025, presente su declaración antes del 16 de abril de 2029",
+  "ar": "للمطالبة بـ EITC لعام 2025، قدّم إقرارك الضريبي بحلول 16 أبريل 2029",
+  "zh": "如要申請 2025 年 EITC，請於 2029 年 4 月 16 日前報稅",
+  "ur": "2025 کے EITC کا دعویٰ کرنے کے لیے 16 اپریل 2029 تک اپنا ٹیکس ریٹرن فائل کریں",
+  "fr": "Pour demander l’EITC 2025, déposez votre déclaration avant le 16 avril 2029",
+  "pl": "Aby ubiegać się o EITC za 2025 r., złóż zeznanie do 16 kwietnia 2029 r."
+ },
+ "For 2024, file by April 17, 2028": {
+  "es": "Para 2024, presente antes del 17 de abril de 2028",
+  "ar": "لعام 2024، قدّم بحلول 17 أبريل 2028",
+  "zh": "2024 年度請於 2028 年 4 月 17 日前報稅",
+  "ur": "2024 کے لیے 17 اپریل 2028 تک فائل کریں",
+  "fr": "Pour 2024, déposez avant le 17 avril 2028",
+  "pl": "Za rok 2024 złóż zeznanie do 17 kwietnia 2028 r."
+ },
+ "For 2023, file by April 15, 2027": {
+  "es": "Para 2023, presente antes del 15 de abril de 2027",
+  "ar": "لعام 2023، قدّم بحلول 15 أبريل 2027",
+  "zh": "2023 年度請於 2027 年 4 月 15 日前報稅",
+  "ur": "2023 کے لیے 15 اپریل 2027 تک فائل کریں",
+  "fr": "Pour 2023, déposez avant le 15 avril 2027",
+  "pl": "Za rok 2023 złóż zeznanie do 15 kwietnia 2027 r."
+ },
+ "File now<span> (opens in new tab)</span>": {
+  "es": "Presentar ahora<span> (se abre en una pestaña nueva)</span>",
+  "ar": "قدّم الآن<span> (تفتح في علامة تبويب جديدة)</span>",
+  "zh": "立即報稅<span>（在新分頁開啟）</span>",
+  "ur": "ابھی فائل کریں<span> (نئے ٹیب میں کھلتا ہے)</span>",
+  "fr": "Déclarer maintenant<span> (s’ouvre dans un nouvel onglet)</span>",
+  "pl": "Złóż teraz<span> (otwiera się w nowej karcie)</span>"
+ },
+ "You’re likely eligible for cash back from the IRS. <span>What’s next</span>": {
+  "es": "Probablemente es elegible para recibir dinero del IRS. <span>Qué sigue</span>",
+  "ar": "من المرجح أنك مؤهل لاسترداد أموال من IRS. <span>الخطوة التالية</span>",
+  "zh": "您很可能符合從 IRS 取回現金的資格。<span>下一步</span>",
+  "ur": "غالباً آپ IRS سے رقم واپس حاصل کرنے کے اہل ہیں۔ <span>آگے کیا ہوگا</span>",
+  "fr": "Vous avez probablement droit à un remboursement de l’IRS. <span>Et ensuite</span>",
+  "pl": "Prawdopodobnie kwalifikujesz się do zwrotu pieniędzy z IRS. <span>Co dalej</span>"
+ },
+ "You may get thousands of dollars a year in tax credits because you’ve worked in the last few years or have children.": {
+  "es": "Es posible que reciba miles de dólares al año en créditos tributarios porque ha trabajado en los últimos años o tiene hijos.",
+  "ar": "قد تحصل على آلاف الدولارات سنويًا في صورة ائتمانات ضريبية لأنك عملت في السنوات القليلة الماضية أو لديك أطفال.",
+  "zh": "您可能每年可獲得數千美元的稅額抵免，因為您在過去幾年有工作或有子女。",
+  "ur": "آپ کو ٹیکس کریڈٹ میں سالانہ ہزاروں ڈالر مل سکتے ہیں کیونکہ آپ نے پچھلے چند سالوں میں کام کیا ہے یا آپ کے بچے ہیں۔",
+  "fr": "Vous pourriez recevoir des milliers de dollars par an en crédits d’impôt parce que vous avez travaillé ces dernières années ou que vous avez des enfants.",
+  "pl": "Możesz otrzymać tysiące dolarów rocznie w ulgach podatkowych, ponieważ pracowałeś(-aś) w ostatnich latach lub masz dzieci."
+ },
+ "Select File now to start filing or amending your tax return for the relevant year(s).": {
+  "es": "Seleccione Presentar ahora para comenzar a presentar o modificar su declaración de impuestos de los años correspondientes.",
+  "ar": "اختر «قدّم الآن» لبدء تقديم إقرارك الضريبي أو تعديله للسنة أو السنوات المعنية.",
+  "zh": "請選擇「立即報稅」，開始辦理或修改相關年度的報稅表。",
+  "ur": "متعلقہ سال(سالوں) کے لیے اپنا ٹیکس ریٹرن فائل یا ترمیم کرنا شروع کرنے کے لیے «ابھی فائل کریں» منتخب کریں۔",
+  "fr": "Sélectionnez Déclarer maintenant pour commencer à déposer ou à modifier votre déclaration d’impôts pour la ou les années concernées.",
+  "pl": "Wybierz Złóż teraz, aby zacząć składać lub korygować zeznanie podatkowe za odpowiednie lata."
+ },
+ "You’re not eligible for cash back from the IRS at this time.": {
+  "es": "Por el momento, no es elegible para recibir dinero del IRS.",
+  "ar": "أنت غير مؤهل لاسترداد أموال من IRS في الوقت الحالي.",
+  "zh": "您目前不符合從 IRS 取回現金的資格。",
+  "ur": "آپ فی الحال IRS سے رقم واپس حاصل کرنے کے اہل نہیں ہیں۔",
+  "fr": "Vous n’avez pas droit à un remboursement de l’IRS pour le moment.",
+  "pl": "Obecnie nie kwalifikujesz się do zwrotu pieniędzy z IRS."
+ },
+ "Tax credits are mostly for people who are working or caring for children and have filed a tax return. Any year you have zero income, you aren’t required to file your taxes. If you start working or caring for children, though, filing a tax return could get you money back.": {
+  "es": "Los créditos tributarios son principalmente para personas que trabajan o cuidan a niños y han presentado una declaración de impuestos. En cualquier año en que no tenga ingresos, no está obligado a presentar su declaración. Sin embargo, si empieza a trabajar o a cuidar a niños, presentar una declaración podría hacerle recuperar dinero.",
+  "ar": "الائتمانات الضريبية مخصصة في الغالب للأشخاص الذين يعملون أو يرعون أطفالًا وقدّموا إقرارًا ضريبيًا. وفي أي سنة لا يكون لديك فيها دخل، فلست ملزمًا بتقديم إقرارك الضريبي. لكن إذا بدأت العمل أو رعاية الأطفال، فقد يؤدي تقديم الإقرار إلى استرداد أموال.",
+  "zh": "稅額抵免主要適用於有工作或照顧子女且已報稅的人。任何一年若您沒有收入，則無需報稅。不過，如果您開始工作或照顧子女，報稅可能讓您取回一筆錢。",
+  "ur": "ٹیکس کریڈٹ زیادہ تر ان لوگوں کے لیے ہیں جو کام کرتے ہیں یا بچوں کی دیکھ بھال کرتے ہیں اور ٹیکس ریٹرن فائل کر چکے ہیں۔ جس سال آپ کی آمدنی صفر ہو، آپ کو ٹیکس فائل کرنا ضروری نہیں۔ تاہم، اگر آپ کام یا بچوں کی دیکھ بھال شروع کرتے ہیں تو ٹیکس ریٹرن فائل کرنے سے آپ کو رقم واپس مل سکتی ہے۔",
+  "fr": "Les crédits d’impôt sont surtout destinés aux personnes qui travaillent ou s’occupent d’enfants et qui ont déposé une déclaration. Les années où vous n’avez aucun revenu, vous n’êtes pas tenu(e) de déclarer. Mais si vous commencez à travailler ou à vous occuper d’enfants, déposer une déclaration pourrait vous faire récupérer de l’argent.",
+  "pl": "Ulgi podatkowe są przeznaczone głównie dla osób, które pracują lub opiekują się dziećmi i złożyły zeznanie podatkowe. W każdym roku, w którym nie miałeś(-aś) dochodu, nie musisz składać zeznania. Jeśli jednak zaczniesz pracować lub opiekować się dziećmi, złożenie zeznania może przynieść Ci zwrot pieniędzy."
+ },
+ "Our partners at GetYourRefund can help you file for free and answer your questions. <a>Chat with a tax expert now⁠<svg/><span> (opens in new tab)</span></a>": {
+  "es": "Nuestros socios de GetYourRefund pueden ayudarle a presentar su declaración gratis y responder sus preguntas. <a>Converse ahora con un experto en impuestos⁠<svg/><span> (se abre en una pestaña nueva)</span></a>",
+  "ar": "يمكن لشركائنا في GetYourRefund مساعدتك في تقديم إقرارك مجانًا والإجابة عن أسئلتك. <a>تحدّث الآن مع خبير ضرائب⁠<svg/><span> (تفتح في علامة تبويب جديدة)</span></a>",
+  "zh": "我們的合作夥伴 GetYourRefund 可以免費協助您報稅並回答您的問題。<a>立即與稅務專家聊天⁠<svg/><span>（在新分頁開啟）</span></a>",
+  "ur": "ہمارے شراکت دار GetYourRefund مفت فائل کرنے میں آپ کی مدد کر سکتے ہیں اور آپ کے سوالات کے جواب دے سکتے ہیں۔ <a>ابھی ٹیکس ماہر سے چیٹ کریں⁠<svg/><span> (نئے ٹیب میں کھلتا ہے)</span></a>",
+  "fr": "Nos partenaires de GetYourRefund peuvent vous aider à déclarer gratuitement et répondre à vos questions. <a>Discutez maintenant avec un expert fiscal⁠<svg/><span> (s’ouvre dans un nouvel onglet)</span></a>",
+  "pl": "Nasi partnerzy z GetYourRefund mogą bezpłatnie pomóc Ci złożyć zeznanie i odpowiedzieć na Twoje pytania. <a>Porozmawiaj teraz z ekspertem podatkowym⁠<svg/><span> (otwiera się w nowej karcie)</span></a>"
+ },
+ "You may be eligible for cash back from the IRS. <span>What’s next</span>": {
+  "es": "Es posible que sea elegible para recibir dinero del IRS. <span>Qué sigue</span>",
+  "ar": "قد تكون مؤهلًا لاسترداد أموال من IRS. <span>الخطوة التالية</span>",
+  "zh": "您可能符合從 IRS 取回現金的資格。<span>下一步</span>",
+  "ur": "ہو سکتا ہے آپ IRS سے رقم واپس حاصل کرنے کے اہل ہوں۔ <span>آگے کیا ہوگا</span>",
+  "fr": "Vous avez peut-être droit à un remboursement de l’IRS. <span>Et ensuite</span>",
+  "pl": "Możesz kwalifikować się do zwrotu pieniędzy z IRS. <span>Co dalej</span>"
+ },
+ "Let’s see if you qualify for cash back from the IRS.": {
+  "es": "Veamos si califica para recibir dinero del IRS.",
+  "ar": "لنرَ ما إذا كنت مؤهلًا لاسترداد أموال من IRS.",
+  "zh": "讓我們看看您是否符合從 IRS 取回現金的資格。",
+  "ur": "آئیے دیکھتے ہیں کہ کیا آپ IRS سے رقم واپس حاصل کرنے کے اہل ہیں۔",
+  "fr": "Voyons si vous avez droit à un remboursement de l’IRS.",
+  "pl": "Sprawdźmy, czy kwalifikujesz się do zwrotu pieniędzy z IRS."
+ },
+ "Tax credits like the Earned Income Tax Credit (EITC) give working people cash back. You may qualify even if you don’t earn much, don’t usually have to file taxes, or have never filed before. Your chances are even better if you take care of children.": {
+  "es": "Los créditos tributarios como el Crédito Tributario por Ingreso del Trabajo (EITC) devuelven dinero a las personas que trabajan. Puede calificar aunque gane poco, normalmente no tenga que presentar impuestos o nunca haya presentado una declaración. Sus posibilidades son aún mejores si cuida a niños.",
+  "ar": "تمنح الائتمانات الضريبية، مثل الائتمان الضريبي على الدخل المكتسب (EITC)، العاملين أموالًا مستردة. وقد تكون مؤهلًا حتى لو كان دخلك قليلًا أو لم يكن عليك عادةً تقديم إقرار ضريبي أو لم تقدّم إقرارًا من قبل. وتزداد فرصك إذا كنت ترعى أطفالًا.",
+  "zh": "勞動所得稅額抵免 (EITC) 等稅額抵免可讓上班族取回現金。即使您收入不高、通常無需報稅，或從未報過稅，也可能符合資格。如果您需要照顧子女，資格機會更大。",
+  "ur": "ارنڈ انکم ٹیکس کریڈٹ (EITC) جیسے ٹیکس کریڈٹ کام کرنے والے لوگوں کو رقم واپس دیتے ہیں۔ آپ اہل ہو سکتے ہیں چاہے آپ کی آمدنی کم ہو، آپ کو عام طور پر ٹیکس فائل نہ کرنا پڑتا ہو، یا آپ نے پہلے کبھی فائل نہ کیا ہو۔ اگر آپ بچوں کی دیکھ بھال کرتے ہیں تو امکانات اور بھی بہتر ہیں۔",
+  "fr": "Les crédits d’impôt comme le crédit d’impôt sur le revenu du travail (EITC) font récupérer de l’argent aux personnes qui travaillent. Vous pouvez y avoir droit même si vous gagnez peu, si vous n’avez généralement pas à déclarer vos impôts ou si vous n’avez jamais déclaré. Vos chances sont encore meilleures si vous vous occupez d’enfants.",
+  "pl": "Ulgi podatkowe, takie jak Earned Income Tax Credit (EITC), dają osobom pracującym zwrot pieniędzy. Możesz się kwalifikować, nawet jeśli niewiele zarabiasz, zwykle nie musisz składać zeznań lub nigdy wcześniej ich nie składałeś(-aś). Twoje szanse są jeszcze większe, jeśli opiekujesz się dziećmi."
+ },
+ "Missed out in the past three years? You can still file or amend past returns to get that money back.": {
+  "es": "¿Se perdió los últimos tres años? Todavía puede presentar o modificar declaraciones anteriores para recuperar ese dinero.",
+  "ar": "فاتتك السنوات الثلاث الماضية؟ لا يزال بإمكانك تقديم إقرارات سابقة أو تعديلها لاسترداد هذه الأموال.",
+  "zh": "過去三年錯過了嗎？您仍可報稅或修改過去的報稅表，取回這筆錢。",
+  "ur": "پچھلے تین سال چھوٹ گئے؟ آپ اب بھی پچھلے ریٹرنز فائل یا ان میں ترمیم کر سکتے ہیں تاکہ وہ رقم واپس حاصل کر سکیں۔",
+  "fr": "Vous avez raté les trois dernières années ? Vous pouvez encore déposer ou modifier des déclarations passées pour récupérer cet argent.",
+  "pl": "Pominąłeś(-ęłaś) ostatnie trzy lata? Nadal możesz złożyć lub skorygować wcześniejsze zeznania, aby odzyskać te pieniądze."
+ },
+ "Answer a few quick questions to find out if there are tax credits or a refund you can claim.": {
+  "es": "Responda unas preguntas rápidas para saber si hay créditos tributarios o un reembolso que pueda reclamar.",
+  "ar": "أجب عن بضعة أسئلة سريعة لمعرفة ما إذا كانت هناك ائتمانات ضريبية أو مبلغ مسترد يمكنك المطالبة به.",
+  "zh": "回答幾個簡單的問題，了解您是否有可申請的稅額抵免或退稅。",
+  "ur": "یہ جاننے کے لیے چند فوری سوالات کے جواب دیں کہ کیا آپ کے لیے کوئی ٹیکس کریڈٹ یا ریفنڈ دستیاب ہے۔",
+  "fr": "Répondez à quelques questions rapides pour savoir s’il existe des crédits d’impôt ou un remboursement que vous pouvez demander.",
+  "pl": "Odpowiedz na kilka krótkich pytań, aby sprawdzić, czy możesz ubiegać się o ulgi podatkowe lub zwrot podatku."
+ },
+ "Connect with an NYC Health enrollment counselor <span>What’s next</span>": {
+  "es": "Comuníquese con un consejero de inscripción de NYC Health <span>Qué sigue</span>",
+  "ar": "تواصل مع مستشار تسجيل من NYC Health <span>الخطوة التالية</span>",
+  "zh": "與 NYC Health 登記顧問聯繫 <span>下一步</span>",
+  "ur": "NYC Health کے اندراج کاؤنسلر سے رابطہ کریں <span>آگے کیا ہوگا</span>",
+  "fr": "Contactez un conseiller d’inscription de NYC Health <span>Et ensuite</span>",
+  "pl": "Skontaktuj się z doradcą ds. rejestracji NYC Health <span>Co dalej</span>"
+ },
+ "An NYC Health enrollment counselor will call you within <strong>three business days (72 hours).</strong>": {
+  "es": "Un consejero de inscripción de NYC Health le llamará en un plazo de <strong>tres días hábiles (72 horas).</strong>",
+  "ar": "سيتصل بك مستشار تسجيل من NYC Health خلال <strong>ثلاثة أيام عمل (72 ساعة).</strong>",
+  "zh": "NYC Health 登記顧問將在<strong>三個工作天（72 小時）</strong>內致電給您。",
+  "ur": "NYC Health کا اندراج کاؤنسلر <strong>تین کاروباری دنوں (72 گھنٹے)</strong> کے اندر آپ کو کال کرے گا۔",
+  "fr": "Un conseiller d’inscription de NYC Health vous appellera dans un délai de <strong>trois jours ouvrables (72 heures).</strong>",
+  "pl": "Doradca ds. rejestracji NYC Health zadzwoni do Ciebie w ciągu <strong>trzech dni roboczych (72 godzin).</strong>"
+ },
+ "Step 1 of 3": {
+  "ur": "مرحلہ 1 از 3",
+  "fr": "Étape 1 sur 3",
+  "pl": "Krok 1 z 3"
+ },
+ "Step 2 of 3": {
+  "ur": "مرحلہ 2 از 3",
+  "fr": "Étape 2 sur 3",
+  "pl": "Krok 2 z 3"
+ },
+ "Step 3 of 3": {
+  "ur": "مرحلہ 3 از 3",
+  "fr": "Étape 3 sur 3",
+  "pl": "Krok 3 z 3"
+ },
+ "Step 1 of 2": {
+  "ur": "مرحلہ 1 از 2",
+  "fr": "Étape 1 sur 2",
+  "pl": "Krok 1 z 2"
+ },
+ "Step 2 of 2": {
+  "ur": "مرحلہ 2 از 2",
+  "fr": "Étape 2 sur 2",
+  "pl": "Krok 2 z 2"
+ },
+ "There’s a good chance <span>[HOSPITAL NAME]</span><br>will reduce or forgive your bill.": {
+  "ur": "اس بات کا اچھا امکان ہے کہ <span>[HOSPITAL NAME]</span><br>آپ کا بل کم یا معاف کر دے گا۔",
+  "fr": "Il y a de bonnes chances que <span>[HOSPITAL NAME]</span><br>réduise ou annule votre facture.",
+  "pl": "Istnieje duża szansa, że <span>[HOSPITAL NAME]</span><br>obniży lub umorzy Twój rachunek."
+ },
+ "Edit Hospital bill forgiveness": {
+  "ur": "ہسپتال کے بل کی معافی میں ترمیم کریں",
+  "fr": "Modifier Remise de factures d’hôpital",
+  "pl": "Edytuj Umorzenie rachunków szpitalnych"
+ },
+ "Edit Energy discounts": {
+  "ur": "توانائی پر رعایت میں ترمیم کریں",
+  "fr": "Modifier Réductions d’énergie",
+  "pl": "Edytuj Zniżki na energię"
+ },
+ "Do you make less than $113,400 per year?": {
+  "ur": "کیا آپ کی سالانہ آمدنی $113,400 سے کم ہے؟",
+  "fr": "Gagnez-vous moins de 113 400 $ par an ?",
+  "pl": "Czy zarabiasz mniej niż 113 400 USD rocznie?"
+ },
+ "Do you make less than <span>$113,400</span> per year?": {
+  "ur": "کیا آپ کی سالانہ آمدنی <span>$113,400</span> سے کم ہے؟",
+  "fr": "Gagnez-vous moins de <span>113 400 $</span> par an ?",
+  "pl": "Czy zarabiasz mniej niż <span>113 400 USD</span> rocznie?"
+ },
+ "Edit Tax credits": {
+  "ur": "ٹیکس کریڈٹ میں ترمیم کریں",
+  "fr": "Modifier Crédits d’impôt",
+  "pl": "Edytuj Ulgi podatkowe"
+ },
+ "Save the numbers below in case you don’t hear back after three days. You can reach <span>OHIS Triage Team</span> <span>Monday to Friday, 9 a.m. to 4 p.m.</span>": {
+  "ur": "اگر تین دن بعد آپ کو جواب نہ ملے تو نیچے دیے گئے نمبر محفوظ کر لیں۔ آپ <span>OHIS Triage Team</span> سے <span>پیر تا جمعہ، صبح 9 بجے سے شام 4 بجے تک</span> رابطہ کر سکتے ہیں۔",
+  "fr": "Enregistrez les numéros ci-dessous au cas où vous n’auriez pas de réponse après trois jours. Vous pouvez joindre l’<span>OHIS Triage Team</span> <span>du lundi au vendredi, de 9 h à 16 h.</span>",
+  "pl": "Zapisz poniższe numery na wypadek, gdybyś nie otrzymał(-a) odpowiedzi po trzech dniach. Możesz skontaktować się z <span>OHIS Triage Team</span> <span>od poniedziałku do piątku, w godz. 9:00–16:00.</span>"
+ },
+ "Edit Health insurance": {
+  "ur": "ہیلتھ انشورنس میں ترمیم کریں",
+  "fr": "Modifier Assurance maladie",
+  "pl": "Edytuj Ubezpieczenie zdrowotne"
+ },
+ "Edit SNAP (food stamps)": {
+  "ur": "SNAP (فوڈ اسٹیمپس) میں ترمیم کریں",
+  "fr": "Modifier SNAP (bons alimentaires)",
+  "pl": "Edytuj SNAP (kupony żywnościowe)"
+ },
+ "Edit Tenant support": {
+  "ur": "کرایہ داروں کی معاونت میں ترمیم کریں",
+  "fr": "Modifier Soutien aux locataires",
+  "pl": "Edytuj Wsparcie dla najemców"
  }
 };
