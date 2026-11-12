@@ -17,7 +17,7 @@
 .qgroup__list .choice-card { min-height: 56px; padding: var(--space-2); justify-content: flex-start; text-align: start; }
 /* Two-up row (Yes / No, Morning / Evening). */
 .qgroup__row { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: 12px; }
-.qgroup__row .choice-card { flex: 1 1 auto; width: auto; min-width: 0; max-width: 100%; white-space: nowrap; min-height: 56px; padding: var(--space-1) var(--space-2); }  /* one line per label; chips share the row and drop to the next row when it is full */
+.qgroup__row .choice-card { flex: 0 0 auto; width: auto; min-width: 0; max-width: 100%; white-space: nowrap; min-height: 56px; padding: var(--space-1) var(--space-2); }  /* one line per label; chips share the row and drop to the next row when it is full */
 /* Multi-select chips: same square-cornered card as Yes/No, sharing the row
    at equal widths; a chip only wraps to the next row when its label would
    otherwise truncate. */
@@ -56,4 +56,4 @@
 
 /* Utility chips: four short options; two per row on phones so labels never wrap. */
 #qUtility .qgroup__chips .choice-card { flex: 1 1 calc(50% - 4px); }   /* 2×2 on phones */
-@media (min-width: 600px) { #qUtility .qgroup__chips .choice-card { flex: 1 1 auto; width: auto; } }  /* one row; each chip at least label + padding */
+@media (min-width: 600px) { #qUtility .qgroup__chips .choice-card { flex: 0 0 auto; width: auto; } }  /* one row; each chip at least label + padding */
