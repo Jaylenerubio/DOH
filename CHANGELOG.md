@@ -17,6 +17,40 @@ Content changes (11/10 batch), placeholder translations in six languages, and la
 - **Layout:** three-option chip rows keep labels on one line and flow as content-width chips; email-code button text shortened; header logo 30px to 44px.
 - **Accessibility:** conformance summary updated (axe scan not re-run since v1.4).
 
+### v1.4.1 QA guide (self-service channel)
+
+Start from the home page, choose "Create an account", pick a language, finish contact, review and the code. Each case below starts on the dashboard card named in bold. Reset by closing the tab (state is `sessionStorage`).
+
+**OTP errors** (`verify.html`; the code is any six digits except `000000`)
+- Wrong code: enter `000000`. The inline error appears. The fifth wrong try goes to `locked.html` (1-hour lock with a live countdown; the lock is session-only in the prototype).
+- Code didn't send: use a phone number ending `0000` and the text option. "Code didn't send. Check your number or try again." shows and Resend is available.
+- Code expired: wait 5 minutes on the page, then enter any code. "Code expired." shows and Resend is available at once.
+- Resend: after any send, Resend shows "Resend in 0:30" and becomes active at 0:00.
+- Existing account: enter phone 917-555-2222 on Contact. It opens the "Welcome back" code screen. Signing in uses Ana Lopez, 03/15/1988, 10457, 917-555-2222.
+
+**CSS path (Community Service Society)** — hospital bills only
+- On the language screen choose Urdu, Arabic, French or Polish. Open **Hospital bill forgiveness**, answer "Yes" to "Do you have an unaffordable hospital bill?", finish the bill questions, and submit from the review page.
+- You land on `df-css.html` (a CSS health counselor) with no "Start your application" button. English, Spanish and Chinese land on `df-next.html` (Dollar For) instead.
+- The dashboard hospital card title and copy also change on this path (a CSS health counselor will call within 2 business days).
+
+**How to get an ineligible ("No match") screen**
+- **Hospital bill forgiveness:** answer "No" to the hospital bill question (`df-ineligible.html`).
+- **Energy discounts:** either choose "Neither" for the utility (`eap-ineligible.html`), or choose a utility, answer "No" to government assistance (or choose Yes with only "Other/not listed"), enter a household size, and answer "No" to "Do you make less than $…?" (limit is $113,400 for 1 person; it rises by household size).
+- **Tax credits:** answer "No, I missed at least one year" (or "I'm not sure") to filing, "No" to work income, and "No, I do not have children" (`eitc-ineligible.html`). "Not sure" on income counts as having income.
+- **Tenant support:** pick "None of the above. (I have a different housing issue.)" and Continue (`tsu-311.html`).
+- The dashboard card then reads "No match" with its own copy and "View details".
+
+**How to get the "Not a fit" screen (SNAP)** (`snap-notfit.html`, "Free in-person help is nearby")
+- On the first SNAP page choose "None of the above" and Continue, or
+- choose any of the three options, then answer "No" to "Does text-based help work for you?".
+- The dashboard SNAP card then shows "Not a fit". Choosing "Yes" goes to Review and Submit instead.
+
+**Also worth a pass**
+- Chip rows at 320, 390 and 768px in every language (health insurance, tax credits, energy discounts): one-line labels, no sideways scroll.
+- "Back to dashboard" is the only primary button on every hand-off and ineligible screen.
+- Right-to-left layout in Arabic and Urdu, including the header logo and buttons.
+- Placeholder translations are unreviewed; note awkward strings for the translator.
+
 ## v1.4 Self-service — 2026-11-06
 
 Self-service intake and sign-in return on top of v1.3. Translations (Spanish, Arabic, Traditional Chinese) are being re-added for the new screens; until then the new screens are English only.
