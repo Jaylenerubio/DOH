@@ -149,9 +149,9 @@ body {
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
-  padding: 12px var(--page-margin-x);   /* 36px logo; 44px outlined translate button + 8px breathing room each side */
+  padding: 12px var(--page-margin-x);   /* 44px logo; 44px outlined translate button + 8px breathing room each side */
 }
-.site-nav__logo { display: block; height: 36px; width: auto; }
+.site-nav__logo { display: block; height: 44px; width: auto; }
 /* NOTE: a translate / language icon sits left of the hamburger in the full
    design. Intentionally omitted for now — add a .site-nav__lang button here
    when localization is in scope. */
