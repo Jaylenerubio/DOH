@@ -2,6 +2,21 @@
 
 One entry per drop. Newest first. Dates are the day the drop was tagged.
 
+## v1.4.1 Content and translations — 2026-11-12
+
+Content changes (11/10 batch), placeholder translations in six languages, and layout fixes on top of v1.4. Translations are unreviewed until a translator signs off.
+
+- **SNAP:** "None of the above" on the first page routes to the free in-person hand-off (`snap-notfit`); the second page is "Does text-based help work for you?"; new consent text with the Frontdoor Benefits privacy link; hand-off rebuilt as "Free in-person help is nearby".
+- **Energy discounts:** new program checklist (SNAP, HEAP, Medicaid, TANF, SNA, SSI, Lifeline, Direct Vendor, federal housing, veterans, other), note under eligible step 1, "Neither" goes straight to not-eligible, explanation sentence on the not-eligible page, utility order Con Edison, National Grid, Both, Neither.
+- **Tax credits:** new outcome pages and "Did you claim the EITC?" info page, IRS online account link, one-sentence likely-eligible copy.
+- **Tenant support and hospital:** TSU option and review copy; hospital bill copy and dashboard card.
+- **Consent and contact:** finish-line sentence removed from consent; period fixes; "Date of birth" label.
+- **Wording:** "Back to dashboard" replaces "Return to dashboard" everywhere (hand-off button is primary); "in-person" is hyphenated as an adjective.
+- **Profile and errors:** preferred language card, "Number already in use" inline error, Material error icon, Material external-link icon.
+- **Translations (placeholder):** Spanish, Arabic, Traditional Chinese, Urdu, French and Polish across the CSS path, all four program flows, tax credits, dashboard and post-language screens. Urdu and Arabic are right-to-left.
+- **Layout:** three-option chip rows keep labels on one line and flow as content-width chips; email-code button text shortened; header logo 30px to 44px.
+- **Accessibility:** conformance summary updated (axe scan not re-run since v1.4).
+
 ## v1.4 Self-service — 2026-11-06
 
 Self-service intake and sign-in return on top of v1.3. Translations (Spanish, Arabic, Traditional Chinese) are being re-added for the new screens; until then the new screens are English only.

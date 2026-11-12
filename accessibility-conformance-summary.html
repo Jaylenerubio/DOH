@@ -319,6 +319,7 @@
         a “Welcome back” code screen when a number already has an account, a Menu-only header inside the tool,
         preferred language on the review page and in My profile, and a restyled SNAP hand-off. See
         <a href="#changes">What changed</a> at the end.</p>
+      <p class="verdict" style="margin-top:12px"><b>Updated Nov&nbsp;12,&nbsp;2026 (v1.4.1) —</b> content and translation release: new SNAP, energy-discount and tax-credit screens, “Back to dashboard” on every hand-off, one-line chip rows, a larger header logo, and placeholder translations in six languages. The axe-core scan below was run on v1.4 (Nov&nbsp;6) and has not been re-run for v1.4.1.</p>
 
       <div class="badges">
         <span class="badge"><span class="tick" aria-hidden="true">✓</span> <b>WCAG&nbsp;2.0&nbsp;AA</b> <span>Section&nbsp;508 floor</span></span>
@@ -469,7 +470,7 @@
           </tr>
           <tr>
             <th scope="row">Handoff pages &amp; “View details”</th>
-            <td><span class="mk">end of screening: primary “Start your application” (partner programs) or “Return to dashboard”; “Start / Finish your application” opens the partner site in a new tab and carries sr-only “(opens in new tab)”</span><span class="mk">from the dashboard: “Back to dashboard” link above the <code>&lt;h1&gt;</code>; after applying, step 1 of the list is marked done with a check icon and sr-only “Done:”; referral programs show a dated sentence and no footer</span><span class="note">Hospital bills “No” on the first question lands on “Need to resolve a medical bill?” — same template as the other not-eligible pages (external link with sr-only new-tab hint, label above a copy field). CHW “Open client record” is hidden in the self channel</span></td>
+            <td><span class="mk">end of screening: primary “Start your application” (partner programs) or “Back to dashboard”; “Start / Finish your application” opens the partner site in a new tab and carries sr-only “(opens in new tab)”</span><span class="mk">from the dashboard: “Back to dashboard” link above the <code>&lt;h1&gt;</code>; after applying, step 1 of the list is marked done with a check icon and sr-only “Done:”; referral programs show a dated sentence and no footer</span><span class="note">Hospital bills “No” on the first question lands on “Need to resolve a medical bill?” — same template as the other not-eligible pages (external link with sr-only new-tab hint, label above a copy field). CHW “Open client record” is hidden in the self channel</span></td>
             <td><div class="sc"><b>1.3.1</b><b>2.4.4</b><b>2.4.6</b><b>3.2.5</b></div></td>
           </tr>
         </tbody>
@@ -653,7 +654,7 @@
     <div class="callout">
       <ul>
         <li><span class="pill partial">Partial</span><p><b>Skip-to-content link.</b> Not present; <code>#main</code> targets are on every page, so the vendor should add a visible-on-focus “Skip to main content” link as the first focusable element (completes 2.4.1).</p></li>
-        <li><span class="pill partial">Partial</span><p><b>Translation.</b> The language chosen on step 1 is saved and shown on the review page and in My profile. Placeholder Spanish, Arabic and Traditional Chinese strings (not reviewed by a translator) cover only some older post-login screens; the v1.4 screens, the landing page and the header button are still English. In production the choice must switch the page language and set <code>&lt;html lang&gt;</code> (3.1.1).</p></li>
+        <li><span class="pill partial">Partial</span><p><b>Translation.</b> The language chosen on step 1 is saved and shown on the review page and in My profile. As of v1.4.1, placeholder Spanish, Arabic, Traditional Chinese, Urdu, French and Polish strings (not reviewed by a translator) cover the screens after language selection, the four program flows, tax credits and the dashboard. The prototype sets <code>&lt;html lang&gt;</code> and <code>dir</code> (right-to-left for Arabic and Urdu) from the chosen language (3.1.1); the pre-selection landing screens are English only. A translator must review every string before launch.</p></li>
         <li><span class="pill partial">Partial</span><p><b>Consistent help (3.2.6).</b> 311 appears on the not-eligible pages and the Eviction handoff only. If a help mechanism ships (311 line, chat), it needs the same place on every page.</p></li>
         <li><span class="pill partial">Partial</span><p><b>Stacked logo.</b> PNG at 30px; “Health” renders at ~9px, at the DOHMH 8pt floor. Swap to SVG from comms and verify legibility on device.</p></li>
         <li><span class="pill defer">Placeholder</span><p><b>Links the vendor must replace.</b> Energy discounts: the Benefits Enrollment Assistant intake URL (<code>#bea-partner-intake-placeholder</code>, flagged in <code>scripts/pillars.js</code> and <code>eeap-next.html</code>). Hospital bills: “Start your application” opens <code>dollarfor.org</code>, a stand-in for the simplified-application link. The NYC Health privacy-policy link on the privacy page is <code>href="#"</code>; the Frontdoor Benefits link on the SNAP review page now points to <code>openfrontdoor.com/privacy</code>. The Dollar For / CSS links (Hospital bills review) and the TSU link (Eviction review) are final.</p></li>
@@ -668,9 +669,13 @@
   <!-- 8 · Changes since Sep 3 ------------------------------------------- -->
   <section id="changes" aria-labelledby="h-changes">
     <div class="sec-head"><span class="sec-num" aria-hidden="true">08</span><h2 id="h-changes">What changed since Oct&nbsp;14</h2></div>
-    <p class="sec-intro">Accessibility-relevant changes in v1.4, so reviewers can re-test the right places.</p>
+    <p class="sec-intro">Accessibility-relevant changes in v1.4 and v1.4.1, so reviewers can re-test the right places.</p>
     <div class="callout">
       <ul>
+        <li><span class="pill ok">Built</span><p><b>v1.4.1 · Chip rows.</b> Three-option rows (Yes / No / Not sure; Morning / Evening / Anytime) keep each label on one line and wrap as content-width chips; checked at 320, 390 and 768px in six languages with no horizontal scroll.</p></li>
+        <li><span class="pill ok">Built</span><p><b>v1.4.1 · Hand-off button.</b> “Back to dashboard” replaces “Return to dashboard” everywhere; on hand-offs it is the single primary action.</p></li>
+        <li><span class="pill ok">Built</span><p><b>v1.4.1 · Header logo.</b> Raised from 30px to 44px tall so the “Health” wordmark is legible; header height grows 61px to 69px.</p></li>
+        <li><span class="pill ok">Built</span><p><b>v1.4.1 · Content.</b> SNAP “None of the above” path and consent text, energy-discount eligibility checklist and not-eligible explanation, new tax-credit outcome pages, “in-person” hyphenated as an adjective. Re-test the screen-reader order on these screens.</p></li>
         <li><span class="pill ok">Built</span><p><b>Five-step intake.</b> Language → privacy → contact → review → code, with one shared progress script. The review step is new: the last place to edit details before the code is sent. Contact-method choice and the programs page are gone.</p></li>
         <li><span class="pill ok">Built</span><p><b>Sign in and Welcome back.</b> Sign in asks for first and last name, date of birth, ZIP and phone; a mismatch shows an “Account not found” notice with a link to create an account. A number that already has an account opens a Welcome back code screen; “Create an account” returns to the contact page, where reusing that number shows “Number already in use. Sign in or use a different number.”</p></li>
         <li><span class="pill ok">Built</span><p><b>Errors.</b> One icon (Material “error”), regular weight, 1.5px red border, same treatment for one-time-code errors. The icon is a single shared constant.</p></li>
@@ -687,7 +692,7 @@
 
 <footer>
   <div class="wrap">
-    <span class="disclaimer">Prepared Aug&nbsp;28,&nbsp;2026 · Updated Nov&nbsp;6,&nbsp;2026 (v1.4) · Prototype, code-level conformance with an automated scan — a description of current coverage, not a certified audit.</span>
+    <span class="disclaimer">Prepared Aug&nbsp;28,&nbsp;2026 · Updated Nov&nbsp;12,&nbsp;2026 (v1.4.1) · Prototype, code-level conformance with an automated scan — a description of current coverage, not a certified audit.</span>
     <span>NYC Health · DOHMH — NYC Health and Affordability Connector</span>
   </div>
 </footer>
