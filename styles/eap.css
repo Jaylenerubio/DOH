@@ -16,8 +16,8 @@
 .qgroup__list { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
 .qgroup__list .choice-card { min-height: 56px; padding: var(--space-2); justify-content: flex-start; text-align: start; }
 /* Two-up row (Yes / No, Morning / Evening). */
-.qgroup__row { display: flex; gap: var(--space-1); margin-top: 12px; }
-.qgroup__row .choice-card { flex: 1 1 0; min-height: 56px; padding: var(--space-1) var(--space-2); }
+.qgroup__row { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: 12px; }
+.qgroup__row .choice-card { flex: 1 1 auto; width: auto; min-width: 0; max-width: 100%; white-space: nowrap; min-height: 56px; padding: var(--space-1) var(--space-2); }  /* one line per label; chips share the row and drop to the next row when it is full */
 /* Multi-select chips: same square-cornered card as Yes/No, sharing the row
    at equal widths; a chip only wraps to the next row when its label would
    otherwise truncate. */
