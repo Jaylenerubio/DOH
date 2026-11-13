@@ -96,7 +96,7 @@ Programs with a result come first, then the rest, under the two-tone "Explore pr
 - Support contact is the email hartconnectorsupport@health.nyc.gov (dashboard, My profile, and the paused-sign-in screen once built). Account deletion is a request by email; what BH does with it (records are never hard-deleted) is TBD.
 - Health insurance: the "Prefer a different site?" picker is removed for v1.3; site changes return later, bundled with editing client information.
 - OTP rules are proposals pending security (not built in the prototype): 6-digit single-use code, expires in 5 minutes; 5 wrong codes per code, with a warning at 2 left, then sign-in pauses 15 minutes; 30-second resend cooldown, at most 3 new codes per 15 minutes; 5 failed detail lookups per 15 minutes per device, then a 15-minute pause (lock the device, not the account). The server enforces limits; the screen only displays them. Wrong-code message (placeholder): "Invalid code. You have 2 attempts left."
-- Energy discounts: Benefits Enrollment Assistant intake URL (`#bea-partner-intake-placeholder` in `scripts/pillars.js` and `eeap-next.html`).
+- Energy discounts: Benefits Enrollment Assistant link: currently the BEA staging start URL (`https://staging.nyc-bea.navateam.com/start`) in `scripts/pillars.js` and `eeap-next.html`; swap for the production URL at launch.
 - Hospital bills: `https://dollarfor.org/` stands in for the simplified-application link.
 - Enrollment-site names, addresses, hours and phone numbers (`scripts/hi-sites.js`).
 - "Connect with a HART employee" link on No match cards: TBD, left out.

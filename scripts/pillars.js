@@ -60,11 +60,11 @@ window.Pillars = (function () {
   function entryFor(key) { return META[key] ? META[key].entry : 'dashboard.html'; }
   function labelFor(key) { return META[key] ? META[key].label : ''; }
   /* Partner applications open in a new tab; handoffs return to the dashboard. */
-  /* Partner applications. Vendor: the EAP url is a placeholder for the BEA
-     partner intake link (e.g. staging.nyc-bea.navateam.com/partner-intake-demo). */
+  /* Partner applications. The EAP url is the BEA (Benefits Enrollment Assistant)
+     staging start link; the vendor swaps in the production link at launch. */
   var APPLY = {
     'hospital-bills': { label: 'Start your application', url: 'https://dollarfor.org/', partner: 'Dollar For' },
-    'financial-help': { label: 'Start your application', url: '#bea-partner-intake-placeholder', partner: 'the Energy Affordability Program', eeapUrl: 'https://nyeeap.com/program' },
+    'financial-help': { label: 'Start your application', url: 'https://staging.nyc-bea.navateam.com/start', partner: 'the Energy Affordability Program', eeapUrl: 'https://nyeeap.com/program' },
     'tax-credits':    { label: 'Start your application', url: 'https://getyourrefund.org/nychealth', partner: 'GetYourRefund' }
   };
   /* Hospital bills: clients whose preferred language is Urdu, Arabic, French or
