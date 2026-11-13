@@ -8,6 +8,8 @@
    - multi        : options toggle; the list stays open; aria-selected is owned
                     by the caller (via onChange) — the controller only reports.
    Listbox is portaled to <body>, position:fixed, flips above when needed.
+   inline: true  keeps the list in the page flow under the field instead (no overlay), so on a phone the
+                 field can never be hidden by its own list or the keyboard; the field scrolls up to make room.
    API:  var c = Combobox.create(rootEl, {
             onChange: function (value, label) {},
             searchable: true|false, multi: true|false });
@@ -25,6 +27,7 @@
     var placeholder = valueEl ? valueEl.textContent.trim() : '';
     var searchable = !!opts.searchable;
     var multi = !!opts.multi;
+    var inline = !!opts.inline;
     var input = null;
     var suppressOpen = false;   // focus returned programmatically (after a pick) must not reopen the list
     var restoring = false;   // selectByValue() restores silently: no open list, no filter
@@ -59,7 +62,8 @@
     }
     var control = input || trigger;             // element that owns focus + ARIA state
 
-    if (listbox.parentNode !== document.body) document.body.appendChild(listbox);
+    if (inline) listbox.classList.add('listbox--inline');
+    else if (listbox.parentNode !== document.body) document.body.appendChild(listbox);
     var open = false;
     var activeIndex = -1;                        // index into `visible`
     var selectedIndex = -1;                      // single-select only
@@ -68,7 +72,33 @@
 
     function labelOf(o) { return o.getAttribute('data-label') || o.firstChild.textContent.trim(); }
 
+    /* Inline list: sized to the part of the screen the keyboard and the pinned footer leave free. */
+    function visibleBottom() {
+      var vv = window.visualViewport, b = vv ? vv.offsetTop + vv.height : window.innerHeight;
+      var f = document.querySelector('.step__footer, .lang-page__footer');
+      if (f) { var fr = f.getBoundingClientRect(); if (fr.top > 0 && fr.top < b) b = fr.top; }
+      return b;
+    }
+    function positionInline() {
+      listbox.style.maxHeight = '';
+      var natural = listbox.scrollHeight + 14;
+      var avail = visibleBottom() - listbox.getBoundingClientRect().top - 12;
+      listbox.style.maxHeight = Math.max(96, Math.min(natural, 360, avail)) + 'px';
+    }
+    /* Bring the field up near the top of what is visible so the list has room under it, and the field stays in sight. */
+    function revealInline() {
+      var vv = window.visualViewport, top0 = vv ? vv.offsetTop : 0;
+      var r = trigger.getBoundingClientRect();
+      var room = visibleBottom() - r.bottom - 12;
+      if (room >= 240 && r.top >= top0) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var delta = r.top - (top0 + 24);
+      try { window.scrollBy({ top: delta, behavior: reduce ? 'auto' : 'smooth' }); } catch (e) { window.scrollBy(0, delta); }
+    }
+    /* The phone keyboard opening or closing resizes the viewport: bring the field back into view, then resize the list. */
+    function onViewport() { if (inline && open) revealInline(); position(); }
     function position() {
+      if (inline) { positionInline(); return; }
       listbox.style.maxHeight = '';
       var r = trigger.getBoundingClientRect();
       var gap = 6, margin = 8;
@@ -119,12 +149,14 @@
       control.setAttribute('aria-expanded', 'true');
       trigger.setAttribute('data-open', 'true');
       position();
+      if (inline) revealInline();
       var start = 0;
       if (!multi && selectedIndex >= 0) start = Math.max(0, visible.indexOf(options[selectedIndex]));
       if (visible.length) setActive(start);
       document.addEventListener('click', onDocPointer, true);
-      window.addEventListener('resize', position);
+      window.addEventListener('resize', onViewport);
       window.addEventListener('scroll', onScroll, true);
+      if (inline && window.visualViewport) { window.visualViewport.addEventListener('resize', onViewport); window.visualViewport.addEventListener('scroll', position); }
     }
     function closeList(focusControl) {
       if (!open) return;
@@ -134,8 +166,9 @@
       trigger.removeAttribute('data-open');
       clearActive();
       document.removeEventListener('click', onDocPointer, true);
-      window.removeEventListener('resize', position);
+      window.removeEventListener('resize', onViewport);
       window.removeEventListener('scroll', onScroll, true);
+      if (inline && window.visualViewport) { window.visualViewport.removeEventListener('resize', onViewport); window.visualViewport.removeEventListener('scroll', position); }
       if (focusControl) { suppressOpen = true; control.focus(); suppressOpen = false; }
     }
     function toggle() { open ? closeList(true) : openList(); }

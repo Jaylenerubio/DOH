@@ -1319,6 +1319,10 @@ body {
   transform: translateY(-4px);
   transition: opacity 160ms var(--ease-out), transform 160ms var(--ease-out), visibility 0s linear 160ms;
 }
+/* Inline variant (preferred-language): sits in the page under the field, never over it. */
+.listbox--inline { position: static; margin-top: 6px; box-shadow: none; transform: none; transition: none; }
+.listbox--inline:not(.is-open) { display: none; }
+.listbox--inline.is-open { transition: none; }
 .listbox.listbox--up { transform: translateY(4px); }   /* flipped: rise from below */
 .listbox.is-open {
   opacity: 1;
