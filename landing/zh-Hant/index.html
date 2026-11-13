@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<base href="/landing/zh-Hant/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>NYC HART Connector — 紐約市衛生局</title>
+<meta name="description" content="透過 NYC HART Connector 照顧您的健康與日常帳單。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NYC HART Connector — 紐約市衛生局">
+<meta property="og:description" content="透過 NYC HART Connector 照顧您的健康與日常帳單。">
+<meta property="og:image" content="/assets/social/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="更健康、更可負擔的紐約從這裡開始。">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32-dark.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg">
+<link rel="preload" href="../assets/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../app.c6f3c643.css">
+<link rel="preload" href="../assets/fonts/noto-sans-tc.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<div class="nyco-city-bar">
+  <p class="nyco-city-bar__text">
+    <button class="l-city__toggle" id="cityToggle" type="button" aria-expanded="false" aria-controls="cityPanel">
+      紐約市官方網站
+      <svg class="l-city__caret" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4"/></svg>
+    </button>
+  </p>
+</div>
+<section class="l-city__panel" id="cityPanel" aria-label="如何辨識這是官方網站" hidden>
+  <div class="l-city__inner">
+    <div>
+      <p class="l-city__label">官方網站使用 .gov</p>
+      <p>.gov 網站屬於美國的官方政府機構。</p>
+    </div>
+    <div>
+      <p class="l-city__label">安全的 .gov 網站使用 HTTPS</p>
+      <p>鎖頭 <span aria-hidden="true">(🔒)</span> 或 https:// 表示您已安全連線至 .gov 網站。請僅在官方的安全網站上分享敏感資訊。</p>
+    </div>
+  </div>
+</section>
+<header class="nyco-site-header nyco-site-header--sticky l-header">
+  <div class="nyco-site-header__bar">
+    <a class="nyco-site-header__home" href="./" aria-label="紐約市衛生局首頁"><img class="l-header__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""></a>
+    <div class="l-header__actions">
+      <button class="nyco-button nyco-button--text nyco-button--small l-btn l-header__lang" type="button" aria-haspopup="dialog" aria-controls="langSheet" aria-label="語言：繁體中文">
+        <span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages nyco-icon nyco-icon--24" aria-hidden="true" focusable="false"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span>
+        <span class="l-header__lang-label">繁體中文</span>
+      </button>
+      <a class="nyco-button nyco-button--primary nyco-button--small l-btn" href="../../preferred-language.html?lang=zh-Hant">開始</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section class="l-intro" aria-labelledby="pageTitle">
+    <h1 class="l-title l-intro__title" id="pageTitle"><span class="l-intro__lead">更健康、更可負擔的紐約從這裡開始。</span> <span class="l-intro__muted">照顧您的健康與日常帳單 <br class="l-br-desk">就用 NYC HART Connector。</span></h1>
+    <div class="l-actions">
+      <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=zh-Hant">開始</a>
+      <a class="nyco-button nyco-button--neutral l-btn l-btn--quiet" href="../../signin.html">從上次中斷處繼續</a>
+    </div>
+  </section>
+  <div class="l-hero">
+  <section class="stack-carousel" id="carousel" data-asset-base="../" aria-roledescription="輪播" aria-label="HART Connector 可協助您的福利" data-slide="投影片" data-of="第 {n} 項，共 {total} 項">
+    <div class="frame" id="frame">
+      <div class="frame__patterns" id="patterns" aria-hidden="true"></div>
+      <svg width="0" height="0" class="hero-svg-defs" aria-hidden="true" focusable="false"><defs id="mbDefs"></defs></svg>
+      <svg width="0" height="0" class="hero-svg-defs" aria-hidden="true" focusable="false"><defs id="brushDefs"></defs></svg>
+      <div class="stage" id="stage"></div>
+            <div class="dots" id="dots" aria-hidden="true"></div>
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" id="playpause" type="button" data-play="播放福利" data-pause="暫停福利"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+    </div>
+    <div class="arrows">
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="heroPrev" type="button" aria-label="上一項福利"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m15 18-6-6 6-6"></path></svg></span></button>
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="heroNext" type="button" aria-label="下一項福利"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m9 18 6-6-6-6"></path></svg></span></button>
+    </div>
+    <p class="visually-hidden" id="heroLive" aria-live="off" aria-atomic="true"></p>
+    <template id="heroText">
+      <p data-id="hospital"><span data-part="title">醫院帳單</span> <span data-part="tag">了解您的醫院是否會減免您的帳單</span></p>
+      <p data-id="health"><span data-part="title">健康保險</span> <span data-part="tag">登記或續保您的健康保險</span></p>
+      <p data-id="heat"><span data-part="title">能源帳單</span> <span data-part="tag">降低您每月的 Con Edison 和 National Grid 帳單</span></p>
+      <p data-id="evict"><span data-part="title">房東相關支援</span> <span data-part="tag">阻止驅逐並獲得協助以保住您的住所</span></p>
+      <p data-id="tax"><span data-part="title">稅收抵免與財務福利</span> <span data-part="tag">從美國國稅局獲得退款</span></p>
+      <p data-id="food"><span data-part="title">SNAP</span> <span data-part="tag">獲得購買食物的協助</span></p>
+    </template>
+  </section>
+  </div>
+  <div class="l-section l-how">
+  <section class="vp" id="vp" aria-labelledby="vpHeading" data-plus="on" data-of="第 {n} 項，共 {total} 項" data-play-video="播放影片" data-pause-video="暫停影片" data-play-animation="播放動畫" data-pause-animation="暫停動畫">
+    <h2 class="l-title l-how__title" id="vpHeading">運作方式</h2>
+
+    <div class="vp__grid">
+      <div class="vp__stage">
+        <div class="vp__stage-frame">
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" id="stageToggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+        </div>
+        <div class="arrows">
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="vpPrev" type="button" aria-label="上一項功能" aria-controls="vpList"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m15 18-6-6 6-6"></path></svg></span></button>
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="vpNext" type="button" aria-label="下一項功能" aria-controls="vpList"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m9 18 6-6-6-6"></path></svg></span></button>
+        </div>
+      </div>
+      <div class="vp__list nyco-accordion nyco-accordion--uncontained nyco-accordion--one-open" id="vpList">
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item vp__item--phone" data-expanded data-current>
+          <div class="vp__media" data-kind="animation" data-still="12300">
+            <div class="phone" aria-hidden="true">
+              <div class="phone__screen">
+                <div class="phone__status">
+                  <span>12:46</span>
+                  <span class="phone__icons">
+                    <svg viewBox="0 0 17 11" aria-hidden="true"><rect x="0" y="7" width="3" height="4" rx=".9"/><rect x="4.67" y="4.67" width="3" height="6.33" rx=".9"/><rect x="9.33" y="2.33" width="3" height="8.67" rx=".9"/><rect x="14" y="0" width="3" height="11" rx=".9"/></svg>
+                    <svg viewBox="0 0 15.5 11" aria-hidden="true"><path d="M7.75 2.2c2.2 0 4.2.85 5.7 2.25l1.3-1.3A9.9 9.9 0 0 0 7.75.35 9.9 9.9 0 0 0 .75 3.15l1.3 1.3A8.1 8.1 0 0 1 7.75 2.2Z"/><path d="M7.75 5.75c1.25 0 2.4.48 3.25 1.3l1.3-1.3a6.5 6.5 0 0 0-4.55-1.85A6.5 6.5 0 0 0 3.2 5.75l1.3 1.3a4.7 4.7 0 0 1 3.25-1.3Z"/><path d="M7.75 10.9 9.8 8.85a2.9 2.9 0 0 0-4.1 0Z"/></svg>
+                    <svg viewBox="0 0 25 12" aria-hidden="true"><rect x=".5" y=".5" width="21" height="11" rx="3.3" fill="none" stroke="currentColor" stroke-opacity=".35"/><rect x="2" y="2" width="18" height="8" rx="2"/><path d="M23 4v4c.8-.3 1.4-1 1.4-2s-.6-1.7-1.4-2Z" fill-opacity=".4"/></svg>
+                  </span>
+                </div>
+                <div class="phone__island"></div>
+                <div class="demo">
+                  <div class="demo__in">
+                    <div class="demo__screen demo__s1">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>紐約市官方網站</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>選單</span></span></div>
+                        <div class="demo__body">
+                          <p class="demo__title"><span>探索計畫</span> <span>與適合您的申請</span></p>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"/></svg><span>醫院帳單</span></p><p>了解您的醫院是否會減免您的帳單。</p><span class="demo__btn">開始</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg><span>醫療保險</span></p><p>加入或續保免費醫療保險。</p><span class="demo__btn">開始</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>驅逐</span></p><p>取得協助，留在您的家中。</p><span class="demo__btn">開始</span></div>
+                          <div class="demo__card demo__card--target"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg><span>能源折扣</span></p><p>降低您每月的 Con Edison 和 National Grid 帳單。</p><span class="demo__btn demo__tap demo__tap--1">開始</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg><span>稅收抵免</span></p><p>申領最多 3 年的稅收抵免和現金補助。</p><span class="demo__btn">開始</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="demo__screen demo__s2">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>紐約市官方網站</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>選單</span></span></div>
+                        <div class="demo__body">
+                          <div class="demo__progress"><span class="demo__on"></span><span></span></div>
+                          <p class="demo__title">看看您是否符合每月能源折扣資格</p>
+                          <div class="demo__q demo__q1"><p>您是 Con Edison 和／或 National Grid 的客戶嗎？</p><div class="demo__opts"><span class="demo__opt">Con Edison</span><span class="demo__opt">National Grid</span><span class="demo__opt demo__tap demo__tap--2">兩者皆是</span><span class="demo__opt">都不是</span></div></div>
+                          <div class="demo__q demo__q2"><p>您目前是否參加任何政府援助計畫？</p><div class="demo__opts"><span class="demo__opt">是</span><span class="demo__opt demo__tap demo__tap--3">否</span></div></div>
+                          <div class="demo__q demo__q3"><p>您與幾個人分擔水電費用？</p><div class="demo__step"><span class="demo__opt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></span><span class="demo__opt demo__count"><span>0</span><span>1</span></span><span class="demo__opt demo__tap demo__tap--4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span></div></div>
+                          <div class="demo__q demo__q4"><p>您的年收入是否低於 $113,400？</p><div class="demo__opts"><span class="demo__opt demo__tap demo__tap--5">是</span><span class="demo__opt">否</span></div></div>
+                        </div>
+                      </div>
+                      <div class="demo__bar"><span class="demo__btn demo__btn--grey">返回</span><span class="demo__btn demo__btn--primary demo__tap demo__tap--6">儲存並繼續</span></div>
+                    </div>
+                    <div class="demo__screen demo__s3">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>紐約市官方網站</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>選單</span></span></div>
+                        <div class="demo__body">
+                          <div class="demo__progress"><span class="demo__on"></span><span class="demo__on"></span></div>
+                          <p class="demo__title">檢查並提交</p>
+                          <p class="demo__lede">如果您符合資格，我們會將以下資訊提供給您的公用事業公司，協助您獲得所需的支援。</p>
+                          <div class="demo__card demo__review"><p class="demo__card-head demo__card-head--edit"><span>能源折扣</span><span class="demo__edit"><span>編輯</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg></span></p><p>您是 Con Edison 和／或 National Grid 的客戶嗎？</p><p class="demo__answer">Con Edison 和 National Grid</p><p>您目前是否參加任何政府援助計畫？</p><p class="demo__answer">否</p><p>您與幾個人分擔水電費用？</p><p class="demo__answer">1</p><p>您的年收入是否低於 $113,400？</p><p class="demo__answer">是</p></div>
+                          <div class="demo__card demo__consent"><p>提交此頁面即表示，您同意與您的公用事業公司分享您的資訊。他們可能會核實這些資訊，並與其他機構分享，以處理您的申請、管理您的參與，並確保遵守計劃規定。</p></div>
+                        </div>
+                      </div>
+                      <div class="demo__bar"><span class="demo__btn demo__btn--grey">返回</span><span class="demo__btn demo__btn--primary demo__tap demo__tap--7">提交</span></div>
+                    </div>
+                    <div class="demo__screen demo__s4">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>紐約市官方網站</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>選單</span></span></div>
+                        <div class="demo__body">
+                          <p class="demo__title"><span>您符合「加強版能源可負擔計畫」（EEAP）的資格</span> <span class="demo__muted">後續步驟</span></p>
+                          <div class="demo__card demo__next"><span class="demo__num">1</span><div><p class="demo__card-head"><span><span class="demo__link">開始您的 EEAP 申請</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></p><p class="demo__small">如果您的電力和天然氣服務來自不同公司，只要兩個帳戶在同一地址，即可在一份申請中同時申請。</p></div></div>
+                          <div class="demo__card demo__next"><span class="demo__num">2</span><div><p class="demo__card-head">申請後您有 14 天時間，提交與您分擔水電費用的所有人最近 28 天的收入證明。</p><p class="demo__small">包括薪資單、社會安全福利、失業和殘障給付以及子女撫養費。照片和上傳的文件都可接受。</p></div></div>
+                          <div class="demo__card demo__next"><span class="demo__num">3</span><div><p class="demo__card-head">一旦獲得批准，您將在兩個帳單週期內收到 EAP 折扣。</p><p class="demo__small">您的抵免將持續 18 個月，之後需要重新申請。</p></div></div>
+                          <span class="demo__btn demo__btn--primary demo__btn--wide">開始您的申請</span>
+                          <span class="demo__btn demo__btn--grey demo__btn--wide">返回主頁</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="demo__url">HART Connector</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="visually-hidden">動畫：有人在手機上開始申請能源折扣，回答四個簡短問題後提交，並看到自己符合「加強版能源可負擔計畫」的資格。</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t1" type="button" aria-expanded="true" aria-controls="vp-p1">
+              <span class="nyco-accordion__title">即時資格檢查</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">即時資格檢查</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p1" role="region" aria-labelledby="vp-t1">
+            <div class="nyco-accordion__content"><p>立即了解您是否符合醫院帳單減免、能源折扣等資格。</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="3200">
+            <div class="programs" aria-hidden="true">
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">SNAP（食物券）</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">租戶支援</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">醫療保健</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">稅收抵免</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">醫院帳單減免</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">能源折扣</span></div>
+            </div>
+            <p class="visually-hidden">動畫：SNAP（食物券）、租戶支援、醫療保健、稅收抵免、醫院帳單減免和能源折扣，依序打勾。</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t2" type="button" aria-expanded="false" aria-controls="vp-p2">
+              <span class="nyco-accordion__title">快速、簡單的申請</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">快速、簡單的申請</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p2" role="region" aria-labelledby="vp-t2">
+            <div class="nyco-accordion__content"><p>隨時隨地提交，無需紙本表格。</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="8000">
+            <div class="chat" aria-hidden="true">
+              <div class="chat__msg chat__msg--in chat__msg--1">
+                <span class="chat__typing"><i></i><i></i><i></i></span>
+                <p class="chat__bubble">感謝您填寫 HART Connector 表格。紐約市衛生局的登記顧問將與您聯絡，協助您續保 Medicaid。</p>
+              </div>
+              <div class="chat__msg chat__msg--in chat__msg--2">
+                <span class="chat__typing"><i></i><i></i><i></i></span>
+                <p class="chat__bubble">您的 Con Edison 折扣申請仍未完成。只需幾分鐘即可完成。</p>
+              </div>
+              <div class="chat__msg chat__msg--out chat__msg--3">
+                <p class="chat__bubble">謝謝提醒！</p>
+              </div>
+            </div>
+            <p class="visually-hidden">動畫：收到簡訊。「感謝您填寫 HART Connector 表格。紐約市衛生局的登記顧問將與您聯絡，協助您續保 Medicaid。」「您的 Con Edison 折扣申請仍未完成。只需幾分鐘即可完成。」回覆：「謝謝提醒！」</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t3" type="button" aria-expanded="false" aria-controls="vp-p3">
+              <span class="nyco-accordion__title">即時提醒</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">即時提醒</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p3" role="region" aria-labelledby="vp-t3">
+            <div class="nyco-accordion__content"><p>透過截止日期和預約提醒，掌握進度。</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="7500">
+            <svg class="paths" id="vpPaths" viewBox="0 0 916 866" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"></svg>
+            <p class="visually-hidden">動畫：從上方看，兩條路徑蜿蜒通往終點線。一條是您獨自按自己的步調前進；另一條是您與專家並肩同行。兩者一起越過終點線。</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t4" type="button" aria-expanded="false" aria-controls="vp-p4">
+              <span class="nyco-accordion__title">彈性支援</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">彈性支援</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p4" role="region" aria-labelledby="vp-t4">
+            <div class="nyco-accordion__content"><p>按照您自己的步調進行，或獲得專家的一對一協助。</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <p class="visually-hidden" id="vpLive" aria-live="polite" aria-atomic="true"></p>
+  </section>
+  </div>
+
+  <section class="l-section l-discover" aria-labelledby="discoverTitle">
+    <h2 class="l-title" id="discoverTitle">探索您可能錯過的 <br class="l-br-600">財務援助和免費專家協助</h2>
+    <p class="l-body l-discover__body">健康保險登記顧問、SNAP 專家、 <br class="l-br-600">報稅人員、租戶權益倡導者等，隨時為您服務</p>
+    <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=zh-Hant">開始</a>
+    <div class="l-cards">
+      <article class="l-card l-card--hospital">
+        <h3 class="l-card__title">了解您的醫院是否會減免您的帳單</h3>
+        <img class="l-card__art" src="../assets/illustrations/hospital-flat.webp" width="555" height="715" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--health">
+        <h3 class="l-card__title">登記或續保您的健康保險</h3>
+        <img class="l-card__art" src="../assets/illustrations/health-flat.webp" width="702" height="782" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--food">
+        <h3 class="l-card__title">獲得購買食物的協助</h3>
+        <img class="l-card__art" src="../assets/illustrations/food-flat.webp" width="803" height="856" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--more">
+        <h3 class="l-card__title">還有更多！</h3>
+        <ul class="l-pills">
+          <li class="l-pill l-pill--energy">能源折扣</li>
+          <li class="l-pill l-pill--hospital">醫院帳單減免</li>
+          <li class="l-pill l-pill--tax">稅收抵免</li>
+          <li class="l-pill l-pill--snap">SNAP（食物券）</li>
+          <li class="l-pill l-pill--tenant">租戶支援</li>
+          <li class="l-pill l-pill--health">醫療保健</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+  
+  <section class="l-section l-section--wide-gap l-faq" aria-labelledby="faqTitle">
+    <h2 class="l-title l-faq__title" id="faqTitle">常見問題</h2>
+    <div class="nyco-accordion">
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t1" type="button" aria-expanded="false" aria-controls="faq-p1">
+              <span class="nyco-accordion__title">什麼是 HART Connector？</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p1" role="region" aria-labelledby="faq-t1">
+            <div class="nyco-accordion__content">
+              <p>Health and Affordability Resource Team（HART）Connector 是一款數位工具，協助紐約市民降低生活成本。它會找出您可能符合資格的服務，並為您牽線，包括：</p>
+              <ul>
+                <li>健康保險登記</li>
+                <li>食物援助</li>
+                <li>防止被驅逐的協助</li>
+                <li>水電瓦斯費折扣</li>
+                <li>醫院帳單財務協助</li>
+                <li>美國國稅局（IRS）現金退款</li>
+              </ul>
+              <p>紐約市衛生及心理衛生局（NYC Health）與其他市府機構及合作組織攜手，讓登記更容易。我們的合作夥伴會從您開始申請，一直協助到您獲得福利或服務為止。</p>
+              <p>HART 社區健康工作者會使用這項工具查看您可能符合哪些計畫，並與您後續聯繫。這項工具也會傳送訊息和提醒，協助您完成每份申請。</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t2" type="button" aria-expanded="false" aria-controls="faq-p2">
+              <span class="nyco-accordion__title">HART Connector 適合哪些人？</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p2" role="region" aria-labelledby="faq-t2">
+            <div class="nyco-accordion__content">
+              <p>HART Connector 免費協助難以負擔基本需求的紐約市民支付醫療、水電瓦斯、食品雜貨等費用。</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t3" type="button" aria-expanded="false" aria-controls="faq-p3">
+              <span class="nyco-accordion__title">我需要提供哪些資訊？</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p3" role="region" aria-labelledby="faq-t3">
+            <div class="nyco-accordion__content">
+              <p>為了讓您更容易申請多項服務，NYC Health 會收集並儲存您的：</p>
+              <ul>
+                <li>全名</li>
+                <li>出生日期</li>
+                <li>郵遞區號</li>
+                <li>聯絡資訊</li>
+              </ul>
+              <p>NYC Health 也會詢問您的收入、家庭狀況，以及您需要協助支付的帳單，例如水電瓦斯或醫院帳單。這些資訊會用來找出您可能符合資格的合作夥伴服務。</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t4" type="button" aria-expanded="false" aria-controls="faq-p4">
+              <span class="nyco-accordion__title">我的個人資訊會如何處理？</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p4" role="region" aria-labelledby="faq-t4">
+            <div class="nyco-accordion__content">
+              <p>NYC Health 會追蹤您每份申請的進度，並透過電子郵件、電話或簡訊傳送提醒。您可以隨時選擇不再接收這些訊息。</p>
+              <p>如果您選擇使用合作夥伴的服務，NYC Health 會分享該合作夥伴協助您所需的資訊。部分合作夥伴可能會請您先同意他們自己的隱私權政策和使用條款。</p>
+              <p>NYC Health 可能會使用 HART Connector 及其合作夥伴的資料來研究和改善這項計畫。您的資料會受到安全保護。NYC Health 公開分享的任何內容都不會包含可識別您身分的資訊。</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="l-cta" aria-labelledby="ctaTitle">
+    <h2 class="l-title l-cta__title" id="ctaTitle">了解您符合哪些服務的資格 <span class="l-keep">今天就開始申請</span></h2>
+    <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=zh-Hant">開始</a>
+  </section>
+
+</main>
+<footer class="l-footer">
+  <div class="nyco-footer nyco-footer--minimal l-footer__site">
+    <a class="nyco-footer__home" href="./" aria-label="紐約市衛生局首頁"><img class="l-footer__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt="" loading="lazy"></a>
+    <div class="l-footer__sections">
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main" target="_blank" rel="noopener noreferrer">nyc.gov 首頁<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/services" target="_blank" rel="noopener noreferrer">服務<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/events/" target="_blank" rel="noopener noreferrer">活動<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/mayors-office" target="_blank" rel="noopener noreferrer">市長辦公室<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+      </ul>
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/your-government" target="_blank" rel="noopener noreferrer">您的政府<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://portal.311.nyc.gov/" target="_blank" rel="noopener noreferrer">311<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nycvotes.org/" target="_blank" rel="noopener noreferrer">登記投票<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://a858-nycnotify.nyc.gov/notifynyc/" target="_blank" rel="noopener noreferrer">緊急警報<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+      </ul>
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://cityjobs.nyc.gov/" target="_blank" rel="noopener noreferrer">工作機會<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/site/mopd/initiatives/digital-accessibility.page" target="_blank" rel="noopener noreferrer">無障礙資源<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="../../privacy.html" target="_blank" rel="noopener noreferrer">隱私權政策<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/about-our-content" target="_blank" rel="noopener noreferrer">關於 nyc.gov 內容<span class="nyco-visually-hidden"> （在新分頁中開啟）</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="l-footer__legal">
+    <p>© 紐約市。2026 版權所有。NYC 是紐約市的商標和服務標誌。</p>
+  </div>
+</footer>
+<dialog class="nyco-sheet__overlay nyco-sheet__overlay--full l-lang" id="langSheet" aria-labelledby="langTitle">
+  <div class="nyco-sheet nyco-sheet--full">
+    <div class="nyco-sheet__dialog" tabindex="-1" autofocus>
+      <div class="nyco-sheet__header">
+        <div class="nyco-sheet__heading"><h2 class="nyco-sheet__title" id="langTitle">選擇您的語言</h2></div>
+        <button class="nyco-button nyco-button--neutral nyco-button--small l-btn l-btn--quiet l-lang__close" id="langClose" type="button">關閉<span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x nyco-icon nyco-icon--24" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span></button>
+      </div>
+      <div class="nyco-sheet__body"><div class="nyco-sheet__content">
+      <ul class="nyco-list-box__list nyco-list-box__list--fill-selected l-lang__list">
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../" hreflang="en"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="en">English</span><span class="l-lang__en"><span aria-hidden="true"> • </span>英文</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../es/" hreflang="es"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="es">Español</span><span class="l-lang__en"><span aria-hidden="true"> • </span>西班牙文</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../zh-Hant/" hreflang="zh-Hant" aria-current="page" data-selected><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="zh-Hant">繁體中文</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ru/" hreflang="ru"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ru">Русский</span><span class="l-lang__en"><span aria-hidden="true"> • </span>俄文</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../bn/" hreflang="bn"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="bn">বাংলা</span><span class="l-lang__en"><span aria-hidden="true"> • </span>孟加拉文</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ht/" hreflang="ht"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ht">Kreyòl Ayisyen</span><span class="l-lang__en"><span aria-hidden="true"> • </span>海地克里奧爾文</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ko/" hreflang="ko"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ko">한국어</span><span class="l-lang__en"><span aria-hidden="true"> • </span>韓文</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ar/" hreflang="ar"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ar" dir="rtl">العربية</span><span class="l-lang__en"><span aria-hidden="true"> • </span>阿拉伯文</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ur/" hreflang="ur"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ur" dir="rtl">اردو</span><span class="l-lang__en"><span aria-hidden="true"> • </span>烏爾都文</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../fr/" hreflang="fr"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="fr">Français</span><span class="l-lang__en"><span aria-hidden="true"> • </span>法文</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../pl/" hreflang="pl"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="pl">Polski</span><span class="l-lang__en"><span aria-hidden="true"> • </span>波蘭文</span></span></span></a></li>
+      </ul>
+      </div></div>
+    </div>
+  </div>
+</dialog>
+
+<script src="../app.a5150248.js"></script>
+</body>
+</html>

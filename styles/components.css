@@ -2161,3 +2161,7 @@ bdi { white-space: nowrap; }   /* brand names and addresses stay in one piece in
 /* "What's next" handoffs: the grey subtitle already carries the quiet tone,
    so the body copy under it is full-strength text to keep the block balanced. */
 .step__body:has(.df-next__subtitle, .hi-next__subtitle) .step__text { color: var(--color-text); }
+
+/* Language step: prototype-only note for languages the prototype doesn't translate */
+.lang-note { margin: 12px 0 0; max-width: 65ch; font-size: 14px; line-height: 20px; color: var(--color-text-secondary); }
+.lang-note[hidden] { display: none; }

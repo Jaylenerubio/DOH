@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<base href="/landing/ru/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>NYC HART Connector — Департамент здравоохранения Нью-Йорка</title>
+<meta name="description" content="Позаботьтесь о своем здоровье и повседневных счетах с помощью NYC HART Connector.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NYC HART Connector — Департамент здравоохранения Нью-Йорка">
+<meta property="og:description" content="Позаботьтесь о своем здоровье и повседневных счетах с помощью NYC HART Connector.">
+<meta property="og:image" content="/assets/social/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Более здоровый и доступный Нью-Йорк начинается здесь.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32-dark.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg">
+<link rel="preload" href="../assets/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../app.c6f3c643.css">
+<link rel="preload" href="../assets/fonts/noto-sans-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<div class="nyco-city-bar">
+  <p class="nyco-city-bar__text">
+    <button class="l-city__toggle" id="cityToggle" type="button" aria-expanded="false" aria-controls="cityPanel">
+      Официальный сайт города Нью-Йорк
+      <svg class="l-city__caret" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4"/></svg>
+    </button>
+  </p>
+</div>
+<section class="l-city__panel" id="cityPanel" aria-label="Как узнать, что это официальный сайт" hidden>
+  <div class="l-city__inner">
+    <div>
+      <p class="l-city__label">Официальные сайты используют .gov</p>
+      <p>Сайт .gov принадлежит официальной государственной организации в США.</p>
+    </div>
+    <div>
+      <p class="l-city__label">Защищенные сайты .gov используют HTTPS</p>
+      <p>Значок замка <span aria-hidden="true">(🔒)</span> или https:// означает, что вы безопасно подключились к сайту .gov. Передавайте конфиденциальную информацию только на официальных защищенных сайтах.</p>
+    </div>
+  </div>
+</section>
+<header class="nyco-site-header nyco-site-header--sticky l-header">
+  <div class="nyco-site-header__bar">
+    <a class="nyco-site-header__home" href="./" aria-label="Главная страница Департамента здравоохранения Нью-Йорка"><img class="l-header__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""></a>
+    <div class="l-header__actions">
+      <button class="nyco-button nyco-button--text nyco-button--small l-btn l-header__lang" type="button" aria-haspopup="dialog" aria-controls="langSheet" aria-label="Язык: русский">
+        <span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages nyco-icon nyco-icon--24" aria-hidden="true" focusable="false"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span>
+        <span class="l-header__lang-label">Русский</span>
+      </button>
+      <a class="nyco-button nyco-button--primary nyco-button--small l-btn" href="../../preferred-language.html?lang=ru">Начать</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section class="l-intro" aria-labelledby="pageTitle">
+    <h1 class="l-title l-intro__title" id="pageTitle"><span class="l-intro__lead">Более здоровый и доступный Нью-Йорк начинается здесь.</span> <span class="l-intro__muted">Позаботьтесь о своем здоровье и повседневных счетах <br class="l-br-desk">с помощью NYC HART Connector.</span></h1>
+    <div class="l-actions">
+      <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=ru">Начать</a>
+      <a class="nyco-button nyco-button--neutral l-btn l-btn--quiet" href="../../signin.html">Продолжить с места остановки</a>
+    </div>
+  </section>
+  <div class="l-hero">
+  <section class="stack-carousel" id="carousel" data-asset-base="../" aria-roledescription="карусель" aria-label="Льготы, с которыми может помочь HART Connector" data-slide="слайд" data-of="{n} из {total}">
+    <div class="frame" id="frame">
+      <div class="frame__patterns" id="patterns" aria-hidden="true"></div>
+      <svg width="0" height="0" class="hero-svg-defs" aria-hidden="true" focusable="false"><defs id="mbDefs"></defs></svg>
+      <svg width="0" height="0" class="hero-svg-defs" aria-hidden="true" focusable="false"><defs id="brushDefs"></defs></svg>
+      <div class="stage" id="stage"></div>
+            <div class="dots" id="dots" aria-hidden="true"></div>
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" id="playpause" type="button" data-play="Воспроизвести льготы" data-pause="Приостановить льготы"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+    </div>
+    <div class="arrows">
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="heroPrev" type="button" aria-label="Предыдущая льгота"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m15 18-6-6 6-6"></path></svg></span></button>
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="heroNext" type="button" aria-label="Следующая льгота"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m9 18 6-6-6-6"></path></svg></span></button>
+    </div>
+    <p class="visually-hidden" id="heroLive" aria-live="off" aria-atomic="true"></p>
+    <template id="heroText">
+      <p data-id="hospital"><span data-part="title">Больничные счета</span> <span data-part="tag">Узнайте, снизит ли больница ваши счета или спишет их</span></p>
+      <p data-id="health"><span data-part="title">Медицинская страховка</span> <span data-part="tag">Оформите или продлите медицинскую страховку</span></p>
+      <p data-id="heat"><span data-part="title">Счета за энергию</span> <span data-part="tag">Снизьте ежемесячные счета Con Edison и National Grid</span></p>
+      <p data-id="evict"><span data-part="title">Помощь с арендодателем</span> <span data-part="tag">Предотвратите выселение и получите помощь, чтобы сохранить жилье</span></p>
+      <p data-id="tax"><span data-part="title">Налоговые льготы и финансовая помощь</span> <span data-part="tag">Получите возврат денег от IRS</span></p>
+      <p data-id="food"><span data-part="title">SNAP</span> <span data-part="tag">Получите помощь в оплате продуктов</span></p>
+    </template>
+  </section>
+  </div>
+  <div class="l-section l-how">
+  <section class="vp" id="vp" aria-labelledby="vpHeading" data-plus="on" data-of="{n} из {total}" data-play-video="Воспроизвести видео" data-pause-video="Приостановить видео" data-play-animation="Воспроизвести анимацию" data-pause-animation="Приостановить анимацию">
+    <h2 class="l-title l-how__title" id="vpHeading">Как это работает</h2>
+
+    <div class="vp__grid">
+      <div class="vp__stage">
+        <div class="vp__stage-frame">
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" id="stageToggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+        </div>
+        <div class="arrows">
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="vpPrev" type="button" aria-label="Предыдущая возможность" aria-controls="vpList"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m15 18-6-6 6-6"></path></svg></span></button>
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="vpNext" type="button" aria-label="Следующая возможность" aria-controls="vpList"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m9 18 6-6-6-6"></path></svg></span></button>
+        </div>
+      </div>
+      <div class="vp__list nyco-accordion nyco-accordion--uncontained nyco-accordion--one-open" id="vpList">
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item vp__item--phone" data-expanded data-current>
+          <div class="vp__media" data-kind="animation" data-still="12300">
+            <div class="phone" aria-hidden="true">
+              <div class="phone__screen">
+                <div class="phone__status">
+                  <span>12:46</span>
+                  <span class="phone__icons">
+                    <svg viewBox="0 0 17 11" aria-hidden="true"><rect x="0" y="7" width="3" height="4" rx=".9"/><rect x="4.67" y="4.67" width="3" height="6.33" rx=".9"/><rect x="9.33" y="2.33" width="3" height="8.67" rx=".9"/><rect x="14" y="0" width="3" height="11" rx=".9"/></svg>
+                    <svg viewBox="0 0 15.5 11" aria-hidden="true"><path d="M7.75 2.2c2.2 0 4.2.85 5.7 2.25l1.3-1.3A9.9 9.9 0 0 0 7.75.35 9.9 9.9 0 0 0 .75 3.15l1.3 1.3A8.1 8.1 0 0 1 7.75 2.2Z"/><path d="M7.75 5.75c1.25 0 2.4.48 3.25 1.3l1.3-1.3a6.5 6.5 0 0 0-4.55-1.85A6.5 6.5 0 0 0 3.2 5.75l1.3 1.3a4.7 4.7 0 0 1 3.25-1.3Z"/><path d="M7.75 10.9 9.8 8.85a2.9 2.9 0 0 0-4.1 0Z"/></svg>
+                    <svg viewBox="0 0 25 12" aria-hidden="true"><rect x=".5" y=".5" width="21" height="11" rx="3.3" fill="none" stroke="currentColor" stroke-opacity=".35"/><rect x="2" y="2" width="18" height="8" rx="2"/><path d="M23 4v4c.8-.3 1.4-1 1.4-2s-.6-1.7-1.4-2Z" fill-opacity=".4"/></svg>
+                  </span>
+                </div>
+                <div class="phone__island"></div>
+                <div class="demo">
+                  <div class="demo__in">
+                    <div class="demo__screen demo__s1">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>Официальный сайт города Нью-Йорк</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>Меню</span></span></div>
+                        <div class="demo__body">
+                          <p class="demo__title"><span>Программы</span> <span>и заявки для вас</span></p>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"/></svg><span>Больничные счета</span></p><p>Узнайте, снизит или спишет ли больница ваши счета.</p><span class="demo__btn">Начать</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg><span>Медстраховка</span></p><p>Оформите или продлите бесплатную медстраховку.</p><span class="demo__btn">Начать</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Выселение</span></p><p>Помощь, чтобы остаться в своем доме.</p><span class="demo__btn">Начать</span></div>
+                          <div class="demo__card demo__card--target"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg><span>Скидки на энергию</span></p><p>Снизьте ежемесячные счета Con Edison и National Grid.</p><span class="demo__btn demo__tap demo__tap--1">Начать</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg><span>Налоговые льготы</span></p><p>Получите налоговые льготы и выплаты за срок до 3 лет.</p><span class="demo__btn">Начать</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="demo__screen demo__s2">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>Официальный сайт города Нью-Йорк</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>Меню</span></span></div>
+                        <div class="demo__body">
+                          <div class="demo__progress"><span class="demo__on"></span><span></span></div>
+                          <p class="demo__title">Узнаем, положены ли вам ежемесячные скидки на энергию</p>
+                          <div class="demo__q demo__q1"><p>Вы клиент Con Edison и/или National Grid?</p><div class="demo__opts"><span class="demo__opt">Con Edison</span><span class="demo__opt">National Grid</span><span class="demo__opt demo__tap demo__tap--2">Оба</span><span class="demo__opt">Ни то, ни другое</span></div></div>
+                          <div class="demo__q demo__q2"><p>Вы участвуете в каких-либо программах госпомощи?</p><div class="demo__opts"><span class="demo__opt">Да</span><span class="demo__opt demo__tap demo__tap--3">Нет</span></div></div>
+                          <div class="demo__q demo__q3"><p>Со сколькими людьми вы делите оплату коммунальных услуг?</p><div class="demo__step"><span class="demo__opt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></span><span class="demo__opt demo__count"><span>0</span><span>1</span></span><span class="demo__opt demo__tap demo__tap--4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span></div></div>
+                          <div class="demo__q demo__q4"><p>Ваш доход меньше $113 400 в год?</p><div class="demo__opts"><span class="demo__opt demo__tap demo__tap--5">Да</span><span class="demo__opt">Нет</span></div></div>
+                        </div>
+                      </div>
+                      <div class="demo__bar"><span class="demo__btn demo__btn--grey">Назад</span><span class="demo__btn demo__btn--primary demo__tap demo__tap--6">Сохранить</span></div>
+                    </div>
+                    <div class="demo__screen demo__s3">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>Официальный сайт города Нью-Йорк</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>Меню</span></span></div>
+                        <div class="demo__body">
+                          <div class="demo__progress"><span class="demo__on"></span><span class="demo__on"></span></div>
+                          <p class="demo__title">Проверка и отправка</p>
+                          <p class="demo__lede">Если вы имеете право, мы передадим эти данные вашей коммунальной компании, чтобы вы получили нужную помощь.</p>
+                          <div class="demo__card demo__review"><p class="demo__card-head demo__card-head--edit"><span>Скидки на энергию</span><span class="demo__edit"><span>Изменить</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg></span></p><p>Вы клиент Con Edison и/или National Grid?</p><p class="demo__answer">Con Edison и National Grid</p><p>Вы участвуете в каких-либо программах госпомощи?</p><p class="demo__answer">Нет</p><p>Со сколькими людьми вы делите оплату коммунальных услуг?</p><p class="demo__answer">1</p><p>Ваш доход меньше $113 400 в год?</p><p class="demo__answer">Да</p></div>
+                          <div class="demo__card demo__consent"><p>Отправляя эту страницу, вы соглашаетесь передать свои данные вашей коммунальной компании. Она может проверить их и передать другим организациям для обработки заявления, управления вашим участием и контроля соблюдения правил программы.</p></div>
+                        </div>
+                      </div>
+                      <div class="demo__bar"><span class="demo__btn demo__btn--grey">Назад</span><span class="demo__btn demo__btn--primary demo__tap demo__tap--7">Отправить</span></div>
+                    </div>
+                    <div class="demo__screen demo__s4">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>Официальный сайт города Нью-Йорк</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>Меню</span></span></div>
+                        <div class="demo__body">
+                          <p class="demo__title"><span>Вы имеете право на программу EEAP (улучшенная доступность энергии)</span> <span class="demo__muted">Что дальше</span></p>
+                          <div class="demo__card demo__next"><span class="demo__num">1</span><div><p class="demo__card-head"><span><span class="demo__link">Начните заявку на EEAP</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></p><p class="demo__small">Если электричество и газ у вас от разных компаний, можно подать одну заявку на оба, если оба счета по одному адресу.</p></div></div>
+                          <div class="demo__card demo__next"><span class="demo__num">2</span><div><p class="demo__card-head">После заявки у вас 14 дней, чтобы подтвердить доходы за последние 28 дней всех, с кем вы делите оплату.</p><p class="demo__small">Это расчетные листы, соцобеспечение, пособия по безработице и инвалидности, алименты. Подойдут фото и загруженные файлы.</p></div></div>
+                          <div class="demo__card demo__next"><span class="demo__num">3</span><div><p class="demo__card-head">После одобрения вы получите скидку EAP в течение двух расчетных периодов.</p><p class="demo__small">Скидка действует 18 месяцев. Затем нужно подать заявку снова.</p></div></div>
+                          <span class="demo__btn demo__btn--primary demo__btn--wide">Начать заявку</span>
+                          <span class="demo__btn demo__btn--grey demo__btn--wide">На главную</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="demo__url">HART Connector</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="visually-hidden">Анимация: на телефоне человек начинает оформлять скидки на энергию, отвечает на четыре коротких вопроса, отправляет заявление и видит, что имеет право на расширенную программу доступной энергии.</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t1" type="button" aria-expanded="true" aria-controls="vp-p1">
+              <span class="nyco-accordion__title">Мгновенная проверка права на помощь</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">Мгновенная проверка права на помощь</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p1" role="region" aria-labelledby="vp-t1">
+            <div class="nyco-accordion__content"><p>Сразу узнайте, имеете ли вы право на списание больничных счетов, скидки на энергию и многое другое.</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="3200">
+            <div class="programs" aria-hidden="true">
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">SNAP (талоны на еду)</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">Поддержка арендаторов</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">Медицинская помощь</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">Налоговые льготы</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">Списание счетов больницы</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">Скидки на энергию</span></div>
+            </div>
+            <p class="visually-hidden">Анимация: SNAP (продовольственные талоны), поддержка арендаторов, медицинская помощь, налоговые льготы, списание больничных счетов и скидки на энергию отмечаются по очереди.</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t2" type="button" aria-expanded="false" aria-controls="vp-p2">
+              <span class="nyco-accordion__title">Быстрые и простые заявления</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">Быстрые и простые заявления</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p2" role="region" aria-labelledby="vp-t2">
+            <div class="nyco-accordion__content"><p>Подавайте заявление, где бы вы ни были, — без бумажных форм.</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="8000">
+            <div class="chat" aria-hidden="true">
+              <div class="chat__msg chat__msg--in chat__msg--1">
+                <span class="chat__typing"><i></i><i></i><i></i></span>
+                <p class="chat__bubble">Спасибо, что заполнили форму HART Connector. Консультант по регистрации Департамента здравоохранения Нью-Йорка свяжется с вами по поводу продления Medicaid.</p>
+              </div>
+              <div class="chat__msg chat__msg--in chat__msg--2">
+                <span class="chat__typing"><i></i><i></i><i></i></span>
+                <p class="chat__bubble">Ваше заявление на скидки Con Edison все еще не завершено. Чтобы закончить, нужно всего несколько минут.</p>
+              </div>
+              <div class="chat__msg chat__msg--out chat__msg--3">
+                <p class="chat__bubble">Спасибо за напоминание!</p>
+              </div>
+            </div>
+            <p class="visually-hidden">Анимация: приходят текстовые сообщения. «Спасибо, что заполнили форму HART Connector. Консультант по регистрации Департамента здравоохранения Нью-Йорка свяжется с вами по поводу продления Medicaid.» «Ваше заявление на скидки Con Edison все еще не завершено. Чтобы закончить, нужно всего несколько минут.» Ответ: «Спасибо за напоминание!»</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t3" type="button" aria-expanded="false" aria-controls="vp-p3">
+              <span class="nyco-accordion__title">Напоминания в реальном времени</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">Напоминания в реальном времени</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p3" role="region" aria-labelledby="vp-t3">
+            <div class="nyco-accordion__content"><p>Не пропускайте сроки и встречи благодаря напоминаниям.</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="7500">
+            <svg class="paths" id="vpPaths" viewBox="0 0 916 866" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"></svg>
+            <p class="visually-hidden">Анимация: вид сверху, две дорожки поднимаются к финишной черте. По одной вы идете сами, в своем темпе; по другой вы идете рядом с экспертом. Обе пересекают финиш вместе.</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t4" type="button" aria-expanded="false" aria-controls="vp-p4">
+              <span class="nyco-accordion__title">Гибкая поддержка</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">Гибкая поддержка</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p4" role="region" aria-labelledby="vp-t4">
+            <div class="nyco-accordion__content"><p>Действуйте в своем темпе или получите индивидуальную помощь эксперта.</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <p class="visually-hidden" id="vpLive" aria-live="polite" aria-atomic="true"></p>
+  </section>
+  </div>
+
+  <section class="l-section l-discover" aria-labelledby="discoverTitle">
+    <h2 class="l-title" id="discoverTitle">Узнайте о финансовой помощи и <br class="l-br-600">бесплатной помощи экспертов для вас</h2>
+    <p class="l-body l-discover__body">Консультанты по медицинскому страхованию, эксперты по SNAP, <br class="l-br-600">специалисты по налогам, защитники прав арендаторов и другие — всегда под рукой</p>
+    <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=ru">Начать</a>
+    <div class="l-cards">
+      <article class="l-card l-card--hospital">
+        <h3 class="l-card__title">Узнайте, снизит ли больница ваши счета или спишет их</h3>
+        <img class="l-card__art" src="../assets/illustrations/hospital-flat.webp" width="555" height="715" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--health">
+        <h3 class="l-card__title">Оформите или продлите медицинскую страховку</h3>
+        <img class="l-card__art" src="../assets/illustrations/health-flat.webp" width="702" height="782" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--food">
+        <h3 class="l-card__title">Получите помощь в оплате продуктов</h3>
+        <img class="l-card__art" src="../assets/illustrations/food-flat.webp" width="803" height="856" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--more">
+        <h3 class="l-card__title">И многое другое!</h3>
+        <ul class="l-pills">
+          <li class="l-pill l-pill--energy">Скидки на энергию</li>
+          <li class="l-pill l-pill--hospital">Списание счетов больницы</li>
+          <li class="l-pill l-pill--tax">Налоговые льготы</li>
+          <li class="l-pill l-pill--snap">SNAP (талоны на еду)</li>
+          <li class="l-pill l-pill--tenant">Поддержка арендаторов</li>
+          <li class="l-pill l-pill--health">Медицинская помощь</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+  
+  <section class="l-section l-section--wide-gap l-faq" aria-labelledby="faqTitle">
+    <h2 class="l-title l-faq__title" id="faqTitle">Часто задаваемые вопросы</h2>
+    <div class="nyco-accordion">
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t1" type="button" aria-expanded="false" aria-controls="faq-p1">
+              <span class="nyco-accordion__title">Что такое HART Connector?</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p1" role="region" aria-labelledby="faq-t1">
+            <div class="nyco-accordion__content">
+              <p>Health and Affordability Resource Team (HART) Connector — это цифровой инструмент, который помогает жителям Нью-Йорка снизить стоимость жизни. Он находит услуги, на которые вы можете иметь право, и связывает вас с ними, в том числе:</p>
+              <ul>
+                <li>Оформление медицинской страховки</li>
+                <li>Продовольственная помощь</li>
+                <li>Помощь в предотвращении выселения</li>
+                <li>Скидки на коммунальные услуги</li>
+                <li>Финансовая помощь с больничными счетами</li>
+                <li>Денежные возвраты от IRS</li>
+              </ul>
+              <p>Департамент здравоохранения и психической гигиены Нью-Йорка (NYC Health) работает с другими городскими ведомствами и организациями-партнерами, чтобы упростить оформление. Наши партнеры помогут вам с начала подачи заявления до получения льготы или услуги.</p>
+              <p>Общественные работники здравоохранения HART используют этот инструмент, чтобы проверить, на какие программы вы можете иметь право, и оставаться с вами на связи. Инструмент также отправляет сообщения и напоминания, чтобы помочь вам завершить каждое заявление.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t2" type="button" aria-expanded="false" aria-controls="faq-p2">
+              <span class="nyco-accordion__title">Для кого предназначен HART Connector?</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p2" role="region" aria-labelledby="faq-t2">
+            <div class="nyco-accordion__content">
+              <p>HART Connector бесплатно помогает жителям Нью-Йорка, которым трудно покрывать базовые потребности, оплачивать медицинские услуги, коммунальные услуги, продукты и многое другое.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t3" type="button" aria-expanded="false" aria-controls="faq-p3">
+              <span class="nyco-accordion__title">Какую информацию мне нужно предоставить?</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p3" role="region" aria-labelledby="faq-t3">
+            <div class="nyco-accordion__content">
+              <p>Чтобы упростить запись на несколько услуг, NYC Health соберет и сохранит ваши:</p>
+              <ul>
+                <li>Полное имя</li>
+                <li>Дата рождения</li>
+                <li>Почтовый индекс</li>
+                <li>Контактные данные</li>
+              </ul>
+              <p>NYC Health также спросит о вашем доходе, вашем домохозяйстве и счетах, с которыми вам нужна помощь, например за коммунальные услуги или больницу. Эта информация используется, чтобы найти услуги партнеров, на которые вы можете иметь право.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t4" type="button" aria-expanded="false" aria-controls="faq-p4">
+              <span class="nyco-accordion__title">Что происходит с моей личной информацией?</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p4" role="region" aria-labelledby="faq-t4">
+            <div class="nyco-accordion__content">
+              <p>NYC Health отслеживает ход каждого заявления и отправляет вам напоминания по электронной почте, телефону или SMS. Вы можете отказаться от этих сообщений в любое время.</p>
+              <p>Если вы решите воспользоваться услугами партнера, NYC Health передаст информацию, которая нужна этому партнеру, чтобы помочь вам. Некоторые партнеры могут сначала попросить вас согласиться с их собственной политикой конфиденциальности и условиями использования.</p>
+              <p>NYC Health может использовать данные HART Connector и его партнеров для изучения и улучшения программы. Ваши данные надежно защищены. Все, чем NYC Health делится публично, не будет содержать сведений, позволяющих установить вашу личность.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="l-cta" aria-labelledby="ctaTitle">
+    <h2 class="l-title l-cta__title" id="ctaTitle">Узнайте, какие услуги вам доступны, <span class="l-keep">и подайте заявление уже сегодня</span></h2>
+    <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=ru">Начать</a>
+  </section>
+
+</main>
+<footer class="l-footer">
+  <div class="nyco-footer nyco-footer--minimal l-footer__site">
+    <a class="nyco-footer__home" href="./" aria-label="Главная страница Департамента здравоохранения Нью-Йорка"><img class="l-footer__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt="" loading="lazy"></a>
+    <div class="l-footer__sections">
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main" target="_blank" rel="noopener noreferrer">Главная nyc.gov<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/services" target="_blank" rel="noopener noreferrer">Услуги<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/events/" target="_blank" rel="noopener noreferrer">События<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/mayors-office" target="_blank" rel="noopener noreferrer">Офис мэра<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+      </ul>
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/your-government" target="_blank" rel="noopener noreferrer">Ваше правительство<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://portal.311.nyc.gov/" target="_blank" rel="noopener noreferrer">311<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nycvotes.org/" target="_blank" rel="noopener noreferrer">Регистрация избирателей<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://a858-nycnotify.nyc.gov/notifynyc/" target="_blank" rel="noopener noreferrer">Экстренные оповещения<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+      </ul>
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://cityjobs.nyc.gov/" target="_blank" rel="noopener noreferrer">Вакансии<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/site/mopd/initiatives/digital-accessibility.page" target="_blank" rel="noopener noreferrer">Ресурсы доступности<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="../../privacy.html" target="_blank" rel="noopener noreferrer">Политика конфиденциальности<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/about-our-content" target="_blank" rel="noopener noreferrer">О материалах nyc.gov<span class="nyco-visually-hidden"> (откроется в новой вкладке)</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="l-footer__legal">
+    <p>© Город Нью-Йорк. 2026 Все права защищены. NYC — товарный знак и знак обслуживания города Нью-Йорк.</p>
+  </div>
+</footer>
+<dialog class="nyco-sheet__overlay nyco-sheet__overlay--full l-lang" id="langSheet" aria-labelledby="langTitle">
+  <div class="nyco-sheet nyco-sheet--full">
+    <div class="nyco-sheet__dialog" tabindex="-1" autofocus>
+      <div class="nyco-sheet__header">
+        <div class="nyco-sheet__heading"><h2 class="nyco-sheet__title" id="langTitle">Выберите язык</h2></div>
+        <button class="nyco-button nyco-button--neutral nyco-button--small l-btn l-btn--quiet l-lang__close" id="langClose" type="button">Закрыть<span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x nyco-icon nyco-icon--24" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span></button>
+      </div>
+      <div class="nyco-sheet__body"><div class="nyco-sheet__content">
+      <ul class="nyco-list-box__list nyco-list-box__list--fill-selected l-lang__list">
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../" hreflang="en"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="en">English</span><span class="l-lang__en"><span aria-hidden="true"> • </span>Английский</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../es/" hreflang="es"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="es">Español</span><span class="l-lang__en"><span aria-hidden="true"> • </span>Испанский</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../zh-Hant/" hreflang="zh-Hant"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="zh-Hant">繁體中文</span><span class="l-lang__en"><span aria-hidden="true"> • </span>Китайский (традиционный)</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ru/" hreflang="ru" aria-current="page" data-selected><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ru">Русский</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../bn/" hreflang="bn"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="bn">বাংলা</span><span class="l-lang__en"><span aria-hidden="true"> • </span>Бенгальский</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ht/" hreflang="ht"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ht">Kreyòl Ayisyen</span><span class="l-lang__en"><span aria-hidden="true"> • </span>Гаитянский креольский</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ko/" hreflang="ko"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ko">한국어</span><span class="l-lang__en"><span aria-hidden="true"> • </span>Корейский</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ar/" hreflang="ar"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ar" dir="rtl">العربية</span><span class="l-lang__en"><span aria-hidden="true"> • </span>Арабский</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ur/" hreflang="ur"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ur" dir="rtl">اردو</span><span class="l-lang__en"><span aria-hidden="true"> • </span>Урду</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../fr/" hreflang="fr"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="fr">Français</span><span class="l-lang__en"><span aria-hidden="true"> • </span>Французский</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../pl/" hreflang="pl"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="pl">Polski</span><span class="l-lang__en"><span aria-hidden="true"> • </span>Польский</span></span></span></a></li>
+      </ul>
+      </div></div>
+    </div>
+  </div>
+</dialog>
+
+<script src="../app.a5150248.js"></script>
+</body>
+</html>

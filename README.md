@@ -2,7 +2,7 @@
 
 Static HTML/CSS/JS prototype of the Connector: a screening tool that checks whether a New Yorker may qualify for five programs and hands them to the right application or referral. This repository is the design specification for the production build — the pages, copy, states, and interactions are the reference; the code is not meant to be reused as-is.
 
-No build step. No dependencies. Open `home.html` in a browser, or serve the folder (`npx serve .`). The deployed copy on Vercel uses `vercel.json` (clean URLs).
+No build step. No dependencies. Serve the folder (`npx serve .`) and open `/`; the landing page loads in a way that opening files directly (`file://`) does not support. The deployed copy on Vercel uses `vercel.json` (clean URLs).
 
 ## Release: v1.3 Save & Continue
 
@@ -44,10 +44,19 @@ Program order, labels, descriptions, entry pages and partner application URLs li
 | `scripts/banner.js` | Self-service header: Menu / language panels, desktop links, sign-out. |
 | `scripts/mask.js` | Masked phone/email and the demo returning-client match. |
 | `scripts/a11y.js` | Live region, step errors, focus helpers. |
-| `assets/` | Logo, icons, illustrations. |
+| `landing/` | HART landing page, one page per language (`landing/es/`, …). Generated from the separate landing-page package (NYCO component library); edit that package and rebuild, not these files. `home.html` and `index.html` redirect here. |
+| `assets/` | Logo (SVG), icons, illustrations. |
 | `accessibility-conformance-summary.html` | WCAG 2.2 AA conformance notes, automated-scan results, known gaps. |
 
 Runtime copy (dashboard status sentences, language list) is in the scripts above; everything else is in the HTML.
+
+### Landing page
+
+- The build output is copied to `landing/` with a `<base href="/landing/…">` tag added to each page, so relative asset URLs survive Vercel's no-trailing-slash redirect. The site must be served from the domain root; under a sub-path, change the `<base>` tags.
+- Buttons link into the tool: "Get started" and the nav button go to `preferred-language.html`; "Pick up where you left off" goes to `signin.html`; the footer Privacy link goes to `privacy.html` (the consent page, not a general policy).
+- The landing language picker passes `?lang=<code>`. `scripts/language.js` stores it in `sessionStorage` (`nyc.language`) and removes it from the URL. Russian, Bengali, Haitian Creole and Korean are on the landing page but not translated in the tool, so `preferred-language.html` shows a note naming the six languages that are.
+- The landing page has a footer; the tool pages do not. Open item for DOHMH and design.
+- The landing source package and its font files are not in this repository. The conformance summary and `COMPONENTS.md` do not cover the landing page.
 
 ## State
 

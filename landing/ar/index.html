@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<base href="/landing/ar/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>NYC HART Connector — إدارة الصحة في مدينة نيويورك</title>
+<meta name="description" content="اعتنِ بصحتك وفواتيرك اليومية مع NYC HART Connector.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NYC HART Connector — إدارة الصحة في مدينة نيويورك">
+<meta property="og:description" content="اعتنِ بصحتك وفواتيرك اليومية مع NYC HART Connector.">
+<meta property="og:image" content="/assets/social/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="نيويورك أكثر صحة وأقل تكلفة تبدأ من هنا.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32-dark.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg">
+<link rel="preload" href="../assets/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../app.c6f3c643.css">
+<link rel="preload" href="../assets/fonts/noto-sans-arabic.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<div class="nyco-city-bar">
+  <p class="nyco-city-bar__text">
+    <button class="l-city__toggle" id="cityToggle" type="button" aria-expanded="false" aria-controls="cityPanel">
+      الموقع الرسمي لمدينة نيويورك
+      <svg class="l-city__caret" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4"/></svg>
+    </button>
+  </p>
+</div>
+<section class="l-city__panel" id="cityPanel" aria-label="كيف تعرف أن هذا موقع رسمي" hidden>
+  <div class="l-city__inner">
+    <div>
+      <p class="l-city__label">المواقع الرسمية تستخدم ‎.gov</p>
+      <p>ينتمي موقع ‎.gov إلى جهة حكومية رسمية في الولايات المتحدة.</p>
+    </div>
+    <div>
+      <p class="l-city__label">مواقع ‎.gov الآمنة تستخدم HTTPS</p>
+      <p>رمز القفل <span aria-hidden="true">(🔒)</span> أو ‎https://‎ يعني أنك متصل بأمان بموقع ‎.gov. لا تشارك المعلومات الحساسة إلا على المواقع الرسمية الآمنة.</p>
+    </div>
+  </div>
+</section>
+<header class="nyco-site-header nyco-site-header--sticky l-header">
+  <div class="nyco-site-header__bar">
+    <a class="nyco-site-header__home" href="./" aria-label="الصفحة الرئيسية لإدارة الصحة في مدينة نيويورك"><img class="l-header__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""></a>
+    <div class="l-header__actions">
+      <button class="nyco-button nyco-button--text nyco-button--small l-btn l-header__lang" type="button" aria-haspopup="dialog" aria-controls="langSheet" aria-label="اللغة: العربية">
+        <span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages nyco-icon nyco-icon--24" aria-hidden="true" focusable="false"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span>
+        <span class="l-header__lang-label">العربية</span>
+      </button>
+      <a class="nyco-button nyco-button--primary nyco-button--small l-btn" href="../../preferred-language.html?lang=ar">ابدأ الآن</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section class="l-intro" aria-labelledby="pageTitle">
+    <h1 class="l-title l-intro__title" id="pageTitle"><span class="l-intro__lead">نيويورك أكثر صحة وأقل تكلفة تبدأ من هنا.</span> <span class="l-intro__muted">اعتنِ بصحتك وفواتيرك اليومية <br class="l-br-desk">مع NYC HART Connector.</span></h1>
+    <div class="l-actions">
+      <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=ar">ابدأ الآن</a>
+      <a class="nyco-button nyco-button--neutral l-btn l-btn--quiet" href="../../signin.html">تابع من حيث توقفت</a>
+    </div>
+  </section>
+  <div class="l-hero">
+  <section class="stack-carousel" id="carousel" data-asset-base="../" aria-roledescription="عرض دوّار" aria-label="المزايا التي يمكن أن يساعدك فيها HART Connector" data-slide="شريحة" data-of="{n} من {total}">
+    <div class="frame" id="frame">
+      <div class="frame__patterns" id="patterns" aria-hidden="true"></div>
+      <svg width="0" height="0" class="hero-svg-defs" aria-hidden="true" focusable="false"><defs id="mbDefs"></defs></svg>
+      <svg width="0" height="0" class="hero-svg-defs" aria-hidden="true" focusable="false"><defs id="brushDefs"></defs></svg>
+      <div class="stage" id="stage"></div>
+            <div class="dots" id="dots" aria-hidden="true"></div>
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" id="playpause" type="button" data-play="تشغيل المزايا" data-pause="إيقاف المزايا مؤقتًا"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+    </div>
+    <div class="arrows">
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="heroPrev" type="button" aria-label="الميزة السابقة"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m15 18-6-6 6-6"></path></svg></span></button>
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="heroNext" type="button" aria-label="الميزة التالية"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m9 18 6-6-6-6"></path></svg></span></button>
+    </div>
+    <p class="visually-hidden" id="heroLive" aria-live="off" aria-atomic="true"></p>
+    <template id="heroText">
+      <p data-id="hospital"><span data-part="title">فواتير المستشفى</span> <span data-part="tag">اعرف إن كان مستشفاك سيخفض فواتيرك أو يعفيك منها</span></p>
+      <p data-id="health"><span data-part="title">التأمين الصحي</span> <span data-part="tag">سجّل في التأمين الصحي أو جدّده</span></p>
+      <p data-id="heat"><span data-part="title">فواتير الطاقة</span> <span data-part="tag">خفّض فواتيرك الشهرية من Con Edison وNational Grid</span></p>
+      <p data-id="evict"><span data-part="title">الدعم في التعامل مع المالك</span> <span data-part="tag">أوقف الإخلاء واحصل على مساعدة للبقاء في منزلك</span></p>
+      <p data-id="tax"><span data-part="title">الإعفاءات الضريبية والمزايا المالية</span> <span data-part="tag">استرد أموالًا من مصلحة الضرائب</span></p>
+      <p data-id="food"><span data-part="title">SNAP</span> <span data-part="tag">احصل على مساعدة في دفع ثمن البقالة</span></p>
+    </template>
+  </section>
+  </div>
+  <div class="l-section l-how">
+  <section class="vp" id="vp" aria-labelledby="vpHeading" data-plus="on" data-of="{n} من {total}" data-play-video="تشغيل الفيديو" data-pause-video="إيقاف الفيديو مؤقتًا" data-play-animation="تشغيل الرسوم المتحركة" data-pause-animation="إيقاف الرسوم المتحركة مؤقتًا">
+    <h2 class="l-title l-how__title" id="vpHeading">كيف يعمل</h2>
+
+    <div class="vp__grid">
+      <div class="vp__stage">
+        <div class="vp__stage-frame">
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" id="stageToggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+        </div>
+        <div class="arrows">
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="vpPrev" type="button" aria-label="الخاصية السابقة" aria-controls="vpList"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m15 18-6-6 6-6"></path></svg></span></button>
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="vpNext" type="button" aria-label="الخاصية التالية" aria-controls="vpList"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m9 18 6-6-6-6"></path></svg></span></button>
+        </div>
+      </div>
+      <div class="vp__list nyco-accordion nyco-accordion--uncontained nyco-accordion--one-open" id="vpList">
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item vp__item--phone" data-expanded data-current>
+          <div class="vp__media" data-kind="animation" data-still="12300">
+            <div class="phone" aria-hidden="true">
+              <div class="phone__screen">
+                <div class="phone__status">
+                  <span>12:46</span>
+                  <span class="phone__icons">
+                    <svg viewBox="0 0 17 11" aria-hidden="true"><rect x="0" y="7" width="3" height="4" rx=".9"/><rect x="4.67" y="4.67" width="3" height="6.33" rx=".9"/><rect x="9.33" y="2.33" width="3" height="8.67" rx=".9"/><rect x="14" y="0" width="3" height="11" rx=".9"/></svg>
+                    <svg viewBox="0 0 15.5 11" aria-hidden="true"><path d="M7.75 2.2c2.2 0 4.2.85 5.7 2.25l1.3-1.3A9.9 9.9 0 0 0 7.75.35 9.9 9.9 0 0 0 .75 3.15l1.3 1.3A8.1 8.1 0 0 1 7.75 2.2Z"/><path d="M7.75 5.75c1.25 0 2.4.48 3.25 1.3l1.3-1.3a6.5 6.5 0 0 0-4.55-1.85A6.5 6.5 0 0 0 3.2 5.75l1.3 1.3a4.7 4.7 0 0 1 3.25-1.3Z"/><path d="M7.75 10.9 9.8 8.85a2.9 2.9 0 0 0-4.1 0Z"/></svg>
+                    <svg viewBox="0 0 25 12" aria-hidden="true"><rect x=".5" y=".5" width="21" height="11" rx="3.3" fill="none" stroke="currentColor" stroke-opacity=".35"/><rect x="2" y="2" width="18" height="8" rx="2"/><path d="M23 4v4c.8-.3 1.4-1 1.4-2s-.6-1.7-1.4-2Z" fill-opacity=".4"/></svg>
+                  </span>
+                </div>
+                <div class="phone__island"></div>
+                <div class="demo">
+                  <div class="demo__in">
+                    <div class="demo__screen demo__s1">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>الموقع الرسمي لمدينة نيويورك</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>القائمة</span></span></div>
+                        <div class="demo__body">
+                          <p class="demo__title"><span>استكشف البرامج</span> <span>والطلبات المناسبة لك</span></p>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"/></svg><span>فواتير المستشفى</span></p><p>اعرف إن كان المستشفى سيخفض فواتيرك أو يعفيك منها.</p><span class="demo__btn">ابدأ الآن</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg><span>التأمين الصحي</span></p><p>سجّل في تأمين صحي مجاني أو جدّده.</p><span class="demo__btn">ابدأ الآن</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>الإخلاء</span></p><p>احصل على مساعدة للبقاء في منزلك.</p><span class="demo__btn">ابدأ الآن</span></div>
+                          <div class="demo__card demo__card--target"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg><span>خصومات الطاقة</span></p><p>خفّض فواتيرك الشهرية من Con Edison وNational Grid.</p><span class="demo__btn demo__tap demo__tap--1">ابدأ الآن</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg><span>الإعفاءات الضريبية</span></p><p>اطلب ما يصل إلى 3 سنوات من الإعفاءات الضريبية والمدفوعات النقدية.</p><span class="demo__btn">ابدأ الآن</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="demo__screen demo__s2">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>الموقع الرسمي لمدينة نيويورك</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>القائمة</span></span></div>
+                        <div class="demo__body">
+                          <div class="demo__progress"><span class="demo__on"></span><span></span></div>
+                          <p class="demo__title">لنرَ إن كنت مؤهلاً لخصومات الطاقة الشهرية</p>
+                          <div class="demo__q demo__q1"><p>هل أنت عميل لدى Con Edison و/أو National Grid؟</p><div class="demo__opts"><span class="demo__opt">Con Edison</span><span class="demo__opt">National Grid</span><span class="demo__opt demo__tap demo__tap--2">كلاهما</span><span class="demo__opt">لا هذا ولا ذاك</span></div></div>
+                          <div class="demo__q demo__q2"><p>هل أنت مسجل حاليًا في أي برامج مساعدة حكومية؟</p><div class="demo__opts"><span class="demo__opt">نعم</span><span class="demo__opt demo__tap demo__tap--3">لا</span></div></div>
+                          <div class="demo__q demo__q3"><p>مع كم شخصًا تتقاسم تكاليف المرافق؟</p><div class="demo__step"><span class="demo__opt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></span><span class="demo__opt demo__count"><span>0</span><span>1</span></span><span class="demo__opt demo__tap demo__tap--4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span></div></div>
+                          <div class="demo__q demo__q4"><p>هل يقل دخلك عن 113,400 دولار سنويًا؟</p><div class="demo__opts"><span class="demo__opt demo__tap demo__tap--5">نعم</span><span class="demo__opt">لا</span></div></div>
+                        </div>
+                      </div>
+                      <div class="demo__bar"><span class="demo__btn demo__btn--grey">رجوع</span><span class="demo__btn demo__btn--primary demo__tap demo__tap--6">حفظ ومتابعة</span></div>
+                    </div>
+                    <div class="demo__screen demo__s3">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>الموقع الرسمي لمدينة نيويورك</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>القائمة</span></span></div>
+                        <div class="demo__body">
+                          <div class="demo__progress"><span class="demo__on"></span><span class="demo__on"></span></div>
+                          <p class="demo__title">المراجعة والإرسال</p>
+                          <p class="demo__lede">إن كنت مؤهلاً، سنشارك المعلومات أدناه مع شركة المرافق لمساعدتك في الحصول على الدعم الذي تحتاجه.</p>
+                          <div class="demo__card demo__review"><p class="demo__card-head demo__card-head--edit"><span>خصومات الطاقة</span><span class="demo__edit"><span>تعديل</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg></span></p><p>هل أنت عميل لدى Con Edison و/أو National Grid؟</p><p class="demo__answer">Con Edison وNational Grid</p><p>هل أنت مسجل حاليًا في أي برامج مساعدة حكومية؟</p><p class="demo__answer">لا</p><p>مع كم شخصًا تتقاسم تكاليف المرافق؟</p><p class="demo__answer">1</p><p>هل يقل دخلك عن 113,400 دولار سنويًا؟</p><p class="demo__answer">نعم</p></div>
+                          <div class="demo__card demo__consent"><p>بإرسال هذه الصفحة، فإنك توافق على مشاركة معلوماتك مع شركة المرافق الخاصة بك. وقد تتحقق منها وتشاركها مع جهات أخرى لمعالجة طلبك وإدارة مشاركتك والتأكد من الالتزام بقواعد البرنامج.</p></div>
+                        </div>
+                      </div>
+                      <div class="demo__bar"><span class="demo__btn demo__btn--grey">رجوع</span><span class="demo__btn demo__btn--primary demo__tap demo__tap--7">إرسال</span></div>
+                    </div>
+                    <div class="demo__screen demo__s4">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>الموقع الرسمي لمدينة نيويورك</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>القائمة</span></span></div>
+                        <div class="demo__body">
+                          <p class="demo__title"><span>أنت مؤهل لبرنامج تحسين القدرة على تحمّل تكاليف الطاقة (EEAP)</span> <span class="demo__muted">الخطوات التالية</span></p>
+                          <div class="demo__card demo__next"><span class="demo__num">1</span><div><p class="demo__card-head"><span><span class="demo__link">ابدأ طلب EEAP</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></p><p class="demo__small">إن كانت خدمات الكهرباء والغاز لديك من شركتين مختلفتين، يمكنك التقديم لكليهما في طلب واحد، ما دام الحسابان على العنوان نفسه.</p></div></div>
+                          <div class="demo__card demo__next"><span class="demo__num">2</span><div><p class="demo__card-head">لديك 14 يومًا بعد التقديم لإرسال إثبات دخل آخر 28 يومًا لكل من تتقاسم معهم تكاليف المرافق.</p><p class="demo__small">يشمل ذلك قسائم الراتب والضمان الاجتماعي ومدفوعات البطالة والإعاقة ونفقة الأطفال. تُقبل الصور والمستندات المرفوعة.</p></div></div>
+                          <div class="demo__card demo__next"><span class="demo__num">3</span><div><p class="demo__card-head">بعد الموافقة، ستحصل على خصم EAP خلال دورتي فوترة.</p><p class="demo__small">يستمر رصيدك 18 شهرًا، وبعدها ستحتاج إلى التقديم من جديد.</p></div></div>
+                          <span class="demo__btn demo__btn--primary demo__btn--wide">ابدأ طلبك</span>
+                          <span class="demo__btn demo__btn--grey demo__btn--wide">العودة إلى لوحة التحكم</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="demo__url">HART Connector</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="visually-hidden">رسوم متحركة: على هاتف، يبدأ شخص طلب خصومات الطاقة، ويجيب عن أربعة أسئلة سريعة، ثم يرسل الطلب ويرى أنه مؤهل لبرنامج دعم تكاليف الطاقة المعزز.</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t1" type="button" aria-expanded="true" aria-controls="vp-p1">
+              <span class="nyco-accordion__title">تحقق فوري من الأهلية</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">تحقق فوري من الأهلية</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p1" role="region" aria-labelledby="vp-t1">
+            <div class="nyco-accordion__content"><p>اعرف فورًا إن كنت مؤهلًا للإعفاء من فواتير المستشفى وخصومات الطاقة وغير ذلك.</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="3200">
+            <div class="programs" aria-hidden="true">
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">SNAP (قسائم الطعام)</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">دعم المستأجرين</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">الرعاية الصحية</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">الإعفاءات الضريبية</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">إعفاء من فواتير المستشفى</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">خصومات الطاقة</span></div>
+            </div>
+            <p class="visually-hidden">رسوم متحركة: SNAP (قسائم الطعام)، ودعم المستأجرين، والرعاية الصحية، والإعفاءات الضريبية، والإعفاء من فواتير المستشفى، وخصومات الطاقة، يُؤشَّر على كل منها بالتتابع.</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t2" type="button" aria-expanded="false" aria-controls="vp-p2">
+              <span class="nyco-accordion__title">طلبات سريعة وبسيطة</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">طلبات سريعة وبسيطة</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p2" role="region" aria-labelledby="vp-t2">
+            <div class="nyco-accordion__content"><p>قدّم طلبك أينما كنت، دون الحاجة إلى نماذج ورقية.</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="8000">
+            <div class="chat" aria-hidden="true">
+              <div class="chat__msg chat__msg--in chat__msg--1">
+                <span class="chat__typing"><i></i><i></i><i></i></span>
+                <p class="chat__bubble">شكرًا لإكمال نموذج HART Connector. سيتواصل معك مستشار تسجيل من إدارة الصحة في مدينة نيويورك بشأن تجديد Medicaid.</p>
+              </div>
+              <div class="chat__msg chat__msg--in chat__msg--2">
+                <span class="chat__typing"><i></i><i></i><i></i></span>
+                <p class="chat__bubble">طلبك للحصول على خصومات Con Edison لا يزال مفتوحًا. لا يستغرق إكماله سوى دقائق قليلة.</p>
+              </div>
+              <div class="chat__msg chat__msg--out chat__msg--3">
+                <p class="chat__bubble">شكرًا على التذكير!</p>
+              </div>
+            </div>
+            <p class="visually-hidden">رسوم متحركة: تصل رسائل نصية. «شكرًا لإكمال نموذج HART Connector. سيتواصل معك مستشار تسجيل من إدارة الصحة في مدينة نيويورك بشأن تجديد Medicaid.» «طلبك للحصول على خصومات Con Edison لا يزال مفتوحًا. لا يستغرق إكماله سوى دقائق قليلة.» والرد: «شكرًا على التذكير!»</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t3" type="button" aria-expanded="false" aria-controls="vp-p3">
+              <span class="nyco-accordion__title">تذكيرات فورية</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">تذكيرات فورية</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p3" role="region" aria-labelledby="vp-t3">
+            <div class="nyco-accordion__content"><p>ابقَ على المسار الصحيح مع تذكيرات بالمواعيد النهائية والمواعيد.</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="7500">
+            <svg class="paths" id="vpPaths" viewBox="0 0 916 866" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"></svg>
+            <p class="visually-hidden">رسوم متحركة: من الأعلى، مساران يلتفّان نحو خط النهاية. في أحدهما تسير وحدك بالسرعة التي تناسبك، وفي الآخر تسير جنبًا إلى جنب مع خبير. ويعبر الاثنان خط النهاية معًا.</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t4" type="button" aria-expanded="false" aria-controls="vp-p4">
+              <span class="nyco-accordion__title">دعم مرن</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">دعم مرن</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p4" role="region" aria-labelledby="vp-t4">
+            <div class="nyco-accordion__content"><p>تقدّم بالسرعة التي تناسبك، أو احصل على مساعدة فردية من خبير.</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <p class="visually-hidden" id="vpLive" aria-live="polite" aria-atomic="true"></p>
+  </section>
+  </div>
+
+  <section class="l-section l-discover" aria-labelledby="discoverTitle">
+    <h2 class="l-title" id="discoverTitle">اكتشف المساعدات المالية <br class="l-br-600">ومساعدة الخبراء المجانية التي قد تفوتك</h2>
+    <p class="l-body l-discover__body">مستشارو التسجيل في التأمين الصحي، وخبراء SNAP، <br class="l-br-600">ومُعدّو الضرائب، ومناصرو المستأجرين، وغيرهم، في متناول يدك</p>
+    <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=ar">ابدأ الآن</a>
+    <div class="l-cards">
+      <article class="l-card l-card--hospital">
+        <h3 class="l-card__title">اعرف إن كان مستشفاك سيخفض فواتيرك أو يعفيك منها</h3>
+        <img class="l-card__art" src="../assets/illustrations/hospital-flat.webp" width="555" height="715" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--health">
+        <h3 class="l-card__title">سجّل في التأمين الصحي أو جدّده</h3>
+        <img class="l-card__art" src="../assets/illustrations/health-flat.webp" width="702" height="782" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--food">
+        <h3 class="l-card__title">احصل على مساعدة في دفع ثمن البقالة</h3>
+        <img class="l-card__art" src="../assets/illustrations/food-flat.webp" width="803" height="856" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--more">
+        <h3 class="l-card__title">والمزيد!</h3>
+        <ul class="l-pills">
+          <li class="l-pill l-pill--energy">خصومات الطاقة</li>
+          <li class="l-pill l-pill--hospital">إعفاء من فواتير المستشفى</li>
+          <li class="l-pill l-pill--tax">الإعفاءات الضريبية</li>
+          <li class="l-pill l-pill--snap">SNAP (قسائم الطعام)</li>
+          <li class="l-pill l-pill--tenant">دعم المستأجرين</li>
+          <li class="l-pill l-pill--health">الرعاية الصحية</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+  
+  <section class="l-section l-section--wide-gap l-faq" aria-labelledby="faqTitle">
+    <h2 class="l-title l-faq__title" id="faqTitle">الأسئلة الشائعة</h2>
+    <div class="nyco-accordion">
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t1" type="button" aria-expanded="false" aria-controls="faq-p1">
+              <span class="nyco-accordion__title">ما هو HART Connector؟</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p1" role="region" aria-labelledby="faq-t1">
+            <div class="nyco-accordion__content">
+              <p>HART Connector (فريق موارد الصحة والقدرة على تحمل التكاليف) أداة رقمية تساعد سكان نيويورك على خفض تكاليف المعيشة. تبحث عن الخدمات التي قد تكون مؤهلًا لها وتوصلك بها، ومنها:</p>
+              <ul>
+                <li>التسجيل في التأمين الصحي</li>
+                <li>المساعدة الغذائية</li>
+                <li>المساعدة في منع الإخلاء</li>
+                <li>خصومات على فواتير المرافق</li>
+                <li>مساعدة مالية في فواتير المستشفى</li>
+                <li>استرداد نقدي من مصلحة الضرائب (IRS)</li>
+              </ul>
+              <p>تعمل إدارة الصحة والصحة النفسية في مدينة نيويورك (NYC Health) مع وكالات المدينة الأخرى والمنظمات الشريكة لتسهيل التسجيل. سيساعدك شركاؤنا من بداية طلبك حتى تحصل على الميزة أو الخدمة.</p>
+              <p>يستخدم العاملون في صحة المجتمع التابعون لـ HART هذه الأداة للتحقق من البرامج التي قد تكون مؤهلًا لها ومتابعة حالتك. كما ترسل الأداة رسائل وتذكيرات لمساعدتك على إكمال كل طلب.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t2" type="button" aria-expanded="false" aria-controls="faq-p2">
+              <span class="nyco-accordion__title">لمن HART Connector؟</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p2" role="region" aria-labelledby="faq-t2">
+            <div class="nyco-accordion__content">
+              <p>يساعد HART Connector سكان نيويورك الذين قد يواجهون صعوبة في تحمل تكاليف احتياجاتهم الأساسية على دفع تكاليف الرعاية الصحية والمرافق والبقالة وغير ذلك، دون أي تكلفة.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t3" type="button" aria-expanded="false" aria-controls="faq-p3">
+              <span class="nyco-accordion__title">ما المعلومات التي أحتاج إلى مشاركتها؟</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p3" role="region" aria-labelledby="faq-t3">
+            <div class="nyco-accordion__content">
+              <p>لتسهيل التسجيل في أكثر من خدمة، ستجمع NYC Health وتحفظ:</p>
+              <ul>
+                <li>اسمك الكامل</li>
+                <li>تاريخ ميلادك</li>
+                <li>الرمز البريدي</li>
+                <li>معلومات الاتصال بك</li>
+              </ul>
+              <p>ستسألك NYC Health أيضًا عن دخلك وأسرتك وأي فواتير تحتاج إلى مساعدة فيها، مثل فواتير المرافق أو المستشفى. تُستخدم هذه المعلومات للعثور على خدمات الشركاء التي قد تكون مؤهلًا لها.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t4" type="button" aria-expanded="false" aria-controls="faq-p4">
+              <span class="nyco-accordion__title">ماذا يحدث لمعلوماتي الشخصية؟</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p4" role="region" aria-labelledby="faq-t4">
+            <div class="nyco-accordion__content">
+              <p>تتابع NYC Health تقدم كل طلب وترسل إليك تذكيرات عبر البريد الإلكتروني أو الهاتف أو الرسائل النصية. يمكنك إيقاف هذه الرسائل في أي وقت.</p>
+              <p>إذا اخترت استخدام خدمات أحد الشركاء، تشارك NYC Health المعلومات التي يحتاجها ذلك الشريك لمساعدتك. قد يطلب منك بعض الشركاء الموافقة أولًا على سياسة الخصوصية وشروط الاستخدام الخاصة بهم.</p>
+              <p>قد تستخدم NYC Health بيانات من HART Connector وشركائه لدراسة البرنامج وتحسينه. بياناتك محفوظة بأمان. أي شيء تشاركه NYC Health علنًا لن يتضمن معلومات تكشف هويتك.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="l-cta" aria-labelledby="ctaTitle">
+    <h2 class="l-title l-cta__title" id="ctaTitle">اعرف الخدمات التي أنت مؤهل لها <span class="l-keep">وابدأ التقديم اليوم</span></h2>
+    <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=ar">ابدأ الآن</a>
+  </section>
+
+</main>
+<footer class="l-footer">
+  <div class="nyco-footer nyco-footer--minimal l-footer__site">
+    <a class="nyco-footer__home" href="./" aria-label="الصفحة الرئيسية لإدارة الصحة في مدينة نيويورك"><img class="l-footer__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt="" loading="lazy"></a>
+    <div class="l-footer__sections">
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main" target="_blank" rel="noopener noreferrer">الصفحة الرئيسية لـ nyc.gov<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/services" target="_blank" rel="noopener noreferrer">الخدمات<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/events/" target="_blank" rel="noopener noreferrer">الفعاليات<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/mayors-office" target="_blank" rel="noopener noreferrer">مكتب العمدة<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+      </ul>
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/your-government" target="_blank" rel="noopener noreferrer">حكومتك<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://portal.311.nyc.gov/" target="_blank" rel="noopener noreferrer">311<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nycvotes.org/" target="_blank" rel="noopener noreferrer">التسجيل للتصويت<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://a858-nycnotify.nyc.gov/notifynyc/" target="_blank" rel="noopener noreferrer">تنبيهات الطوارئ<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+      </ul>
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://cityjobs.nyc.gov/" target="_blank" rel="noopener noreferrer">الوظائف<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/site/mopd/initiatives/digital-accessibility.page" target="_blank" rel="noopener noreferrer">موارد إمكانية الوصول<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="../../privacy.html" target="_blank" rel="noopener noreferrer">سياسة الخصوصية<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/about-our-content" target="_blank" rel="noopener noreferrer">عن محتوى nyc.gov<span class="nyco-visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="l-footer__legal">
+    <p>© مدينة نيويورك. 2026 جميع الحقوق محفوظة. NYC علامة تجارية وعلامة خدمة لمدينة نيويورك.</p>
+  </div>
+</footer>
+<dialog class="nyco-sheet__overlay nyco-sheet__overlay--full l-lang" id="langSheet" aria-labelledby="langTitle">
+  <div class="nyco-sheet nyco-sheet--full">
+    <div class="nyco-sheet__dialog" tabindex="-1" autofocus>
+      <div class="nyco-sheet__header">
+        <div class="nyco-sheet__heading"><h2 class="nyco-sheet__title" id="langTitle">اختر لغتك</h2></div>
+        <button class="nyco-button nyco-button--neutral nyco-button--small l-btn l-btn--quiet l-lang__close" id="langClose" type="button">إغلاق<span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x nyco-icon nyco-icon--24" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span></button>
+      </div>
+      <div class="nyco-sheet__body"><div class="nyco-sheet__content">
+      <ul class="nyco-list-box__list nyco-list-box__list--fill-selected l-lang__list">
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../" hreflang="en"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="en">English</span><span class="l-lang__en"><span aria-hidden="true"> • </span>الإنجليزية</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../es/" hreflang="es"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="es">Español</span><span class="l-lang__en"><span aria-hidden="true"> • </span>الإسبانية</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../zh-Hant/" hreflang="zh-Hant"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="zh-Hant">繁體中文</span><span class="l-lang__en"><span aria-hidden="true"> • </span>الصينية (التقليدية)</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ru/" hreflang="ru"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ru">Русский</span><span class="l-lang__en"><span aria-hidden="true"> • </span>الروسية</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../bn/" hreflang="bn"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="bn">বাংলা</span><span class="l-lang__en"><span aria-hidden="true"> • </span>البنغالية</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ht/" hreflang="ht"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ht">Kreyòl Ayisyen</span><span class="l-lang__en"><span aria-hidden="true"> • </span>الكريولية الهايتية</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ko/" hreflang="ko"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ko">한국어</span><span class="l-lang__en"><span aria-hidden="true"> • </span>الكورية</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ar/" hreflang="ar" aria-current="page" data-selected><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ar" dir="rtl">العربية</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ur/" hreflang="ur"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ur" dir="rtl">اردو</span><span class="l-lang__en"><span aria-hidden="true"> • </span>الأردية</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../fr/" hreflang="fr"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="fr">Français</span><span class="l-lang__en"><span aria-hidden="true"> • </span>الفرنسية</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../pl/" hreflang="pl"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="pl">Polski</span><span class="l-lang__en"><span aria-hidden="true"> • </span>البولندية</span></span></span></a></li>
+      </ul>
+      </div></div>
+    </div>
+  </div>
+</dialog>
+
+<script src="../app.a5150248.js"></script>
+</body>
+</html>

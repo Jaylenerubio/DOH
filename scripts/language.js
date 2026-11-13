@@ -8,6 +8,21 @@
   'use strict';
 
   var KEY = 'nyc.language';
+  var TRANSLATED = ['en', 'es', 'zh', 'ar', 'ur', 'fr', 'pl'];   /* languages the prototype actually has */
+  var NOT_TRANSLATED = ['ru', 'bn', 'ht', 'ko'];                  /* listed, but fall back to English: prototype note */
+
+  /* The public landing page links here with ?lang=<its language code>. Applied
+     once, then removed from the URL so a later Back never overrides a new choice. */
+  function applyLandingLanguage() {
+    var q = '';
+    try { q = new URLSearchParams(window.location.search).get('lang') || ''; } catch (e) {}
+    if (!q) return;
+    if (q === 'zh-Hant') q = 'zh';
+    if (TRANSLATED.indexOf(q) === -1 && NOT_TRANSLATED.indexOf(q) === -1) q = '';
+    if (q) { try { sessionStorage.setItem(KEY, q); } catch (e) {} }   /* untranslated ones still preselect; the tool then shows English */
+    try { history.replaceState(null, '', window.location.pathname); } catch (e) {}
+  }
+  applyLandingLanguage();
 
   function init() {
     var comboRoot = document.getElementById('langCombo');
@@ -16,6 +31,8 @@
     var errorEl = document.getElementById('stepError');
     if (!comboRoot || !cont || !window.Combobox) return;
     var trigger = comboRoot.querySelector('.combobox__trigger');   /* aria-invalid lives on the frame */
+    var noteEl = document.getElementById('langNote');
+    function updateNote(v) { if (noteEl) noteEl.hidden = NOT_TRANSLATED.indexOf(v) === -1; }
 
     var combo = window.Combobox.create(comboRoot, {
       searchable: true,
@@ -23,6 +40,7 @@
         trigger.removeAttribute('aria-invalid'); A11y.clearStepError(errorEl);   // Continue is always enabled
         if (trigger) trigger.removeAttribute('aria-invalid');
         try { sessionStorage.setItem(KEY, value); } catch (e) {}
+        updateNote(value);
       }
     });
 
@@ -32,6 +50,7 @@
       var v = null;
       try { v = sessionStorage.getItem(KEY); } catch (e) {}
       if (v && combo.selectByValue(v)) trigger.removeAttribute('aria-invalid'); A11y.clearStepError(errorEl);
+      updateNote(v);
     }
     restore();
     window.addEventListener('pageshow', restore);

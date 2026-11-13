@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<base href="/landing/ko/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>NYC HART Connector — 뉴욕시 보건부</title>
+<meta name="description" content="NYC HART Connector와 함께 건강과 일상 청구서를 관리하세요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NYC HART Connector — 뉴욕시 보건부">
+<meta property="og:description" content="NYC HART Connector와 함께 건강과 일상 청구서를 관리하세요.">
+<meta property="og:image" content="/assets/social/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="더 건강하고 더 저렴한 뉴욕이 여기서 시작됩니다.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32-dark.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg">
+<link rel="preload" href="../assets/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../app.c6f3c643.css">
+<link rel="preload" href="../assets/fonts/noto-sans-kr.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<div class="nyco-city-bar">
+  <p class="nyco-city-bar__text">
+    <button class="l-city__toggle" id="cityToggle" type="button" aria-expanded="false" aria-controls="cityPanel">
+      뉴욕시 공식 웹사이트
+      <svg class="l-city__caret" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4"/></svg>
+    </button>
+  </p>
+</div>
+<section class="l-city__panel" id="cityPanel" aria-label="공식 웹사이트인지 확인하는 방법" hidden>
+  <div class="l-city__inner">
+    <div>
+      <p class="l-city__label">공식 웹사이트는 .gov를 사용합니다</p>
+      <p>.gov 웹사이트는 미국의 공식 정부 기관에 속합니다.</p>
+    </div>
+    <div>
+      <p class="l-city__label">보안 .gov 웹사이트는 HTTPS를 사용합니다</p>
+      <p>자물쇠 <span aria-hidden="true">(🔒)</span> 또는 https://는 .gov 웹사이트에 안전하게 연결되었음을 의미합니다. 민감한 정보는 공식 보안 웹사이트에서만 공유하세요.</p>
+    </div>
+  </div>
+</section>
+<header class="nyco-site-header nyco-site-header--sticky l-header">
+  <div class="nyco-site-header__bar">
+    <a class="nyco-site-header__home" href="./" aria-label="뉴욕시 보건부 홈"><img class="l-header__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""></a>
+    <div class="l-header__actions">
+      <button class="nyco-button nyco-button--text nyco-button--small l-btn l-header__lang" type="button" aria-haspopup="dialog" aria-controls="langSheet" aria-label="언어: 한국어">
+        <span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages nyco-icon nyco-icon--24" aria-hidden="true" focusable="false"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span>
+        <span class="l-header__lang-label">한국어</span>
+      </button>
+      <a class="nyco-button nyco-button--primary nyco-button--small l-btn" href="../../preferred-language.html?lang=ko">시작하기</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section class="l-intro" aria-labelledby="pageTitle">
+    <h1 class="l-title l-intro__title" id="pageTitle"><span class="l-intro__lead">더 건강하고 더 저렴한 뉴욕이 여기서 시작됩니다.</span> <span class="l-intro__muted">NYC HART Connector와 함께 <br class="l-br-desk">건강과 일상 청구서를 관리하세요.</span></h1>
+    <div class="l-actions">
+      <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=ko">시작하기</a>
+      <a class="nyco-button nyco-button--neutral l-btn l-btn--quiet" href="../../signin.html">중단한 곳에서 계속하기</a>
+    </div>
+  </section>
+  <div class="l-hero">
+  <section class="stack-carousel" id="carousel" data-asset-base="../" aria-roledescription="캐러셀" aria-label="HART Connector가 도와드릴 수 있는 혜택" data-slide="슬라이드" data-of="{total}개 중 {n}번째">
+    <div class="frame" id="frame">
+      <div class="frame__patterns" id="patterns" aria-hidden="true"></div>
+      <svg width="0" height="0" class="hero-svg-defs" aria-hidden="true" focusable="false"><defs id="mbDefs"></defs></svg>
+      <svg width="0" height="0" class="hero-svg-defs" aria-hidden="true" focusable="false"><defs id="brushDefs"></defs></svg>
+      <div class="stage" id="stage"></div>
+            <div class="dots" id="dots" aria-hidden="true"></div>
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" id="playpause" type="button" data-play="혜택 재생" data-pause="혜택 일시 정지"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+    </div>
+    <div class="arrows">
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="heroPrev" type="button" aria-label="이전 혜택"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m15 18-6-6 6-6"></path></svg></span></button>
+      <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="heroNext" type="button" aria-label="다음 혜택"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m9 18 6-6-6-6"></path></svg></span></button>
+    </div>
+    <p class="visually-hidden" id="heroLive" aria-live="off" aria-atomic="true"></p>
+    <template id="heroText">
+      <p data-id="hospital"><span data-part="title">병원비</span> <span data-part="tag">병원이 청구서를 감면하거나 탕감해 줄지 알아보세요</span></p>
+      <p data-id="health"><span data-part="title">건강 보험</span> <span data-part="tag">건강 보험에 가입하거나 갱신하세요</span></p>
+      <p data-id="heat"><span data-part="title">에너지 요금</span> <span data-part="tag">매월 Con Edison 및 National Grid 요금을 낮추세요</span></p>
+      <p data-id="evict"><span data-part="title">임대인 관련 지원</span> <span data-part="tag">퇴거를 막고 집에 머물 수 있도록 도움을 받으세요</span></p>
+      <p data-id="tax"><span data-part="title">세금 공제 및 재정 혜택</span> <span data-part="tag">IRS로부터 환급금을 받으세요</span></p>
+      <p data-id="food"><span data-part="title">SNAP</span> <span data-part="tag">식료품비 지원을 받으세요</span></p>
+    </template>
+  </section>
+  </div>
+  <div class="l-section l-how">
+  <section class="vp" id="vp" aria-labelledby="vpHeading" data-plus="on" data-of="{total}개 중 {n}번째" data-play-video="동영상 재생" data-pause-video="동영상 일시 정지" data-play-animation="애니메이션 재생" data-pause-animation="애니메이션 일시 정지">
+    <h2 class="l-title l-how__title" id="vpHeading">이용 방법</h2>
+
+    <div class="vp__grid">
+      <div class="vp__stage">
+        <div class="vp__stage-frame">
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" id="stageToggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+        </div>
+        <div class="arrows">
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="vpPrev" type="button" aria-label="이전 기능" aria-controls="vpList"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m15 18-6-6 6-6"></path></svg></span></button>
+          <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small pill" id="vpNext" type="button" aria-label="다음 기능" aria-controls="vpList"><span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right nyco-icon nyco-icon--24 nyco-icon--directional" aria-hidden="true" focusable="false" data-icon-inset><path d="m9 18 6-6-6-6"></path></svg></span></button>
+        </div>
+      </div>
+      <div class="vp__list nyco-accordion nyco-accordion--uncontained nyco-accordion--one-open" id="vpList">
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item vp__item--phone" data-expanded data-current>
+          <div class="vp__media" data-kind="animation" data-still="12300">
+            <div class="phone" aria-hidden="true">
+              <div class="phone__screen">
+                <div class="phone__status">
+                  <span>12:46</span>
+                  <span class="phone__icons">
+                    <svg viewBox="0 0 17 11" aria-hidden="true"><rect x="0" y="7" width="3" height="4" rx=".9"/><rect x="4.67" y="4.67" width="3" height="6.33" rx=".9"/><rect x="9.33" y="2.33" width="3" height="8.67" rx=".9"/><rect x="14" y="0" width="3" height="11" rx=".9"/></svg>
+                    <svg viewBox="0 0 15.5 11" aria-hidden="true"><path d="M7.75 2.2c2.2 0 4.2.85 5.7 2.25l1.3-1.3A9.9 9.9 0 0 0 7.75.35 9.9 9.9 0 0 0 .75 3.15l1.3 1.3A8.1 8.1 0 0 1 7.75 2.2Z"/><path d="M7.75 5.75c1.25 0 2.4.48 3.25 1.3l1.3-1.3a6.5 6.5 0 0 0-4.55-1.85A6.5 6.5 0 0 0 3.2 5.75l1.3 1.3a4.7 4.7 0 0 1 3.25-1.3Z"/><path d="M7.75 10.9 9.8 8.85a2.9 2.9 0 0 0-4.1 0Z"/></svg>
+                    <svg viewBox="0 0 25 12" aria-hidden="true"><rect x=".5" y=".5" width="21" height="11" rx="3.3" fill="none" stroke="currentColor" stroke-opacity=".35"/><rect x="2" y="2" width="18" height="8" rx="2"/><path d="M23 4v4c.8-.3 1.4-1 1.4-2s-.6-1.7-1.4-2Z" fill-opacity=".4"/></svg>
+                  </span>
+                </div>
+                <div class="phone__island"></div>
+                <div class="demo">
+                  <div class="demo__in">
+                    <div class="demo__screen demo__s1">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>뉴욕시 공식 웹사이트</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>메뉴</span></span></div>
+                        <div class="demo__body">
+                          <p class="demo__title"><span>프로그램 살펴보기</span> <span>및 맞춤 신청</span></p>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"/></svg><span>병원비</span></p><p>병원비 감면 또는 면제 여부를 확인하세요.</p><span class="demo__btn">시작하기</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg><span>건강 보험</span></p><p>무료 건강 보험에 가입하거나 갱신하세요.</p><span class="demo__btn">시작하기</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>퇴거</span></p><p>집에 계속 살 수 있도록 도움을 받으세요.</p><span class="demo__btn">시작하기</span></div>
+                          <div class="demo__card demo__card--target"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg><span>에너지 할인</span></p><p>매달 Con Edison 및 National Grid 요금을 낮추세요.</p><span class="demo__btn demo__tap demo__tap--1">시작하기</span></div>
+                          <div class="demo__card"><p class="demo__card-head"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg><span>세금 공제</span></p><p>최대 3년 치 세금 공제와 현금 지급을 받으세요.</p><span class="demo__btn">시작하기</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="demo__screen demo__s2">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>뉴욕시 공식 웹사이트</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>메뉴</span></span></div>
+                        <div class="demo__body">
+                          <div class="demo__progress"><span class="demo__on"></span><span></span></div>
+                          <p class="demo__title">월별 에너지 할인 자격이 있는지 확인해 보세요</p>
+                          <div class="demo__q demo__q1"><p>Con Edison 및/또는 National Grid 고객이신가요?</p><div class="demo__opts"><span class="demo__opt">Con Edison</span><span class="demo__opt">National Grid</span><span class="demo__opt demo__tap demo__tap--2">둘 다</span><span class="demo__opt">해당 없음</span></div></div>
+                          <div class="demo__q demo__q2"><p>현재 정부 지원 프로그램에 등록되어 있나요?</p><div class="demo__opts"><span class="demo__opt">예</span><span class="demo__opt demo__tap demo__tap--3">아니요</span></div></div>
+                          <div class="demo__q demo__q3"><p>공과금을 몇 명과 나누어 내시나요?</p><div class="demo__step"><span class="demo__opt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></span><span class="demo__opt demo__count"><span>0</span><span>1</span></span><span class="demo__opt demo__tap demo__tap--4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span></div></div>
+                          <div class="demo__q demo__q4"><p>연 소득이 $113,400 미만인가요?</p><div class="demo__opts"><span class="demo__opt demo__tap demo__tap--5">예</span><span class="demo__opt">아니요</span></div></div>
+                        </div>
+                      </div>
+                      <div class="demo__bar"><span class="demo__btn demo__btn--grey">뒤로</span><span class="demo__btn demo__btn--primary demo__tap demo__tap--6">저장하고 계속</span></div>
+                    </div>
+                    <div class="demo__screen demo__s3">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>뉴욕시 공식 웹사이트</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>메뉴</span></span></div>
+                        <div class="demo__body">
+                          <div class="demo__progress"><span class="demo__on"></span><span class="demo__on"></span></div>
+                          <p class="demo__title">검토 및 제출</p>
+                          <p class="demo__lede">자격이 되면, 필요한 지원을 받을 수 있도록 아래 정보를 공공요금 회사와 공유합니다.</p>
+                          <div class="demo__card demo__review"><p class="demo__card-head demo__card-head--edit"><span>에너지 할인</span><span class="demo__edit"><span>편집</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg></span></p><p>Con Edison 및/또는 National Grid 고객이신가요?</p><p class="demo__answer">Con Edison 및 National Grid</p><p>현재 정부 지원 프로그램에 등록되어 있나요?</p><p class="demo__answer">아니요</p><p>공과금을 몇 명과 나누어 내시나요?</p><p class="demo__answer">1</p><p>연 소득이 $113,400 미만인가요?</p><p class="demo__answer">예</p></div>
+                          <div class="demo__card demo__consent"><p>이 페이지를 제출하면 공공요금 회사와 정보를 공유하는 데 동의하게 됩니다. 회사는 이를 확인하고, 신청 처리, 참여 관리, 프로그램 규정 준수 확인을 위해 다른 기관과 공유할 수 있습니다.</p></div>
+                        </div>
+                      </div>
+                      <div class="demo__bar"><span class="demo__btn demo__btn--grey">뒤로</span><span class="demo__btn demo__btn--primary demo__tap demo__tap--7">제출</span></div>
+                    </div>
+                    <div class="demo__screen demo__s4">
+                      <div class="demo__page">
+                        <div class="demo__city"><span>뉴욕시 공식 웹사이트</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+                        <div class="demo__head"><img class="demo__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt=""><span class="demo__menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><span>메뉴</span></span></div>
+                        <div class="demo__body">
+                          <p class="demo__title"><span>강화된 에너지 부담 완화 프로그램(EEAP) 대상자입니다</span> <span class="demo__muted">다음 단계</span></p>
+                          <div class="demo__card demo__next"><span class="demo__num">1</span><div><p class="demo__card-head"><span><span class="demo__link">EEAP 신청 시작하기</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></p><p class="demo__small">전기와 가스 회사가 다르더라도 두 계정이 같은 주소라면 한 번의 신청으로 모두 신청할 수 있습니다.</p></div></div>
+                          <div class="demo__card demo__next"><span class="demo__num">2</span><div><p class="demo__card-head">신청 후 14일 안에 공과금을 함께 내는 모든 사람의 최근 28일 소득 증명을 제출하세요.</p><p class="demo__small">급여 명세서, 사회보장, 실업 및 장애 수당, 자녀 양육비가 포함됩니다. 사진과 업로드한 문서 모두 가능합니다.</p></div></div>
+                          <div class="demo__card demo__next"><span class="demo__num">3</span><div><p class="demo__card-head">승인되면 두 번의 청구 주기 안에 EAP 할인을 받게 됩니다.</p><p class="demo__small">공제는 18개월 동안 유지되며, 이후 다시 신청해야 합니다.</p></div></div>
+                          <span class="demo__btn demo__btn--primary demo__btn--wide">신청 시작하기</span>
+                          <span class="demo__btn demo__btn--grey demo__btn--wide">대시보드로 돌아가기</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="demo__url">HART Connector</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="visually-hidden">애니메이션: 휴대폰에서 한 사람이 에너지 할인 신청을 시작해 간단한 질문 네 개에 답하고 제출한 뒤, 강화된 에너지 비용 지원 프로그램 자격이 있다는 것을 확인합니다.</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t1" type="button" aria-expanded="true" aria-controls="vp-p1">
+              <span class="nyco-accordion__title">즉시 자격 확인</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">즉시 자격 확인</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p1" role="region" aria-labelledby="vp-t1">
+            <div class="nyco-accordion__content"><p>병원비 탕감, 에너지 할인 등의 자격이 되는지 바로 확인하세요.</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="3200">
+            <div class="programs" aria-hidden="true">
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">SNAP(푸드 스탬프)</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">세입자 지원</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">의료 서비스</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">세금 공제</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">병원비 탕감</span></div>
+              <div class="programs__row"><img class="programs__check" src="../assets/value-props/brush/check.svg" width="44" height="44" alt=""><span class="programs__pill">에너지 할인</span></div>
+            </div>
+            <p class="visually-hidden">애니메이션: SNAP(푸드 스탬프), 세입자 지원, 의료 서비스, 세금 공제, 병원비 탕감, 에너지 할인이 차례로 체크됩니다.</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t2" type="button" aria-expanded="false" aria-controls="vp-p2">
+              <span class="nyco-accordion__title">빠르고 간단한 신청</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">빠르고 간단한 신청</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p2" role="region" aria-labelledby="vp-t2">
+            <div class="nyco-accordion__content"><p>어디서나 제출하세요. 종이 양식이 필요 없습니다.</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="8000">
+            <div class="chat" aria-hidden="true">
+              <div class="chat__msg chat__msg--in chat__msg--1">
+                <span class="chat__typing"><i></i><i></i><i></i></span>
+                <p class="chat__bubble">HART Connector 양식을 작성해 주셔서 감사합니다. 뉴욕시 보건부 등록 상담사가 Medicaid 갱신과 관련하여 연락드릴 예정입니다.</p>
+              </div>
+              <div class="chat__msg chat__msg--in chat__msg--2">
+                <span class="chat__typing"><i></i><i></i><i></i></span>
+                <p class="chat__bubble">Con Edison 할인 신청이 아직 완료되지 않았습니다. 완료하는 데 몇 분밖에 걸리지 않습니다.</p>
+              </div>
+              <div class="chat__msg chat__msg--out chat__msg--3">
+                <p class="chat__bubble">알려 주셔서 감사합니다!</p>
+              </div>
+            </div>
+            <p class="visually-hidden">애니메이션: 문자 메시지가 도착합니다. “HART Connector 양식을 작성해 주셔서 감사합니다. 뉴욕시 보건부 등록 상담사가 Medicaid 갱신과 관련하여 연락드릴 예정입니다.” “Con Edison 할인 신청이 아직 완료되지 않았습니다. 완료하는 데 몇 분밖에 걸리지 않습니다.” 답장: “알려 주셔서 감사합니다!”</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t3" type="button" aria-expanded="false" aria-controls="vp-p3">
+              <span class="nyco-accordion__title">실시간 알림</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">실시간 알림</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p3" role="region" aria-labelledby="vp-t3">
+            <div class="nyco-accordion__content"><p>마감일과 예약 알림으로 일정을 놓치지 마세요.</p></div>
+          </div>
+        </div>
+
+        <div class="nyco-accordion__item nyco-accordion__item--uncontained vp__item">
+          <div class="vp__media" data-kind="animation" data-still="7500">
+            <svg class="paths" id="vpPaths" viewBox="0 0 916 866" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"></svg>
+            <p class="visually-hidden">애니메이션: 위에서 내려다본 두 길이 결승선까지 구불구불 이어집니다. 한 길에서는 혼자 자신의 속도로, 다른 길에서는 전문가와 나란히 갑니다. 두 길 모두 함께 결승선을 통과합니다.</p>
+            <button class="nyco-button nyco-button--neutral nyco-button--icon-only nyco-button--small media-toggle" type="button"><span class="nyco-button__icon" aria-hidden="true"></span></button>
+          </div>
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="vp-t4" type="button" aria-expanded="false" aria-controls="vp-p4">
+              <span class="nyco-accordion__title">유연한 지원</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <span class="vp__static">유연한 지원</span>
+          </h3>
+          <div class="nyco-accordion__panel" id="vp-p4" role="region" aria-labelledby="vp-t4">
+            <div class="nyco-accordion__content"><p>자신의 속도에 맞춰 진행하거나 전문가의 일대일 도움을 받으세요.</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <p class="visually-hidden" id="vpLive" aria-live="polite" aria-atomic="true"></p>
+  </section>
+  </div>
+
+  <section class="l-section l-discover" aria-labelledby="discoverTitle">
+    <h2 class="l-title" id="discoverTitle">놓치고 있을 수 있는 <br class="l-br-600">재정 지원과 무료 전문가 도움을 찾아보세요</h2>
+    <p class="l-body l-discover__body">건강 보험 등록 상담사, SNAP 전문가, <br class="l-br-600">세금 신고 대리인, 세입자 권익 옹호자 등을 손쉽게 만나보세요</p>
+    <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=ko">시작하기</a>
+    <div class="l-cards">
+      <article class="l-card l-card--hospital">
+        <h3 class="l-card__title">병원이 청구서를 감면하거나 탕감해 줄지 알아보세요</h3>
+        <img class="l-card__art" src="../assets/illustrations/hospital-flat.webp" width="555" height="715" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--health">
+        <h3 class="l-card__title">건강 보험에 가입하거나 갱신하세요</h3>
+        <img class="l-card__art" src="../assets/illustrations/health-flat.webp" width="702" height="782" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--food">
+        <h3 class="l-card__title">식료품비 지원을 받으세요</h3>
+        <img class="l-card__art" src="../assets/illustrations/food-flat.webp" width="803" height="856" alt="" loading="lazy">
+      </article>
+      <article class="l-card l-card--more">
+        <h3 class="l-card__title">그 밖에도 더 있습니다!</h3>
+        <ul class="l-pills">
+          <li class="l-pill l-pill--energy">에너지 할인</li>
+          <li class="l-pill l-pill--hospital">병원비 탕감</li>
+          <li class="l-pill l-pill--tax">세금 공제</li>
+          <li class="l-pill l-pill--snap">SNAP(푸드 스탬프)</li>
+          <li class="l-pill l-pill--tenant">세입자 지원</li>
+          <li class="l-pill l-pill--health">의료 서비스</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+  
+  <section class="l-section l-section--wide-gap l-faq" aria-labelledby="faqTitle">
+    <h2 class="l-title l-faq__title" id="faqTitle">자주 묻는 질문</h2>
+    <div class="nyco-accordion">
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t1" type="button" aria-expanded="false" aria-controls="faq-p1">
+              <span class="nyco-accordion__title">HART Connector란 무엇인가요?</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p1" role="region" aria-labelledby="faq-t1">
+            <div class="nyco-accordion__content">
+              <p>Health and Affordability Resource Team(HART) Connector는 뉴욕 시민의 생활비 부담을 줄여 주는 디지털 도구입니다. 자격이 될 수 있는 서비스를 찾아 연결해 드리며, 다음이 포함됩니다:</p>
+              <ul>
+                <li>건강보험 가입</li>
+                <li>식품 지원</li>
+                <li>퇴거 예방 지원</li>
+                <li>공과금 할인</li>
+                <li>병원비 재정 지원</li>
+                <li>IRS 현금 환급</li>
+              </ul>
+              <p>뉴욕시 보건정신위생국(NYC Health)은 다른 시 기관 및 협력 단체와 함께 가입 절차를 더 쉽게 만듭니다. 협력 단체는 신청을 시작할 때부터 혜택이나 서비스를 받을 때까지 도와드립니다.</p>
+              <p>HART 지역사회 보건 요원은 이 도구로 자격이 될 수 있는 프로그램을 확인하고 후속 연락을 드립니다. 도구는 각 신청을 마칠 수 있도록 메시지와 알림도 보내 드립니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t2" type="button" aria-expanded="false" aria-controls="faq-p2">
+              <span class="nyco-accordion__title">HART Connector는 누구를 위한 것인가요?</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p2" role="region" aria-labelledby="faq-t2">
+            <div class="nyco-accordion__content">
+              <p>HART Connector는 기본 생활비를 감당하기 어려운 뉴욕 시민이 의료비, 공과금, 식료품비 등을 낼 수 있도록 무료로 도와드립니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t3" type="button" aria-expanded="false" aria-controls="faq-p3">
+              <span class="nyco-accordion__title">어떤 정보를 제공해야 하나요?</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p3" role="region" aria-labelledby="faq-t3">
+            <div class="nyco-accordion__content">
+              <p>여러 서비스에 더 쉽게 가입할 수 있도록 NYC Health는 다음 정보를 수집하고 보관합니다:</p>
+              <ul>
+                <li>성명</li>
+                <li>생년월일</li>
+                <li>우편번호</li>
+                <li>연락처</li>
+              </ul>
+              <p>NYC Health는 소득, 가구, 그리고 공과금이나 병원비처럼 도움이 필요한 청구서에 대해서도 여쭤봅니다. 이 정보는 자격이 될 수 있는 협력 서비스를 찾는 데 사용됩니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nyco-accordion__item nyco-accordion__item--filled nyco-accordion__item--chevron">
+          <h3 class="nyco-accordion__heading">
+            <button class="nyco-accordion__trigger" id="faq-t4" type="button" aria-expanded="false" aria-controls="faq-p4">
+              <span class="nyco-accordion__title">제 개인 정보는 어떻게 처리되나요?</span>
+              <svg class="nyco-accordion__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="nyco-accordion__panel" id="faq-p4" role="region" aria-labelledby="faq-t4">
+            <div class="nyco-accordion__content">
+              <p>NYC Health는 각 신청의 진행 상황을 확인하고 이메일, 전화 또는 문자로 알림을 보내 드립니다. 이러한 메시지는 언제든지 수신을 거부할 수 있습니다.</p>
+              <p>협력 단체의 서비스를 이용하기로 하시면, NYC Health는 해당 단체가 도움을 드리는 데 필요한 정보를 공유합니다. 일부 협력 단체는 먼저 자체 개인정보 처리방침과 이용 약관에 동의해 달라고 요청할 수 있습니다.</p>
+              <p>NYC Health는 프로그램을 연구하고 개선하기 위해 HART Connector와 협력 단체의 데이터를 사용할 수 있습니다. 귀하의 데이터는 안전하게 보호됩니다. NYC Health가 공개적으로 공유하는 내용에는 귀하를 식별할 수 있는 정보가 포함되지 않습니다.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="l-cta" aria-labelledby="ctaTitle">
+    <h2 class="l-title l-cta__title" id="ctaTitle">자격이 되는 서비스를 확인하고 <span class="l-keep">오늘 바로 신청을 시작하세요</span></h2>
+    <a class="nyco-button nyco-button--primary l-btn" href="../../preferred-language.html?lang=ko">시작하기</a>
+  </section>
+
+</main>
+<footer class="l-footer">
+  <div class="nyco-footer nyco-footer--minimal l-footer__site">
+    <a class="nyco-footer__home" href="./" aria-label="뉴욕시 보건부 홈"><img class="l-footer__logo" src="../assets/logo/nyc-health-stacked.svg" width="96" height="44" alt="" loading="lazy"></a>
+    <div class="l-footer__sections">
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main" target="_blank" rel="noopener noreferrer">nyc.gov 홈<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/services" target="_blank" rel="noopener noreferrer">서비스<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/events/" target="_blank" rel="noopener noreferrer">행사<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/mayors-office" target="_blank" rel="noopener noreferrer">시장실<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+      </ul>
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/your-government" target="_blank" rel="noopener noreferrer">시 정부<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://portal.311.nyc.gov/" target="_blank" rel="noopener noreferrer">311<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nycvotes.org/" target="_blank" rel="noopener noreferrer">유권자 등록<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://a858-nycnotify.nyc.gov/notifynyc/" target="_blank" rel="noopener noreferrer">긴급 알림<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+      </ul>
+      <ul class="l-footer__links">
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://cityjobs.nyc.gov/" target="_blank" rel="noopener noreferrer">채용<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/site/mopd/initiatives/digital-accessibility.page" target="_blank" rel="noopener noreferrer">접근성 자료<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="../../privacy.html" target="_blank" rel="noopener noreferrer">개인정보 처리방침<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+        <li class="nyco-footer__row-link"><a class="nyco-footer__link" href="https://www.nyc.gov/main/about-our-content" target="_blank" rel="noopener noreferrer">nyc.gov 콘텐츠 정보<span class="nyco-visually-hidden"> (새 탭에서 열림)</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="l-footer__legal">
+    <p>© 뉴욕시. 2026 모든 권리 보유. NYC는 뉴욕시의 상표 및 서비스 마크입니다.</p>
+  </div>
+</footer>
+<dialog class="nyco-sheet__overlay nyco-sheet__overlay--full l-lang" id="langSheet" aria-labelledby="langTitle">
+  <div class="nyco-sheet nyco-sheet--full">
+    <div class="nyco-sheet__dialog" tabindex="-1" autofocus>
+      <div class="nyco-sheet__header">
+        <div class="nyco-sheet__heading"><h2 class="nyco-sheet__title" id="langTitle">언어를 선택하세요</h2></div>
+        <button class="nyco-button nyco-button--neutral nyco-button--small l-btn l-btn--quiet l-lang__close" id="langClose" type="button">닫기<span class="nyco-button__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x nyco-icon nyco-icon--24" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span></button>
+      </div>
+      <div class="nyco-sheet__body"><div class="nyco-sheet__content">
+      <ul class="nyco-list-box__list nyco-list-box__list--fill-selected l-lang__list">
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../" hreflang="en"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="en">English</span><span class="l-lang__en"><span aria-hidden="true"> • </span>영어</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../es/" hreflang="es"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="es">Español</span><span class="l-lang__en"><span aria-hidden="true"> • </span>스페인어</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../zh-Hant/" hreflang="zh-Hant"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="zh-Hant">繁體中文</span><span class="l-lang__en"><span aria-hidden="true"> • </span>중국어(번체)</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ru/" hreflang="ru"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ru">Русский</span><span class="l-lang__en"><span aria-hidden="true"> • </span>러시아어</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../bn/" hreflang="bn"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="bn">বাংলা</span><span class="l-lang__en"><span aria-hidden="true"> • </span>벵골어</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ht/" hreflang="ht"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ht">Kreyòl Ayisyen</span><span class="l-lang__en"><span aria-hidden="true"> • </span>아이티 크리올어</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ko/" hreflang="ko" aria-current="page" data-selected><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ko">한국어</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ar/" hreflang="ar"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ar" dir="rtl">العربية</span><span class="l-lang__en"><span aria-hidden="true"> • </span>아랍어</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../ur/" hreflang="ur"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="ur" dir="rtl">اردو</span><span class="l-lang__en"><span aria-hidden="true"> • </span>우르두어</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../fr/" hreflang="fr"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="fr">Français</span><span class="l-lang__en"><span aria-hidden="true"> • </span>프랑스어</span></span></span></a></li>
+        <li><a class="nyco-list-box__item nyco-list-box__item--radio" href="../pl/" hreflang="pl"><span class="nyco-radio__circle" aria-hidden="true"></span><span class="nyco-list-box__text"><span><span class="l-lang__name" lang="pl">Polski</span><span class="l-lang__en"><span aria-hidden="true"> • </span>폴란드어</span></span></span></a></li>
+      </ul>
+      </div></div>
+    </div>
+  </div>
+</dialog>
+
+<script src="../app.a5150248.js"></script>
+</body>
+</html>

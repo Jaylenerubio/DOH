@@ -2,6 +2,12 @@
 
 One entry per drop. Newest first. Dates are the day the drop was tagged.
 
+## Unreleased — landing page
+
+Not part of the v1.4.1 tag.
+
+- `home.html` and `index.html` redirect to the new HART landing page in `landing/` (11 languages; its buttons open `preferred-language.html` and `signin.html`; the language picked carries into the tool). The tool uses the landing page's SVG logo (`assets/nyc-health-stacked.svg` replaces the PNG). `preferred-language.html` notes that Russian, Bengali, Haitian Creole and Korean are not translated in the tool. Landing translations are unreviewed; Russian, Bengali, Haitian Creole and Korean are machine drafts.
+
 ## v1.4.1 Content and translations — 2026-11-13
 
 Content changes (11/10 batch), placeholder translations in six languages, and layout fixes on top of v1.4. Translations are unreviewed until a translator signs off.
