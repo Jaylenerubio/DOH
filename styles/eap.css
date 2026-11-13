@@ -56,4 +56,4 @@
 
 /* Utility chips: four short options; two per row on phones so labels never wrap. */
 #qUtility .qgroup__chips .choice-card { flex: 1 1 calc(50% - 4px); }   /* 2×2 on phones */
-@media (min-width: 600px) { #qUtility .qgroup__chips .choice-card { flex: 0 0 auto; width: auto; } }  /* one row; each chip at least label + padding */
+@media (min-width: 600px) { #qUtility .qgroup__chips .choice-card { flex: 1 1 0; width: auto; min-width: max-content; white-space: nowrap; } }  /* one row, chips fill the width equally like Yes/No */
