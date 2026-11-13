@@ -52,10 +52,10 @@ window.I18N_DICT = {
   "ar": "المبلغ المستحق",
   "zh": "欠款金額"
  },
- "An NYC Health Department enrollment counselor from your site will call you within <strong>three business days (72 hours).</strong>": {
-  "es": "Un consejero de inscripción de NYC Health de su sitio le llamará en un plazo de <strong>tres días hábiles (72 horas).</strong>",
-  "ar": "سيتصل بك مستشار تسجيل من إدارة الصحة في NYC Health من موقعك خلال <strong>ثلاثة أيام عمل (72 ساعة).</strong>",
-  "zh": "您所在據點的 NYC Health 衛生局登記輔導員將在<strong>三個工作天（72 小時）</strong>內致電給您。"
+ "An NYC Health Department enrollment counselor from your site will call you within <strong>3 business days (72 hours).</strong>": {
+  "es": "Un consejero de inscripción de NYC Health de su sitio le llamará en un plazo de <strong>3 días hábiles (72 horas).</strong>",
+  "ar": "سيتصل بك مستشار تسجيل من إدارة الصحة في NYC Health من موقعك خلال <strong>3 أيام عمل (72 ساعة).</strong>",
+  "zh": "您所在據點的 NYC Health 衛生局登記輔導員將在<strong>3 個工作天（72 小時）</strong>內致電給您。"
  },
  "Answer a few questions and schedule a free call with an enrollment counselor.": {
   "es": "Responda unas preguntas y programe una llamada gratuita con un consejero de inscripción.",
@@ -325,13 +325,13 @@ window.I18N_DICT = {
   "fr": "Aviez-vous une assurance maladie lorsque vous êtes allé(e) à l’hôpital ?",
   "pl": "Czy miałeś(-aś) ubezpieczenie zdrowotne, gdy zgłosiłeś(-aś) się do szpitala?"
  },
- "Did you have income from work in the last three years?": {
-  "es": "¿Tuvo ingresos del trabajo en los últimos tres años?",
-  "ar": "هل كان لديك دخل من العمل خلال السنوات الثلاث الماضية؟",
-  "zh": "過去三年內您有工作收入嗎？",
-  "ur": "کیا پچھلے تین سالوں میں آپ کی کام سے آمدنی تھی؟",
-  "fr": "Avez-vous eu un revenu du travail au cours des trois dernières années ?",
-  "pl": "Czy w ciągu ostatnich trzech lat miałeś(-aś) dochód z pracy?"
+ "Did you have income from work in the last 3 years?": {
+  "es": "¿Tuvo ingresos del trabajo en los últimos 3 años?",
+  "ar": "هل كان لديك دخل من العمل خلال السنوات الـ3 الماضية؟",
+  "zh": "過去3 年內您有工作收入嗎？",
+  "ur": "کیا پچھلے 3 سالوں میں آپ کی کام سے آمدنی تھی؟",
+  "fr": "Avez-vous eu un revenu du travail au cours des 3 dernières années ?",
+  "pl": "Czy w ciągu ostatnich 3 lat miałeś(-aś) dochód z pracy?"
  },
  "Direct Vendor or Utility Guarantee": {
   "es": "Pago directo al proveedor o Garantía de servicios públicos",
@@ -531,13 +531,13 @@ window.I18N_DICT = {
   "fr": "Commencer",
   "pl": "Zacznij"
  },
- "Have you filed taxes in the last three years?": {
-  "es": "¿Ha presentado impuestos en los últimos tres años?",
-  "ar": "هل قدّمت إقرارات ضريبية خلال السنوات الثلاث الماضية؟",
-  "zh": "過去三年內您報過稅嗎？",
-  "ur": "کیا آپ نے پچھلے تین سالوں میں ٹیکس فائل کیے ہیں؟",
-  "fr": "Avez-vous déposé une déclaration d’impôts au cours des trois dernières années ?",
-  "pl": "Czy składałeś(-aś) zeznania podatkowe w ciągu ostatnich trzech lat?"
+ "Have you filed taxes in the last 3 years?": {
+  "es": "¿Ha presentado impuestos en los últimos 3 años?",
+  "ar": "هل قدّمت إقرارات ضريبية خلال السنوات الـ3 الماضية؟",
+  "zh": "過去3 年內您報過稅嗎？",
+  "ur": "کیا آپ نے پچھلے 3 سالوں میں ٹیکس فائل کیے ہیں؟",
+  "fr": "Avez-vous déposé une déclaration d’impôts au cours des 3 dernières années ?",
+  "pl": "Czy składałeś(-aś) zeznania podatkowe w ciągu ostatnich 3 lat?"
  },
  "Health insurance": {
   "es": "Seguro médico",
@@ -795,10 +795,10 @@ window.I18N_DICT = {
   "ar": "برنامج توفير Medicare (Medicare Savings Program، MSP)",
   "zh": "聯邦醫療保險儲蓄計劃 (MSP)"
  },
- "Missed out in the past three years? You can still file or amend those returns to get that money back.": {
-  "es": "¿No presentó en los últimos tres años? Todavía puede presentar o corregir esas declaraciones para recuperar ese dinero.",
-  "ar": "فاتك ذلك خلال السنوات الثلاث الماضية؟ لا يزال بإمكانك تقديم تلك الإقرارات أو تعديلها لاسترداد هذه الأموال.",
-  "zh": "過去三年內有錯過嗎？您仍可補報或修正這些年度的報稅表，把這筆錢拿回來。"
+ "Missed out in the past 3 years? You can still file or amend those returns to get that money back.": {
+  "es": "¿No presentó en los últimos 3 años? Todavía puede presentar o corregir esas declaraciones para recuperar ese dinero.",
+  "ar": "فاتك ذلك خلال السنوات الـ3 الماضية؟ لا يزال بإمكانك تقديم تلك الإقرارات أو تعديلها لاسترداد هذه الأموال.",
+  "zh": "過去3 年內有錯過嗎？您仍可補報或修正這些年度的報稅表，把這筆錢拿回來。"
  },
  "Month": {
   "es": "Mes",
@@ -1021,10 +1021,10 @@ window.I18N_DICT = {
   "ar": "حفظ ومتابعة",
   "zh": "儲存並繼續"
  },
- "Save the numbers below in case you don’t hear back after three days. You can reach <span>{site}</span> <span>{hours}</span>": {
-  "es": "Guarde los números de abajo por si no recibe respuesta después de tres días. Puede comunicarse con <span>{site}</span> <span>{hours}</span>",
-  "ar": "احفظ الأرقام أدناه في حال لم يصلك رد بعد ثلاثة أيام. يمكنك الاتصال بـ <span>{site}</span> <span>{hours}</span>",
-  "zh": "請儲存以下號碼，以防三天後仍未收到回覆。您可聯絡 <span>{site}</span>，服務時間：<span>{hours}</span>"
+ "Save the numbers below in case you don’t hear back after 3 days. You can reach <span>{site}</span> <span>{hours}</span>": {
+  "es": "Guarde los números de abajo por si no recibe respuesta después de 3 días. Puede comunicarse con <span>{site}</span> <span>{hours}</span>",
+  "ar": "احفظ الأرقام أدناه في حال لم يصلك رد بعد 3 أيام. يمكنك الاتصال بـ <span>{site}</span> <span>{hours}</span>",
+  "zh": "請儲存以下號碼，以防3 天後仍未收到回覆。您可聯絡 <span>{site}</span>，服務時間：<span>{hours}</span>"
  },
  "Secure .gov websites use HTTPS": {
   "es": "Los sitios web .gov seguros usan HTTPS",
@@ -1170,18 +1170,18 @@ window.I18N_DICT = {
   "fr": "Déclarations d’impôts",
   "pl": "Zeznań podatkowych"
  },
- "Tell us about the bill — NYC Health": {
-  "es": "Cuéntenos sobre la factura — NYC Health",
-  "ar": "أخبرنا عن الفاتورة — NYC Health",
-  "zh": "告訴我們帳單的情況 — NYC Health"
+ "Tell us about your bill — NYC Health": {
+  "es": "Cuéntenos sobre su factura — NYC Health",
+  "ar": "أخبرنا عن فاتورتك — NYC Health",
+  "zh": "告訴我們您的帳單情況 — NYC Health"
  },
- "Tell us about the bill": {
-  "es": "Cuéntenos sobre la factura",
-  "ar": "أخبرنا عن الفاتورة",
-  "zh": "請告訴我們帳單的情況",
-  "ur": "ہمیں بل کے بارے میں بتائیں",
-  "fr": "Parlez-nous de la facture",
-  "pl": "Opowiedz nam o rachunku"
+ "Tell us about your bill": {
+  "es": "Cuéntenos sobre su factura",
+  "ar": "أخبرنا عن فاتورتك",
+  "zh": "請告訴我們您的帳單情況",
+  "ur": "ہمیں اپنے بل کے بارے میں بتائیں",
+  "fr": "Parlez-nous de votre facture",
+  "pl": "Opowiedz nam o swoim rachunku"
  },
  "Tell us about yourself — NYC Health": {
   "es": "Cuéntenos sobre usted — NYC Health",
@@ -1413,13 +1413,13 @@ window.I18N_DICT = {
   "ar": "يمكنك إضافة فواتير أخرى لاحقًا، بما فيها فواتير من مستشفيات أخرى. قد لا تكون بعض الفواتير مؤهلة، بحسب تاريخها.",
   "zh": "您日後可以新增其他帳單，包括其他醫院的帳單。部分帳單可能因日期而不符合資格。"
  },
- "You can also do this later. We’ve sent a link to your email and phone, so you can pick it up anytime. Some hospitals have application deadlines, so complete Dollar For’s patient form and send in your documents as soon as possible.": {
-  "es": "También puede hacerlo después. Le enviamos un enlace a su correo electrónico y teléfono para que pueda continuar cuando quiera. Algunos hospitales tienen fechas límite para las solicitudes, así que complete el formulario de paciente de Dollar For y envíe sus documentos lo antes posible.",
-  "ar": "يمكنك أيضًا فعل ذلك لاحقًا. أرسلنا رابطًا إلى بريدك الإلكتروني وهاتفك، لتتمكن من المتابعة في أي وقت. لدى بعض المستشفيات مواعيد نهائية للتقديم، لذا أكمل نموذج المريض الخاص بـ Dollar For وأرسل مستنداتك في أقرب وقت ممكن.",
-  "zh": "您也可以稍後再做。我們已將連結寄到您的電子郵件和手機，您隨時可以繼續。部分醫院設有申請截止日期，因此請盡快填寫 Dollar For 的病人表格並送交您的文件。",
-  "ur": "آپ یہ بعد میں بھی کر سکتے ہیں۔ ہم نے آپ کے ای میل اور فون پر ایک لنک بھیجا ہے، تاکہ آپ جب چاہیں اسے دوبارہ شروع کر سکیں۔ کچھ ہسپتالوں میں درخواست کی آخری تاریخیں ہوتی ہیں، اس لیے Dollar For کا مریض فارم مکمل کریں اور اپنی دستاویزات جلد از جلد بھیج دیں۔",
-  "fr": "Vous pouvez aussi le faire plus tard. Nous avons envoyé un lien à votre adresse e-mail et à votre téléphone pour que vous puissiez reprendre à tout moment. Certains hôpitaux ont des dates limites de demande ; remplissez donc le formulaire patient de Dollar For et envoyez vos documents dès que possible.",
-  "pl": "Możesz to też zrobić później. Wysłaliśmy link na Twój adres e-mail i telefon, abyś mógł(-ogła) wrócić w dowolnym momencie. Niektóre szpitale mają terminy składania wniosków, więc jak najszybciej wypełnij formularz pacjenta Dollar For i prześlij dokumenty."
+ "You can also do this later. We’ve sent you a link, so you can pick it up anytime.": {
+  "es": "También puede hacerlo después. Le enviamos un enlace para que pueda continuar cuando quiera.",
+  "ar": "يمكنك أيضًا فعل ذلك لاحقًا. أرسلنا إليك رابطًا لتتمكن من المتابعة في أي وقت.",
+  "zh": "您也可以稍後再做。我們已寄給您一個連結，您隨時可以繼續。",
+  "ur": "آپ یہ بعد میں بھی کر سکتے ہیں۔ ہم نے آپ کو ایک لنک بھیجا ہے، تاکہ آپ جب چاہیں اسے جاری رکھ سکیں۔",
+  "fr": "Vous pouvez aussi le faire plus tard. Nous vous avons envoyé un lien pour que vous puissiez reprendre à tout moment.",
+  "pl": "Możesz to też zrobić później. Wysłaliśmy Ci link, abyś mógł(-ogła) wrócić w dowolnym momencie."
  },
  "You can choose:": {
   "es": "Puede elegir:",
@@ -1429,13 +1429,13 @@ window.I18N_DICT = {
   "fr": "Vous pouvez choisir :",
   "pl": "Możesz wybrać:"
  },
- "You can request to review, update, or delete your information by contacting us at <a>hartconnectorsupport@health.nyc.gov</a>.": {
-  "es": "Puede solicitar revisar, actualizar o eliminar su información comunicándose con nosotros en <a>hartconnectorsupport@health.nyc.gov</a>.",
-  "ar": "يمكنك طلب مراجعة معلوماتك أو تحديثها أو حذفها بالتواصل معنا عبر <a>hartconnectorsupport@health.nyc.gov</a>.",
-  "zh": "您可以聯絡 <a>hartconnectorsupport@health.nyc.gov</a>，要求檢視、更新或刪除您的資訊。",
-  "ur": "آپ ہم سے <a>hartconnectorsupport@health.nyc.gov</a> پر رابطہ کر کے اپنی معلومات کا جائزہ لینے، انہیں اپ ڈیٹ کرنے یا حذف کرنے کی درخواست کر سکتے ہیں۔",
-  "fr": "Vous pouvez demander à consulter, mettre à jour ou supprimer vos informations en nous contactant à <a>hartconnectorsupport@health.nyc.gov</a>.",
-  "pl": "Możesz poprosić o przejrzenie, aktualizację lub usunięcie swoich danych, kontaktując się z nami pod adresem <a>hartconnectorsupport@health.nyc.gov</a>."
+ "Email <a>hartconnectorsupport@health.nyc.gov</a> to update or delete your profile.": {
+  "es": "Envíe un correo a <a>hartconnectorsupport@health.nyc.gov</a> para actualizar o eliminar su perfil.",
+  "ar": "راسلنا عبر البريد الإلكتروني <a>hartconnectorsupport@health.nyc.gov</a> لتحديث ملفك الشخصي أو حذفه.",
+  "zh": "請寄電子郵件至 <a>hartconnectorsupport@health.nyc.gov</a>，以更新或刪除您的個人檔案。",
+  "ur": "اپنی پروفائل اپ ڈیٹ یا حذف کرنے کے لیے <a>hartconnectorsupport@health.nyc.gov</a> پر ای میل کریں۔",
+  "fr": "Écrivez à <a>hartconnectorsupport@health.nyc.gov</a> pour mettre à jour ou supprimer votre profil.",
+  "pl": "Napisz na adres <a>hartconnectorsupport@health.nyc.gov</a>, aby zaktualizować lub usunąć swój profil."
  },
  "You have 14 days after applying to submit your proof of income for the last 28 days for everyone you share your utility costs with.": {
   "es": "Tiene 14 días después de solicitar para enviar el comprobante de ingresos de los últimos 28 días de todas las personas con quienes comparte los costos de servicios públicos.",
@@ -1530,13 +1530,13 @@ window.I18N_DICT = {
   "fr": "Votre situation",
   "pl": "Twoja sytuacja"
  },
- "You’ll hear back from most<br>hospitals within 3-8 weeks.": {
-  "es": "La mayoría de los hospitales<br>responde en 3 a 8 semanas.",
-  "ar": "ستصلك الردود من معظم<br>المستشفيات خلال 3-8 أسابيع.",
-  "zh": "大多數醫院會在 3-8 週內回覆。",
-  "ur": "زیادہ تر ہسپتالوں سے<br>3-8 ہفتوں میں جواب مل جاتا ہے۔",
-  "fr": "La plupart des hôpitaux répondent<br>sous 3 à 8 semaines.",
-  "pl": "Większość szpitali odpowiada<br>w ciągu 3-8 tygodni."
+ "Most hospitals decide within 30 days.": {
+  "es": "La mayoría de los hospitales decide en un plazo de 30 días.",
+  "ar": "تقرر معظم المستشفيات خلال 30 يومًا.",
+  "zh": "大多數醫院會在 30 天內做出決定。",
+  "ur": "زیادہ تر ہسپتال 30 دنوں کے اندر فیصلہ کرتے ہیں۔",
+  "fr": "La plupart des hôpitaux décident dans un délai de 30 jours.",
+  "pl": "Większość szpitali podejmuje decyzję w ciągu 30 dni."
  },
  "You’ll need:": {
   "es": "Necesitará:",
@@ -2174,13 +2174,13 @@ window.I18N_DICT = {
   "fr": "Contactez l’Unité de soutien aux locataires de NYC <span>Et ensuite</span>",
   "pl": "Skontaktuj się z Jednostką Wsparcia Najemców NYC <span>Co dalej</span>"
  },
- "A tenant helpline specialist will call you within three business days (72 hours). The call will come from an unknown number between 9:30 a.m. to 5 p.m., Monday to Friday.": {
-  "es": "Un especialista de la línea de ayuda para inquilinos le llamará en un plazo de tres días hábiles (72 horas). La llamada vendrá de un número desconocido entre las 9:30 a. m. y las 5 p. m., de lunes a viernes.",
-  "ar": "سيتصل بك أخصائي من خط مساعدة المستأجرين خلال ثلاثة أيام عمل (72 ساعة). ستأتي المكالمة من رقم غير معروف بين الساعة 9:30 صباحًا و5 مساءً، من الاثنين إلى الجمعة.",
-  "zh": "租戶協助專線專員將在三個工作天（72 小時）內致電給您。來電可能顯示為未知號碼，時間為週一至週五上午 9:30 至下午 5:00。",
-  "ur": "ٹیننٹ ہیلپ لائن کا ماہر تین کاروباری دنوں (72 گھنٹے) کے اندر آپ کو کال کرے گا۔ کال پیر سے جمعہ، صبح 9:30 سے شام 5 بجے کے درمیان کسی نامعلوم نمبر سے آئے گی۔",
-  "fr": "Un spécialiste de la ligne d’assistance aux locataires vous appellera dans un délai de trois jours ouvrables (72 heures). L’appel proviendra d’un numéro inconnu, entre 9 h 30 et 17 h, du lundi au vendredi.",
-  "pl": "Specjalista infolinii dla najemców zadzwoni do Ciebie w ciągu trzech dni roboczych (72 godzin). Połączenie nadejdzie z nieznanego numeru między 9:30 a 17:00, od poniedziałku do piątku."
+ "A tenant helpline specialist will call you within 3 business days (72 hours). The call will come from an unknown number between 9:30 a.m. to 5 p.m., Monday to Friday.": {
+  "es": "Un especialista de la línea de ayuda para inquilinos le llamará en un plazo de 3 días hábiles (72 horas). La llamada vendrá de un número desconocido entre las 9:30 a. m. y las 5 p. m., de lunes a viernes.",
+  "ar": "سيتصل بك أخصائي من خط مساعدة المستأجرين خلال 3 أيام عمل (72 ساعة). ستأتي المكالمة من رقم غير معروف بين الساعة 9:30 صباحًا و5 مساءً، من الاثنين إلى الجمعة.",
+  "zh": "租戶協助專線專員將在3 個工作天（72 小時）內致電給您。來電可能顯示為未知號碼，時間為週一至週五上午 9:30 至下午 5:00。",
+  "ur": "ٹیننٹ ہیلپ لائن کا ماہر 3 کاروباری دنوں (72 گھنٹے) کے اندر آپ کو کال کرے گا۔ کال پیر سے جمعہ، صبح 9:30 سے شام 5 بجے کے درمیان کسی نامعلوم نمبر سے آئے گی۔",
+  "fr": "Un spécialiste de la ligne d’assistance aux locataires vous appellera dans un délai de 3 jours ouvrables (72 heures). L’appel proviendra d’un numéro inconnu, entre 9 h 30 et 17 h, du lundi au vendredi.",
+  "pl": "Specjalista infolinii dla najemców zadzwoni do Ciebie w ciągu 3 dni roboczych (72 godzin). Połączenie nadejdzie z nieznanego numeru między 9:30 a 17:00, od poniedziałku do piątku."
  },
  "Need help with food?": {
   "es": "¿Necesita ayuda con la comida?",
@@ -2302,13 +2302,13 @@ window.I18N_DICT = {
   "fr": "Recevez un SMS avec le lien de votre demande",
   "pl": "Otrzymaj SMS z linkiem do wniosku"
  },
- "Frontdoor Benefits will text you a link within a minute. The link walks you through each step of getting SNAP: filling out a simple application, uploading documents, and preparing for your interview. Once you have your EBT card, you can get help renewing too.": {
-  "es": "Frontdoor Benefits le enviará un enlace por mensaje de texto en un minuto. El enlace le guía en cada paso para obtener SNAP: completar una solicitud sencilla, subir documentos y prepararse para su entrevista. Cuando tenga su tarjeta EBT, también podrá recibir ayuda para renovar.",
-  "ar": "سترسل لك Frontdoor Benefits رابطًا نصيًا خلال دقيقة. يرشدك الرابط خلال كل خطوة للحصول على SNAP: تعبئة طلب بسيط وتحميل المستندات والاستعداد لمقابلتك. وبعد حصولك على بطاقة EBT، يمكنك أيضًا الحصول على مساعدة في التجديد.",
-  "zh": "Frontdoor Benefits 會在一分鐘內以簡訊傳送連結給您。該連結會引導您完成取得 SNAP 的每個步驟：填寫簡單的申請表、上傳文件並準備面談。取得 EBT 卡後，您也可以獲得續期協助。",
-  "ur": "Frontdoor Benefits ایک منٹ کے اندر آپ کو ایک لنک ٹیکسٹ کرے گا۔ یہ لنک SNAP حاصل کرنے کے ہر مرحلے میں آپ کی رہنمائی کرتا ہے: ایک سادہ درخواست بھرنا، دستاویزات اپ لوڈ کرنا اور اپنے انٹرویو کی تیاری کرنا۔ جب آپ کے پاس EBT کارڈ آ جائے تو آپ تجدید میں بھی مدد حاصل کر سکتے ہیں۔",
-  "fr": "Frontdoor Benefits vous enverra un lien par SMS en moins d’une minute. Ce lien vous guide à chaque étape pour obtenir le SNAP : remplir une demande simple, téléverser des documents et préparer votre entretien. Une fois que vous avez votre carte EBT, vous pouvez aussi être aidé(e) pour le renouvellement.",
-  "pl": "Frontdoor Benefits wyśle Ci SMS-em link w ciągu minuty. Link poprowadzi Cię przez każdy etap uzyskania SNAP: wypełnienie prostego wniosku, przesłanie dokumentów i przygotowanie do rozmowy. Gdy będziesz mieć kartę EBT, możesz też uzyskać pomoc w odnowieniu."
+ "A SNAP specialist will text you a link within a minute. The link walks you through each step of getting SNAP: filling out a simple application, uploading documents, and preparing for your interview. Once you have your EBT card, you can get help renewing too.": {
+  "es": "Un especialista de SNAP le enviará un enlace por mensaje de texto en un minuto. El enlace le guía en cada paso para obtener SNAP: completar una solicitud sencilla, subir documentos y prepararse para su entrevista. Cuando tenga su tarjeta EBT, también podrá recibir ayuda para renovar.",
+  "ar": "سيرسل لك أخصائي SNAP رابطًا نصيًا خلال دقيقة. يرشدك الرابط خلال كل خطوة للحصول على SNAP: تعبئة طلب بسيط وتحميل المستندات والاستعداد لمقابلتك. وبعد حصولك على بطاقة EBT، يمكنك أيضًا الحصول على مساعدة في التجديد.",
+  "zh": "SNAP 專員會在一分鐘內以簡訊傳送連結給您。該連結會引導您完成取得 SNAP 的每個步驟：填寫簡單的申請表、上傳文件並準備面談。取得 EBT 卡後，您也可以獲得續期協助。",
+  "ur": "SNAP کا ماہر ایک منٹ کے اندر آپ کو ایک لنک ٹیکسٹ کرے گا۔ یہ لنک SNAP حاصل کرنے کے ہر مرحلے میں آپ کی رہنمائی کرتا ہے: ایک سادہ درخواست بھرنا، دستاویزات اپ لوڈ کرنا اور اپنے انٹرویو کی تیاری کرنا۔ جب آپ کے پاس EBT کارڈ آ جائے تو آپ تجدید میں بھی مدد حاصل کر سکتے ہیں۔",
+  "fr": "Un spécialiste SNAP vous enverra un lien par SMS en moins d’une minute. Ce lien vous guide à chaque étape pour obtenir le SNAP : remplir une demande simple, téléverser des documents et préparer votre entretien. Une fois que vous avez votre carte EBT, vous pouvez aussi être aidé(e) pour le renouvellement.",
+  "pl": "Specjalista SNAP wyśle Ci SMS-em link w ciągu minuty. Link poprowadzi Cię przez każdy etap uzyskania SNAP: wypełnienie prostego wniosku, przesłanie dokumentów i przygotowanie do rozmowy. Gdy będziesz mieć kartę EBT, możesz też uzyskać pomoc w odnowieniu."
  },
  "Get reminders and personalized help": {
   "es": "Reciba recordatorios y ayuda personalizada",
@@ -2350,13 +2350,13 @@ window.I18N_DICT = {
   "fr": "Découvrez où en est votre demande",
   "pl": "Sprawdź status swojego wniosku"
  },
- "A SNAP specialist can help if there is a problem with your application. That might mean resending documents, preparing for your interview, or following up with the NYC Human Resources Administration (HRA).": {
-  "es": "Un especialista de SNAP puede ayudarle si hay un problema con su solicitud. Esto puede incluir volver a enviar documentos, prepararse para su entrevista o dar seguimiento con la Administración de Recursos Humanos de NYC (HRA).",
-  "ar": "يمكن لأخصائي SNAP مساعدتك إذا كانت هناك مشكلة في طلبك. قد يعني ذلك إعادة إرسال المستندات أو الاستعداد لمقابلتك أو المتابعة مع إدارة الموارد البشرية في مدينة نيويورك (HRA).",
-  "zh": "如果您的申請出現問題，SNAP 專員可以協助您。這可能包括重新提交文件、準備面談，或向紐約市人力資源管理局 (HRA) 追蹤進度。",
-  "ur": "اگر آپ کی درخواست میں کوئی مسئلہ ہو تو SNAP کا ماہر مدد کر سکتا ہے۔ اس کا مطلب دستاویزات دوبارہ بھیجنا، انٹرویو کی تیاری کرنا، یا NYC ہیومن ریسورسز ایڈمنسٹریشن (HRA) سے رابطہ کرنا ہو سکتا ہے۔",
-  "fr": "Un spécialiste SNAP peut vous aider en cas de problème avec votre demande. Il peut s’agir de renvoyer des documents, de préparer votre entretien ou de relancer l’Administration des ressources humaines de NYC (HRA).",
-  "pl": "Specjalista SNAP może pomóc, jeśli wystąpi problem z Twoim wnioskiem. Może to oznaczać ponowne wysłanie dokumentów, przygotowanie do rozmowy lub kontakt z Administracją Zasobów Ludzkich NYC (HRA)."
+ "They’ll help you solve any issues with your application. That might mean resending documents, preparing for your interview, or following up with the NYC Human Resources Administration (HRA).": {
+  "es": "Le ayudarán a resolver cualquier problema con su solicitud. Esto puede incluir volver a enviar documentos, prepararse para su entrevista o dar seguimiento con la Administración de Recursos Humanos de NYC (HRA).",
+  "ar": "سيساعدونك في حل أي مشكلات في طلبك. قد يعني ذلك إعادة إرسال المستندات أو الاستعداد لمقابلتك أو المتابعة مع إدارة الموارد البشرية في مدينة نيويورك (HRA).",
+  "zh": "他們會協助您解決申請上的任何問題。這可能包括重新提交文件、準備面談，或向紐約市人力資源管理局 (HRA) 追蹤進度。",
+  "ur": "وہ آپ کی درخواست کے کسی بھی مسئلے کو حل کرنے میں مدد کریں گے۔ اس کا مطلب دستاویزات دوبارہ بھیجنا، انٹرویو کی تیاری کرنا، یا NYC ہیومن ریسورسز ایڈمنسٹریشن (HRA) سے رابطہ کرنا ہو سکتا ہے۔",
+  "fr": "Ils vous aideront à résoudre tout problème lié à votre demande. Il peut s’agir de renvoyer des documents, de préparer votre entretien ou de relancer l’Administration des ressources humaines de NYC (HRA).",
+  "pl": "Pomogą Ci rozwiązać wszelkie problemy z wnioskiem. Może to oznaczać ponowne wysłanie dokumentów, przygotowanie do rozmowy lub kontakt z Administracją Zasobów Ludzkich NYC (HRA)."
  },
  "Fill out a short form": {
   "es": "Complete un formulario corto",
@@ -2390,13 +2390,13 @@ window.I18N_DICT = {
   "fr": "Besoin de nourriture maintenant ?",
   "pl": "Potrzebujesz jedzenia teraz?"
  },
- "<a>Find free meals and groceries near you⁠<svg/></a><br>or call the National Hunger Hotline <span>while you wait for your SNAP benefits to arrive.</span>": {
-  "es": "<a>Encuentre comidas y alimentos gratuitos cerca de usted⁠<svg/></a><br>o llame a la Línea Nacional contra el Hambre <span>mientras espera que lleguen sus beneficios de SNAP.</span>",
-  "ar": "<a>اعثر على وجبات ومواد غذائية مجانية بالقرب منك⁠<svg/></a><br>أو اتصل بالخط الوطني لمكافحة الجوع <span>بينما تنتظر وصول مزايا SNAP.</span>",
-  "zh": "<a>尋找您附近的免費餐點和食品雜貨⁠<svg/></a><br>或致電全國飢餓熱線 <span>等待您的 SNAP 福利送達。</span>",
-  "ur": "<a>اپنے قریب مفت کھانا اور راشن تلاش کریں⁠<svg/></a><br>یا نیشنل ہنگر ہاٹ لائن پر کال کریں <span>جب تک آپ کے SNAP کے فوائد نہیں پہنچ جاتے۔</span>",
-  "fr": "<a>Trouvez des repas et des produits d’épicerie gratuits près de chez vous⁠<svg/></a><br>ou appelez la ligne nationale contre la faim <span>en attendant l’arrivée de vos prestations SNAP.</span>",
-  "pl": "<a>Znajdź bezpłatne posiłki i artykuły spożywcze w pobliżu⁠<svg/></a><br>lub zadzwoń na krajową infolinię przeciw głodowi <span>w oczekiwaniu na świadczenia SNAP.</span>"
+ "Find free food near you⁠": {
+  "es": "Encuentre comida gratuita cerca de usted⁠",
+  "ar": "اعثر على طعام مجاني بالقرب منك⁠",
+  "zh": "尋找您附近的免費食物⁠",
+  "ur": "اپنے قریب مفت کھانا تلاش کریں⁠",
+  "fr": "Trouvez de la nourriture gratuite près de chez vous⁠",
+  "pl": "Znajdź bezpłatną żywność w pobliżu⁠"
  },
  "Call the National Hunger Hotline, (866) 348-6479": {
   "es": "Llame a la Línea Nacional contra el Hambre, (866) 348-6479",
@@ -2550,13 +2550,13 @@ window.I18N_DICT = {
   "fr": "Comment vérifier",
   "pl": "Jak to sprawdzić"
  },
- "Look at line 27 of your Form 1040 for each of the past three years. If there’s an amount there, you claimed it.": {
-  "es": "Mire la línea 27 de su Formulario 1040 de cada uno de los últimos tres años. Si hay un monto allí, lo reclamó.",
-  "ar": "انظر إلى السطر 27 في نموذج 1040 الخاص بك لكل سنة من السنوات الثلاث الماضية. إذا كان هناك مبلغ فيه، فقد طالبت به.",
-  "zh": "查看您過去三年每年 1040 表第 27 行。若該處有金額，表示您已申請過。",
-  "ur": "پچھلے تین سالوں میں سے ہر سال کے اپنے فارم 1040 کی لائن 27 دیکھیں۔ اگر وہاں کوئی رقم درج ہے تو آپ نے اس کا دعویٰ کیا تھا۔",
-  "fr": "Regardez la ligne 27 de votre formulaire 1040 pour chacune des trois dernières années. S’il y a un montant, vous l’avez demandé.",
-  "pl": "Spójrz na wiersz 27 swojego formularza 1040 za każdy z ostatnich trzech lat. Jeśli widnieje tam kwota, to ubiegałeś(-aś) się o ulgę."
+ "Look at line 27 of your Form 1040 for each of the past 3 years. If there’s an amount there, you claimed it.": {
+  "es": "Mire la línea 27 de su Formulario 1040 de cada uno de los últimos 3 años. Si hay un monto allí, lo reclamó.",
+  "ar": "انظر إلى السطر 27 في نموذج 1040 الخاص بك لكل سنة من السنوات الـ3 الماضية. إذا كان هناك مبلغ فيه، فقد طالبت به.",
+  "zh": "查看您過去3 年每年 1040 表第 27 行。若該處有金額，表示您已申請過。",
+  "ur": "پچھلے 3 سالوں میں سے ہر سال کے اپنے فارم 1040 کی لائن 27 دیکھیں۔ اگر وہاں کوئی رقم درج ہے تو آپ نے اس کا دعویٰ کیا تھا۔",
+  "fr": "Regardez la ligne 27 de votre formulaire 1040 pour chacune des 3 dernières années. S’il y a un montant, vous l’avez demandé.",
+  "pl": "Spójrz na wiersz 27 swojego formularza 1040 za każdy z ostatnich 3 lat. Jeśli widnieje tam kwota, to ubiegałeś(-aś) się o ulgę."
  },
  "Don’t have your returns? You can request copies in your <a>IRS online account⁠<svg/><span> (opens in new tab)</span></a>.": {
   "es": "¿No tiene sus declaraciones? Puede solicitar copias en su <a>cuenta en línea del IRS⁠<svg/><span> (se abre en una pestaña nueva)</span></a>.",
@@ -2590,13 +2590,13 @@ window.I18N_DICT = {
   "fr": "<strong>FileMyself :</strong> Déclarez par vous-même et discutez avec un expert si besoin.",
   "pl": "<strong>FileMyself:</strong> Złóż zeznanie samodzielnie i w razie potrzeby porozmawiaj z ekspertem."
  },
- "You have three years from the tax deadline to file": {
-  "es": "Tiene tres años desde la fecha límite de impuestos para presentar",
-  "ar": "لديك ثلاث سنوات من الموعد النهائي للضرائب للتقديم",
-  "zh": "您可在報稅截止日後三年內報稅",
-  "ur": "آپ کے پاس ٹیکس کی آخری تاریخ سے تین سال تک فائل کرنے کا وقت ہے",
-  "fr": "Vous avez trois ans à compter de la date limite fiscale pour déclarer",
-  "pl": "Masz trzy lata od terminu rozliczenia podatkowego na złożenie zeznania"
+ "You have 3 years from the tax deadline to file": {
+  "es": "Tiene 3 años desde la fecha límite de impuestos para presentar",
+  "ar": "لديك 3 سنوات من الموعد النهائي للضرائب للتقديم",
+  "zh": "您可在報稅截止日後3 年內報稅",
+  "ur": "آپ کے پاس ٹیکس کی آخری تاریخ سے 3 سال تک فائل کرنے کا وقت ہے",
+  "fr": "Vous avez 3 ans à compter de la date limite fiscale pour déclarer",
+  "pl": "Masz 3 lata od terminu rozliczenia podatkowego na złożenie zeznania"
  },
  "To claim the 2025 EITC, file your tax return by April 16, 2029": {
   "es": "Para reclamar el EITC de 2025, presente su declaración antes del 16 de abril de 2029",
@@ -2646,13 +2646,13 @@ window.I18N_DICT = {
   "fr": "Vous pourriez recevoir des milliers de dollars par an en crédits d’impôt parce que vous avez travaillé ces dernières années ou que vous avez des enfants.",
   "pl": "Możesz otrzymać tysiące dolarów rocznie w ulgach podatkowych, ponieważ pracowałeś(-aś) w ostatnich latach lub masz dzieci."
  },
- "<a>File now⁠<svg/><span> (opens in new tab)</span></a> to start filing or amending your tax return for the relevant year(s).": {
-  "es": "<a>Presentar ahora⁠<svg/><span> (se abre en una pestaña nueva)</span></a> para comenzar a presentar o modificar su declaración de impuestos de los años correspondientes.",
-  "ar": "<a>قدّم الآن⁠<svg/><span> (تفتح في علامة تبويب جديدة)</span></a> لبدء تقديم إقرارك الضريبي أو تعديله للسنة أو السنوات المعنية.",
-  "zh": "<a>立即報稅⁠<svg/><span>（在新分頁開啟）</span></a> 開始辦理或修改相關年度的報稅表。",
-  "ur": "<a>ابھی فائل کریں⁠<svg/><span> (نئے ٹیب میں کھلتا ہے)</span></a> متعلقہ سال(سالوں) کے لیے اپنا ٹیکس ریٹرن فائل یا ترمیم کرنا شروع کرنے کے لیے۔",
-  "fr": "<a>Déclarer maintenant⁠<svg/><span> (s’ouvre dans un nouvel onglet)</span></a> pour commencer à déposer ou à modifier votre déclaration d’impôts pour la ou les années concernées.",
-  "pl": "<a>Złóż teraz⁠<svg/><span> (otwiera się w nowej karcie)</span></a>, aby zacząć składać lub korygować zeznanie podatkowe za odpowiednie lata."
+ "<a>File now⁠<svg/><span> (opens in new tab)</span></a> or amend your tax return for the relevant year(s).": {
+  "es": "<a>Presentar ahora⁠<svg/><span> (se abre en una pestaña nueva)</span></a> o modificar su declaración de impuestos de los años correspondientes.",
+  "ar": "<a>قدّم الآن⁠<svg/><span> (تفتح في علامة تبويب جديدة)</span></a> أو عدّل إقرارك الضريبي للسنة أو السنوات المعنية.",
+  "zh": "<a>立即報稅⁠<svg/><span>（在新分頁開啟）</span></a> 或修改相關年度的報稅表。",
+  "ur": "<a>ابھی فائل کریں⁠<svg/><span> (نئے ٹیب میں کھلتا ہے)</span></a> یا متعلقہ سال(سالوں) کے لیے اپنے ٹیکس ریٹرن میں ترمیم کریں۔",
+  "fr": "<a>Déclarer maintenant⁠<svg/><span> (s’ouvre dans un nouvel onglet)</span></a> ou modifiez votre déclaration d’impôts pour la ou les années concernées.",
+  "pl": "<a>Złóż teraz⁠<svg/><span> (otwiera się w nowej karcie)</span></a> lub skoryguj zeznanie podatkowe za odpowiednie lata."
  },
  "You’re not eligible for cash back from the IRS at this time": {
   "es": "Por el momento, no es elegible para recibir dinero del IRS",
@@ -2702,13 +2702,13 @@ window.I18N_DICT = {
   "fr": "Les crédits d’impôt comme le crédit d’impôt sur le revenu du travail (EITC) font récupérer de l’argent aux personnes qui travaillent. Vous pouvez y avoir droit même si vous gagnez peu, si vous n’avez généralement pas à déclarer vos impôts ou si vous n’avez jamais déclaré. Vos chances sont encore meilleures si vous vous occupez d’enfants.",
   "pl": "Ulgi podatkowe, takie jak Earned Income Tax Credit (EITC), dają osobom pracującym zwrot pieniędzy. Możesz się kwalifikować, nawet jeśli niewiele zarabiasz, zwykle nie musisz składać zeznań lub nigdy wcześniej ich nie składałeś(-aś). Twoje szanse są jeszcze większe, jeśli opiekujesz się dziećmi."
  },
- "Missed out in the past three years? You can still file or amend past returns to get that money back.": {
-  "es": "¿Se perdió los últimos tres años? Todavía puede presentar o modificar declaraciones anteriores para recuperar ese dinero.",
-  "ar": "فاتتك السنوات الثلاث الماضية؟ لا يزال بإمكانك تقديم إقرارات سابقة أو تعديلها لاسترداد هذه الأموال.",
-  "zh": "過去三年錯過了嗎？您仍可報稅或修改過去的報稅表，取回這筆錢。",
-  "ur": "پچھلے تین سال چھوٹ گئے؟ آپ اب بھی پچھلے ریٹرنز فائل یا ان میں ترمیم کر سکتے ہیں تاکہ وہ رقم واپس حاصل کر سکیں۔",
-  "fr": "Vous avez raté les trois dernières années ? Vous pouvez encore déposer ou modifier des déclarations passées pour récupérer cet argent.",
-  "pl": "Pominąłeś(-ęłaś) ostatnie trzy lata? Nadal możesz złożyć lub skorygować wcześniejsze zeznania, aby odzyskać te pieniądze."
+ "Missed out in the past 3 years? You can still file or amend past returns to get that money back.": {
+  "es": "¿Se perdió los últimos 3 años? Todavía puede presentar o modificar declaraciones anteriores para recuperar ese dinero.",
+  "ar": "فاتتك السنوات الـ3 الماضية؟ لا يزال بإمكانك تقديم إقرارات سابقة أو تعديلها لاسترداد هذه الأموال.",
+  "zh": "過去3 年錯過了嗎？您仍可報稅或修改過去的報稅表，取回這筆錢。",
+  "ur": "پچھلے 3 سال چھوٹ گئے؟ آپ اب بھی پچھلے ریٹرنز فائل یا ان میں ترمیم کر سکتے ہیں تاکہ وہ رقم واپس حاصل کر سکیں۔",
+  "fr": "Vous avez raté les 3 dernières années ? Vous pouvez encore déposer ou modifier des déclarations passées pour récupérer cet argent.",
+  "pl": "Pominąłeś(-ęłaś) ostatnie 3 lata? Nadal możesz złożyć lub skorygować wcześniejsze zeznania, aby odzyskać te pieniądze."
  },
  "Answer a few quick questions to find out if there are tax credits or a refund you can claim.": {
   "es": "Responda unas preguntas rápidas para saber si hay créditos tributarios o un reembolso que pueda reclamar.",
@@ -2726,13 +2726,13 @@ window.I18N_DICT = {
   "fr": "Contactez un conseiller d’inscription de NYC Health <span>Et ensuite</span>",
   "pl": "Skontaktuj się z doradcą ds. rejestracji NYC Health <span>Co dalej</span>"
  },
- "An NYC Health enrollment counselor will call you within <strong>three business days (72 hours).</strong>": {
-  "es": "Un consejero de inscripción de NYC Health le llamará en un plazo de <strong>tres días hábiles (72 horas).</strong>",
-  "ar": "سيتصل بك مستشار تسجيل من NYC Health خلال <strong>ثلاثة أيام عمل (72 ساعة).</strong>",
-  "zh": "NYC Health 登記顧問將在<strong>三個工作天（72 小時）</strong>內致電給您。",
-  "ur": "NYC Health کا اندراج کاؤنسلر <strong>تین کاروباری دنوں (72 گھنٹے)</strong> کے اندر آپ کو کال کرے گا۔",
-  "fr": "Un conseiller d’inscription de NYC Health vous appellera dans un délai de <strong>trois jours ouvrables (72 heures).</strong>",
-  "pl": "Doradca ds. rejestracji NYC Health zadzwoni do Ciebie w ciągu <strong>trzech dni roboczych (72 godzin).</strong>"
+ "An NYC Health enrollment counselor will call you within <strong>3 business days (72 hours).</strong>": {
+  "es": "Un consejero de inscripción de NYC Health le llamará en un plazo de <strong>3 días hábiles (72 horas).</strong>",
+  "ar": "سيتصل بك مستشار تسجيل من NYC Health خلال <strong>3 أيام عمل (72 ساعة).</strong>",
+  "zh": "NYC Health 登記顧問將在<strong>3 個工作天（72 小時）</strong>內致電給您。",
+  "ur": "NYC Health کا اندراج کاؤنسلر <strong>3 کاروباری دنوں (72 گھنٹے)</strong> کے اندر آپ کو کال کرے گا۔",
+  "fr": "Un conseiller d’inscription de NYC Health vous appellera dans un délai de <strong>3 jours ouvrables (72 heures).</strong>",
+  "pl": "Doradca ds. rejestracji NYC Health zadzwoni do Ciebie w ciągu <strong>3 dni roboczych (72 godzin).</strong>"
  },
  "Step 1 of 3": {
   "ur": "مرحلہ 1 از 3",
@@ -2789,10 +2789,10 @@ window.I18N_DICT = {
   "fr": "Modifier Crédits d’impôt",
   "pl": "Edytuj Ulgi podatkowe"
  },
- "Save the numbers below in case you don’t hear back after three days. You can reach <span>OHIS Triage Team</span> <span>Monday to Friday, 9 a.m. to 4 p.m.</span>": {
-  "ur": "اگر تین دن بعد آپ کو جواب نہ ملے تو نیچے دیے گئے نمبر محفوظ کر لیں۔ آپ <span>OHIS Triage Team</span> سے <span>پیر تا جمعہ، صبح 9 بجے سے شام 4 بجے تک</span> رابطہ کر سکتے ہیں۔",
-  "fr": "Enregistrez les numéros ci-dessous au cas où vous n’auriez pas de réponse après trois jours. Vous pouvez joindre l’<span>OHIS Triage Team</span> <span>du lundi au vendredi, de 9 h à 16 h.</span>",
-  "pl": "Zapisz poniższe numery na wypadek, gdybyś nie otrzymał(-a) odpowiedzi po trzech dniach. Możesz skontaktować się z <span>OHIS Triage Team</span> <span>od poniedziałku do piątku, w godz. 9:00–16:00.</span>"
+ "Save the numbers below in case you don’t hear back after 3 days. You can reach <span>OHIS Triage Team</span> <span>Monday to Friday, 9 a.m. to 4 p.m.</span>": {
+  "ur": "اگر 3 دن بعد آپ کو جواب نہ ملے تو نیچے دیے گئے نمبر محفوظ کر لیں۔ آپ <span>OHIS Triage Team</span> سے <span>پیر تا جمعہ، صبح 9 بجے سے شام 4 بجے تک</span> رابطہ کر سکتے ہیں۔",
+  "fr": "Enregistrez les numéros ci-dessous au cas où vous n’auriez pas de réponse après 3 jours. Vous pouvez joindre l’<span>OHIS Triage Team</span> <span>du lundi au vendredi, de 9 h à 16 h.</span>",
+  "pl": "Zapisz poniższe numery na wypadek, gdybyś nie otrzymał(-a) odpowiedzi po 3 dniach. Możesz skontaktować się z <span>OHIS Triage Team</span> <span>od poniedziałku do piątku, w godz. 9:00–16:00.</span>"
  },
  "Edit Health insurance": {
   "ur": "ہیلتھ انشورنس میں ترمیم کریں",
@@ -3304,5 +3304,29 @@ window.I18N_DICT = {
   "ur": "(اختیاری)",
   "fr": "(facultatif)",
   "pl": "(opcjonalnie)"
+ },
+ "<a>File now⁠<svg/><span> (opens in new tab)</span></a> or amend your tax return for the relevant year(s). You can choose:": {
+  "es": "<a>Presentar ahora⁠<svg/><span> (se abre en una pestaña nueva)</span></a> o modificar su declaración de impuestos de los años correspondientes. Puede elegir:",
+  "ar": "<a>قدّم الآن⁠<svg/><span> (تفتح في علامة تبويب جديدة)</span></a> أو عدّل إقرارك الضريبي للسنة أو السنوات المعنية. يمكنك الاختيار:",
+  "zh": "<a>立即報稅⁠<svg/><span>（在新分頁開啟）</span></a> 或修改相關年度的報稅表。 您可以選擇：",
+  "ur": "<a>ابھی فائل کریں⁠<svg/><span> (نئے ٹیب میں کھلتا ہے)</span></a> یا متعلقہ سال(سالوں) کے لیے اپنے ٹیکس ریٹرن میں ترمیم کریں۔ آپ انتخاب کر سکتے ہیں:",
+  "fr": "<a>Déclarer maintenant⁠<svg/><span> (s’ouvre dans un nouvel onglet)</span></a> ou modifiez votre déclaration d’impôts pour la ou les années concernées. Vous pouvez choisir :",
+  "pl": "<a>Złóż teraz⁠<svg/><span> (otwiera się w nowej karcie)</span></a> lub skoryguj zeznanie podatkowe za odpowiednie lata. Możesz wybrać:"
+ },
+ "Based on your answers, you could get money back. It depends on a few details our partners at GetYourRefund can help you figure out.": {
+  "es": "Según sus respuestas, podría recibir dinero de vuelta. Depende de algunos detalles que nuestros socios de GetYourRefund pueden ayudarle a determinar.",
+  "ar": "بناءً على إجاباتك، قد تستردّ مبلغًا من المال. يعتمد ذلك على بعض التفاصيل التي يمكن لشركائنا في GetYourRefund مساعدتك في تحديدها.",
+  "zh": "根據您的回答，您可能可以拿回一筆錢。這取決於一些細節，我們的合作夥伴 GetYourRefund 可以協助您釐清。",
+  "ur": "آپ کے جوابات کی بنیاد پر، آپ کو رقم واپس مل سکتی ہے۔ یہ چند تفصیلات پر منحصر ہے جنہیں سمجھنے میں ہمارے شراکت دار GetYourRefund آپ کی مدد کر سکتے ہیں۔",
+  "fr": "D’après vos réponses, vous pourriez récupérer de l’argent. Cela dépend de quelques détails que nos partenaires de GetYourRefund peuvent vous aider à déterminer.",
+  "pl": "Na podstawie Twoich odpowiedzi możesz odzyskać część pieniędzy. Zależy to od kilku szczegółów, które nasi partnerzy z GetYourRefund pomogą Ci ustalić."
+ },
+ "Filing for free with NYC Health partner GetYourRefund will confirm exactly what you can get.": {
+  "es": "Presentar su declaración gratis con GetYourRefund, socio de NYC Health, confirmará exactamente lo que puede recibir.",
+  "ar": "سيؤكد لك تقديم إقرارك مجانًا عبر GetYourRefund، شريك NYC Health، المبلغ الدقيق الذي يمكنك الحصول عليه.",
+  "zh": "透過 NYC Health 合作夥伴 GetYourRefund 免費報稅，即可確認您確切能拿到多少。",
+  "ur": "NYC Health کے شراکت دار GetYourRefund کے ساتھ مفت فائل کرنے سے یہ تصدیق ہو جائے گی کہ آپ کو ٹھیک کتنی رقم مل سکتی ہے۔",
+  "fr": "Déclarer gratuitement avec GetYourRefund, partenaire de NYC Health, confirmera exactement ce que vous pouvez obtenir.",
+  "pl": "Bezpłatne złożenie zeznania z partnerem NYC Health, GetYourRefund, pokaże dokładnie, ile możesz otrzymać."
  }
 };

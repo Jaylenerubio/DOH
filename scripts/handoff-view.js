@@ -67,7 +67,7 @@
     'medicaid': {
       referral: function (d, date) {
         var site = document.querySelector('[data-site-name]'); var name = site ? site.textContent : 'your enrollment site';
-        return 'We asked an enrollment counselor at ' + name + ' to call you ' + (HI_TIME[d.time] || 'during the day') + ' about ' + (HI_NEED[d.need] || 'health insurance') + '. Sent ' + b(date) + '. Expect a call within ' + b('three business days (72 hours).');
+        return 'We asked an enrollment counselor at ' + name + ' to call you ' + (HI_TIME[d.time] || 'during the day') + ' about ' + (HI_NEED[d.need] || 'health insurance') + '. Sent ' + b(date) + '. Expect a call within ' + b('3 business days (72 hours).');
       },
       note: 'We\u2019ll also email you this site information so you can find it later.'
     },

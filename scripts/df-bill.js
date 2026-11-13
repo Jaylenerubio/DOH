@@ -1,5 +1,5 @@
 /* =========================================================================
-   Dollar For intake — "Tell us about the bill".
+   Dollar For intake — "Tell us about your bill".
    - Helper text is always shown in full.
    - Back returns to the previous step; "Save and continue" is a placeholder
      until the next step is built.

@@ -6,6 +6,7 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 
 Content changes (11/10 batch), placeholder translations in six languages, and layout fixes on top of v1.4. Translations are unreviewed until a translator signs off.
 
+- **Copy round (11/13):** profile support line now emails hartconnectorsupport@health.nyc.gov; Dollar For: "Tell us about your bill", new later-link note, step 3 "Most hospitals decide within 30 days.", sharing line removed; EITC likely/maybe pages rewritten; durations use numerals (3 years, 3 business days); SNAP "Need food now?" box is link only; SNAP apply/enroll step copy. Translations unreviewed.
 - **SNAP:** "None of the above" on the first page routes to the free in-person hand-off (`snap-notfit`); the second page is "Does text-based help work for you?"; new consent text with the Frontdoor Benefits privacy link; hand-off rebuilt as "Free in-person help is nearby".
 - **Energy discounts:** new program checklist (SNAP, HEAP, Medicaid, TANF, SNA, SSI, Lifeline, Direct Vendor, federal housing, veterans, other), note under eligible step 1, "Neither" goes straight to not-eligible, explanation sentence on the not-eligible page, utility order Con Edison, National Grid, Both, Neither.
 - **Tax credits:** new outcome pages and "Did you claim the EITC?" info page, IRS online account link, one-sentence likely-eligible copy.

@@ -47,7 +47,7 @@
       A11y.clearStepError(errorEl); A11y.clearGroupError(document.querySelector('.choice-list'));
       if (v === 'no') { window.location.href = 'df-ineligible.html'; return; }   /* → Need to resolve a medical bill? */
       try { sessionStorage.removeItem('nyc.outcome.hospital-bills'); } catch (e) {}   /* a Yes clears an earlier Not eligible */
-      window.location.href = 'df-bill.html';   /* → Tell us about the bill */
+      window.location.href = 'df-bill.html';   /* → Tell us about your bill */
     });
 
     if (back) {
