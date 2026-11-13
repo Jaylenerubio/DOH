@@ -2162,7 +2162,8 @@ body.menu-open { overflow: hidden; }
 
 /* Support contact line: 16px, email as an .ext-link with a 20px envelope in
    the link colour. Used on the dashboard, My profile and the code step. */
-.support-line { margin: var(--space-4) 0 0; font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); color: var(--color-text); overflow-wrap: anywhere; }
+.support-line { margin: -8px 0 0;   /* 12px column gap - 8px + 12px above the text inside the 44px link = 16px from the card to the words (44px tap target kept) */
+   font-family: var(--type-ui-16-family); font-size: var(--type-ui-16-size); line-height: var(--type-ui-16-line-height); color: var(--color-text); overflow-wrap: anywhere; }
 .support-mail { font-weight: inherit; display: inline-block; }   
 
 /* Languages: fonts that cover Arabic and Traditional Chinese. RTL itself comes from <html dir="rtl"> (set by scripts/i18n.js). */

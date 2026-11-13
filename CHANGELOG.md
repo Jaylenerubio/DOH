@@ -6,6 +6,7 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 
 Not part of the v1.4.1 tag.
 
+- **My profile:** the support line ("Email … to update or delete your profile.") sits 16px below the last card (was 24px). The email link keeps its 44px tap target.
 - **Translate-button flash:** the header's translate button no longer shows for a moment on My profile (and every other tool page) before disappearing. It is hidden from first paint (`styles/components.css`); `banner.js` still removes it.
 - **Header matches the landing page:** the "Official website" band and the logo bar on every tool page now use the landing page's left edge (16px phone, 32px tablet, 56px desktop, not the centered column), the same heights (40px band, 69px bar, 77px from 1024px), and the same logo sizes (76px under 1024px, 96px above). Moving from the landing page into the tool no longer shifts the header. The band's tap target is 40px tall (was 46px). Checked on 41 tool pages at 320, 390, 768 and 1280px; the three pages without a header are unchanged.
 - **Validation on phones:** a failed Continue now scrolls the first control that needs an answer (for example the "I agree" checkbox on the consent page) into view above the pinned bar, with its "Required" message, instead of leaving it off screen (`A11y.queueErrorScroll`).
