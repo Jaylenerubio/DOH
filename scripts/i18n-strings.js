@@ -2574,13 +2574,13 @@ window.I18N_DICT = {
   "fr": "Si vous ne l’avez pas demandé",
   "pl": "Jeśli nie ubiegałeś(-aś) się o ulgę"
  },
- "If you qualified for tax credits in past years, you can still get this money. Select File now to amend your return(s) for free with GetYourRefund, an NYC Health partner.": {
-  "es": "Si cumplía los requisitos para créditos tributarios en años anteriores, aún puede recibir ese dinero. Seleccione Presentar ahora para modificar su(s) declaración(es) gratis con GetYourRefund, socio de NYC Health.",
-  "ar": "إذا كنت مؤهلًا للحصول على ائتمانات ضريبية في سنوات سابقة، فلا يزال بإمكانك الحصول على هذه الأموال. اختر «قدّم الآن» لتعديل إقراراتك مجانًا مع GetYourRefund، شريكة NYC Health.",
-  "zh": "如果您在過去幾年符合稅額抵免資格，仍可取得這筆錢。請選擇「立即報稅」，透過 NYC Health 合作夥伴 GetYourRefund 免費修改您的報稅表。",
-  "ur": "اگر آپ پچھلے سالوں میں ٹیکس کریڈٹ کے اہل تھے تو آپ اب بھی یہ رقم حاصل کر سکتے ہیں۔ NYC Health کے شراکت دار GetYourRefund کے ساتھ مفت اپنے ریٹرن میں ترمیم کرنے کے لیے «ابھی فائل کریں» منتخب کریں۔",
-  "fr": "Si vous remplissiez les conditions pour des crédits d’impôt les années précédentes, vous pouvez encore obtenir cet argent. Sélectionnez Déclarer maintenant pour modifier gratuitement votre ou vos déclarations avec GetYourRefund, partenaire de NYC Health.",
-  "pl": "Jeśli w poprzednich latach spełniałeś(-aś) warunki do ulg podatkowych, nadal możesz otrzymać te pieniądze. Wybierz Złóż teraz, aby bezpłatnie skorygować zeznania z GetYourRefund, partnerem NYC Health."
+ "If you qualified for tax credits in past years, you can still get this money. <a>File now⁠<svg/><span> (opens in new tab)</span></a> to amend your return(s) for free with GetYourRefund, an NYC Health partner.": {
+  "es": "Si cumplía los requisitos para créditos tributarios en años anteriores, aún puede recibir ese dinero. <a>Presentar ahora⁠<svg/><span> (se abre en una pestaña nueva)</span></a> para modificar su(s) declaración(es) gratis con GetYourRefund, socio de NYC Health.",
+  "ar": "إذا كنت مؤهلًا للحصول على ائتمانات ضريبية في سنوات سابقة، فلا يزال بإمكانك الحصول على هذه الأموال. <a>قدّم الآن⁠<svg/><span> (تفتح في علامة تبويب جديدة)</span></a> لتعديل إقراراتك مجانًا مع GetYourRefund، شريكة NYC Health.",
+  "zh": "如果您在過去幾年符合稅額抵免資格，仍可取得這筆錢。<a>立即報稅⁠<svg/><span>（在新分頁開啟）</span></a>，透過 NYC Health 合作夥伴 GetYourRefund 免費修改您的報稅表。",
+  "ur": "اگر آپ پچھلے سالوں میں ٹیکس کریڈٹ کے اہل تھے تو آپ اب بھی یہ رقم حاصل کر سکتے ہیں۔ NYC Health کے شراکت دار GetYourRefund کے ساتھ مفت اپنے ریٹرن میں ترمیم کرنے کے لیے <a>ابھی فائل کریں⁠<svg/><span> (نئے ٹیب میں کھلتا ہے)</span></a>۔",
+  "fr": "Si vous remplissiez les conditions pour des crédits d’impôt les années précédentes, vous pouvez encore obtenir cet argent. <a>Déclarer maintenant⁠<svg/><span> (s’ouvre dans un nouvel onglet)</span></a> pour modifier gratuitement votre ou vos déclarations avec GetYourRefund, partenaire de NYC Health.",
+  "pl": "Jeśli w poprzednich latach spełniałeś(-aś) warunki do ulg podatkowych, nadal możesz otrzymać te pieniądze. <a>Złóż teraz⁠<svg/><span> (otwiera się w nowej karcie)</span></a>, aby bezpłatnie skorygować zeznania z GetYourRefund, partnerem NYC Health."
  },
  "<strong>FileMyself:</strong> File on your own and chat with an expert if you need it.": {
   "es": "<strong>FileMyself:</strong> Presente su declaración por su cuenta y converse con un experto si lo necesita.",
