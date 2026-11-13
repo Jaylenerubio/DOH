@@ -107,6 +107,7 @@
       }
       this.setErrorText(msg, message || 'Required');
       msg.hidden = false;
+      this.queueErrorScroll();
       control.classList.add('is-invalid');
       if (control.tagName === 'INPUT' || control.tagName === 'SELECT' || control.tagName === 'TEXTAREA') control.setAttribute('aria-invalid', 'true');
       control.setAttribute('aria-describedby', msg.id);
@@ -119,6 +120,34 @@
         });
       }
       return msg;
+    },
+    /* After a failed Continue: scroll the first control with an error (and its message) into the part of the
+       screen not covered by the pinned footer, so the person sees what is required. One scroll per press, even
+       when several controls report at once. Does nothing if it is already fully in view. */
+    queueErrorScroll: function () {
+      if (this._scrollQ) return;
+      var self = this;
+      this._scrollQ = window.setTimeout(function () {
+        self._scrollQ = 0;
+        var first = null, top = Infinity;
+        Array.prototype.forEach.call(document.querySelectorAll('.is-invalid, [aria-invalid="true"]'), function (el) {
+          var r = el.getBoundingClientRect();
+          if (!r.width && !r.height) return;
+          var t = r.top + window.pageYOffset;
+          if (t < top) { top = t; first = el; }
+        });
+        if (!first) return;
+        var footer = document.querySelector('.step__footer, .lang-page__footer');
+        var visibleBottom = window.innerHeight - (footer ? footer.getBoundingClientRect().height : 0);
+        var r = first.getBoundingClientRect(), bottom = r.bottom;
+        var msg = first.nextElementSibling;
+        if (msg && msg.classList && msg.classList.contains('field__error') && !msg.hidden) bottom = msg.getBoundingClientRect().bottom;
+        if (r.top >= 0 && bottom <= visibleBottom) return;
+        var offset = Math.max(16, (visibleBottom - (bottom - r.top)) / 2);
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        try { window.scrollTo({ top: Math.max(0, r.top + window.pageYOffset - offset), behavior: reduce ? 'auto' : 'smooth' }); }
+        catch (e) { window.scrollTo(0, Math.max(0, r.top + window.pageYOffset - offset)); }
+      }, 0);
     },
     clearGroupError: function (control, anchor) {
       if (!control) return;

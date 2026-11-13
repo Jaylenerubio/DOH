@@ -45,7 +45,7 @@
       if (!consent.checked) {
         A11y.groupError(consent.closest('.consent-tile, .checkbox') || consent, 'Required');
         A11y.clearStepError(errorEl);
-        consent.focus();
+        consent.focus({ preventScroll: true });   /* A11y.groupError scrolls the checkbox into view */
         return;
       }
       A11y.clearStepError(errorEl); A11y.clearGroupError(consent.closest('.consent-tile, .checkbox') || consent);
