@@ -198,7 +198,7 @@
       restoring = true; applySelection(i); restoring = false;   // picking must not filter the list to the picked item
       if (input) filter('');
       closeList(true);
-      if (inline && input && window.matchMedia && window.matchMedia('(pointer: coarse)').matches) input.blur();   /* phone: keyboard away after a pick */
+      if (input && window.matchMedia && window.matchMedia('(pointer: coarse)').matches) input.blur();   /* phone: keyboard away after a pick */
       if (opts.onChange) opts.onChange(options[i].getAttribute('data-value'), labelOf(options[i]));
     }
 
@@ -230,8 +230,8 @@
         /* Tapping the field or its arrow while the list is open closes it (and puts the phone keyboard away).
            With a mouse, clicking into the text still just places the cursor. */
         var coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
-        if (open && openAtDown && (e.target !== input || (inline && coarse))) { closeList(false); if (inline && input.blur) input.blur(); return; }
-        if (open && e.target !== input) { closeList(false); if (inline && input.blur) input.blur(); return; }
+        if (open && openAtDown && (e.target !== input || coarse)) { closeList(false); if (input.blur) input.blur(); return; }
+        if (open && e.target !== input) { closeList(false); if (input.blur) input.blur(); return; }
         if (e.target !== input) { input.focus(); }
         if (!open) openList();
       });

@@ -36,7 +36,6 @@
 
     var combo = window.Combobox.create(comboRoot, {
       searchable: true,
-      inline: true,   /* list under the field in the page flow: never covers the field, even with the phone keyboard open */
       onChange: function (value) {
         trigger.removeAttribute('aria-invalid'); A11y.clearStepError(errorEl);   // Continue is always enabled
         if (trigger) trigger.removeAttribute('aria-invalid');
