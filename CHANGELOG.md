@@ -6,6 +6,7 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 
 Not part of the v1.4.1 tag.
 
+- Translated pages no longer flash English before switching language or direction: `scripts/i18n-gate.js` (in the head of the 39 translated pages) hides the page until `i18n-dom.js` has applied the translation and the language's font has loaded, with a 2.5-second failsafe. English pages are unaffected.
 - Every page, tool and landing, has the NYC favicon (`assets/logo/`) and link-preview tags (`assets/social/share.png`). `og:image` is an absolute address on `hart-connector-v2.vercel.app`; change it when the production domain is known. The share image is a placeholder.
 - Removed the stray `undefined/` folder. The landing footer's Privacy policy link stays unwired until a policy page exists.
 - `home.html` and `index.html` redirect to the new HART landing page in `landing/` (11 languages; its buttons open `preferred-language.html` and `signin.html`; the language picked carries into the tool). The tool uses the landing page's SVG logo (`assets/nyc-health-stacked.svg` replaces the PNG). `preferred-language.html` notes that Russian, Bengali, Haitian Creole and Korean are not translated in the tool. Landing translations are unreviewed; Russian, Bengali, Haitian Creole and Korean are machine drafts.

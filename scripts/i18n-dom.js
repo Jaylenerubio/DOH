@@ -137,6 +137,7 @@ window.I18nDom = (function () {
   function start() {
     if (lang() === 'en') return;
     run(document);
+    if (window.I18nGate) I18nGate.reveal();   /* scripts/i18n-gate.js keeps the page hidden until now */
     obs = new MutationObserver(function (recs) {
       obs.disconnect();
       var seen = [];

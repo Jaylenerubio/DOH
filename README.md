@@ -48,7 +48,7 @@ Program order, labels, descriptions, entry pages and partner application URLs li
 | `assets/` | Logo (SVG), icons, illustrations. |
 | `accessibility-conformance-summary.html` | WCAG 2.2 AA conformance notes, automated-scan results, known gaps. |
 
-Runtime copy (dashboard status sentences, language list) is in the scripts above; everything else is in the HTML.
+Runtime copy (dashboard status sentences, language list) is in the scripts above; `scripts/i18n-gate.js` holds each page hidden until its translation is applied, to avoid a flash of English (prototype only); everything else is in the HTML.
 
 ### Landing page
 
@@ -110,7 +110,8 @@ Programs with a result come first, then the rest, under the two-tone "Explore pr
 - Enrollment-site names, addresses, hours and phone numbers (`scripts/hi-sites.js`).
 - "Connect with a HART employee" link on No match cards: TBD, left out.
 - Program names and descriptions: pending JL content review.
-- No translated strings; no skip-to-content link (see the conformance summary).
+- Translations (Spanish, Arabic, Traditional Chinese, Urdu, French, Polish) are unreviewed placeholders; a translator must review every string. Russian, Bengali, Haitian Creole and Korean are listed but not translated in the tool.
+- No skip-to-content link (see the conformance summary).
 
 ## Conventions
 
