@@ -17,10 +17,8 @@
 .qgroup__list .choice-card { min-height: 56px; padding: var(--space-2); justify-content: flex-start; text-align: start; }
 /* Two-up row (Morning / Evening) hugs too, for consistency. */
 .qgroup__row { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: 12px; }
-.qgroup__row .choice-card { flex: 1 1 0; width: auto; min-width: max-content; max-width: 100%; white-space: nowrap; min-height: 56px; padding: var(--space-1) var(--space-2); }  /* phones: one line per label; chips share the row at equal widths and drop to the next row only when a label would not fit */
-@media (min-width: 600px) { .qgroup__row .choice-card { flex: 0 0 auto; min-width: 0; } }  /* wider screens: content-width chips */
+.qgroup__row .choice-card { flex: 1 1 0; width: auto; min-width: max-content; max-width: 100%; white-space: nowrap; min-height: 56px; padding: var(--space-1) var(--space-2); }  /* one line per label; chips share the row at equal widths (all screen sizes) and drop to the next row only when a label would not fit */
 /* Chips: square-cornered cards sharing the row at equal widths; a chip wraps
    to the next row only when its label would otherwise truncate. */
 .qgroup__chips { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: 12px; }
 .qgroup__chips .choice-card { flex: 1 1 100%; width: auto; max-width: 100%; min-height: 56px; padding: var(--space-1) var(--space-2); justify-content: flex-start; text-align: start; }  /* long labels: one full-width card per row, edges aligned */
-@media (min-width: 600px) { .qgroup__chips .choice-card { flex: 0 1 auto; } }  /* wider screens: content-width chips that flow across the row, like the Yes / No chips */
