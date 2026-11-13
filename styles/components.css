@@ -105,6 +105,11 @@ body {
 /* =========================================================================
    Global navigation — top banner + service nav. Shared by every screen.
    ========================================================================= */
+/* Gutter for the banner and nav bands: the same left edge as the HART landing page (16 / 32 / 56px).
+   They bleed edge to edge and are not capped like the page body below. */
+:root { --nav-gutter: 16px; }
+@media (min-width: 720px)  { :root { --nav-gutter: 32px; } }
+@media (min-width: 1024px) { :root { --nav-gutter: 56px; } }
 .top-banner {
   flex: 0 0 auto;
   background: var(--color-neutral-100);
@@ -113,22 +118,23 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 12px var(--page-margin-x);
+  padding: 8px var(--nav-gutter);        /* band is 40px tall, same as the HART landing page */
   font-size: var(--type-ui-14-size);
-  line-height: var(--type-ui-14-line-height);
+  line-height: 21px;
   color: var(--color-text);
 }
 .top-banner__caret { flex: 0 0 auto; transition: transform 160ms var(--ease-out); }
 .top-banner__toggle {
   display: inline-flex; align-items: center; gap: 6px;
-  margin: -12px calc(-1 * var(--page-margin-x)); padding: 12px var(--page-margin-x);   /* full-band tap target */
+  box-sizing: border-box; min-height: 40px;
+  margin: -8px calc(-1 * var(--nav-gutter)); padding: 8px var(--nav-gutter);   /* full-band tap target */
   border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer;
 }
 .top-banner__toggle:focus-visible { outline: var(--focus-ring); outline-offset: -3px; }
 .top-banner__toggle[aria-expanded="true"] .top-banner__caret { transform: rotate(180deg); }
 .top-banner__panel { background: var(--color-neutral-100); border-top: 1px solid var(--color-neutral-300); }   /* same grey as the band, divider under the toggle */
 .top-banner__panel[hidden] { display: none; }
-.top-banner__panel-inner { padding: var(--space-2) var(--page-margin-x) var(--space-3); }
+.top-banner__panel-inner { padding: var(--space-2) var(--nav-gutter) var(--space-3); }
 .top-banner__block + .top-banner__block { margin-top: var(--space-2); }
 .top-banner__heading {
   margin: 0 0 4px;
@@ -148,10 +154,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 60px;
-  padding: 12px var(--page-margin-x);   /* 44px logo; 44px outlined translate button + 8px breathing room each side */
+  box-sizing: border-box;
+  min-height: 68px;                     /* + 1px border = 69px, same as the HART landing page */
+  padding: 12px var(--nav-gutter);
 }
-.site-nav__logo { display: block; height: 44px; width: auto; }
+/* Logo and bar match the landing page: 76px logo under 1024px (64px under 360px), 96px with a 76px bar from 1024px. */
+.site-nav__logo { display: block; width: 76px; height: auto; }
+@media (max-width: 359.98px) { .site-nav__logo { width: 64px; } }
+@media (min-width: 1024px) {
+  .site-nav__inner { min-height: 76px; padding-block: 16px; }
+  .site-nav__logo { width: 96px; }
+}
 /* NOTE: a translate / language icon sits left of the hamburger in the full
    design. Intentionally omitted for now — add a .site-nav__lang button here
    when localization is in scope. */
@@ -725,7 +738,6 @@ body {
    inside them — logo, actions, page body, buttons — sits in a centred column
    capped at 820px (iPad portrait), so tablet and desktop share one layout. */
 @media (min-width: 768px) {
-  .top-banner__inner, .top-banner__panel-inner, .site-nav__inner,
   .step__progress, .step__body, .step__footer > *, .lang-page__body, .lang-page__footer > *,
   .interstitial { width: 100%; max-width: 820px; margin-inline-start: auto; margin-inline-end: auto; }
 }
