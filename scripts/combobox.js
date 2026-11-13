@@ -224,8 +224,13 @@
 
     // ---- wiring -----------------------------------------------------------
     if (input) {
+      var openAtDown = false;   /* was the list already open when this tap began? (the tap that opens it must not also close it) */
+      trigger.addEventListener('pointerdown', function () { openAtDown = open; });
       trigger.addEventListener('click', function (e) {
-        /* Tapping the arrow while the list is open closes it (and puts the phone keyboard away). */
+        /* Tapping the field or its arrow while the list is open closes it (and puts the phone keyboard away).
+           With a mouse, clicking into the text still just places the cursor. */
+        var coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+        if (open && openAtDown && (e.target !== input || (inline && coarse))) { closeList(false); if (inline && input.blur) input.blur(); return; }
         if (open && e.target !== input) { closeList(false); if (inline && input.blur) input.blur(); return; }
         if (e.target !== input) { input.focus(); }
         if (!open) openList();
