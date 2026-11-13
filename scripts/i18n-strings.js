@@ -1522,14 +1522,6 @@ window.I18N_DICT = {
   "ar": "برامجك — NYC Health",
   "zh": "您的計劃 — NYC Health"
  },
- "Your situation": {
-  "es": "Su situación",
-  "ar": "وضعك",
-  "zh": "您的情況",
-  "ur": "آپ کی صورتحال",
-  "fr": "Votre situation",
-  "pl": "Twoja sytuacja"
- },
  "Most hospitals decide within 30 days.": {
   "es": "La mayoría de los hospitales decide en un plazo de 30 días.",
   "ar": "تقرر معظم المستشفيات خلال 30 يومًا.",

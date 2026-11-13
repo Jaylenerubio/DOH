@@ -137,7 +137,7 @@
     }
     if (text) text.innerHTML = 'You submitted this application. A tenant specialist <br class="br-tablet">will contact you in 2-3 business days.';
     if (progress) progress.hidden = true;
-    if (prompt) prompt.textContent = 'Your situation';
+    if (prompt) prompt.textContent = 'Are any of the following situations happening to you?';
     renderReadOnly();
 
     if (save) save.hidden = true;

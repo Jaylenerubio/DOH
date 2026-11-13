@@ -59,7 +59,7 @@
       r.innerHTML = '<span class="review-read__label"></span><span class="review-read__value"></span>';
       field.insertBefore(r, field.firstChild);
     }
-    var lab = fieldLabel(field) || (field.classList.contains('tsu-review__answers') ? 'Your situation' : '');
+    var lab = fieldLabel(field) || (field.classList.contains('tsu-review__answers') ? 'Are any of the following situations happening to you?' : '');
     if (field.hasAttribute('data-show-optional') && field.querySelector('.field__optional')) lab += ' (optional)';   /* keep the optional cue in the read view */
     r.querySelector('.review-read__label').textContent = lab;
     var v = fieldValue(field);
