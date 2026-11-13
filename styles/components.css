@@ -2189,3 +2189,8 @@ bdi { white-space: nowrap; }   /* brand names and addresses stay in one piece in
 /* Language step: prototype-only note for languages the prototype doesn't translate */
 .lang-note { margin: 12px 0 0; max-width: 65ch; font-size: 14px; line-height: 20px; color: var(--color-text-secondary); }
 .lang-note[hidden] { display: none; }
+
+/* The header translate button is baked into every page's markup, but banner.js removes it on every page except the
+   retired home.html / index.html (the language picker lives on the landing page). Hide it from first paint so it
+   never flashes before the script runs (seen on My profile). */
+.site-nav .site-nav__translate { display: none; }
