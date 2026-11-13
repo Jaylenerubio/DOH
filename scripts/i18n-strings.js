@@ -3312,5 +3312,21 @@ window.I18N_DICT = {
   "ur": "NYC Health کے شراکت دار GetYourRefund کے ساتھ مفت فائل کرنے سے یہ تصدیق ہو جائے گی کہ آپ کو ٹھیک کتنی رقم مل سکتی ہے۔",
   "fr": "Déclarer gratuitement avec GetYourRefund, partenaire de NYC Health, confirmera exactement ce que vous pouvez obtenir.",
   "pl": "Bezpłatne złożenie zeznania z partnerem NYC Health, GetYourRefund, pokaże dokładnie, ile możesz otrzymać."
+ },
+ "Frontdoor Benefits can help you get your SNAP benefits": {
+  "es": "Frontdoor Benefits puede ayudarle a recibir sus beneficios de SNAP",
+  "ar": "يمكن لـ Frontdoor Benefits مساعدتك في الحصول على مزايا SNAP",
+  "zh": "Frontdoor Benefits 可以協助您取得 SNAP 福利",
+  "ur": "Frontdoor Benefits SNAP کے فوائد حاصل کرنے میں آپ کی مدد کر سکتا ہے",
+  "fr": "Frontdoor Benefits peut vous aider à obtenir vos prestations SNAP",
+  "pl": "Frontdoor Benefits pomoże Ci otrzymać świadczenia SNAP"
+ },
+ "Frontdoor Benefits can help you keep your SNAP benefits": {
+  "es": "Frontdoor Benefits puede ayudarle a mantener sus beneficios de SNAP",
+  "ar": "يمكن لـ Frontdoor Benefits مساعدتك في الاحتفاظ بمزايا SNAP",
+  "zh": "Frontdoor Benefits 可以協助您保有 SNAP 福利",
+  "ur": "Frontdoor Benefits SNAP کے فوائد برقرار رکھنے میں آپ کی مدد کر سکتا ہے",
+  "fr": "Frontdoor Benefits peut vous aider à conserver vos prestations SNAP",
+  "pl": "Frontdoor Benefits pomoże Ci zachować świadczenia SNAP"
  }
 };
