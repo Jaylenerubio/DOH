@@ -6,6 +6,7 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 
 Not part of the v1.4.1 tag.
 
+- **Phones:** the Back / Continue bar (and the hand-off pages' action buttons) now stays pinned to the bottom of the visible screen under 768px, above the browser's own bottom toolbar, instead of sitting at the end of a long page where the toolbar could cover it. It is sticky, so it never hides the last lines of content. Tablet and desktop are unchanged. Tested at 320, 375 and 820px across 16 pages; not yet checked on a real iPhone.
 - README rewritten for the vendor handoff: start-here list, how the landing page and the tool fit together, the six programs (SNAP added), the current flow and the translation setup. Removed `scripts/landing.js`, the old landing page's rotating hero word, which nothing used.
 - Translated pages no longer flash English before switching language or direction: `scripts/i18n-gate.js` (in the head of the 39 translated pages) hides the page until `i18n-dom.js` has applied the translation and the language's font has loaded, with a 2.5-second failsafe. English pages are unaffected.
 - Every page, tool and landing, has the NYC favicon (`assets/logo/`) and link-preview tags (`assets/social/share.png`). `og:image` is an absolute address on `hart-connector-v2.vercel.app`; change it when the production domain is known. The share image is a placeholder.

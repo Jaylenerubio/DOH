@@ -764,6 +764,14 @@ body {
   color: var(--color-text-secondary);
 }
 .step__footer { flex: 0 0 auto; }
+/* Phones: the Back / Continue bar stays pinned to the bottom of the visible screen, above the
+   browser's own bottom toolbar, instead of sitting at the end of a long page where the toolbar
+   can cover it. It is sticky (in flow), so it never hides the last lines of the page, and
+   scroll-padding keeps a focused field from landing underneath it. */
+@media (max-width: 767px) {
+  .step__footer, .lang-page__footer { position: sticky; bottom: 0; z-index: 20; }
+  html { scroll-padding-bottom: 120px; }
+}
 .step__actions {
   display: flex;
   gap: var(--space-1);                    /* 8px between Back and Continue */
