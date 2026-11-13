@@ -2,11 +2,9 @@
 
 One entry per drop. Newest first. Dates are the day the drop was tagged.
 
-## v1.4.1 Content and translations — 2026-11-13
+## v1.4.2 Landing page and mobile QA — 2026-11-13
 
-Content changes (11/10 batch), placeholder translations in six languages, layout fixes on top of v1.4, and the HART landing page with mobile QA fixes. Translations are unreviewed until a translator signs off.
-
-**Landing page and mobile QA (11/13)**
+Not part of the v1.4.1 tag.
 
 - **Validation on phones:** a failed Continue now scrolls the first control that needs an answer (for example the "I agree" checkbox on the consent page) into view above the pinned bar, with its "Required" message, instead of leaving it off screen (`A11y.queueErrorScroll`).
 - **Hospital bills:** Continue without an answer shows "Select an answer to continue" under the Yes / No cards (it was just above them) and the page scrolls so the cards and the message are both in view above the pinned bar. A small change; the page already scrolled to the message.
@@ -18,6 +16,10 @@ Content changes (11/10 batch), placeholder translations in six languages, layout
 - Every page, tool and landing, has the NYC favicon (`assets/logo/`) and link-preview tags (`assets/social/share.png`). `og:image` is an absolute address on `hart-connector-v2.vercel.app`; change it when the production domain is known. The share image is a placeholder.
 - Removed the stray `undefined/` folder. The landing footer's Privacy policy link stays unwired until a policy page exists.
 - `home.html` and `index.html` redirect to the new HART landing page in `landing/` (11 languages; its buttons open `preferred-language.html` and `signin.html`; the language picked carries into the tool). The tool uses the landing page's SVG logo (`assets/nyc-health-stacked.svg` replaces the PNG). `preferred-language.html` notes that Russian, Bengali, Haitian Creole and Korean are not translated in the tool. Landing translations are unreviewed; Russian, Bengali, Haitian Creole and Korean are machine drafts.
+
+## v1.4.1 Content and translations — 2026-11-13
+
+Content changes (11/10 batch), placeholder translations in six languages, and layout fixes on top of v1.4. Translations are unreviewed until a translator signs off.
 
 - **Copy round (11/13):** profile support line now emails hartconnectorsupport@health.nyc.gov; Dollar For: "Tell us about your bill", new later-link note, step 3 "Most hospitals decide within 30 days.", sharing line removed; EITC likely/maybe pages rewritten; durations use numerals (3 years, 3 business days); SNAP "Need food now?" box is link only; SNAP apply/enroll step copy. Translations unreviewed.
 - **Energy discounts (11/13):** the EAP "Start your application" link goes to the BEA staging start link (`https://staging.nyc-bea.navateam.com/start`; the vendor swaps in the production link at launch); step 3 reads "Once approved, you'll receive the EAP discount within two billing cycles."; the utility chips fill the row at equal widths from 600px up.
@@ -98,6 +100,7 @@ Self-service intake and sign-in return on top of v1.3. Translations (Spanish, Ar
 - Self-service: email is optional at intake (contact and check-your-information pages show "Email (optional)" with grey text); the CHW channel still requires it. Welcome page after verification breaks as "Welcome to the / HART Connector."
 - Combobox: restoring a saved choice no longer opens the list; picking an option no longer reopens it filtered to that one option, so the language can be changed (preferred-language and CHW language pages).
 - `review-edit.js` skips `.review-card[data-readonly]`.
+
 
 ## v1.3 Save & Continue — 2026-10-21
 
