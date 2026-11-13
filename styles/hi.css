@@ -23,3 +23,4 @@
    to the next row only when its label would otherwise truncate. */
 .qgroup__chips { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: 12px; }
 .qgroup__chips .choice-card { flex: 1 1 100%; width: auto; max-width: 100%; min-height: 56px; padding: var(--space-1) var(--space-2); justify-content: flex-start; text-align: start; }  /* long labels: one full-width card per row, edges aligned */
+@media (min-width: 600px) { .qgroup__chips .choice-card { flex: 0 1 auto; } }  /* wider screens: content-width chips that flow across the row, like the Yes / No chips */
