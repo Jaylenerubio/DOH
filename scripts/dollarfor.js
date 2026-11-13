@@ -43,7 +43,13 @@
 
     cont.addEventListener('click', function () {
       var v = store ? store.get('hospitalBill') : '';
-      if (!v) { A11y.stepError(errorEl, 'Select an answer to continue', cards[0]); return; }
+      if (!v) {
+        /* Message sits under the Yes / No cards and the page scrolls to them (A11y.queueErrorScroll), not to the top of the page. */
+        A11y.clearStepError(errorEl);
+        A11y.groupError(document.querySelector('.choice-list'), 'Select an answer to continue');
+        cards[0].focus({ preventScroll: true });
+        return;
+      }
       A11y.clearStepError(errorEl); A11y.clearGroupError(document.querySelector('.choice-list'));
       if (v === 'no') { window.location.href = 'df-ineligible.html'; return; }   /* → Need to resolve a medical bill? */
       try { sessionStorage.removeItem('nyc.outcome.hospital-bills'); } catch (e) {}   /* a Yes clears an earlier Not eligible */
