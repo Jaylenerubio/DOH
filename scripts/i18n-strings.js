@@ -943,9 +943,9 @@ window.I18N_DICT = {
   "fr": "Les sites officiels utilisent .gov",
   "pl": "Oficjalne strony używają domeny .gov"
  },
- "Once you’re approved, you’ll receive the EAP discount within two billing cycles.": {
-  "es": "Una vez que lo aprueben, recibirá el descuento del EAP en un plazo de dos ciclos de facturación.",
-  "ar": "بعد الموافقة عليك، ستحصل على خصم EAP خلال دورتَي فوترة.",
+ "Once approved, you’ll receive the EAP discount within two billing cycles.": {
+  "es": "Una vez aprobado, recibirá el descuento del EAP en un plazo de dos ciclos de facturación.",
+  "ar": "بعد الموافقة، ستحصل على خصم EAP خلال دورتَي فوترة.",
   "zh": "一旦獲批，您將在兩個帳單週期內收到 EAP 折扣。",
   "ur": "منظوری کے بعد آپ کو دو بلنگ سائیکلز کے اندر EAP رعایت مل جائے گی۔",
   "fr": "Une fois approuvé(e), vous recevrez la réduction EAP dans un délai de deux cycles de facturation.",
@@ -1530,13 +1530,13 @@ window.I18N_DICT = {
   "fr": "La plupart des hôpitaux décident dans un délai de 30 jours.",
   "pl": "Większość szpitali podejmuje decyzję w ciągu 30 dni."
  },
- "You’ll need:": {
-  "es": "Necesitará:",
-  "ar": "ستحتاج إلى:",
-  "zh": "您需要準備：",
-  "ur": "آپ کو درکار ہوگا:",
-  "fr": "Vous aurez besoin de :",
-  "pl": "Będziesz potrzebować:"
+ "You’ll need proof of income, like:": {
+  "es": "Necesitará comprobante de ingresos, como:",
+  "ar": "ستحتاج إلى إثبات دخل، مثل:",
+  "zh": "您需要準備收入證明，例如：",
+  "ur": "آپ کو آمدنی کا ثبوت درکار ہوگا، جیسے:",
+  "fr": "Vous aurez besoin d’un justificatif de revenus, par exemple :",
+  "pl": "Będziesz potrzebować potwierdzenia dochodów, na przykład:"
  },
  "You’re eligible for the Energy Affordability Program (EAP)": {
   "es": "Usted es elegible para el Programa de Asequibilidad de Energía (EAP)",
