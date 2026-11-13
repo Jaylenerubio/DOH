@@ -1,18 +1,40 @@
-# NYC Health and Affordability Connector — prototype
+# NYC HART Connector — prototype
 
-Static HTML/CSS/JS prototype of the Connector: a screening tool that checks whether a New Yorker may qualify for five programs and hands them to the right application or referral. This repository is the design specification for the production build — the pages, copy, states, and interactions are the reference; the code is not meant to be reused as-is.
+Static HTML/CSS/JS prototype of the NYC Health HART Connector: a screening tool that checks whether a New Yorker may qualify for six programs and hands them to the right application or referral. This repository is the design specification for the production build. The pages, copy, states and interactions are the reference; the code is not meant to be reused as-is. Where this repository, the landing page package, Figma or any other document disagree, **the prototype wins**.
 
-No build step. No dependencies. Serve the folder (`npx serve .`) and open `/`; the landing page loads in a way that opening files directly (`file://`) does not support. The deployed copy on Vercel uses `vercel.json` (clean URLs).
+**Live prototype:** https://hart-connector-v2.vercel.app/home
 
-## Release: v1.3 Save & Continue
+## Start here
 
-A HART employee (CHW) starts the client's record in the Blooming Health CRM; the client finishes at home. This branch has **no intake or account-creation pages**. The public self-service flow (landing, programs, privacy, contact, account created, "Starting [program]") is on branch `v1.4-Self-service`.
+1. This README, then `CHANGELOG.md` (what each release changed, and the QA guide with the test cases).
+2. `accessibility-conformance-summary.html` (WCAG 2.2 AA notes, scan results, known gaps) and `COMPONENTS.md` (component inventory).
+3. Run it: there is no build step and no dependencies. Serve the folder (`npx serve .`) and open `/`. Opening files directly (`file://`) does not work for the landing page.
+4. "Placeholders the production build must replace" (below) lists every stand-in value.
+
+## Two deliverables, one set of rules
+
+The HART Connector is delivered as two parts:
+
+| Part | Delivered as | How to implement |
+|---|---|---|
+| Landing page | `HART landing page.zip` (its own folder, build and handoff documents) | Port it exactly. Follow its README and `landing-dev-handoff.html`; use the generated React component as is. |
+| Tool (this repository) | This repository and the live prototype | Reference specification. Rebuild the pages, copy, states and interactions in your own stack. |
+
+- `landing/` in this repository is a **preview copy** so the two parts connect on the live link. Deploy the landing page from the zip, not from this folder.
+- The landing buttons open `preferred-language.html` ("Get started", header button) and `signin.html` ("Pick up where you left off").
+- The landing language picker passes `?lang=<code>`; the tool stores it and removes it from the URL (see "Landing page" below). Keep this behavior.
+- Both parts share the logo, favicon and link-preview image (`assets/logo/`, `assets/social/share.png`). The share image is a placeholder, and `og:image` is an absolute address on `hart-connector-v2.vercel.app` on all 55 pages: change it when the production domain is known.
+- Eleven languages are listed: English, Spanish, Chinese (Traditional), Russian, Bengali, Haitian Creole, Korean, Arabic, Urdu, French, Polish. The landing page has all eleven (machine drafts); the tool translates six (all but Russian, Bengali, Haitian Creole, Korean), also unreviewed. Arabic and Urdu read right to left.
+- **Security:** the strict content security policy in the landing handoff (section 06) applies to the landing page. The tool stores answers in `sessionStorage` and loads Google Fonts, so it needs its own policy, set by the build team and the City's security review.
+
+## The flow
+
+A HART employee (CHW) can start the client's record in the Blooming Health CRM; the client then finishes at home. The self-service path (channel `self`) is in this repository.
 
 ```
-home → preferred-language → privacy → contact → review-info (check and edit details) → verify (text code) → profile-created
-     → first chosen program's screener → handoff → dashboard
-returning: signin (or returning, if contact details match) → code → welcome-back → dashboard
-dashboard → "View details" (static handoff page) · "Start your application" (partner link) · My profile
+landing → preferred-language → privacy → contact → review-info (check and edit details) → verify (text code) → profile-created → dashboard
+returning: signin (or returning, if contact details match) → verify (code) → welcome-back → dashboard
+dashboard → program screener → review → handoff (or not-eligible page) → dashboard · "View details" (static handoff page) · "Start your application" (partner link) · My profile
 ```
 
 - Sign-in finds the record by email + phone + ZIP + DOB (all four must match; email is required at intake). No match shows "We couldn't find your account", the five NYC Health locations and a single "Try again" button.
@@ -27,9 +49,10 @@ dashboard → "View details" (static handoff page) · "Start your application" (
 | `medicaid` | Health insurance | `hi` → `hi-review` | `hi-next` | — |
 | `anti-eviction` | Eviction (Tenant Support Unit) | `tsu` → `tsu-review` | `tsu-connected` | `tsu-311` |
 | `financial-help` | Energy discounts (EAP / EEAP) | `eap` → `eap-review` | `eeap-next` | `eap-ineligible` |
-| `tax-credits` | Tax credits (EITC) | `eitc` → `eitc-review` | `eitc-eligible` | `eitc-ineligible` |
+| `tax-credits` | Tax credits (EITC) | `eitc` → `eitc-review` | `eitc-eligible` (also `eitc-maybe`, `eitc-claimed`) | `eitc-ineligible` |
+| `snap` | SNAP (food stamps) | `snap` → `snap-fit` → `snap-review` | `snap-next` | `snap-notfit` (free in-person help) |
 
-Program order, labels, descriptions, entry pages and partner application URLs live in `scripts/pillars.js` (`ORDER`, `META`, `APPLY`).
+Program labels, descriptions, entry pages and partner application URLs live in `scripts/pillars.js` (`ORDER`, `META`, `APPLY`); the dashboard's display order is in `scripts/dashboard.js`.
 
 ## Where things live
 
@@ -42,13 +65,16 @@ Program order, labels, descriptions, entry pages and partner application URLs li
 | `scripts/dashboard.js` | Dashboard card states and CTAs. |
 | `scripts/handoff-view.js` | Handoff pages when opened from the dashboard (`?from=dashboard`). |
 | `scripts/banner.js` | Self-service header: Menu / language panels, desktop links, sign-out. |
+| `scripts/language.js` | Preferred-language page: stores the choice, reads the landing page's `?lang=`, shows the note for languages the tool lacks. |
+| `scripts/i18n.js`, `scripts/i18n-dom.js`, `scripts/i18n-strings.js`, `scripts/i18n-gate.js` | Prototype translations (see "Translations" below). |
 | `scripts/mask.js` | Masked phone/email and the demo returning-client match. |
 | `scripts/a11y.js` | Live region, step errors, focus helpers. |
 | `landing/` | HART landing page, one page per language (`landing/es/`, …). Generated from the separate landing-page package (NYCO component library); edit that package and rebuild, not these files. `home.html` and `index.html` redirect here. |
 | `assets/` | Logo (SVG), icons, illustrations. |
+| `CHANGELOG.md`, `COMPONENTS.md` | Release history with QA guide; component inventory. |
 | `accessibility-conformance-summary.html` | WCAG 2.2 AA conformance notes, automated-scan results, known gaps. |
 
-Runtime copy (dashboard status sentences, language list) is in the scripts above; `scripts/i18n-gate.js` holds each page hidden until its translation is applied, to avoid a flash of English (prototype only); everything else is in the HTML.
+Runtime copy (dashboard status sentences, language list) is in the scripts above; everything else is in the HTML.
 
 ### Landing page
 
@@ -72,24 +98,20 @@ Everything is `sessionStorage`; nothing is sent anywhere. Clearing the tab reset
 | `nyc.completed`, `nyc.completed.<key>` | screened programs, and when |
 | `nyc.outcome.<key>` | `'eligible'` / `'ineligible'` (a completed program with no outcome counts as eligible) |
 | `nyc.returning` | `'verified'` |
-| `nyc.language` | chosen language code (stored and announced; no translation in the prototype) |
+| `nyc.language` | chosen language code (Spanish, Arabic, Chinese, Urdu, French and Polish translate the pages after it; the rest show English) |
 | `nyc.df`, `nyc.hi`, `nyc.tsu`, `nyc.eap`, `nyc.eitc` | per-program answers |
 
 Demo client: email `ana@example.com`, phone `917-555-2222`, ZIP `10457`, DOB `03/15/1988` (anything else shows "We couldn't find your account"). Any 6 digits verify, except `000000`, which counts as a wrong code ("Invalid code. You have N attempts left."); the fifth pauses sign-in. The demo record seeds no results: every program shows "Get started" until a screener and handoff are completed. In production the vendor fills these from what the client did with the CHW in person. All names, numbers and sites are fictional.
 
-Translation demo (PLACEHOLDER translations, not reviewed by a translator). Three more demo clients each have a preferred language, and every screen after sign-in renders in it (welcome back, dashboard, profile, all program screeners, review and handoff pages, header menu). The sign-in screens stay English. Same sign-in steps; any 6-digit code:
+## Translations
 
-| Client | Language | Email | Phone | ZIP | DOB |
-|---|---|---|---|---|---|
-| Sofía | Spanish | sofia@example.com | 917-555-4444 | 10029 | 11/04/1985 |
-| ليلى (Layla) | Arabic (right-to-left) | layla@example.com | 917-555-3333 | 11201 | 07/22/1990 |
-| 美玲 (Mei) | Chinese, Traditional | mei@example.com | 917-555-5555 | 11354 | 02/09/1979 |
+Placeholder translations, not reviewed by a translator. The language is chosen on `preferred-language.html` (also in the header language menu, on `review-info.html` and in My profile). Every page after `preferred-language` renders in it; `preferred-language` and `signin` stay English. Languages without translations show English, and the preferred-language page says which six are translated.
 
-How it works for the vendor: `scripts/i18n-strings.js` holds every string (English text → Spanish, Arabic, Traditional Chinese); `scripts/i18n.js` and `scripts/i18n-dom.js` swap them in at load and when scripts add text later; `nyc.language` picks the language; `<html lang>` and `dir` follow it (Arabic = right-to-left, with mirrored layout, icons and left-to-right numbers, emails and addresses). The header language menu also switches the page. Languages without translations show English. Production should replace this with real localization (message keys and locale files). Proper names (hospitals, cities, partner and utility names) are not translated.
+How it works: `scripts/i18n-strings.js` holds every string (English text to each language); `scripts/i18n.js` and `scripts/i18n-dom.js` swap them in at load and when scripts add text later; `nyc.language` picks the language; `<html lang>` and `dir` follow it (Arabic and Urdu are right to left, with mirrored layout and icons and left-to-right numbers, emails and addresses). `scripts/i18n-gate.js` keeps a translated page hidden until its text is swapped in, so there is no flash of English (prototype only). Production should replace all of this with real localization (message keys and locale files). Proper names (hospitals, cities, partner and utility names) are not translated.
 
 ## Dashboard states
 
-Programs with a result come first, then the rest, under the two-tone "Explore programs & applications for you" H1 (small "Hi, {name}" above it). The support email line (envelope + mailto link) sits at the bottom. SNAP is hidden for now. Clicking a partner link does not change state.
+Programs with a result come first, then the rest, under the two-tone "Explore programs & applications for you" H1 (small "Hi, {name}" above it). The support email line (envelope + mailto link) sits at the bottom. Clicking a partner link does not change state.
 
 | State | Chip | Body | CTAs |
 |---|---|---|---|

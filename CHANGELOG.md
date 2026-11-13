@@ -6,6 +6,7 @@ One entry per drop. Newest first. Dates are the day the drop was tagged.
 
 Not part of the v1.4.1 tag.
 
+- README rewritten for the vendor handoff: start-here list, how the landing page and the tool fit together, the six programs (SNAP added), the current flow and the translation setup. Removed `scripts/landing.js`, the old landing page's rotating hero word, which nothing used.
 - Translated pages no longer flash English before switching language or direction: `scripts/i18n-gate.js` (in the head of the 39 translated pages) hides the page until `i18n-dom.js` has applied the translation and the language's font has loaded, with a 2.5-second failsafe. English pages are unaffected.
 - Every page, tool and landing, has the NYC favicon (`assets/logo/`) and link-preview tags (`assets/social/share.png`). `og:image` is an absolute address on `hart-connector-v2.vercel.app`; change it when the production domain is known. The share image is a placeholder.
 - Removed the stray `undefined/` folder. The landing footer's Privacy policy link stays unwired until a policy page exists.
