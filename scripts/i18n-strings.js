@@ -3297,14 +3297,6 @@ window.I18N_DICT = {
   "fr": "(facultatif)",
   "pl": "(opcjonalnie)"
  },
- "<a>File now⁠<svg/><span> (opens in new tab)</span></a> or amend your tax return for the relevant year(s). You can choose:": {
-  "es": "<a>Presentar ahora⁠<svg/><span> (se abre en una pestaña nueva)</span></a> o modificar su declaración de impuestos de los años correspondientes. Puede elegir:",
-  "ar": "<a>قدّم الآن⁠<svg/><span> (تفتح في علامة تبويب جديدة)</span></a> أو عدّل إقرارك الضريبي للسنة أو السنوات المعنية. يمكنك الاختيار:",
-  "zh": "<a>立即報稅⁠<svg/><span>（在新分頁開啟）</span></a> 或修改相關年度的報稅表。 您可以選擇：",
-  "ur": "<a>ابھی فائل کریں⁠<svg/><span> (نئے ٹیب میں کھلتا ہے)</span></a> یا متعلقہ سال(سالوں) کے لیے اپنے ٹیکس ریٹرن میں ترمیم کریں۔ آپ انتخاب کر سکتے ہیں:",
-  "fr": "<a>Déclarer maintenant⁠<svg/><span> (s’ouvre dans un nouvel onglet)</span></a> ou modifiez votre déclaration d’impôts pour la ou les années concernées. Vous pouvez choisir :",
-  "pl": "<a>Złóż teraz⁠<svg/><span> (otwiera się w nowej karcie)</span></a> lub skoryguj zeznanie podatkowe za odpowiednie lata. Możesz wybrać:"
- },
  "Based on your answers, you could get money back. It depends on a few details our partners at GetYourRefund can help you figure out.": {
   "es": "Según sus respuestas, podría recibir dinero de vuelta. Depende de algunos detalles que nuestros socios de GetYourRefund pueden ayudarle a determinar.",
   "ar": "بناءً على إجاباتك، قد تستردّ مبلغًا من المال. يعتمد ذلك على بعض التفاصيل التي يمكن لشركائنا في GetYourRefund مساعدتك في تحديدها.",
