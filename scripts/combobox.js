@@ -72,12 +72,10 @@
 
     function labelOf(o) { return o.getAttribute('data-label') || o.firstChild.textContent.trim(); }
 
-    /* Inline list: sized to the part of the screen the keyboard and the pinned footer leave free. */
+    /* Inline list: sized to the part of the screen the keyboard leaves free; it covers the pinned footer while open. */
     function visibleBottom() {
-      var vv = window.visualViewport, b = vv ? vv.offsetTop + vv.height : window.innerHeight;
-      var f = document.querySelector('.step__footer, .lang-page__footer');
-      if (f) { var fr = f.getBoundingClientRect(); if (fr.top > 0 && fr.top < b) b = fr.top; }
-      return b;
+      var vv = window.visualViewport;
+      return vv ? vv.offsetTop + vv.height : window.innerHeight;   /* the pinned Back / Continue bar goes behind the open list */
     }
     function positionInline() {
       listbox.style.maxHeight = '';
@@ -154,6 +152,7 @@
       if (!multi && selectedIndex >= 0) start = Math.max(0, visible.indexOf(options[selectedIndex]));
       if (visible.length) setActive(start);
       document.addEventListener('click', onDocPointer, true);
+      document.addEventListener('pointerdown', onDocPointer, true);   /* iOS does not send click for taps on plain page areas */
       window.addEventListener('resize', onViewport);
       window.addEventListener('scroll', onScroll, true);
       if (inline && window.visualViewport) { window.visualViewport.addEventListener('resize', onViewport); window.visualViewport.addEventListener('scroll', position); }
@@ -166,6 +165,7 @@
       trigger.removeAttribute('data-open');
       clearActive();
       document.removeEventListener('click', onDocPointer, true);
+      document.removeEventListener('pointerdown', onDocPointer, true);
       window.removeEventListener('resize', onViewport);
       window.removeEventListener('scroll', onScroll, true);
       if (inline && window.visualViewport) { window.visualViewport.removeEventListener('resize', onViewport); window.visualViewport.removeEventListener('scroll', position); }
@@ -198,6 +198,7 @@
       restoring = true; applySelection(i); restoring = false;   // picking must not filter the list to the picked item
       if (input) filter('');
       closeList(true);
+      if (inline && input && window.matchMedia && window.matchMedia('(pointer: coarse)').matches) input.blur();   /* phone: keyboard away after a pick */
       if (opts.onChange) opts.onChange(options[i].getAttribute('data-value'), labelOf(options[i]));
     }
 
@@ -224,6 +225,8 @@
     // ---- wiring -----------------------------------------------------------
     if (input) {
       trigger.addEventListener('click', function (e) {
+        /* Tapping the arrow while the list is open closes it (and puts the phone keyboard away). */
+        if (open && e.target !== input) { closeList(false); if (inline && input.blur) input.blur(); return; }
         if (e.target !== input) { input.focus(); }
         if (!open) openList();
       });
