@@ -24,7 +24,7 @@ dashboard → "View details" (static handoff page) · "Start your application" (
 | Key | Name | Screener | Handoff (eligible) | Not eligible |
 |---|---|---|---|---|
 | `hospital-bills` | Hospital bills (Dollar For) | `dollarfor` → `df-bill` → `df-self` → `df-review` | `df-next` | `df-ineligible` |
-| `medicaid` | Health insurance | `hi` → `hi-site` → `hi-review` | `hi-next` | — |
+| `medicaid` | Health insurance | `hi` → `hi-review` | `hi-next` | — |
 | `anti-eviction` | Eviction (Tenant Support Unit) | `tsu` → `tsu-review` | `tsu-connected` | `tsu-311` |
 | `financial-help` | Energy discounts (EAP / EEAP) | `eap` → `eap-review` | `eeap-next` | `eap-ineligible` |
 | `tax-credits` | Tax credits (EITC) | `eitc` → `eitc-review` | `eitc-eligible` | `eitc-ineligible` |

@@ -24,7 +24,7 @@
         missing.forEach(function (id) { var el = document.getElementById(id); A11y.groupError(el, 'Selection required'); });
         document.getElementById(missing[0]).focus(); return;
       }
-      window.location.href = 'hi-site.html';   /* Submit → enrollment site → handoff */
+      window.location.href = 'hi-next.html';   /* Submit → handoff (site is matched by ZIP on hi-next) */
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();

@@ -70,6 +70,9 @@
       rows.household.hidden = !incomeRoute;
       rows.income.hidden = !(incomeRoute && hh >= 1);     // appears once household ≥ 1
       store.set('path', incomeRoute ? 'eeap' : (hasUtil && a === 'yes' && p.length ? 'eap' : ''));
+      /* EEAP (income route) is a cold hand-off: no "we'll share your information" language. Only the EAP (programs) route shares with the utility. */
+      var share = !incomeRoute && hasUtil && a === 'yes' && p.length > 0;
+      document.getElementById('shareIntro').hidden = !share; document.getElementById('consentNote').hidden = !share;
       selAssist.value = a || '';
       if (document.activeElement !== inHH) inHH.value = incomeRoute && hh ? hh : '';
       document.getElementById('rvIncomeLabel').textContent = 'Do you make less than ' + money(THRESHOLD[hh] || THRESHOLD[1]) + ' per year?';

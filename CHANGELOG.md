@@ -14,6 +14,7 @@ Content changes (11/10 batch), placeholder translations in six languages, and la
 - **Wording:** "Back to dashboard" replaces "Return to dashboard" everywhere (hand-off button is primary); "in-person" is hyphenated as an adjective.
 - **Profile and errors:** preferred language card, "Number already in use" inline error, Material error icon, Material external-link icon.
 - **Translations (placeholder):** Spanish, Arabic, Traditional Chinese, Urdu, French and Polish across the CSS path, all four program flows, tax credits, dashboard and post-language screens. Urdu and Arabic are right-to-left.
+- **Hand-offs and headings:** the "Your NYC Health enrollment site" screen is removed (health insurance goes from Review and submit straight to the counselor hand-off; the site is still matched by ZIP). Review and submit no longer says "we'll share your information" for tax credits (GetYourRefund) or for EEAP (cold hand-offs); the EAP programs route keeps it. H1s have no ending period unless they are questions.
 - **Layout:** three-option chip rows keep labels on one line and flow as content-width chips; email-code button text shortened; header logo 30px to 44px.
 - **Accessibility:** conformance summary updated (axe scan not re-run since v1.4).
 

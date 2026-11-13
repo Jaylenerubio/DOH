@@ -1,5 +1,5 @@
-/* Health insurance — "What's next" (terminal). Shows the site chosen on
-   hi-site.html with its two numbers; chains (CHW) or returns to the
+/* Health insurance — "What's next" (terminal). Shows the NYC Health site matched by ZIP
+   (HISites.matchByZip) with its two numbers; chains (CHW) or returns to the
    dashboard (self-service) via Pillars.wireHandoff. */
 (function () {
   'use strict';

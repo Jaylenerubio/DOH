@@ -1175,13 +1175,13 @@ window.I18N_DICT = {
   "ar": "أخبرنا عن الفاتورة — NYC Health",
   "zh": "告訴我們帳單的情況 — NYC Health"
  },
- "Tell us about the bill.": {
-  "es": "Cuéntenos sobre la factura.",
-  "ar": "أخبرنا عن الفاتورة.",
-  "zh": "請告訴我們帳單的情況。",
-  "ur": "ہمیں بل کے بارے میں بتائیں۔",
-  "fr": "Parlez-nous de la facture.",
-  "pl": "Opowiedz nam o rachunku."
+ "Tell us about the bill": {
+  "es": "Cuéntenos sobre la factura",
+  "ar": "أخبرنا عن الفاتورة",
+  "zh": "請告訴我們帳單的情況",
+  "ur": "ہمیں بل کے بارے میں بتائیں",
+  "fr": "Parlez-nous de la facture",
+  "pl": "Opowiedz nam o rachunku"
  },
  "Tell us about yourself — NYC Health": {
   "es": "Cuéntenos sobre usted — NYC Health",
@@ -1546,13 +1546,13 @@ window.I18N_DICT = {
   "fr": "Vous aurez besoin de :",
   "pl": "Będziesz potrzebować:"
  },
- "You’re eligible for the Energy Affordability Program (EAP).": {
-  "es": "Usted es elegible para el Programa de Asequibilidad de Energía (EAP).",
-  "ar": "أنت مؤهل لبرنامج القدرة على تحمّل تكاليف الطاقة (EAP).",
-  "zh": "您符合能源可負擔計劃 (EAP) 的資格。",
-  "ur": "آپ انرجی افورڈیبلٹی پروگرام (EAP) کے اہل ہیں۔",
-  "fr": "Vous avez droit au programme d’accessibilité énergétique (EAP).",
-  "pl": "Kwalifikujesz się do programu Energy Affordability Program (EAP)."
+ "You’re eligible for the Energy Affordability Program (EAP)": {
+  "es": "Usted es elegible para el Programa de Asequibilidad de Energía (EAP)",
+  "ar": "أنت مؤهل لبرنامج القدرة على تحمّل تكاليف الطاقة (EAP)",
+  "zh": "您符合能源可負擔計劃 (EAP) 的資格",
+  "ur": "آپ انرجی افورڈیبلٹی پروگرام (EAP) کے اہل ہیں",
+  "fr": "Vous avez droit au programme d’accessibilité énergétique (EAP)",
+  "pl": "Kwalifikujesz się do programu Energy Affordability Program (EAP)"
  },
  "You’re likely eligible for a tax refund — NYC Health": {
   "es": "Probablemente es elegible para un reembolso de impuestos — NYC Health",
@@ -1702,10 +1702,10 @@ window.I18N_DICT = {
   "ar": "لقد أرسلت هذا الطلب. سيتصل بك أخصائي دعم المستأجرين <br>خلال 2-3 أيام عمل.",
   "zh": "您已提交此申請。租戶專員將在 2-3 個工作天內與您聯絡。"
  },
- "You're eligible for the Enhanced Energy Affordability Program (EEAP).": {
-  "es": "Usted es elegible para el Programa de Asequibilidad de Energía Mejorado (EEAP).",
-  "ar": "أنت مؤهل لبرنامج القدرة المعززة على تحمّل تكاليف الطاقة (EEAP).",
-  "zh": "您符合強化能源可負擔計劃 (EEAP) 的資格。"
+ "You're eligible for the Enhanced Energy Affordability Program (EEAP)": {
+  "es": "Usted es elegible para el Programa de Asequibilidad de Energía Mejorado (EEAP)",
+  "ar": "أنت مؤهل لبرنامج القدرة المعززة على تحمّل تكاليف الطاقة (EEAP)",
+  "zh": "您符合強化能源可負擔計劃 (EEAP) 的資格"
  },
  "Based on your answers, our {x} program isn’t available to you. You can return to it in Other featured programs.": {
   "es": "Según sus respuestas, nuestro programa de {x} no está disponible para usted. Puede volver a él en Otros programas destacados.",
@@ -1894,13 +1894,13 @@ window.I18N_DICT = {
   "fr": "Donnez votre meilleure estimation de ce que vous devez après l’assurance, Medicaid, les partages de frais de santé ou d’autres contributions. Nous voulons savoir combien vous devez personnellement.",
   "pl": "Podaj swoje najlepsze oszacowanie kwoty, którą jesteś winien(-na) po uwzględnieniu ubezpieczenia, Medicaid, wspólnot zdrowotnych lub innych wpłat. Chcemy wiedzieć, ile osobiście jesteś winien(-na)."
  },
- "Tell us about yourself.": {
-  "es": "Cuéntenos sobre usted.",
-  "ar": "أخبرنا عن نفسك.",
-  "zh": "請告訴我們您的情況。",
-  "ur": "ہمیں اپنے بارے میں بتائیں۔",
-  "fr": "Parlez-nous de vous.",
-  "pl": "Opowiedz nam o sobie."
+ "Tell us about yourself": {
+  "es": "Cuéntenos sobre usted",
+  "ar": "أخبرنا عن نفسك",
+  "zh": "請告訴我們您的情況",
+  "ur": "ہمیں اپنے بارے میں بتائیں",
+  "fr": "Parlez-nous de vous",
+  "pl": "Opowiedz nam o sobie"
  },
  "Include spouses and dependents.": {
   "es": "Incluya a su cónyuge y a las personas a su cargo.",
@@ -1974,13 +1974,13 @@ window.I18N_DICT = {
   "fr": "Appeler",
   "pl": "Zadzwoń"
  },
- "You’re not eligible for energy discounts at this time.": {
-  "es": "Por el momento, no es elegible para los descuentos de energía.",
-  "ar": "أنت غير مؤهل للحصول على خصومات الطاقة في الوقت الحالي.",
-  "zh": "您目前不符合能源折扣資格。",
-  "ur": "آپ فی الحال توانائی پر رعایت کے اہل نہیں ہیں۔",
-  "fr": "Vous n’êtes pas admissible aux réductions d’énergie pour le moment.",
-  "pl": "Obecnie nie kwalifikujesz się do zniżek na energię."
+ "You’re not eligible for energy discounts at this time": {
+  "es": "Por el momento, no es elegible para los descuentos de energía",
+  "ar": "أنت غير مؤهل للحصول على خصومات الطاقة في الوقت الحالي",
+  "zh": "您目前不符合能源折扣資格",
+  "ur": "آپ فی الحال توانائی پر رعایت کے اہل نہیں ہیں",
+  "fr": "Vous n’êtes pas admissible aux réductions d’énergie pour le moment",
+  "pl": "Obecnie nie kwalifikujesz się do zniżek na energię"
  },
  "Select the government assistance program(s) you’re enrolled in: <span>(Select all that apply)</span>": {
   "es": "Seleccione los programas de asistencia del gobierno en los que está inscrito: <span>(Seleccione todos los que correspondan)</span>",
@@ -2630,13 +2630,13 @@ window.I18N_DICT = {
   "fr": "Déclarer maintenant<span> (s’ouvre dans un nouvel onglet)</span>",
   "pl": "Złóż teraz<span> (otwiera się w nowej karcie)</span>"
  },
- "You’re likely eligible for cash back from the IRS. <span>What’s next</span>": {
-  "es": "Probablemente es elegible para recibir dinero del IRS. <span>Qué sigue</span>",
-  "ar": "من المرجح أنك مؤهل لاسترداد أموال من IRS. <span>الخطوة التالية</span>",
+ "You’re likely eligible for cash back from the IRS <span>What’s next</span>": {
+  "es": "Probablemente es elegible para recibir dinero del IRS <span>Qué sigue</span>",
+  "ar": "من المرجح أنك مؤهل لاسترداد أموال من IRS <span>الخطوة التالية</span>",
   "zh": "您很可能符合從 IRS 取回現金的資格。<span>下一步</span>",
-  "ur": "غالباً آپ IRS سے رقم واپس حاصل کرنے کے اہل ہیں۔ <span>آگے کیا ہوگا</span>",
-  "fr": "Vous avez probablement droit à un remboursement de l’IRS. <span>Et ensuite</span>",
-  "pl": "Prawdopodobnie kwalifikujesz się do zwrotu pieniędzy z IRS. <span>Co dalej</span>"
+  "ur": "غالباً آپ IRS سے رقم واپس حاصل کرنے کے اہل ہیں <span>آگے کیا ہوگا</span>",
+  "fr": "Vous avez probablement droit à un remboursement de l’IRS <span>Et ensuite</span>",
+  "pl": "Prawdopodobnie kwalifikujesz się do zwrotu pieniędzy z IRS <span>Co dalej</span>"
  },
  "You may get thousands of dollars a year in tax credits because you’ve worked in the last few years or have children.": {
   "es": "Es posible que reciba miles de dólares al año en créditos tributarios porque ha trabajado en los últimos años o tiene hijos.",
@@ -2654,13 +2654,13 @@ window.I18N_DICT = {
   "fr": "Sélectionnez Déclarer maintenant pour commencer à déposer ou à modifier votre déclaration d’impôts pour la ou les années concernées.",
   "pl": "Wybierz Złóż teraz, aby zacząć składać lub korygować zeznanie podatkowe za odpowiednie lata."
  },
- "You’re not eligible for cash back from the IRS at this time.": {
-  "es": "Por el momento, no es elegible para recibir dinero del IRS.",
-  "ar": "أنت غير مؤهل لاسترداد أموال من IRS في الوقت الحالي.",
-  "zh": "您目前不符合從 IRS 取回現金的資格。",
-  "ur": "آپ فی الحال IRS سے رقم واپس حاصل کرنے کے اہل نہیں ہیں۔",
-  "fr": "Vous n’avez pas droit à un remboursement de l’IRS pour le moment.",
-  "pl": "Obecnie nie kwalifikujesz się do zwrotu pieniędzy z IRS."
+ "You’re not eligible for cash back from the IRS at this time": {
+  "es": "Por el momento, no es elegible para recibir dinero del IRS",
+  "ar": "أنت غير مؤهل لاسترداد أموال من IRS في الوقت الحالي",
+  "zh": "您目前不符合從 IRS 取回現金的資格",
+  "ur": "آپ فی الحال IRS سے رقم واپس حاصل کرنے کے اہل نہیں ہیں",
+  "fr": "Vous n’avez pas droit à un remboursement de l’IRS pour le moment",
+  "pl": "Obecnie nie kwalifikujesz się do zwrotu pieniędzy z IRS"
  },
  "Tax credits are mostly for people who are working or caring for children and have filed a tax return. Any year you have zero income, you aren’t required to file your taxes. If you start working or caring for children, though, filing a tax return could get you money back.": {
   "es": "Los créditos tributarios son principalmente para personas que trabajan o cuidan a niños y han presentado una declaración de impuestos. En cualquier año en que no tenga ingresos, no está obligado a presentar su declaración. Sin embargo, si empieza a trabajar o a cuidar a niños, presentar una declaración podría hacerle recuperar dinero.",
@@ -2678,21 +2678,21 @@ window.I18N_DICT = {
   "fr": "Nos partenaires de GetYourRefund peuvent vous aider à déclarer gratuitement et répondre à vos questions. <a>Discutez maintenant avec un expert fiscal⁠<svg/><span> (s’ouvre dans un nouvel onglet)</span></a>",
   "pl": "Nasi partnerzy z GetYourRefund mogą bezpłatnie pomóc Ci złożyć zeznanie i odpowiedzieć na Twoje pytania. <a>Porozmawiaj teraz z ekspertem podatkowym⁠<svg/><span> (otwiera się w nowej karcie)</span></a>"
  },
- "You may be eligible for cash back from the IRS. <span>What’s next</span>": {
-  "es": "Es posible que sea elegible para recibir dinero del IRS. <span>Qué sigue</span>",
-  "ar": "قد تكون مؤهلًا لاسترداد أموال من IRS. <span>الخطوة التالية</span>",
+ "You may be eligible for cash back from the IRS <span>What’s next</span>": {
+  "es": "Es posible que sea elegible para recibir dinero del IRS <span>Qué sigue</span>",
+  "ar": "قد تكون مؤهلًا لاسترداد أموال من IRS <span>الخطوة التالية</span>",
   "zh": "您可能符合從 IRS 取回現金的資格。<span>下一步</span>",
-  "ur": "ہو سکتا ہے آپ IRS سے رقم واپس حاصل کرنے کے اہل ہوں۔ <span>آگے کیا ہوگا</span>",
-  "fr": "Vous avez peut-être droit à un remboursement de l’IRS. <span>Et ensuite</span>",
-  "pl": "Możesz kwalifikować się do zwrotu pieniędzy z IRS. <span>Co dalej</span>"
+  "ur": "ہو سکتا ہے آپ IRS سے رقم واپس حاصل کرنے کے اہل ہوں <span>آگے کیا ہوگا</span>",
+  "fr": "Vous avez peut-être droit à un remboursement de l’IRS <span>Et ensuite</span>",
+  "pl": "Możesz kwalifikować się do zwrotu pieniędzy z IRS <span>Co dalej</span>"
  },
- "Let’s see if you qualify for cash back from the IRS.": {
-  "es": "Veamos si califica para recibir dinero del IRS.",
-  "ar": "لنرَ ما إذا كنت مؤهلًا لاسترداد أموال من IRS.",
-  "zh": "讓我們看看您是否符合從 IRS 取回現金的資格。",
-  "ur": "آئیے دیکھتے ہیں کہ کیا آپ IRS سے رقم واپس حاصل کرنے کے اہل ہیں۔",
-  "fr": "Voyons si vous avez droit à un remboursement de l’IRS.",
-  "pl": "Sprawdźmy, czy kwalifikujesz się do zwrotu pieniędzy z IRS."
+ "Let’s see if you qualify for cash back from the IRS": {
+  "es": "Veamos si califica para recibir dinero del IRS",
+  "ar": "لنرَ ما إذا كنت مؤهلًا لاسترداد أموال من IRS",
+  "zh": "讓我們看看您是否符合從 IRS 取回現金的資格",
+  "ur": "آئیے دیکھتے ہیں کہ کیا آپ IRS سے رقم واپس حاصل کرنے کے اہل ہیں",
+  "fr": "Voyons si vous avez droit à un remboursement de l’IRS",
+  "pl": "Sprawdźmy, czy kwalifikujesz się do zwrotu pieniędzy z IRS"
  },
  "Tax credits like the Earned Income Tax Credit (EITC) give working people cash back. You may qualify even if you don’t earn much, don’t usually have to file taxes, or have never filed before. Your chances are even better if you take care of children.": {
   "es": "Los créditos tributarios como el Crédito Tributario por Ingreso del Trabajo (EITC) devuelven dinero a las personas que trabajan. Puede calificar aunque gane poco, normalmente no tenga que presentar impuestos o nunca haya presentado una declaración. Sus posibilidades son aún mejores si cuida a niños.",
@@ -3209,13 +3209,13 @@ window.I18N_DICT = {
   "fr": "<span>Numéro changé ?</span> Écrivez à <a>hartconnectorsupport@health.nyc.gov</a>",
   "pl": "<span>Zmieniłeś(-aś) numer?</span> Napisz na <a>hartconnectorsupport@health.nyc.gov</a>"
  },
- "Welcome to the<br>HART Connector.": {
-  "es": "Le damos la bienvenida al<br>HART Connector.",
-  "ar": "مرحبًا بك في<br>HART Connector.",
-  "zh": "歡迎使用<br>HART Connector。",
-  "ur": "HART Connector میں<br>خوش آمدید۔",
-  "fr": "Bienvenue sur le<br>HART Connector.",
-  "pl": "Witamy w<br>HART Connector."
+ "Welcome to the<br>HART Connector": {
+  "es": "Le damos la bienvenida al<br>HART Connector",
+  "ar": "مرحبًا بك في<br>HART Connector",
+  "zh": "歡迎使用<br>HART Connector",
+  "ur": "HART Connector میں<br>خوش آمدید",
+  "fr": "Bienvenue sur le<br>HART Connector",
+  "pl": "Witamy w<br>HART Connector"
  },
  "Edit Preferred language": {
   "es": "Editar idioma preferido",
