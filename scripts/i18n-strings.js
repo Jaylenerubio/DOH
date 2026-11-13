@@ -2646,13 +2646,13 @@ window.I18N_DICT = {
   "fr": "Vous pourriez recevoir des milliers de dollars par an en crédits d’impôt parce que vous avez travaillé ces dernières années ou que vous avez des enfants.",
   "pl": "Możesz otrzymać tysiące dolarów rocznie w ulgach podatkowych, ponieważ pracowałeś(-aś) w ostatnich latach lub masz dzieci."
  },
- "Select File now to start filing or amending your tax return for the relevant year(s).": {
-  "es": "Seleccione Presentar ahora para comenzar a presentar o modificar su declaración de impuestos de los años correspondientes.",
-  "ar": "اختر «قدّم الآن» لبدء تقديم إقرارك الضريبي أو تعديله للسنة أو السنوات المعنية.",
-  "zh": "請選擇「立即報稅」，開始辦理或修改相關年度的報稅表。",
-  "ur": "متعلقہ سال(سالوں) کے لیے اپنا ٹیکس ریٹرن فائل یا ترمیم کرنا شروع کرنے کے لیے «ابھی فائل کریں» منتخب کریں۔",
-  "fr": "Sélectionnez Déclarer maintenant pour commencer à déposer ou à modifier votre déclaration d’impôts pour la ou les années concernées.",
-  "pl": "Wybierz Złóż teraz, aby zacząć składać lub korygować zeznanie podatkowe za odpowiednie lata."
+ "<a>File now⁠<svg/><span> (opens in new tab)</span></a> to start filing or amending your tax return for the relevant year(s).": {
+  "es": "<a>Presentar ahora⁠<svg/><span> (se abre en una pestaña nueva)</span></a> para comenzar a presentar o modificar su declaración de impuestos de los años correspondientes.",
+  "ar": "<a>قدّم الآن⁠<svg/><span> (تفتح في علامة تبويب جديدة)</span></a> لبدء تقديم إقرارك الضريبي أو تعديله للسنة أو السنوات المعنية.",
+  "zh": "<a>立即報稅⁠<svg/><span>（在新分頁開啟）</span></a> 開始辦理或修改相關年度的報稅表。",
+  "ur": "<a>ابھی فائل کریں⁠<svg/><span> (نئے ٹیب میں کھلتا ہے)</span></a> متعلقہ سال(سالوں) کے لیے اپنا ٹیکس ریٹرن فائل یا ترمیم کرنا شروع کرنے کے لیے۔",
+  "fr": "<a>Déclarer maintenant⁠<svg/><span> (s’ouvre dans un nouvel onglet)</span></a> pour commencer à déposer ou à modifier votre déclaration d’impôts pour la ou les années concernées.",
+  "pl": "<a>Złóż teraz⁠<svg/><span> (otwiera się w nowej karcie)</span></a>, aby zacząć składać lub korygować zeznanie podatkowe za odpowiednie lata."
  },
  "You’re not eligible for cash back from the IRS at this time": {
   "es": "Por el momento, no es elegible para recibir dinero del IRS",
