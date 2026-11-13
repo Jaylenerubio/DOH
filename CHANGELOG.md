@@ -15,7 +15,7 @@ Content changes (11/10 batch), placeholder translations in six languages, and la
 - **Profile and errors:** preferred language card, "Number already in use" inline error, Material error icon, Material external-link icon.
 - **Translations (placeholder):** Spanish, Arabic, Traditional Chinese, Urdu, French and Polish across the CSS path, all four program flows, tax credits, dashboard and post-language screens. Urdu and Arabic are right-to-left.
 - **Hand-offs and headings:** the "Your NYC Health enrollment site" screen is removed (health insurance goes from Review and submit straight to the counselor hand-off; the site is still matched by ZIP). Review and submit no longer says "we'll share your information" for tax credits (GetYourRefund) or for EEAP (cold hand-offs); the EAP programs route keeps it. H1s have no ending period unless they are questions. On the tax-credit hand-offs (likely, maybe and already-claimed), "File now" is now a link to GetYourRefund with the external-link arrow.
-- **Layout:** three-option chip rows keep labels on one line and flow as content-width chips; email-code button text shortened; header logo 30px to 44px.
+- **Layout:** short-label chip rows (Yes / No, Morning / Evening / Anytime) keep labels on one line and fill the row at equal widths on phones (under 600px), content-width above; long-label options are full-width stacked cards; email-code button text shortened; header logo 30px to 44px.
 - **Accessibility:** conformance summary updated (axe scan not re-run since v1.4).
 
 ### v1.4.1 QA guide (self-service channel)
