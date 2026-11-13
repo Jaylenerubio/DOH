@@ -2,11 +2,16 @@
 
 One entry per drop. Newest first. Dates are the day the drop was tagged.
 
-## v1.4.1 Content and translations — 2026-11-12
+## v1.4.1 Content and translations — 2026-11-13
 
 Content changes (11/10 batch), placeholder translations in six languages, and layout fixes on top of v1.4. Translations are unreviewed until a translator signs off.
 
 - **Copy round (11/13):** profile support line now emails hartconnectorsupport@health.nyc.gov; Dollar For: "Tell us about your bill", new later-link note, step 3 "Most hospitals decide within 30 days.", sharing line removed; EITC likely/maybe pages rewritten; durations use numerals (3 years, 3 business days); SNAP "Need food now?" box is link only; SNAP apply/enroll step copy. Translations unreviewed.
+- **Energy discounts (11/13):** the EAP "Start your application" link goes to the BEA staging start link (`https://staging.nyc-bea.navateam.com/start`; the vendor swaps in the production link at launch); step 3 reads "Once approved, you'll receive the EAP discount within two billing cycles."; the utility chips fill the row at equal widths from 600px up.
+- **Hospital bills (11/13):** step 1 of the Dollar For hand-off says "You'll need proof of income, like:".
+- **Tenant support (11/13):** the review and submitted-view label matches the screener question, "Are any of the following situations happening to you?".
+- **Tax credits (11/13):** the likely-eligible page is two steps like the maybe page, with the GetYourRefund line above the steps.
+- **Profile (11/13):** support line reads "Email hartconnectorsupport@health.nyc.gov to update or delete your profile."
 - **Back button:** walking back from a hand-off or result page into the screener now clears that program, so the dashboard shows "Get started" instead of "Referral sent" (`scripts/flow-reset.js`).
 - **SNAP:** "None of the above" on the first page routes to the free in-person hand-off (`snap-notfit`); the second page is "Does text-based help work for you?"; new consent text with the Frontdoor Benefits privacy link; hand-off rebuilt as "Free in-person help is nearby".
 - **Energy discounts:** new program checklist (SNAP, HEAP, Medicaid, TANF, SNA, SSI, Lifeline, Direct Vendor, federal housing, veterans, other), note under eligible step 1, "Neither" goes straight to not-eligible, explanation sentence on the not-eligible page, utility order Con Edison, National Grid, Both, Neither.
@@ -35,6 +40,9 @@ Start from the home page, choose "Create an account", pick a language, finish co
 - On the language screen choose Urdu, Arabic, French or Polish. Open **Hospital bill forgiveness**, answer "Yes" to "Do you have an unaffordable hospital bill?", finish the bill questions, and submit from the review page.
 - You land on `df-css.html` (a CSS health counselor) with no "Start your application" button. English, Spanish and Chinese land on `df-next.html` (Dollar For) instead.
 - The dashboard hospital card title and copy also change on this path (a CSS health counselor will call within 2 business days).
+
+**Back button**
+- Finish any program to its hand-off, press Back through the screener, then open the dashboard. The card reads "Get started", not "Referral sent".
 
 **How to get an ineligible ("No match") screen**
 - **Hospital bill forgiveness:** answer "No" to the hospital bill question (`df-ineligible.html`).
