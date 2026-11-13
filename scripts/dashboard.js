@@ -115,4 +115,6 @@
     stack.addEventListener('click', function (e) { var a = e.target.closest('[data-apply]'); if (a) Pillars.markApplied(a.getAttribute('data-apply')); });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+  /* Restored from the back/forward cache: re-read state (a flow may have been backed out of). */
+  window.addEventListener('pageshow', function (e) { if (e.persisted) location.reload(); });
 })();
