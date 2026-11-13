@@ -35,7 +35,7 @@
     function updateNote(v) { if (noteEl) noteEl.hidden = NOT_TRANSLATED.indexOf(v) === -1; }
 
     var combo = window.Combobox.create(comboRoot, {
-      searchable: true,
+      searchable: false,   /* 11 languages: a plain list, no typing, so the phone keyboard never opens over it */
       onChange: function (value) {
         trigger.removeAttribute('aria-invalid'); A11y.clearStepError(errorEl);   // Continue is always enabled
         if (trigger) trigger.removeAttribute('aria-invalid');
