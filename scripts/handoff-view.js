@@ -101,9 +101,11 @@
 
     /* Back to dashboard above the title */
     var h1 = root.querySelector('.step__title');
-    var back = document.createElement('a');
-    back.className = 'handoff__back'; back.href = 'dashboard.html'; back.innerHTML = ARROW + 'Back to dashboard';
-    if (h1) h1.parentNode.insertBefore(back, h1);
+    if (!root.querySelector('.handoff__back')) {   /* Pillars.wireHandoff may have added it already */
+      var back = document.createElement('a');
+      back.className = 'handoff__back'; back.href = 'dashboard.html'; back.innerHTML = ARROW + 'Back to dashboard';
+      if (h1) h1.parentNode.insertBefore(back, h1);
+    }
 
     var intro = root.querySelector('main .step__text');
     var btn = document.getElementById('nextPillarBtn'), rec = document.getElementById('recordBtn'), footer = root.querySelector('.step__footer');

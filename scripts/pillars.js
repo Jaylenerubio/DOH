@@ -96,14 +96,24 @@ window.Pillars = (function () {
         btn.addEventListener('click', function () { window.location.href = 'dashboard.html'; });
       }
     }
+    /* "Back to dashboard" sits above the title (the same link the dashboard view uses) so the footer
+       is one button: on phones the pinned footer then takes a single row. */
     if (rec) {
-      if (app) { rec.textContent = 'Back to dashboard'; rec.addEventListener('click', function () { window.location.href = 'dashboard.html'; }); }
-      else rec.hidden = true;
+      rec.hidden = true;
+      if (app) addBackLink();
     }
+  }
+  var BACK_ARROW = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.825 10.9999H19C19.2833 10.9999 19.5208 11.0957 19.7125 11.2874C19.9042 11.4791 20 11.7166 20 11.9999C20 12.2832 19.9042 12.5207 19.7125 12.7124C19.5208 12.9041 19.2833 12.9999 19 12.9999H7.825L12.725 17.8999C12.925 18.0999 13.0208 18.3332 13.0125 18.5999C13.0042 18.8666 12.9 19.0999 12.7 19.2999C12.5 19.4832 12.2667 19.5791 12 19.5874C11.7333 19.5957 11.5 19.4999 11.3 19.2999L4.7 12.6999C4.6 12.5999 4.52917 12.4916 4.4875 12.3749C4.44583 12.2582 4.425 12.1332 4.425 11.9999C4.425 11.8666 4.44583 11.7416 4.4875 11.6249C4.52917 11.5082 4.6 11.3999 4.7 11.2999L11.3 4.69989C11.4833 4.51656 11.7125 4.42489 11.9875 4.42489C12.2625 4.42489 12.5 4.51656 12.7 4.69989C12.9 4.89989 13 5.13739 13 5.41239C13 5.68739 12.9 5.92489 12.7 6.12489L7.825 10.9999Z" fill="currentColor"/></svg>';
+  function addBackLink() {
+    var h1 = document.querySelector('.step__title');
+    if (!h1 || document.querySelector('.handoff__back')) return;
+    var a = document.createElement('a');
+    a.className = 'handoff__back'; a.href = 'dashboard.html'; a.innerHTML = BACK_ARROW + 'Back to dashboard';
+    h1.parentNode.insertBefore(a, h1);
   }
   return { ORDER: ORDER, META: META, selected: selected, completed: completed, isCompleted: isCompleted,
            markCompleted: markCompleted, pending: pending, first: first, nextAfter: nextAfter,
-           entryFor: entryFor, labelFor: labelFor, wireHandoff: wireHandoff,
+           entryFor: entryFor, labelFor: labelFor, wireHandoff: wireHandoff, addBackLink: addBackLink,
            isSelf: isSelf, APPLY: APPLY, usesCss: usesCss,
            outcome: outcome, markOutcome: markOutcome, applyUrl: applyUrl };
 })();

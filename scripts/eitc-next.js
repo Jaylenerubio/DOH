@@ -10,6 +10,9 @@
     Array.prototype.forEach.call(document.querySelectorAll('#nextPillarBtn, #recordBtn'), function (b) {
       b.addEventListener('click', function () { window.location.href = home; });
     });
+    /* "File now" is the footer's one button; "Back to dashboard" moves above the title (see Pillars.addBackLink). */
+    var rec = document.getElementById('recordBtn');
+    if (rec && !inel && Pillars.addBackLink) { rec.hidden = true; Pillars.addBackLink(); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
