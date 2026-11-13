@@ -53,7 +53,7 @@ Runtime copy (dashboard status sentences, language list) is in the scripts above
 ### Landing page
 
 - The build output is copied to `landing/` with a `<base href="/landing/…">` tag added to each page, so relative asset URLs survive Vercel's no-trailing-slash redirect. The site must be served from the domain root; under a sub-path, change the `<base>` tags.
-- Buttons link into the tool: "Get started" and the nav button go to `preferred-language.html`; "Pick up where you left off" goes to `signin.html`; the footer Privacy link goes to `privacy.html` (the consent page, not a general policy).
+- Buttons link into the tool: "Get started" and the nav button go to `preferred-language.html`; "Pick up where you left off" goes to `signin.html`; the footer's Privacy policy link is unwired (`data-unwired`, goes nowhere) until the policy page exists.
 - The landing language picker passes `?lang=<code>`. `scripts/language.js` stores it in `sessionStorage` (`nyc.language`) and removes it from the URL. Russian, Bengali, Haitian Creole and Korean are on the landing page but not translated in the tool, so `preferred-language.html` shows a note naming the six languages that are.
 - The landing page has a footer; the tool pages do not. Open item for DOHMH and design.
 - The landing source package and its font files are not in this repository. The conformance summary and `COMPONENTS.md` do not cover the landing page.
